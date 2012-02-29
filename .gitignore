@@ -1,0 +1,5 @@
+/build/
+Builds
+.DS_Store
+build.output
+pkg/

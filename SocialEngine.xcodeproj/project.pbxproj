@@ -15,6 +15,14 @@
 		024687A914FE2642009E2CB9 /* DXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 024687A814FE2642009E2CB9 /* DXAppDelegate.m */; };
 		024687AC14FE2642009E2CB9 /* DXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024687AB14FE2642009E2CB9 /* DXViewController.m */; };
 		024687AF14FE2642009E2CB9 /* DXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024687AD14FE2642009E2CB9 /* DXViewController.xib */; };
+		02E222781504FF3E00EF802E /* DXSEFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222661504FF3E00EF802E /* DXSEFriendInfo.m */; };
+		02E222791504FF3E00EF802E /* DXSEInitialConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222681504FF3E00EF802E /* DXSEInitialConfig.m */; };
+		02E2227A1504FF3E00EF802E /* DXSEModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E2226A1504FF3E00EF802E /* DXSEModule.m */; };
+		02E2227B1504FF3E00EF802E /* DXSESocialEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E2226C1504FF3E00EF802E /* DXSESocialEngine.m */; };
+		02E2227C1504FF3E00EF802E /* DXSEUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E2226E1504FF3E00EF802E /* DXSEUserInfo.m */; };
+		02E2227D1504FF3E00EF802E /* DXSEFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222711504FF3E00EF802E /* DXSEFacebook.m */; };
+		02E2227E1504FF3E00EF802E /* DXSE4Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222741504FF3E00EF802E /* DXSE4Square.m */; };
+		02E2227F1504FF3E00EF802E /* DXSETwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222771504FF3E00EF802E /* DXSETwitter.m */; };
 		E6EEE6A31504ED3B0096C4CB /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D21504ED3B0096C4CB /* Foursquare2.m */; };
 		E6EEE6A41504ED3B0096C4CB /* HRRequest+PhotoExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D41504ED3B0096C4CB /* HRRequest+PhotoExt.m */; };
 		E6EEE6A51504ED3B0096C4CB /* NSDictionary+ParamUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D81504ED3B0096C4CB /* NSDictionary+ParamUtils.m */; };
@@ -114,6 +122,22 @@
 		024687AA14FE2642009E2CB9 /* DXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXViewController.h; sourceTree = "<group>"; };
 		024687AB14FE2642009E2CB9 /* DXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXViewController.m; sourceTree = "<group>"; };
 		024687AE14FE2642009E2CB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DXViewController.xib; sourceTree = "<group>"; };
+		02E222651504FF3E00EF802E /* DXSEFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEFriendInfo.h; sourceTree = "<group>"; };
+		02E222661504FF3E00EF802E /* DXSEFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEFriendInfo.m; sourceTree = "<group>"; };
+		02E222671504FF3E00EF802E /* DXSEInitialConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEInitialConfig.h; sourceTree = "<group>"; };
+		02E222681504FF3E00EF802E /* DXSEInitialConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEInitialConfig.m; sourceTree = "<group>"; };
+		02E222691504FF3E00EF802E /* DXSEModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEModule.h; sourceTree = "<group>"; };
+		02E2226A1504FF3E00EF802E /* DXSEModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEModule.m; sourceTree = "<group>"; };
+		02E2226B1504FF3E00EF802E /* DXSESocialEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSESocialEngine.h; sourceTree = "<group>"; };
+		02E2226C1504FF3E00EF802E /* DXSESocialEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSESocialEngine.m; sourceTree = "<group>"; };
+		02E2226D1504FF3E00EF802E /* DXSEUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfo.h; sourceTree = "<group>"; };
+		02E2226E1504FF3E00EF802E /* DXSEUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfo.m; sourceTree = "<group>"; };
+		02E222701504FF3E00EF802E /* DXSEFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEFacebook.h; sourceTree = "<group>"; };
+		02E222711504FF3E00EF802E /* DXSEFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEFacebook.m; sourceTree = "<group>"; };
+		02E222731504FF3E00EF802E /* DXSE4Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSE4Square.h; sourceTree = "<group>"; };
+		02E222741504FF3E00EF802E /* DXSE4Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSE4Square.m; sourceTree = "<group>"; };
+		02E222761504FF3E00EF802E /* DXSETwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSETwitter.h; sourceTree = "<group>"; };
+		02E222771504FF3E00EF802E /* DXSETwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSETwitter.m; sourceTree = "<group>"; };
 		E6EEE5D11504ED3B0096C4CB /* Foursquare2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare2.h; sourceTree = "<group>"; };
 		E6EEE5D21504ED3B0096C4CB /* Foursquare2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare2.m; sourceTree = "<group>"; };
 		E6EEE5D31504ED3B0096C4CB /* HRRequest+PhotoExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HRRequest+PhotoExt.h"; sourceTree = "<group>"; };
@@ -345,6 +369,7 @@
 		0246879E14FE2642009E2CB9 /* SocialEngine */ = {
 			isa = PBXGroup;
 			children = (
+				02E222631504FF3E00EF802E /* DXSocialEngine */,
 				024687A714FE2642009E2CB9 /* DXAppDelegate.h */,
 				024687A814FE2642009E2CB9 /* DXAppDelegate.m */,
 				024687AA14FE2642009E2CB9 /* DXViewController.h */,
@@ -364,6 +389,61 @@
 				024687A614FE2642009E2CB9 /* SocialEngine-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02E222631504FF3E00EF802E /* DXSocialEngine */ = {
+			isa = PBXGroup;
+			children = (
+				02E222641504FF3E00EF802E /* Core */,
+				02E2226F1504FF3E00EF802E /* FacebookModule */,
+				02E222721504FF3E00EF802E /* FourSquareModule */,
+				02E222751504FF3E00EF802E /* TwitterModule */,
+			);
+			path = DXSocialEngine;
+			sourceTree = "<group>";
+		};
+		02E222641504FF3E00EF802E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				02E222651504FF3E00EF802E /* DXSEFriendInfo.h */,
+				02E222661504FF3E00EF802E /* DXSEFriendInfo.m */,
+				02E222671504FF3E00EF802E /* DXSEInitialConfig.h */,
+				02E222681504FF3E00EF802E /* DXSEInitialConfig.m */,
+				02E222691504FF3E00EF802E /* DXSEModule.h */,
+				02E2226A1504FF3E00EF802E /* DXSEModule.m */,
+				02E2226B1504FF3E00EF802E /* DXSESocialEngine.h */,
+				02E2226C1504FF3E00EF802E /* DXSESocialEngine.m */,
+				02E2226D1504FF3E00EF802E /* DXSEUserInfo.h */,
+				02E2226E1504FF3E00EF802E /* DXSEUserInfo.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		02E2226F1504FF3E00EF802E /* FacebookModule */ = {
+			isa = PBXGroup;
+			children = (
+				02E222701504FF3E00EF802E /* DXSEFacebook.h */,
+				02E222711504FF3E00EF802E /* DXSEFacebook.m */,
+			);
+			path = FacebookModule;
+			sourceTree = "<group>";
+		};
+		02E222721504FF3E00EF802E /* FourSquareModule */ = {
+			isa = PBXGroup;
+			children = (
+				02E222731504FF3E00EF802E /* DXSE4Square.h */,
+				02E222741504FF3E00EF802E /* DXSE4Square.m */,
+			);
+			path = FourSquareModule;
+			sourceTree = "<group>";
+		};
+		02E222751504FF3E00EF802E /* TwitterModule */ = {
+			isa = PBXGroup;
+			children = (
+				02E222761504FF3E00EF802E /* DXSETwitter.h */,
+				02E222771504FF3E00EF802E /* DXSETwitter.m */,
+			);
+			path = TwitterModule;
 			sourceTree = "<group>";
 		};
 		E6EEE5CF1504ED3B0096C4CB /* API */ = {
@@ -870,6 +950,14 @@
 				E6EEE6F71504ED3B0096C4CB /* CJSONDeserializer.m in Sources */,
 				E6EEE6F81504ED3B0096C4CB /* CJSONScanner.m in Sources */,
 				E6EEE6F91504ED3B0096C4CB /* CJSONSerializer.m in Sources */,
+				02E222781504FF3E00EF802E /* DXSEFriendInfo.m in Sources */,
+				02E222791504FF3E00EF802E /* DXSEInitialConfig.m in Sources */,
+				02E2227A1504FF3E00EF802E /* DXSEModule.m in Sources */,
+				02E2227B1504FF3E00EF802E /* DXSESocialEngine.m in Sources */,
+				02E2227C1504FF3E00EF802E /* DXSEUserInfo.m in Sources */,
+				02E2227D1504FF3E00EF802E /* DXSEFacebook.m in Sources */,
+				02E2227E1504FF3E00EF802E /* DXSE4Square.m in Sources */,
+				02E2227F1504FF3E00EF802E /* DXSETwitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

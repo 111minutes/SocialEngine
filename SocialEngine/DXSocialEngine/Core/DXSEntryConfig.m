@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DXSEInitialConfig.h"
+#import "DXSEntryConfig.h"
 
-@implementation DXSEInitialConfig
+@implementation DXSEntryConfig
 
 @synthesize oauthKey;
 @synthesize oauthSecret;

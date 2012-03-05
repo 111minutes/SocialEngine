@@ -22,7 +22,7 @@
 }
 
 //==============================================================================
-- (id) initWithInitialConfig:(DXSEInitialConfig*) anInitialConfig
+- (id) initWithEntryConfig:(DXSEntryConfig*) anInitialConfig
 {
     if( (self = [super init]) )
     {

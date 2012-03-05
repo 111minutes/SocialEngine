@@ -83,9 +83,9 @@
     NSDictionary* moduleDict = [aDictionary objectForKey:aModuleKey];
     if(moduleDict)
     {
-        DXSEInitialConfig* initialConfig = [[DXSEInitialConfig alloc] initWithDictionary:moduleDict];
+        DXSEntryConfig* initialConfig = [[DXSEntryConfig alloc] initWithDictionary:moduleDict];
         if(initialConfig)
-            result = [[NSClassFromString(aModuleKey) alloc] initWithInitialConfig:initialConfig];
+            result = [[NSClassFromString(aModuleKey) alloc] initWithEntryConfig:initialConfig];
         [initialConfig release];
     }
     

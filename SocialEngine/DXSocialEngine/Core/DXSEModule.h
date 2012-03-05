@@ -7,23 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DXSEInitialConfig.h"
+#import "DXSEntryConfig.h"
 
-typedef void (^DXSESuccessBlock)(id data);
+@class DXSEModule;
+
+typedef void (^DXSESuccessBlock)(DXSEModule* module, id data);
 typedef void (^DXSEFailureBlock)(NSError* error);
 
 //==============================================================================
 @interface DXSEModule : NSObject
 {
-    DXSEInitialConfig* initialConfig;
+    DXSEntryConfig* initialConfig;
     
     NSString* accessToken;
 }
 
-@property (nonatomic, readonly) DXSEInitialConfig* initialConfig;
+@property (nonatomic, readonly) DXSEntryConfig* initialConfig;
 @property (nonatomic, readonly) NSString* accessToken;
 
-- (id) initWithInitialConfig:(DXSEInitialConfig*) anInitialConfig;
+- (id) initWithEntryConfig:(DXSEntryConfig*) anInitialConfig;
 
 - (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 - (void) logout;

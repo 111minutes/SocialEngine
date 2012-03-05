@@ -17,7 +17,7 @@
 		024687AF14FE2642009E2CB9 /* DXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024687AD14FE2642009E2CB9 /* DXViewController.xib */; };
 		027238A9150521370090730A /* SocialEngine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 027238A8150521370090730A /* SocialEngine.plist */; };
 		02E222781504FF3E00EF802E /* DXSEFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222661504FF3E00EF802E /* DXSEFriendInfo.m */; };
-		02E222791504FF3E00EF802E /* DXSEInitialConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222681504FF3E00EF802E /* DXSEInitialConfig.m */; };
+		02E222791504FF3E00EF802E /* DXSEntryConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222681504FF3E00EF802E /* DXSEntryConfig.m */; };
 		02E2227A1504FF3E00EF802E /* DXSEModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E2226A1504FF3E00EF802E /* DXSEModule.m */; };
 		02E2227B1504FF3E00EF802E /* DXSESocialEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E2226C1504FF3E00EF802E /* DXSESocialEngine.m */; };
 		02E2227C1504FF3E00EF802E /* DXSEUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E2226E1504FF3E00EF802E /* DXSEUserInfo.m */; };
@@ -126,8 +126,8 @@
 		027238A8150521370090730A /* SocialEngine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SocialEngine.plist; sourceTree = "<group>"; };
 		02E222651504FF3E00EF802E /* DXSEFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEFriendInfo.h; sourceTree = "<group>"; };
 		02E222661504FF3E00EF802E /* DXSEFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEFriendInfo.m; sourceTree = "<group>"; };
-		02E222671504FF3E00EF802E /* DXSEInitialConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEInitialConfig.h; sourceTree = "<group>"; };
-		02E222681504FF3E00EF802E /* DXSEInitialConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEInitialConfig.m; sourceTree = "<group>"; };
+		02E222671504FF3E00EF802E /* DXSEntryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DXSEntryConfig.h; sourceTree = "<group>"; };
+		02E222681504FF3E00EF802E /* DXSEntryConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEntryConfig.m; sourceTree = "<group>"; };
 		02E222691504FF3E00EF802E /* DXSEModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEModule.h; sourceTree = "<group>"; };
 		02E2226A1504FF3E00EF802E /* DXSEModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEModule.m; sourceTree = "<group>"; };
 		02E2226B1504FF3E00EF802E /* DXSESocialEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSESocialEngine.h; sourceTree = "<group>"; };
@@ -408,8 +408,8 @@
 		02E222641504FF3E00EF802E /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				02E222671504FF3E00EF802E /* DXSEInitialConfig.h */,
-				02E222681504FF3E00EF802E /* DXSEInitialConfig.m */,
+				02E222671504FF3E00EF802E /* DXSEntryConfig.h */,
+				02E222681504FF3E00EF802E /* DXSEntryConfig.m */,
 				02E2226B1504FF3E00EF802E /* DXSESocialEngine.h */,
 				02E2226C1504FF3E00EF802E /* DXSESocialEngine.m */,
 				02E222691504FF3E00EF802E /* DXSEModule.h */,
@@ -955,7 +955,7 @@
 				E6EEE6F81504ED3B0096C4CB /* CJSONScanner.m in Sources */,
 				E6EEE6F91504ED3B0096C4CB /* CJSONSerializer.m in Sources */,
 				02E222781504FF3E00EF802E /* DXSEFriendInfo.m in Sources */,
-				02E222791504FF3E00EF802E /* DXSEInitialConfig.m in Sources */,
+				02E222791504FF3E00EF802E /* DXSEntryConfig.m in Sources */,
 				02E2227A1504FF3E00EF802E /* DXSEModule.m in Sources */,
 				02E2227B1504FF3E00EF802E /* DXSESocialEngine.m in Sources */,
 				02E2227C1504FF3E00EF802E /* DXSEUserInfo.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DXSEInitialConfig : NSObject
+@interface DXSEntryConfig : NSObject
 
 @property (nonatomic, readonly) NSString* oauthKey;
 @property (nonatomic, readonly) NSString* oauthSecret;

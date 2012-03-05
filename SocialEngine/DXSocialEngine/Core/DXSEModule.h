@@ -21,9 +21,9 @@ typedef void (^DXSEFailureBlock)(NSError* error);
 
 - (id) initWithInitialConfig:(DXSEInitialConfig*) anInitialConfig;
 
-//- (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
-//- (void) logout;
-//- (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
-//- (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (void) logout;
+- (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 
 @end

@@ -56,7 +56,7 @@
 {
     NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SocialEngine" ofType:@"config"];
     NSDictionary* dicConfig = [NSDictionary dictionaryWithContentsOfFile:filePath];
-    
+    NSLog(@"config %@", dicConfig);
 //    NSDictionary* [dicConfig objectForKey:@""];
 }
 

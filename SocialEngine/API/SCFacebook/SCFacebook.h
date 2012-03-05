@@ -52,6 +52,7 @@ typedef enum {
     FBPostType postType;
 }
 
+@property (nonatomic, readonly) Facebook* facebook;
 @property (nonatomic, assign) FBPostType postType;
 
 +(SCFacebook *)shared;

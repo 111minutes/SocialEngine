@@ -39,6 +39,7 @@ static SCFacebook * _scFacebook = nil;
 
 @synthesize callback = _callback;
 @synthesize postType;
+@synthesize facebook;
 
 
 #pragma mark -

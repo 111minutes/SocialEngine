@@ -21,6 +21,6 @@
 
 + (DXSESocialEngine*) sharedInstance;
 
-
+- (void) configure;
 
 @end

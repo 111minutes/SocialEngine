@@ -51,4 +51,13 @@
     [super dealloc];
 }
 
+//==============================================================================
+- (void) configure
+{
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SocialEngine" ofType:@"config"];
+    NSDictionary* dicConfig = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    
+//    NSDictionary* [dicConfig objectForKey:@""];
+}
+
 @end

@@ -5,18 +5,18 @@
 	<key>DXSEFacebook</key>
 	<dict>
 		<key>oauthKey</key>
-		<string></string>
+		<string>278915902179799</string>
 		<key>oauthSecret</key>
-		<string></string>
+		<string>e506319885e5089b90b31842873c5461</string>
 		<key>redirectURL</key>
 		<string></string>
 	</dict>
 	<key>DXSETwitter</key>
 	<dict>
 		<key>oauthKey</key>
-		<string></string>
+		<string>ZN2LGwXNrASxqpHyPbSuEQ</string>
 		<key>oauthSecret</key>
-		<string></string>
+		<string>LeNCyssmt6FBV4OQF0Kz5NLie3oqyxh1QgP2GwvCZE</string>
 		<key>redirectURL</key>
 		<string></string>
 	</dict>

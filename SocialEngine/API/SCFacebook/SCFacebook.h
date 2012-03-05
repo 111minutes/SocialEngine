@@ -26,8 +26,9 @@
 #import <Foundation/Foundation.h>
 #import "Facebook.h"
 
-#warning Your application App ID/API Key Facebook
-#define kAppId @"140422319335414"
+
+//#warning Your application App ID/API Key Facebook
+//#define kAppId @"140422319335414"
 
 #define OPEN_URL @"OPEN_URL"
 #define FQL_USER_STANDARD @"uid, name, email, birthday_date, about_me, pic"
@@ -52,6 +53,8 @@ typedef enum {
     FBPostType postType;
 }
 
+@property (nonatomic, copy) NSString* oauthKey;
+
 @property (nonatomic, readonly) Facebook* facebook;
 @property (nonatomic, assign) FBPostType postType;
 
@@ -66,5 +69,7 @@ typedef enum {
 +(void)feedPostWithPhoto:(UIImage*)_photo caption:(NSString*)_caption callBack:(SCFacebookCallback)callBack;
 +(void)myFeedCallBack:(SCFacebookCallback)callBack;
 +(void)inviteFriendsWithMessage:(NSString *)_message callBack:(SCFacebookCallback)callBack;
+
+- (void) configure;
 
 @end

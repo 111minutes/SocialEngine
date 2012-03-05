@@ -7,6 +7,7 @@
 //
 
 #import "DXViewController.h"
+#import "DXSESocialEngine.h"
 
 @implementation DXViewController
 
@@ -46,13 +47,32 @@
 //==============================================================================
 - (IBAction)facebookLoginPressed:(id)sender
 {
-    ;
+    [[DXSESocialEngine sharedInstance].facebook login:^(DXSEModule *module, id data) {
+        [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+    
+    } failure:^(NSError *error)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+    }];
 }
 
 //==============================================================================
 - (IBAction)foursquareLoginPressed:(id)sender
 {
     ;
+}
+
+//==============================================================================
+- (IBAction)facebookLogout
+{
+    [[DXSESocialEngine sharedInstance].facebook logout:^(DXSEModule *module, id data)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+
+    } failure:^(NSError *error)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"logout error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+    }];
 }
 
 @end

@@ -39,7 +39,10 @@ static SCFacebook * _scFacebook = nil;
 
 @synthesize callback = _callback;
 @synthesize postType;
+
+// Malaar:
 @synthesize facebook;
+@synthesize oauthKey;
 
 
 #pragma mark -
@@ -58,7 +61,12 @@ static SCFacebook * _scFacebook = nil;
     return _scFacebook;
 }
 
-
+- (void) dealloc
+{
+    [oauthKey release];
+    
+    [super dealloc];
+}
 
 #pragma mark -
 #pragma mark Private Methods
@@ -91,25 +99,8 @@ static SCFacebook * _scFacebook = nil;
 - (SCFacebook *) init
 {
 	self = [super init];
-	if (self != nil){
-        
-        // Initialize Facebook
-        _facebook = [[Facebook alloc] initWithAppId:kAppId andDelegate:self];
-        
-        // Initialize user permissions
-        _userPermissions = [[NSMutableDictionary alloc] initWithCapacity:1];
-        
-        // Check and retrieve authorization information
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        if ([defaults objectForKey:@"FBAccessTokenKey"] 
-            && [defaults objectForKey:@"FBExpirationDateKey"]) {
-            _facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
-            _facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
-        }
-        if (![_facebook isSessionValid]) {
-            [self loggedOut:NO];
-        } 
-        
+	if (self != nil)
+    {
         //Notification
         [[NSNotificationCenter defaultCenter] addObserverForName:OPEN_URL object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
             NSURL *url = (NSURL*)[note object];
@@ -119,6 +110,25 @@ static SCFacebook * _scFacebook = nil;
 	return self;
 }
 
+- (void) configure
+{
+    // Initialize Facebook
+    _facebook = [[Facebook alloc] initWithAppId:oauthKey andDelegate:self];
+    
+    // Initialize user permissions
+    _userPermissions = [[NSMutableDictionary alloc] initWithCapacity:1];
+    
+    // Check and retrieve authorization information
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] 
+        && [defaults objectForKey:@"FBExpirationDateKey"]) {
+        _facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        _facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }
+    if (![_facebook isSessionValid]) {
+        [self loggedOut:NO];
+    } 
+}
 
 -(void)_loginWithAppId:(NSString *)appId callBack:(SCFacebookCallback)callBack{
     
@@ -294,7 +304,7 @@ static SCFacebook * _scFacebook = nil;
 #pragma mark Public Methods Class
 
 +(void)loginCallBack:(SCFacebookCallback)callBack{
-	[[SCFacebook shared] _loginWithAppId:kAppId callBack:callBack];
+	[[SCFacebook shared] _loginWithAppId:[SCFacebook shared].oauthKey callBack:callBack];
 }
 
 +(void)logoutCallBack:(SCFacebookCallback)callBack{

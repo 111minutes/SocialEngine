@@ -13,5 +13,6 @@
 - (IBAction)twitterLoginPressed:(id)sender;
 - (IBAction)facebookLoginPressed:(id)sender;
 - (IBAction)foursquareLoginPressed:(id)sender;
+- (IBAction)facebookLogout;
 
 @end

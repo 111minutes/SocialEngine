@@ -10,7 +10,7 @@
 
 @implementation DXSEModule
 
-@synthesize initialConfig;
+@synthesize entryConfig;
 @synthesize accessToken;
 
 #pragma mark - Init/Dealloc
@@ -26,7 +26,7 @@
 {
     if( (self = [super init]) )
     {
-        initialConfig = [anInitialConfig retain];
+        entryConfig = [anInitialConfig retain];
     }
     return self;
 }
@@ -34,7 +34,7 @@
 //==============================================================================
 - (void) dealloc
 {
-    [initialConfig release];
+    [entryConfig release];
     
     [super dealloc];
 }

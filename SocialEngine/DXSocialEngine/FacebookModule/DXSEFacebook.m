@@ -21,6 +21,17 @@
 }
 
 //==============================================================================
+- (id) initWithEntryConfig:(DXSEntryConfig *)anInitialConfig
+{
+    if( (self = [super initWithEntryConfig:anInitialConfig]) )
+    {
+        [SCFacebook shared].oauthKey = entryConfig.oauthKey;
+        [[SCFacebook shared] configure];
+    }
+    return self;
+}
+
+//==============================================================================
 - (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
     [SCFacebook loginCallBack:^(BOOL success, id result)
@@ -42,11 +53,24 @@
 }
 
 //==============================================================================
-- (void) logout
+- (void) logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
     [SCFacebook logoutCallBack:^(BOOL success, id result)
     {
-        // ...
+        if (success)
+        {
+            aSuccess(self, nil);
+            [accessToken release];
+            accessToken = nil;
+        }
+        else
+        {
+            if(result)
+            {
+//                NSError* error = [[NSError alloc] initWithDomain:<#(NSString *)#> code:<#(NSInteger)#> userInfo:<#(NSDictionary *)#>]
+                aFailure(nil);
+            }
+        }
     }];
 }
 

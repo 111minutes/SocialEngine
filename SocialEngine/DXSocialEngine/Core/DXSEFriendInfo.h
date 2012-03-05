@@ -10,4 +10,8 @@
 
 @interface DXSEFriendInfo : NSObject
 
+@property (nonatomic, retain) NSString *userName;
+@property (nonatomic, retain) NSNumber *userID;
+@property (nonatomic, retain) NSString *userAvatorURL;
+
 @end

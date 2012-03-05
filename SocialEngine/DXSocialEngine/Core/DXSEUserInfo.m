@@ -10,4 +10,19 @@
 
 @implementation DXSEUserInfo
 
+//==============================================================================
+@synthesize userID, userName, userEmail, userAvatarURL, userBirthdayDate;
+
+//==============================================================================
+- (void) dealloc
+{
+    self.userID = nil;
+    self.userName = nil;
+    self.userEmail = nil;
+    self.userAvatarURL = nil;
+    self.userBirthdayDate = nil;
+    
+    [super dealloc];
+}
+
 @end

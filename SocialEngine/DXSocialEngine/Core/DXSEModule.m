@@ -11,6 +11,7 @@
 @implementation DXSEModule
 
 @synthesize initialConfig;
+@synthesize accessToken;
 
 #pragma mark - Init/Dealloc
 //==============================================================================
@@ -41,21 +42,32 @@
 //==============================================================================
 - (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
+    NSAssert(NO, @"You need override this method");
 }
 
 //==============================================================================
 - (void) logout
 {
+    NSAssert(NO, @"You need override this method");
+}
+
+//==============================================================================
+- (BOOL) isAuthorized
+{
+    NSAssert(NO, @"You need override this method");
+    return NO;
 }
 
 //==============================================================================
 - (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
+    NSAssert(NO, @"You need override this method");
 }
 
 //==============================================================================
 - (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
+    NSAssert(NO, @"You need override this method");
 }
 
 @end

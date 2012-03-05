@@ -10,4 +10,10 @@
 
 @interface DXSEUserInfo : NSObject
 
+@property (nonatomic, retain) NSNumber *userID;
+@property (nonatomic, retain) NSString *userName;
+@property (nonatomic, retain) NSString *userEmail;
+@property (nonatomic, retain) NSDate *userBirthdayDate;
+@property (nonatomic, retain) NSString *userAvatarURL;
+
 @end

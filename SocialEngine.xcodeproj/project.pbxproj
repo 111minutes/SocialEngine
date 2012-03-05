@@ -15,6 +15,7 @@
 		024687A914FE2642009E2CB9 /* DXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 024687A814FE2642009E2CB9 /* DXAppDelegate.m */; };
 		024687AC14FE2642009E2CB9 /* DXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024687AB14FE2642009E2CB9 /* DXViewController.m */; };
 		024687AF14FE2642009E2CB9 /* DXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024687AD14FE2642009E2CB9 /* DXViewController.xib */; };
+		027238A9150521370090730A /* SocialEngine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 027238A8150521370090730A /* SocialEngine.plist */; };
 		02E222781504FF3E00EF802E /* DXSEFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222661504FF3E00EF802E /* DXSEFriendInfo.m */; };
 		02E222791504FF3E00EF802E /* DXSEInitialConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222681504FF3E00EF802E /* DXSEInitialConfig.m */; };
 		02E2227A1504FF3E00EF802E /* DXSEModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E2226A1504FF3E00EF802E /* DXSEModule.m */; };
@@ -122,6 +123,7 @@
 		024687AA14FE2642009E2CB9 /* DXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXViewController.h; sourceTree = "<group>"; };
 		024687AB14FE2642009E2CB9 /* DXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXViewController.m; sourceTree = "<group>"; };
 		024687AE14FE2642009E2CB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DXViewController.xib; sourceTree = "<group>"; };
+		027238A8150521370090730A /* SocialEngine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SocialEngine.plist; sourceTree = "<group>"; };
 		02E222651504FF3E00EF802E /* DXSEFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEFriendInfo.h; sourceTree = "<group>"; };
 		02E222661504FF3E00EF802E /* DXSEFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEFriendInfo.m; sourceTree = "<group>"; };
 		02E222671504FF3E00EF802E /* DXSEInitialConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEInitialConfig.h; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				024687A114FE2642009E2CB9 /* InfoPlist.strings */,
 				024687A414FE2642009E2CB9 /* main.m */,
 				024687A614FE2642009E2CB9 /* SocialEngine-Prefix.pch */,
+				027238A8150521370090730A /* SocialEngine.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -405,16 +408,16 @@
 		02E222641504FF3E00EF802E /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				02E222651504FF3E00EF802E /* DXSEFriendInfo.h */,
-				02E222661504FF3E00EF802E /* DXSEFriendInfo.m */,
 				02E222671504FF3E00EF802E /* DXSEInitialConfig.h */,
 				02E222681504FF3E00EF802E /* DXSEInitialConfig.m */,
-				02E222691504FF3E00EF802E /* DXSEModule.h */,
-				02E2226A1504FF3E00EF802E /* DXSEModule.m */,
 				02E2226B1504FF3E00EF802E /* DXSESocialEngine.h */,
 				02E2226C1504FF3E00EF802E /* DXSESocialEngine.m */,
+				02E222691504FF3E00EF802E /* DXSEModule.h */,
+				02E2226A1504FF3E00EF802E /* DXSEModule.m */,
 				02E2226D1504FF3E00EF802E /* DXSEUserInfo.h */,
 				02E2226E1504FF3E00EF802E /* DXSEUserInfo.m */,
+				02E222651504FF3E00EF802E /* DXSEFriendInfo.h */,
+				02E222661504FF3E00EF802E /* DXSEFriendInfo.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -859,6 +862,7 @@
 				024687AF14FE2642009E2CB9 /* DXViewController.xib in Resources */,
 				E6EEE6BF1504ED3B0096C4CB /* FBDialog.bundle in Resources */,
 				E6EEE6ED1504ED3B0096C4CB /* README in Resources */,
+				027238A9150521370090730A /* SocialEngine.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,10 +1035,12 @@
 		024687B314FE2642009E2CB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialEngine/SocialEngine-Prefix.pch";
 				INFOPLIST_FILE = "SocialEngine/SocialEngine-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1042,10 +1048,12 @@
 		024687B414FE2642009E2CB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialEngine/SocialEngine-Prefix.pch";
 				INFOPLIST_FILE = "SocialEngine/SocialEngine-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

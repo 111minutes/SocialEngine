@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DXSEFacebook</key>
+	<dict>
+		<key>oauthKey</key>
+		<string></string>
+		<key>oauthSecret</key>
+		<string></string>
+		<key>redirectURL</key>
+		<string></string>
+	</dict>
+	<key>DXSETwitter</key>
+	<dict>
+		<key>oauthKey</key>
+		<string></string>
+		<key>oauthSecret</key>
+		<string></string>
+		<key>redirectURL</key>
+		<string></string>
+	</dict>
+	<key>DXSE4Square</key>
+	<dict>
+		<key>oauthKey</key>
+		<string></string>
+		<key>oauthSecret</key>
+		<string></string>
+		<key>redirectURL</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

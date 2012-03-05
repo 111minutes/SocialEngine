@@ -10,4 +10,16 @@
 
 @implementation DXSEFriendInfo
 
+//==============================================================================
+@synthesize userID, userName, userAvatorURL;
+
+//==============================================================================
+- (void) dealloc
+{
+    self.userID = nil;
+    self.userName = nil;
+    self.userAvatorURL = nil;
+    [super dealloc];
+}
+
 @end

@@ -8,6 +8,21 @@
 
 #import "DXSESocialEngine.h"
 
+
+//==============================================================================
+//==============================================================================
+//==============================================================================
+@interface DXSESocialEngine (Private)
+
+- (void) configure;
+- (DXSEModule*) initializeModuleWithKey:(NSString*)aModuleKey fromDictionary:(NSDictionary*)aDictionary;
+
+@end
+
+
+//==============================================================================
+//==============================================================================
+//==============================================================================
 @implementation DXSESocialEngine
 
 @synthesize facebook;
@@ -33,10 +48,7 @@
 {
     if( (self = [super init]) )
     {
-        // init with config
-        // ...
-        // init modules with own config
-        // ...
+        [self configure];
     }
     return self;
 }
@@ -54,10 +66,30 @@
 //==============================================================================
 - (void) configure
 {
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SocialEngine" ofType:@"config"];
-    NSDictionary* dicConfig = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"SocialEngine" ofType:@"plist"];
+    NSDictionary* dictConfig = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    NSAssert(dictConfig, @"Need config file!");
+    NSLog(@"config %@", dictConfig);
+
+    facebook = (DXSEFacebook*)[self initializeModuleWithKey:@"DXSEFacebook" fromDictionary:dictConfig];
+    twitter = (DXSETwitter*)[self initializeModuleWithKey:@"DXSETwitter" fromDictionary:dictConfig];
+    fourSquare = (DXSE4Square*)[self initializeModuleWithKey:@"DXSE4Square" fromDictionary:dictConfig];
+}
+
+//==============================================================================
+- (DXSEModule*) initializeModuleWithKey:(NSString*)aModuleKey fromDictionary:(NSDictionary*)aDictionary
+{
+    DXSEModule* result = nil;
+    NSDictionary* moduleDict = [aDictionary objectForKey:aModuleKey];
+    if(moduleDict)
+    {
+        DXSEInitialConfig* initialConfig = [[DXSEInitialConfig alloc] initWithDictionary:moduleDict];
+        if(initialConfig)
+            result = [[NSClassFromString(aModuleKey) alloc] initWithInitialConfig:initialConfig];
+        [initialConfig release];
+    }
     
-//    NSDictionary* [dicConfig objectForKey:@""];
+    return result;
 }
 
 @end

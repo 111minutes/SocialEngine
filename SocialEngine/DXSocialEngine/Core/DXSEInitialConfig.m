@@ -10,4 +10,26 @@
 
 @implementation DXSEInitialConfig
 
+@synthesize oauthKey;
+@synthesize oauthSecret;
+@synthesize redirectURL;
+
+//==============================================================================
+- (id) initWithDictionary:(NSDictionary*)aDictionary
+{
+    if( (self = [super init]) )
+    {
+        if(!aDictionary)
+        {
+            [self release];
+            return nil;
+        }
+        
+        oauthKey = [[aDictionary objectForKey:@"oauthKey"] retain];
+        oauthSecret = [[aDictionary objectForKey:@"oauthSecret"] retain];
+        redirectURL = [[aDictionary objectForKey:@"redirectURL"] retain];
+    }
+    return self;
+}
+
 @end

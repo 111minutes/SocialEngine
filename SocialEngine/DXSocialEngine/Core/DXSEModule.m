@@ -38,13 +38,24 @@
     [super dealloc];
 }
 
-////==============================================================================
-//- (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
-////==============================================================================
-//- (void) logout;
-////==============================================================================
-//- (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
-////==============================================================================
-//- (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+//==============================================================================
+- (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
+{
+}
+
+//==============================================================================
+- (void) logout
+{
+}
+
+//==============================================================================
+- (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
+{
+}
+
+//==============================================================================
+- (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
+{
+}
 
 @end

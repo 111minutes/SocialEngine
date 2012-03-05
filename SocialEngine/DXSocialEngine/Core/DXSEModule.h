@@ -12,7 +12,19 @@
 typedef void (^DXSESuccessBlock)(id data);
 typedef void (^DXSEFailureBlock)(NSError* error);
 
-@interface DXSEModule : NSObject
+//==============================================================================
+@protocol DXSEModuleProtocol <NSObject>
+
+- (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (void) logout;
+- (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+// other
+
+@end
+
+//==============================================================================
+@interface DXSEModule : NSObject <DXSEModuleProtocol>
 {
     DXSEInitialConfig* initialConfig;
 }
@@ -20,10 +32,5 @@ typedef void (^DXSEFailureBlock)(NSError* error);
 @property (nonatomic, readonly) DXSEInitialConfig* initialConfig;
 
 - (id) initWithInitialConfig:(DXSEInitialConfig*) anInitialConfig;
-
-//- (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
-//- (void) logout;
-//- (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
-//- (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 
 @end

@@ -10,4 +10,8 @@
 
 @interface DXViewController : UIViewController
 
+- (IBAction)twitterLoginPressed:(id)sender;
+- (IBAction)facebookLoginPressed:(id)sender;
+- (IBAction)foursquareLoginPressed:(id)sender;
+
 @end

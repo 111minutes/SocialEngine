@@ -9,7 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "DXSEModule.h"
 
+#import "OAuthSignInViewController.h"
 
-@interface DXSETwitter : DXSEModule
+
+@interface DXSETwitter : DXSEModule <OAuthSignInViewControllerDelegate>
+{
+	OAuthSignInViewController* signInController;
+    
+    DXSESuccessBlock successBlock;
+    DXSEFailureBlock failureBlock;
+}
 
 @end

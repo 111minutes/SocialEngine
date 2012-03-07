@@ -46,7 +46,7 @@
 }
 
 //==============================================================================
-- (void) logout
+- (void) logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
     NSAssert(NO, @"You need override this method");
 }

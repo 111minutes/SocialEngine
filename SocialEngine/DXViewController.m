@@ -41,7 +41,14 @@
 //==============================================================================
 - (IBAction)twitterLoginPressed:(id)sender
 {
-    ;
+    [[DXSESocialEngine sharedInstance].twitter login:^(DXSEModule *module, id data)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+        
+    } failure:^(NSError *error)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+    }];
 }
 
 //==============================================================================

@@ -77,20 +77,19 @@
 //==============================================================================
 - (BOOL) isAuthorized
 {
-    NSAssert(NO, @"You need override this method");
-    return NO;
+    return [[SCFacebook shared].facebook isSessionValid];
 }
 
 //==============================================================================
 - (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
-    NSAssert(NO, @"You need override this method");
+    NSAssert(NO, @"Not implement yet");
 }
 
 //==============================================================================
 - (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
-    NSAssert(NO, @"You need override this method");
+    NSAssert(NO, @"Not implement yet");
 }
 
 @end

@@ -8,7 +8,8 @@
 
 #import "DXSEFacebook.h"
 #import "SCFacebook.h"
-
+#import "DXSEUserInfo.h"
+#import "MUKitDefines.h"
 
 @implementation DXSEFacebook
 
@@ -39,14 +40,14 @@
         if (success)
         {
             aSuccess(self, nil);
-            accessToken = [[SCFacebook shared].facebook.accessToken retain];
+//            accessToken = [[SCFacebook shared].facebook.accessToken retain];
         }
         else
         {
             if(result)
             {
 //                NSError* error = [[NSError alloc] initWithDomain:<#(NSString *)#> code:<#(NSInteger)#> userInfo:<#(NSDictionary *)#>]
-                aFailure(nil);
+                aFailure(self, nil);
             }
         }
     }];
@@ -60,15 +61,13 @@
         if (success)
         {
             aSuccess(self, nil);
-            [accessToken release];
-            accessToken = nil;
         }
         else
         {
             if(result)
             {
 //                NSError* error = [[NSError alloc] initWithDomain:<#(NSString *)#> code:<#(NSInteger)#> userInfo:<#(NSDictionary *)#>]
-                aFailure(nil);
+                aFailure(self, nil);
             }
         }
     }];
@@ -77,20 +76,45 @@
 //==============================================================================
 - (BOOL) isAuthorized
 {
-    NSAssert(NO, @"You need override this method");
-    return NO;
+    return [[SCFacebook shared].facebook isSessionValid];
+}
+
+//==============================================================================
+- (NSString*) accessToken
+{
+    return [[SCFacebook shared].facebook accessToken];
 }
 
 //==============================================================================
 - (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
-    NSAssert(NO, @"You need override this method");
+    [SCFacebook getUserFQL:FQL_USER_STANDARD callBack:^(BOOL success, id result)
+    {
+        if(success)
+        {
+//            NSLog(@"%@", result);
+            DXSEUserInfo* userInfo = [DXSEUserInfo userInfo];
+            
+            userInfo.ID = NULL_PROTECT([result objectForKey:@"uid"]);
+            userInfo.name = NULL_PROTECT([result objectForKey:@"name"]);
+            userInfo.email = NULL_PROTECT([result objectForKey:@"email"]);
+            userInfo.birthdayDate = NULL_PROTECT([result objectForKey:@"birthday_date"]);
+            userInfo.avatarURL = [NSURL URLWithString:NULL_PROTECT([result objectForKey:@"pic"])];
+            
+            aSuccess(self, userInfo);
+        }
+        else
+        {
+            aFailure(self, nil);
+        }
+        
+    }];
 }
 
 //==============================================================================
 - (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
-    NSAssert(NO, @"You need override this method");
+    NSAssert(NO, @"Not implement yet");
 }
 
 @end

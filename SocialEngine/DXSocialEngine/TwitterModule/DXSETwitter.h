@@ -8,8 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "DXSEModule.h"
+#import "MGTwitterEngineDelegate.h"
+#import "OAuthSignInViewController.h"
 
 
-@interface DXSETwitter : DXSEModule
+@interface DXSETwitter : DXSEModule <OAuthSignInViewControllerDelegate, MGTwitterEngineDelegate>
+{
+	OAuthSignInViewController* signInController;
+    
+    NSMutableDictionary* successBlocks;
+    NSMutableDictionary* failureBlocks;
+    
+    NSString* userInfoIdentifier;
+}
 
 @end

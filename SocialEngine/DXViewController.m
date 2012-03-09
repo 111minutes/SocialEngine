@@ -41,7 +41,22 @@
 //==============================================================================
 - (IBAction)twitterLoginPressed:(id)sender
 {
-    ;
+    [[DXSESocialEngine sharedInstance].twitter login:^(DXSEModule *module, id data)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+        
+        [[DXSESocialEngine sharedInstance].twitter getUserInfoSuccess:^(DXSEModule *module, id data)
+        {
+            NSLog(@"UserInfo(Twitter): %@", [data description]);
+            
+        } failure:^(DXSEModule *module, NSError *error)
+        {
+        }];
+        
+    } failure:^(DXSEModule *module, NSError *error)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+    }];
 }
 
 //==============================================================================
@@ -49,8 +64,17 @@
 {
     [[DXSESocialEngine sharedInstance].facebook login:^(DXSEModule *module, id data) {
         [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+        
+        [[DXSESocialEngine sharedInstance].facebook getUserInfoSuccess:^(DXSEModule *module, id data)
+        {
+            NSLog(@"UserInfo(Facebook): %@", [data description]);
+            
+        } failure:^(DXSEModule *module, NSError *error)
+        {
+            //...
+        }];
     
-    } failure:^(NSError *error)
+    } failure:^(DXSEModule *module, NSError *error)
     {
         [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
     }];
@@ -69,10 +93,20 @@
     {
         [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
 
-    } failure:^(NSError *error)
+    } failure:^(DXSEModule *module, NSError *error)
     {
         [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"logout error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
     }];
+}
+
+//==============================================================================
+- (IBAction)twitterLogout
+{
+    [[DXSESocialEngine sharedInstance].twitter logout:^(DXSEModule *module, id data)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+        
+    } failure:nil];
 }
 
 @end

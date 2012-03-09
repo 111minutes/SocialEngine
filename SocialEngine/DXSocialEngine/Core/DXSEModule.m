@@ -11,7 +11,7 @@
 @implementation DXSEModule
 
 @synthesize entryConfig;
-@synthesize accessToken;
+//@synthesize accessToken;
 
 #pragma mark - Init/Dealloc
 //==============================================================================
@@ -46,7 +46,7 @@
 }
 
 //==============================================================================
-- (void) logout
+- (void) logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
     NSAssert(NO, @"You need override this method");
 }
@@ -56,6 +56,13 @@
 {
     NSAssert(NO, @"You need override this method");
     return NO;
+}
+
+//==============================================================================
+- (NSString*) accessToken
+{
+    NSAssert(NO, @"You need override this method");
+    return nil;
 }
 
 //==============================================================================

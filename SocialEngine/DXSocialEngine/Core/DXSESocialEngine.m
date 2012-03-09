@@ -71,9 +71,9 @@
     NSAssert(dictConfig, @"Need config file!");
     NSLog(@"config %@", dictConfig);
 
-    facebook = (DXSEFacebook*)[self initializeModuleWithKey:@"DXSEFacebook" fromDictionary:dictConfig];
-    twitter = (DXSETwitter*)[self initializeModuleWithKey:@"DXSETwitter" fromDictionary:dictConfig];
-    fourSquare = (DXSE4Square*)[self initializeModuleWithKey:@"DXSE4Square" fromDictionary:dictConfig];
+    facebook = [(DXSEFacebook*)[self initializeModuleWithKey:@"DXSEFacebook" fromDictionary:dictConfig] retain];
+    twitter = [(DXSETwitter*)[self initializeModuleWithKey:@"DXSETwitter" fromDictionary:dictConfig] retain];
+    fourSquare = [(DXSE4Square*)[self initializeModuleWithKey:@"DXSE4Square" fromDictionary:dictConfig] retain];
 }
 
 //==============================================================================
@@ -85,7 +85,7 @@
     {
         DXSEntryConfig* initialConfig = [[DXSEntryConfig alloc] initWithDictionary:moduleDict];
         if(initialConfig)
-            result = [[NSClassFromString(aModuleKey) alloc] initWithEntryConfig:initialConfig];
+            result = [[[NSClassFromString(aModuleKey) alloc] initWithEntryConfig:initialConfig] autorelease];
         [initialConfig release];
     }
     

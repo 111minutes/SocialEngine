@@ -41,7 +41,7 @@
 - (void)loadView {
 	[super loadView];
 	
-	_backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:kGGTwitterLoadingBackgroundImage]];
+	_backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:kGGTwitterLoadingBackgroundImage]] autorelease];
 
 	self.view = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 320, 416)] autorelease];	
 	_backgroundView.frame =  CGRectMake(0, 44, 320, 416);
@@ -219,11 +219,13 @@
 }
 
 
-- (void)dealloc {
+- (void)dealloc
+{
 	[_webView release];
-	[_navBar release];
-	[_backgroundView release];	
-	[_blockerView release];	
+    // Malaar: fuck my mind!
+//	[_navBar release];
+//	[_backgroundView release];	
+//	[_blockerView release];	
     [super dealloc];
 }
 

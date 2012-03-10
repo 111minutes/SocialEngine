@@ -23,11 +23,11 @@
 	<key>DXSE4Square</key>
 	<dict>
 		<key>oauthKey</key>
-		<string></string>
+		<string>WNTV2ERIO1RWMGJSMA4AZ2MLEVKDXD2BBVALLZUCOZPHK5RG</string>
 		<key>oauthSecret</key>
-		<string></string>
+		<string>AIH3QFBLR0XZJLSTYUYSM30IY5MNIWOKDEKGBJW5TRU0OHL5</string>
 		<key>redirectURL</key>
-		<string></string>
+		<string>https://dev.roundonme.com/</string>
 	</dict>
 </dict>
 </plist>

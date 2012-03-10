@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DXSEUserInfo.h"
+#import <Foundation/Foundation.h>
 
-@interface DXSEUserInfoTwitter : DXSEUserInfo
+@interface DXSEUserInfoTwitter : NSObject
 
 @property (nonatomic, retain) NSString* ID;
 @property (nonatomic, retain) NSString* name;

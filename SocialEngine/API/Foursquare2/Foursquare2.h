@@ -37,7 +37,12 @@ typedef enum {
 	
 }
 
+//Malaar:
+#pragma mark - 
++ (void) setOAuthKey:(NSString*)aOauthKey secret:(NSString*)aSecret redirectURL:(NSString*)aRedirectURL;
++ (NSString*) accessToken;
 
+#pragma mark - 
 +(void)getAccessTokenForCode:(NSString*)code callback:(id)callback;
 +(void)setAccessToken:(NSString*)token;
 +(void)removeAccessToken;

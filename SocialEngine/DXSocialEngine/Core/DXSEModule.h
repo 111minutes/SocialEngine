@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "DXSEntryConfig.h"
+#import "MUCocoaExtentions.h"
+#import "MUKitDefines.h"
 
 @class DXSEModule;
 
@@ -18,19 +20,39 @@ typedef void (^DXSEFailureBlock)(DXSEModule* module, NSError* error);
 @interface DXSEModule : NSObject
 {
     DXSEntryConfig* entryConfig;
+
+    NSMutableDictionary* successBlocks;
+    NSMutableDictionary* failureBlocks;
 }
 
 @property (nonatomic, readonly) DXSEntryConfig* entryConfig;
 
 - (id) initWithEntryConfig:(DXSEntryConfig*) anInitialConfig;
 
+#pragma mark - Authentication
 - (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 - (void) logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 - (BOOL) isAuthorized;
 - (NSString*) accessToken;
 
-- (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+#pragma mark - UserInfo
+- (void) getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 - (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+
+#pragma mark - 
 // other
+
+@end
+
+
+@interface DXSEModule (OnlyForSubclasses)
+
+- (void) showLoginController:(UIViewController*)aLoginController;
+- (void) hideLoginController;
+
+- (void) registerSuccessBlock:(DXSESuccessBlock)successBlock forKey:(NSString*)aBlockKey;
+- (void) registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString*)aBlockKey;
+- (void) executeSuccessBlockForKey:(NSString*)aBlockKey withData:(id)aData;
+- (void) executeFailureBlockForKey:(NSString*)aBlockKey withError:(NSError*)anError;
 
 @end

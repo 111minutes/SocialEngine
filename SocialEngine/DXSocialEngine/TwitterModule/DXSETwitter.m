@@ -10,30 +10,11 @@
 #import "MGTwitterEngine.h"
 #import "TwitterEngine.h"
 #import "DXSEUserInfoTwitter.h"
-#include "MUCocoaExtentions.h"
-#import "MUKitDefines.h"
 
 #define LOGIN               @"LOGIN"
 #define GET_USER_INFO       @"GET_USER_INFO"
 
-//==============================================================================
-//==============================================================================
-//==============================================================================
-@interface DXSETwitter (Private)
 
-- (void) showLoginController;
-- (void) hideLoginController;
-
-- (void) registerSuccessBlock:(DXSESuccessBlock)successBlock forKey:(NSString*)aBlockKey;
-- (void) registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString*)aBlockKey;
-- (void) executeSuccessBlockForKey:(NSString*)aBlockKey withData:(id)aData;
-- (void) executeFailureBlockForKey:(NSString*)aBlockKey withError:(NSError*)anError;
-
-@end
-
-//==============================================================================
-//==============================================================================
-//==============================================================================
 @implementation DXSETwitter
 
 #pragma mark - Init/Dealloc
@@ -49,9 +30,6 @@
 {
     if( (self = [super initWithEntryConfig:anInitialConfig]) )
     {
-        successBlocks = [NSMutableDictionary new];
-        failureBlocks = [NSMutableDictionary new];
-        
         [TwitterEngine sharedEngineWithDelegate:self];
         [[TwitterEngine sharedEngine] setConsumerKey:entryConfig.oauthKey secret:entryConfig.oauthSecret];
     }
@@ -60,15 +38,13 @@
 
 //==============================================================================
 - (void) dealloc
-{
-    [successBlocks release];
-    [failureBlocks release];
-    
+{    
     [userInfoIdentifier release];
 
     [super dealloc];
 }
 
+#pragma mark - Authentication
 //==============================================================================
 - (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
@@ -101,7 +77,7 @@
 }
 
 //==============================================================================
-- (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
+- (void) getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
     if(!userInfoIdentifier)
     {
@@ -158,7 +134,7 @@
 	[signInController loadRequest:[sharedEngine authorizeURLRequest]];
     
     // show login controller here
-    [self showLoginController];
+    [self showLoginController:signInController];
 }
 
 //==============================================================================
@@ -183,26 +159,16 @@
 }
 
 //==============================================================================
-- (void) showLoginController
+- (void) showLoginController:(UIViewController *)aLoginController
 {
-    UIView* view = (UIView*)[UIApplication sharedApplication].keyWindow;
-    if([view.subviews count] > 0)
-        view = [view.subviews objectAtIndex:0];
-    
-    UIViewController* controller = [view firstAvailableUIViewController];
-    [controller presentModalViewController:signInController animated:YES];
-    [signInController autorelease];
+    [super showLoginController:signInController];
+    [signInController release];
 }
 
 //==============================================================================
 - (void) hideLoginController
 {
-    UIView* view = (UIView*)[UIApplication sharedApplication].keyWindow;
-    if([view.subviews count] > 0)
-        view = [view.subviews objectAtIndex:0];
-    
-    UIViewController* controller = [view firstAvailableUIViewController];
-    [controller dismissModalViewControllerAnimated:YES];
+    [super hideLoginController];
     signInController = nil;
 }
 
@@ -219,6 +185,7 @@
     // ...
 }
 
+#pragma mark - UserInfo
 //==============================================================================
 - (void)userInfoReceived:(NSArray *)aUserInfo forRequest:(NSString *)connectionIdentifier
 {
@@ -241,34 +208,6 @@
     [self executeSuccessBlockForKey:GET_USER_INFO withData:userInfo];
 //    NSLog(@"Twitter - UserInfo:\n%@", aUserInfo);
     
-}
-
-//==============================================================================
-- (void) registerSuccessBlock:(DXSESuccessBlock)successBlock forKey:(NSString*)aBlockKey
-{
-    [successBlocks setObject:successBlock forKey:aBlockKey];
-}
-
-//==============================================================================
-- (void) registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString*)aBlockKey
-{
-    [failureBlocks setObject:failureBlock forKey:aBlockKey];
-}
-
-//==============================================================================
-- (void) executeSuccessBlockForKey:(NSString*)aBlockKey withData:(id)aData
-{
-    DXSESuccessBlock success = [successBlocks objectForKey:aBlockKey];
-    success(self, aData);
-    [successBlocks removeObjectForKey:aBlockKey];
-}
-
-//==============================================================================
-- (void) executeFailureBlockForKey:(NSString*)aBlockKey withError:(NSError*)anError
-{
-    DXSEFailureBlock failure = [failureBlocks objectForKey:aBlockKey];
-    failure(self, anError);
-    [failureBlocks removeObjectForKey:aBlockKey];
 }
 
 @end

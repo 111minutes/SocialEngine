@@ -45,7 +45,7 @@
     {
         [[[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
         
-        [[DXSESocialEngine sharedInstance].twitter getUserInfoSuccess:^(DXSEModule *module, id data)
+        [[DXSESocialEngine sharedInstance].twitter getUserInfo:^(DXSEModule *module, id data)
         {
             NSLog(@"UserInfo(Twitter): %@", [data description]);
             
@@ -62,10 +62,11 @@
 //==============================================================================
 - (IBAction)facebookLoginPressed:(id)sender
 {
-    [[DXSESocialEngine sharedInstance].facebook login:^(DXSEModule *module, id data) {
+    [[DXSESocialEngine sharedInstance].facebook login:^(DXSEModule *module, id data)
+    {
         [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
         
-        [[DXSESocialEngine sharedInstance].facebook getUserInfoSuccess:^(DXSEModule *module, id data)
+        [[DXSESocialEngine sharedInstance].facebook getUserInfo:^(DXSEModule *module, id data)
         {
             NSLog(@"UserInfo(Facebook): %@", [data description]);
             
@@ -83,7 +84,23 @@
 //==============================================================================
 - (IBAction)foursquareLoginPressed:(id)sender
 {
-    ;
+    [[DXSESocialEngine sharedInstance].fourSquare login:^(DXSEModule *module, id data)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"4Square" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+        
+        [[DXSESocialEngine sharedInstance].fourSquare getUserInfo:^(DXSEModule *module, id data)
+        {
+            NSLog(@"UserInfo(FourSquare): %@", data);
+            
+        } failure:^(DXSEModule *module, NSError *error)
+        {
+            // ...
+        }];
+
+    } failure:^(DXSEModule *module, NSError *error)
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"4Square" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+    }];
 }
 
 //==============================================================================

@@ -41,7 +41,11 @@
 - (void)loadView {
 	[super loadView];
 	
-	_backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:kGGTwitterLoadingBackgroundImage]] autorelease];
+//    NSBundle* twitterBundle = [NSBundle bundleWithPath:@"Twitter.bundle"];
+//    NSString* bgImagePath = [twitterBundle pathForResource:@"twitter_load" ofType:@"png" inDirectory:@"images"];
+    
+    NSString* bgImagePath = @"Twitter.bundle/images/twitter_load.png";
+	_backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:bgImagePath]] autorelease];
 
 	self.view = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 320, 416)] autorelease];	
 	_backgroundView.frame =  CGRectMake(0, 44, 320, 416);

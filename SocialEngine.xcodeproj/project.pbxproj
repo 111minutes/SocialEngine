@@ -15,9 +15,12 @@
 		024687A914FE2642009E2CB9 /* DXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 024687A814FE2642009E2CB9 /* DXAppDelegate.m */; };
 		024687AC14FE2642009E2CB9 /* DXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024687AB14FE2642009E2CB9 /* DXViewController.m */; };
 		024687AF14FE2642009E2CB9 /* DXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024687AD14FE2642009E2CB9 /* DXViewController.xib */; };
-		02485FB3150A8090003B4565 /* DXSEUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 02485FB2150A8090003B4565 /* DXSEUserInfo.m */; };
+		02485FB3150A8090003B4565 /* DXSEUserInfoFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 02485FB2150A8090003B4565 /* DXSEUserInfoFacebook.m */; };
 		02485FB6150A80CB003B4565 /* DXSEUserInfoTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02485FB5150A80CB003B4565 /* DXSEUserInfoTwitter.m */; };
 		027238A9150521370090730A /* SocialEngine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 027238A8150521370090730A /* SocialEngine.plist */; };
+		028FEF44150B7062006531CE /* FoursquareWebLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 028FEF43150B7062006531CE /* FoursquareWebLogin.m */; };
+		028FEF47150BBA1D006531CE /* Twitter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 028FEF46150BBA1D006531CE /* Twitter.bundle */; };
+		028FEF4A150BC11C006531CE /* DXSEUserInfo4Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 028FEF49150BC11C006531CE /* DXSEUserInfo4Square.m */; };
 		02E222781504FF3E00EF802E /* DXSEFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222661504FF3E00EF802E /* DXSEFriendInfo.m */; };
 		02E222791504FF3E00EF802E /* DXSEntryConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222681504FF3E00EF802E /* DXSEntryConfig.m */; };
 		02E2227A1504FF3E00EF802E /* DXSEModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E2226A1504FF3E00EF802E /* DXSEModule.m */; };
@@ -126,11 +129,16 @@
 		024687AA14FE2642009E2CB9 /* DXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXViewController.h; sourceTree = "<group>"; };
 		024687AB14FE2642009E2CB9 /* DXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXViewController.m; sourceTree = "<group>"; };
 		024687AE14FE2642009E2CB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DXViewController.xib; sourceTree = "<group>"; };
-		02485FB1150A8090003B4565 /* DXSEUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfo.h; sourceTree = "<group>"; };
-		02485FB2150A8090003B4565 /* DXSEUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfo.m; sourceTree = "<group>"; };
+		02485FB1150A8090003B4565 /* DXSEUserInfoFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DXSEUserInfoFacebook.h; sourceTree = "<group>"; };
+		02485FB2150A8090003B4565 /* DXSEUserInfoFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfoFacebook.m; sourceTree = "<group>"; };
 		02485FB4150A80CB003B4565 /* DXSEUserInfoTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfoTwitter.h; sourceTree = "<group>"; };
 		02485FB5150A80CB003B4565 /* DXSEUserInfoTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfoTwitter.m; sourceTree = "<group>"; };
 		027238A8150521370090730A /* SocialEngine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SocialEngine.plist; sourceTree = "<group>"; };
+		028FEF42150B7062006531CE /* FoursquareWebLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareWebLogin.h; sourceTree = "<group>"; };
+		028FEF43150B7062006531CE /* FoursquareWebLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareWebLogin.m; sourceTree = "<group>"; };
+		028FEF46150BBA1D006531CE /* Twitter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Twitter.bundle; sourceTree = "<group>"; };
+		028FEF48150BC11B006531CE /* DXSEUserInfo4Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfo4Square.h; sourceTree = "<group>"; };
+		028FEF49150BC11C006531CE /* DXSEUserInfo4Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfo4Square.m; sourceTree = "<group>"; };
 		02E222651504FF3E00EF802E /* DXSEFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEFriendInfo.h; sourceTree = "<group>"; };
 		02E222661504FF3E00EF802E /* DXSEFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEFriendInfo.m; sourceTree = "<group>"; };
 		02E222671504FF3E00EF802E /* DXSEntryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEntryConfig.h; sourceTree = "<group>"; };
@@ -409,10 +417,12 @@
 		02485FB0150A8090003B4565 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
-				02485FB1150A8090003B4565 /* DXSEUserInfo.h */,
-				02485FB2150A8090003B4565 /* DXSEUserInfo.m */,
+				02485FB1150A8090003B4565 /* DXSEUserInfoFacebook.h */,
+				02485FB2150A8090003B4565 /* DXSEUserInfoFacebook.m */,
 				02485FB4150A80CB003B4565 /* DXSEUserInfoTwitter.h */,
 				02485FB5150A80CB003B4565 /* DXSEUserInfoTwitter.m */,
+				028FEF48150BC11B006531CE /* DXSEUserInfo4Square.h */,
+				028FEF49150BC11C006531CE /* DXSEUserInfo4Square.m */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -485,6 +495,8 @@
 		E6EEE5D01504ED3B0096C4CB /* Foursquare2 */ = {
 			isa = PBXGroup;
 			children = (
+				028FEF42150B7062006531CE /* FoursquareWebLogin.h */,
+				028FEF43150B7062006531CE /* FoursquareWebLogin.m */,
 				E6EEE7121504EF220096C4CB /* Constants.h */,
 				E6EEE5D11504ED3B0096C4CB /* Foursquare2.h */,
 				E6EEE5D21504ED3B0096C4CB /* Foursquare2.m */,
@@ -650,6 +662,7 @@
 				E6EEE65C1504ED3B0096C4CB /* oauthconsumer */,
 				E6EEE6841504ED3B0096C4CB /* OAuthSignInViewController */,
 				E6EEE6871504ED3B0096C4CB /* TouchJSON */,
+				028FEF46150BBA1D006531CE /* Twitter.bundle */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -888,6 +901,7 @@
 				E6EEE6BF1504ED3B0096C4CB /* FBDialog.bundle in Resources */,
 				E6EEE6ED1504ED3B0096C4CB /* README in Resources */,
 				027238A9150521370090730A /* SocialEngine.plist in Resources */,
+				028FEF47150BBA1D006531CE /* Twitter.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,8 +1018,10 @@
 				02E2227E1504FF3E00EF802E /* DXSE4Square.m in Sources */,
 				02E2227F1504FF3E00EF802E /* DXSETwitter.m in Sources */,
 				02F420721507709200023A4C /* TwitterEngine.m in Sources */,
-				02485FB3150A8090003B4565 /* DXSEUserInfo.m in Sources */,
+				02485FB3150A8090003B4565 /* DXSEUserInfoFacebook.m in Sources */,
 				02485FB6150A80CB003B4565 /* DXSEUserInfoTwitter.m in Sources */,
+				028FEF44150B7062006531CE /* FoursquareWebLogin.m in Sources */,
+				028FEF4A150BC11C006531CE /* DXSEUserInfo4Square.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,4 +32,10 @@
     return self;
 }
 
+//==============================================================================
+- (NSString*) description
+{
+    return [NSString stringWithFormat:@"oauthKey=%@; oauthSecret=%@; redirectURL=%@", oauthKey, oauthSecret, redirectURL];
+}
+
 @end

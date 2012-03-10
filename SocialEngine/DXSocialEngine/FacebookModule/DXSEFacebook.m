@@ -8,7 +8,7 @@
 
 #import "DXSEFacebook.h"
 #import "SCFacebook.h"
-#import "DXSEUserInfo.h"
+#import "DXSEUserInfoFacebook.h"
 #import "MUKitDefines.h"
 
 @implementation DXSEFacebook
@@ -32,6 +32,7 @@
     return self;
 }
 
+#pragma mark - Authentication
 //==============================================================================
 - (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
@@ -85,15 +86,16 @@
     return [[SCFacebook shared].facebook accessToken];
 }
 
+#pragma mark - UserInfo
 //==============================================================================
-- (void) getUserInfoSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
+- (void) getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
     [SCFacebook getUserFQL:FQL_USER_STANDARD callBack:^(BOOL success, id result)
     {
         if(success)
         {
 //            NSLog(@"%@", result);
-            DXSEUserInfo* userInfo = [DXSEUserInfo userInfo];
+            DXSEUserInfoFacebook* userInfo = [DXSEUserInfoFacebook userInfo];
             
             userInfo.ID = NULL_PROTECT([result objectForKey:@"uid"]);
             userInfo.name = NULL_PROTECT([result objectForKey:@"name"]);

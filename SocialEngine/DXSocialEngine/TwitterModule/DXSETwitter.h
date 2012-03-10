@@ -16,9 +16,6 @@
 {
 	OAuthSignInViewController* signInController;
     
-    NSMutableDictionary* successBlocks;
-    NSMutableDictionary* failureBlocks;
-    
     NSString* userInfoIdentifier;
 }
 

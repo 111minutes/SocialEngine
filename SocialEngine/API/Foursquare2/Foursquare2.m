@@ -8,7 +8,9 @@
 
 #import "Foursquare2.h"
 
-
+static NSString* oauthKey = nil;
+static NSString* oauthSecret = nil;
+static NSString* redirectURL = nil;
 
 @interface Foursquare2 (PrivateAPI)
 + (void)        get:(NSString *)methodName
@@ -44,6 +46,22 @@
 
 @implementation Foursquare2
 
++ (void) setOAuthKey:(NSString*)aOauthKey secret:(NSString*)aSecret redirectURL:(NSString*)aRedirectURL
+{
+    [oauthKey release];
+    oauthKey = [aOauthKey copy];
+    [oauthSecret release];
+    oauthSecret = [aSecret copy];
+    [redirectURL release];
+    redirectURL = [aRedirectURL copy];
+    
+}
+
++ (NSString*) accessToken
+{
+    return [[self classAttributes] objectForKey:@"access_token"];
+}
+
 + (void)initialize
 {
 	[self setFormat:HRDataFormatJSON];
@@ -60,7 +78,7 @@
 	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 	[dic setObject:code forKey:@"code"];
 	[dic setObject:@"authorization_code" forKey:@"grant_type"];
-	[dic setObject:REDIRECT_URL forKey:@"redirect_uri"];
+	[dic setObject:redirectURL forKey:@"redirect_uri"];
 	[self get:@"oauth2/access_token" withParams:dic callback:callback];
 }
 
@@ -894,8 +912,8 @@
 +(NSDictionary*)generateFinalParamsFor:(NSDictionary *)params 
 {	
 	NSMutableDictionary *dict = [NSMutableDictionary new];
-	[dict setObject:OAUTH_KEY forKey:@"client_id"];
-	[dict setObject:OAUTH_SECRET forKey:@"client_secret"];
+	[dict setObject:oauthKey forKey:@"client_id"];
+	[dict setObject:oauthSecret forKey:@"client_secret"];
 	NSString *accessToken  = [[self classAttributes] objectForKey:@"access_token"];
 	if ([accessToken length] > 0)
 		[dict setObject:accessToken forKey:@"oauth_token"];
@@ -907,7 +925,7 @@
 		}
 	}
 	
-	return dict;
+	return [dict autorelease];
 }
 
 + (void)    request:(NSString *)methodName 

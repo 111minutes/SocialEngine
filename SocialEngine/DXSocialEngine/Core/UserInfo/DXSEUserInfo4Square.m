@@ -1,31 +1,31 @@
 //
-//  DXSEUserInfo.m
+//  DXSEUserInfo4Square.m
 //  SocialEngine
 //
-//  Created by Malaar on 3/5/12.
+//  Created by Malaar on 10.03.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DXSEUserInfo.h"
+#import "DXSEUserInfo4Square.h"
 
-@implementation DXSEUserInfo
+@implementation DXSEUserInfo4Square
 
-@synthesize ID, name, email, avatarURL, birthdayDate;
+@synthesize ID, firstName, lastName, email, avatarURL;
 
 //==============================================================================
-+ (id) userInfo
++ (id) userInfo4Square
 {
-    return [[[DXSEUserInfo alloc] init] autorelease];
+    return [[[DXSEUserInfo4Square alloc] init] autorelease];
 }
 
 //==============================================================================
 - (void) dealloc
 {
     [ID release];
-    [name release];
+    [firstName release];
+    [lastName release];
     [email release];
     [avatarURL release];
-    [birthdayDate release];
     
     [super dealloc];
 }
@@ -33,8 +33,8 @@
 //==============================================================================
 - (NSString*) description
 {
-    return [NSString stringWithFormat:@"id=%@; name=%@; email=%@; birthdate=%@; avatarURL=%@",
-            ID, name, email, birthdayDate, avatarURL];
+    return [NSString stringWithFormat:@"id=%@; firstName=%@; lastName=%@; email=%@; avatarURL=%@;",
+            ID, firstName, lastName, email, avatarURL];
 }
 
 @end

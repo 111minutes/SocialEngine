@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "DXSEModule.h"
+#import "FoursquareWebLogin.h"
 
 
-@interface DXSE4Square : DXSEModule
+@interface DXSE4Square : DXSEModule <FoursquareWebLoginDelegate>
 
 @end

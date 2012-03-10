@@ -1,0 +1,1 @@
+../../MUKit/MUControls/MUTableViewCell2Half/MUCellLb3WithFullWidthLb1.h

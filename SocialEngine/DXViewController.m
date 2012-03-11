@@ -51,6 +51,7 @@
             
         } failure:^(DXSEModule *module, NSError *error)
         {
+            NSLog(@"UserInfo: failed");
         }];
         
     } failure:^(DXSEModule *module, NSError *error)
@@ -72,7 +73,7 @@
             
         } failure:^(DXSEModule *module, NSError *error)
         {
-            //...
+            NSLog(@"UserInfo: failed");
         }];
     
     } failure:^(DXSEModule *module, NSError *error)
@@ -94,7 +95,7 @@
             
         } failure:^(DXSEModule *module, NSError *error)
         {
-            // ...
+            NSLog(@"UserInfo: failed");
         }];
 
     } failure:^(DXSEModule *module, NSError *error)

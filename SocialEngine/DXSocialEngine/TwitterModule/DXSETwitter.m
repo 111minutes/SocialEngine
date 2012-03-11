@@ -121,6 +121,7 @@
 {
 	// hide login controller here
     [self hideLoginController];
+    [self executeFailureBlockForKey:LOGIN withError:nil];
 }
 
 #pragma mark - oAuth delegate

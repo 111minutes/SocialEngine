@@ -5,3 +5,12 @@ build.output
 *.xcodeproj/project.xcworkspace/xcuserdata/*
 *.xcodeproj/xcuserdata/*
 pkg/
+*.xcodeproj/**
+!*.xcodeproj/*.pbxproj
+
+*.xcworkspace/**
+!*.xcworkspace/*.xcworkspacedata
+
+Pods
+Podfile.lock
+.idea

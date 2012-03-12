@@ -59,8 +59,9 @@
 //==============================================================================
 - (void) logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
+    [[TwitterEngine sharedEngine] clearAllTwitterCookies];
     [[TwitterEngine sharedEngine] endUserSession];
-//    [[TwitterEngine sharedEngine] clearAccessToken];
+    [[TwitterEngine sharedEngine] clearAccessToken];
     aSuccess(self, nil);
 }
 

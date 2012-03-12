@@ -65,6 +65,7 @@
 - (void)setUsesSecureConnection:(BOOL)flag;
 - (BOOL)clearsCookies; // YES = deletes twitter.com cookies when setting username/password, default is NO (see README.txt)
 - (void)setClearsCookies:(BOOL)flag;
+- (void)clearAllTwitterCookies;
 #if YAJL_AVAILABLE || TOUCHJSON_AVAILABLE
 - (MGTwitterEngineDeliveryOptions)deliveryOptions;
 - (void)setDeliveryOptions:(MGTwitterEngineDeliveryOptions)deliveryOptions;

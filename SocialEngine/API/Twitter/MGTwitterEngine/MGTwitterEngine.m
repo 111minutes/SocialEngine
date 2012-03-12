@@ -305,6 +305,23 @@
 	_clearsCookies = flag;
 }
 
+- (void)clearAllTwitterCookies
+{
+    // Remove all cookies for twitter, to ensure next connection uses new credentials.
+    NSString *urlString = [NSString stringWithFormat:@"%@://%@", 
+                           (_secureConnection) ? @"https" : @"http", 
+                           _APIDomain];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSEnumerator *enumerator = [[cookieStorage cookiesForURL:url] objectEnumerator];
+    NSHTTPCookie *cookie = nil;
+    while ((cookie = [enumerator nextObject])) {
+        [cookieStorage deleteCookie:cookie];
+    }
+
+}
+
 #if YAJL_AVAILABLE || TOUCHJSON_AVAILABLE
 
 - (MGTwitterEngineDeliveryOptions)deliveryOptions

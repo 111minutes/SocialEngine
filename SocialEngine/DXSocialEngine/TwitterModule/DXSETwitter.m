@@ -103,7 +103,7 @@
 	engine._pin = pin;
 	
 	//since we got the pin, we can ask for the access token now.
-	[engine requestAccessToken:self onSuccess:@selector(onAccessTokenSuccess:withData:) onFail:@selector(onAccessTokenFailed:)];
+	[engine requestAccessToken:self onSuccess:@selector(onAccessTokenSuccess:withData:) onFail:@selector(onAccessTokenFailed:withData:)];
 
 	// hide login controller here
     [self hideLoginController];
@@ -148,8 +148,16 @@
 //==============================================================================
 - (void) onAccessTokenSuccess:(OAServiceTicket *)ticket withData:(NSData *)data
 {
-	[[TwitterEngine sharedEngine] setAccessTokenWith:ticket withData:data];
-    [self executeSuccessBlockForKey:LOGIN withData:nil];
+    if (ticket.didSucceed)
+    {
+        [[TwitterEngine sharedEngine] setAccessTokenWith:ticket withData:data];
+        [self executeSuccessBlockForKey:LOGIN withData:nil];
+    }
+    else
+    {
+        NSLog(@"Twitter: Access token failed");
+        [self executeFailureBlockForKey:LOGIN withError:nil];
+    }
 }
 
 //==============================================================================

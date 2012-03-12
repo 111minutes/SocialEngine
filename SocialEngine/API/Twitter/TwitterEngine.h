@@ -10,9 +10,9 @@
 #import "MGTwitterEngine.h"
 #import "OAuthConsumer.h"
 
-#define kRequestURL @"http://twitter.com/oauth/request_token"
-#define kAccessURL @"http://twitter.com/oauth/access_token"
-#define kAuthorizeURL @"http://twitter.com/oauth/authorize"
+#define kRequestURL @"https://api.twitter.com/oauth/request_token"
+#define kAccessURL @"https://api.twitter.com/oauth/access_token"
+#define kAuthorizeURL @"https://api.twitter.com/oauth/authorize"
 
 //#define kOAuthConsumerKey @"ZN2LGwXNrASxqpHyPbSuEQ"	//TODO: Add your consumer key here
 //#define kOAuthConsumerSecret @"LeNCyssmt6FBV4OQF0Kz5NLie3oqyxh1QgP2GwvCZE"	//TODO: add your consumer secret here.

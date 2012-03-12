@@ -69,6 +69,9 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    
+    NSLog(@"response statusCode %d",[(NSHTTPURLResponse *)response statusCode]);
+    
 	OAServiceTicket *ticket = [[OAServiceTicket alloc] initWithRequest:request
 															  response:response
 																  data:responseData

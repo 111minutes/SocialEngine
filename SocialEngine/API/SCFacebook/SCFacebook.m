@@ -41,7 +41,7 @@ static SCFacebook * _scFacebook = nil;
 @synthesize postType;
 
 // Malaar:
-@synthesize facebook;
+@synthesize facebook = _facebook;
 @synthesize oauthKey;
 
 

@@ -66,9 +66,10 @@
     [[DXSESocialEngine sharedInstance].facebook login:^(DXSEModule *module, id data)
     {
         [[[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
-        
+        NSLog(@"facebook accessToken %@",[[DXSESocialEngine sharedInstance].facebook accessToken]);
         [[DXSESocialEngine sharedInstance].facebook getUserInfo:^(DXSEModule *module, id data)
         {
+            NSLog(@"facebook accessToken %@",[[DXSESocialEngine sharedInstance].facebook accessToken]);
             NSLog(@"UserInfo(Facebook): %@", [data description]);
             
         } failure:^(DXSEModule *module, NSError *error)

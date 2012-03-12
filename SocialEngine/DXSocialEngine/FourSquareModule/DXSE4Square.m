@@ -114,15 +114,15 @@
 
             NSDictionary* userDict = [[result objectForKey:@"response"] objectForKey:@"user"];
 
-            userInfo.ID = NULL_PROTECT([userDict objectForKey:@"id"]);
-            userInfo.firstName = NULL_PROTECT([userDict objectForKey:@"firstName"]);
-            userInfo.lastName = NULL_PROTECT([userDict objectForKey:@"lastName"]);
-            userInfo.avatarURL = NULL_PROTECT([userDict objectForKey:@"photo"]);
+            userInfo.ID = MU_NULL_PROTECT([userDict objectForKey:@"id"]);
+            userInfo.firstName = MU_NULL_PROTECT([userDict objectForKey:@"firstName"]);
+            userInfo.lastName = MU_NULL_PROTECT([userDict objectForKey:@"lastName"]);
+            userInfo.avatarURL = MU_NULL_PROTECT([userDict objectForKey:@"photo"]);
 
-            NSDictionary* contactDict = NULL_PROTECT([userDict objectForKey:@"contact"]);
+            NSDictionary* contactDict = MU_NULL_PROTECT([userDict objectForKey:@"contact"]);
             if(contactDict)
             {
-                userInfo.email = NULL_PROTECT([contactDict objectForKey:@"email"]);
+                userInfo.email = MU_NULL_PROTECT([contactDict objectForKey:@"email"]);
             }
 
             aSuccess(self, userInfo);

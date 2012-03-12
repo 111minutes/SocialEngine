@@ -97,11 +97,11 @@
 //            NSLog(@"%@", result);
             DXSEUserInfoFacebook* userInfo = [DXSEUserInfoFacebook userInfo];
             
-            userInfo.ID = NULL_PROTECT([result objectForKey:@"uid"]);
-            userInfo.name = NULL_PROTECT([result objectForKey:@"name"]);
-            userInfo.email = NULL_PROTECT([result objectForKey:@"email"]);
-            userInfo.birthdayDate = NULL_PROTECT([result objectForKey:@"birthday_date"]);
-            userInfo.avatarURL = [NSURL URLWithString:NULL_PROTECT([result objectForKey:@"pic"])];
+            userInfo.ID = MU_NULL_PROTECT([result objectForKey:@"uid"]);
+            userInfo.name = MU_NULL_PROTECT([result objectForKey:@"name"]);
+            userInfo.email = MU_NULL_PROTECT([result objectForKey:@"email"]);
+            userInfo.birthdayDate = MU_NULL_PROTECT([result objectForKey:@"birthday_date"]);
+            userInfo.avatarURL = [NSURL URLWithString:MU_NULL_PROTECT([result objectForKey:@"pic"])];
             
             aSuccess(self, userInfo);
         }

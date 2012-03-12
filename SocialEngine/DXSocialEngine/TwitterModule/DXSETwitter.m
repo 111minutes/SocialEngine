@@ -210,9 +210,9 @@
     NSDictionary* userDict = [aUserInfo lastObject];
     
     DXSEUserInfoTwitter* userInfo = [DXSEUserInfoTwitter userInfoTwitter];
-    userInfo.ID = [((NSNumber*)NULL_PROTECT([userDict objectForKey:@"id"])) stringValue];
-    userInfo.name = NULL_PROTECT([userDict objectForKey:@"name"]);
-    userInfo.screenName = NULL_PROTECT([userDict objectForKey:@"screen_name"]);
+    userInfo.ID = [((NSNumber*)MU_NULL_PROTECT([userDict objectForKey:@"id"])) stringValue];
+    userInfo.name = MU_NULL_PROTECT([userDict objectForKey:@"name"]);
+    userInfo.screenName = MU_NULL_PROTECT([userDict objectForKey:@"screen_name"]);
     
     [self executeSuccessBlockForKey:GET_USER_INFO withData:userInfo];
 //    NSLog(@"Twitter - UserInfo:\n%@", aUserInfo);

@@ -117,13 +117,13 @@
 //==============================================================================
 - (void) registerSuccessBlock:(DXSESuccessBlock)successBlock forKey:(NSString*)aBlockKey
 {
-    [successBlocks setObject:successBlock forKey:aBlockKey];
+    [successBlocks setObject:[[successBlock copy] autorelease] forKey:aBlockKey];
 }
 
 //==============================================================================
 - (void) registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString*)aBlockKey
 {
-    [failureBlocks setObject:failureBlock forKey:aBlockKey];
+    [failureBlocks setObject:[[failureBlock copy] autorelease] forKey:aBlockKey];
 }
 
 //==============================================================================

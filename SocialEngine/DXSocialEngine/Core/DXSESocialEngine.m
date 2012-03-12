@@ -92,4 +92,10 @@
     return result;
 }
 
+//==============================================================================
+- (DXSEModule *) firstAuthorizedModule
+{
+    return [facebook isAuthorized] ? facebook : [twitter isAuthorized] ? twitter : [fourSquare isAuthorized] ? fourSquare : nil; 
+}
+
 @end

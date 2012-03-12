@@ -21,5 +21,6 @@
 
 + (DXSESocialEngine*) sharedInstance;
 
+- (DXSEModule *) firstAuthorizedModule;
 
 @end

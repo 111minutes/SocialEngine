@@ -9,6 +9,7 @@
 #import "DXAppDelegate.h"
 
 #import "DXViewController.h"
+#import "DXSESocialEngine.h"
 
 @implementation DXAppDelegate
 
@@ -74,13 +75,13 @@
 //SCFacebook Implementation
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"OPEN_URL" object:url];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DXSE_OPEN_URL object:url];
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"OPEN_URL" object:url];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DXSE_OPEN_URL object:url];
     return YES;
 }
 

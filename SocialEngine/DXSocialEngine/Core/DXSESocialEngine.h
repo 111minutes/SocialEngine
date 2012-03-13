@@ -11,6 +11,8 @@
 #import "DXSETwitter.h"
 #import "DXSE4Square.h"
 
+#define DXSE_OPEN_URL @"OPEN_URL"
+
 @interface DXSESocialEngine : NSObject
 {
 }

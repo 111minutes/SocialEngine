@@ -77,7 +77,10 @@
 																  data:responseData
 															didSucceed:[(NSHTTPURLResponse *)response statusCode] < 400];
     [ticket autorelease];
-	[delegate performSelector:didFinishSelector withObject:ticket withObject:responseData];
+    if ([ticket didSucceed])
+        [delegate performSelector:didFinishSelector withObject:ticket withObject:responseData];
+    else
+        [delegate performSelector:didFailSelector withObject:ticket withObject:responseData];
 	
 	//TODO: document this, obviously you don't autorelease and then release again!
 	//[ticket release], ticket = nil;

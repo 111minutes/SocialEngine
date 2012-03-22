@@ -14,11 +14,11 @@
 	<key>DXSETwitter</key>
 	<dict>
 		<key>oauthKey</key>
-		<string>ZN2LGwXNrASxqpHyPbSuEQ</string>
+		<string>bTbgFez3wjSnrTiebajtsA</string>
 		<key>oauthSecret</key>
-		<string>LeNCyssmt6FBV4OQF0Kz5NLie3oqyxh1QgP2GwvCZE</string>
+		<string>bNYJtQh4ZWYyAixAPBNUaoWyLp6y8xHlCUuWhs441U</string>
 		<key>redirectURL</key>
-		<string></string>
+		<string>http://google.com</string>
 	</dict>
 	<key>DXSE4Square</key>
 	<dict>

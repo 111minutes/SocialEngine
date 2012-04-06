@@ -8,8 +8,25 @@
 
 #import "OAuthSignInViewController.h"
 
+// iPhone frames
+#define IPHONE_VIEW_FRAME CGRectMake(0, 0, 320, 416)
+#define IPHONE_BACKGROUND_VIEW_FRAME CGRectMake(0, 44, 320, 416)
+#define IPHONE_NAVIGATION_BAR_FRAME CGRectMake(0, 0, 320, 44)
+
+// iPad frames
+#define IPAD_VIEW_FRAME CGRectMake(0, 0, 768, 960)
+#define IPAD_BACKGROUND_VIEW_FRAME CGRectMake(0, 44, 768, 960)
+#define IPAD_NAVIGATION_BAR_FRAME CGRectMake(0, 0, 768, 44)
+
+BOOL isIPad(void);
+
 @implementation OAuthSignInViewController
 @synthesize delegate;
+
+BOOL isIPad()
+{
+    return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
+}
 
 - (id)init
 {
@@ -20,19 +37,20 @@
 	if (self = [super init]) {		
 		self.delegate = aDelegate;
 		_firstLoad = YES;		
-		_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 44, 320, 416)];		
-		_webView.alpha = 0.0;
-		_webView.delegate = self;
-		_webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
-		//Because twitter will present a pin on the site instead of the oauth_verifier for mobile applications
-		//we will try to detect the number, so we turn off phone number recognition and we turn on data recognition.
-		if ([_webView respondsToSelector: @selector(setDetectsPhoneNumbers:)]){ 			
-			[(id) _webView setDetectsPhoneNumbers: NO];
-		}
-		if ([_webView respondsToSelector: @selector(setDataDetectorTypes:)]){
-			[(id) _webView setDataDetectorTypes:UIDataDetectorTypeNone];
-		}
+		
+        _webView = [[UIWebView alloc] initWithFrame: isIPad() ? IPAD_BACKGROUND_VIEW_FRAME : IPHONE_BACKGROUND_VIEW_FRAME];		
+        _webView.alpha = 0.0;
+        _webView.delegate = self;
+        _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+        //Because twitter will present a pin on the site instead of the oauth_verifier for mobile applications
+        //we will try to detect the number, so we turn off phone number recognition and we turn on data recognition.
+        if ([_webView respondsToSelector: @selector(setDetectsPhoneNumbers:)]){ 			
+            [(id) _webView setDetectsPhoneNumbers: NO];
+        }
+        if ([_webView respondsToSelector: @selector(setDataDetectorTypes:)]){
+            [(id) _webView setDataDetectorTypes:UIDataDetectorTypeNone];
+        }
 	}
 	return self;
 }
@@ -41,23 +59,23 @@
 - (void)loadView {
 	[super loadView];
 	
-//    NSBundle* twitterBundle = [NSBundle bundleWithPath:@"Twitter.bundle"];
-//    NSString* bgImagePath = [twitterBundle pathForResource:@"twitter_load" ofType:@"png" inDirectory:@"images"];
+    //    NSBundle* twitterBundle = [NSBundle bundleWithPath:@"Twitter.bundle"];
+    //    NSString* bgImagePath = [twitterBundle pathForResource:@"twitter_load" ofType:@"png" inDirectory:@"images"];
     
     NSString* bgImagePath = @"Twitter.bundle/images/twitter_load.png";
 	_backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:bgImagePath]] autorelease];
-
-	self.view = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 320, 416)] autorelease];	
-	_backgroundView.frame =  CGRectMake(0, 44, 320, 416);
-	_navBar = [[[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, 320, 44)] autorelease];
-
+    
+	self.view = [[[UIView alloc] initWithFrame: isIPad() ? IPAD_VIEW_FRAME : IPHONE_VIEW_FRAME ] autorelease];	
+	_backgroundView.frame =  isIPad() ? IPAD_BACKGROUND_VIEW_FRAME : IPHONE_BACKGROUND_VIEW_FRAME;
+	_navBar = [[[UINavigationBar alloc] initWithFrame: isIPad() ? IPAD_NAVIGATION_BAR_FRAME : IPHONE_NAVIGATION_BAR_FRAME] autorelease];
+    
 	_navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
 	_backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	
 	[self.view addSubview:_backgroundView];
 	
-	[self.view addSubview: _webView];
+    [self.view addSubview: _webView];
 	
 	[self.view addSubview: _navBar];
 	
@@ -66,7 +84,7 @@
 	_blockerView.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2);
 	_blockerView.alpha = 0.0;
 	_blockerView.clipsToBounds = YES;
-			
+    
 	UILabel	*label = [[[UILabel alloc] initWithFrame: CGRectMake(0, 5, _blockerView.bounds.size.width, 15)] autorelease];
 	label.text = NSLocalizedString(@"Please Wait…", nil);
 	label.backgroundColor = [UIColor clearColor];
@@ -86,6 +104,7 @@
 	
 	[_navBar pushNavigationItem: navItem animated: NO];
 }
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

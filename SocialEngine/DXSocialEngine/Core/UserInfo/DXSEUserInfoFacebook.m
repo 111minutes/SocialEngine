@@ -10,7 +10,7 @@
 
 @implementation DXSEUserInfoFacebook
 
-@synthesize ID, name, email, avatarURL, birthdayDate;
+@synthesize name, email, avatarURL, birthdayDate;
 
 //==============================================================================
 + (id) userInfo
@@ -21,7 +21,6 @@
 //==============================================================================
 - (void) dealloc
 {
-    [ID release];
     [name release];
     [email release];
     [avatarURL release];
@@ -34,7 +33,7 @@
 - (NSString*) description
 {
     return [NSString stringWithFormat:@"id=%@; name=%@; email=%@; birthdate=%@; avatarURL=%@",
-            ID, name, email, birthdayDate, avatarURL];
+            self.ID, name, email, birthdayDate, avatarURL];
 }
 
 @end

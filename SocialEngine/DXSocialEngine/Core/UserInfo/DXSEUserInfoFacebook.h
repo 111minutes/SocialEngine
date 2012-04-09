@@ -6,11 +6,10 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "DXSEUserInfo.h"
 
-@interface DXSEUserInfoFacebook : NSObject
+@interface DXSEUserInfoFacebook : DXSEUserInfo
 
-@property (nonatomic, retain) NSString *ID;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *email;
 @property (nonatomic, retain) NSDate *birthdayDate;

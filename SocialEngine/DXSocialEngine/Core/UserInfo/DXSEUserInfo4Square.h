@@ -6,11 +6,10 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "DXSEUserInfo.h"
 
-@interface DXSEUserInfo4Square : NSObject
+@interface DXSEUserInfo4Square : DXSEUserInfo
 
-@property (nonatomic, retain) NSString *ID;
 @property (nonatomic, retain) NSString *firstName;
 @property (nonatomic, retain) NSString *lastName;
 @property (nonatomic, retain) NSString *email;

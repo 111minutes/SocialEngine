@@ -10,7 +10,7 @@
 
 @implementation DXSEUserInfo4Square
 
-@synthesize ID, firstName, lastName, email, avatarURL;
+@synthesize firstName, lastName, email, avatarURL;
 
 //==============================================================================
 + (id) userInfo4Square
@@ -21,7 +21,6 @@
 //==============================================================================
 - (void) dealloc
 {
-    [ID release];
     [firstName release];
     [lastName release];
     [email release];
@@ -34,7 +33,7 @@
 - (NSString*) description
 {
     return [NSString stringWithFormat:@"id=%@; firstName=%@; lastName=%@; email=%@; avatarURL=%@;",
-            ID, firstName, lastName, email, avatarURL];
+            self.ID, firstName, lastName, email, avatarURL];
 }
 
 @end

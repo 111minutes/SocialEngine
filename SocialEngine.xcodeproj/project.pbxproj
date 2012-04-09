@@ -30,6 +30,7 @@
 		02E2227F1504FF3E00EF802E /* DXSETwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222771504FF3E00EF802E /* DXSETwitter.m */; };
 		02F420721507709200023A4C /* TwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F420711507709200023A4C /* TwitterEngine.m */; };
 		5A85C38B197543E8BAFEC418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58526CBD1A4729B697B353 /* libPods.a */; };
+		E6CF5D25153326310043ABEE /* DXSEUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CF5D24153326300043ABEE /* DXSEUserInfo.m */; };
 		E6EEE6A31504ED3B0096C4CB /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D21504ED3B0096C4CB /* Foursquare2.m */; };
 		E6EEE6A41504ED3B0096C4CB /* HRRequest+PhotoExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D41504ED3B0096C4CB /* HRRequest+PhotoExt.m */; };
 		E6EEE6A51504ED3B0096C4CB /* NSDictionary+ParamUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D81504ED3B0096C4CB /* NSDictionary+ParamUtils.m */; };
@@ -129,7 +130,7 @@
 		024687AA14FE2642009E2CB9 /* DXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXViewController.h; sourceTree = "<group>"; };
 		024687AB14FE2642009E2CB9 /* DXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXViewController.m; sourceTree = "<group>"; };
 		024687AE14FE2642009E2CB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DXViewController.xib; sourceTree = "<group>"; };
-		02485FB1150A8090003B4565 /* DXSEUserInfoFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DXSEUserInfoFacebook.h; sourceTree = "<group>"; };
+		02485FB1150A8090003B4565 /* DXSEUserInfoFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfoFacebook.h; sourceTree = "<group>"; };
 		02485FB2150A8090003B4565 /* DXSEUserInfoFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfoFacebook.m; sourceTree = "<group>"; };
 		02485FB4150A80CB003B4565 /* DXSEUserInfoTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfoTwitter.h; sourceTree = "<group>"; };
 		02485FB5150A80CB003B4565 /* DXSEUserInfoTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfoTwitter.m; sourceTree = "<group>"; };
@@ -157,6 +158,8 @@
 		02F420711507709200023A4C /* TwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterEngine.m; sourceTree = "<group>"; };
 		5B58526CBD1A4729B697B353 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B412CF15C9504E38B5FEE5CE /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		E6CF5D231533262F0043ABEE /* DXSEUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfo.h; sourceTree = "<group>"; };
+		E6CF5D24153326300043ABEE /* DXSEUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfo.m; sourceTree = "<group>"; };
 		E6EEE5D11504ED3B0096C4CB /* Foursquare2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare2.h; sourceTree = "<group>"; };
 		E6EEE5D21504ED3B0096C4CB /* Foursquare2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare2.m; sourceTree = "<group>"; };
 		E6EEE5D31504ED3B0096C4CB /* HRRequest+PhotoExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HRRequest+PhotoExt.h"; sourceTree = "<group>"; };
@@ -417,6 +420,8 @@
 		02485FB0150A8090003B4565 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				E6CF5D231533262F0043ABEE /* DXSEUserInfo.h */,
+				E6CF5D24153326300043ABEE /* DXSEUserInfo.m */,
 				02485FB1150A8090003B4565 /* DXSEUserInfoFacebook.h */,
 				02485FB2150A8090003B4565 /* DXSEUserInfoFacebook.m */,
 				02485FB4150A80CB003B4565 /* DXSEUserInfoTwitter.h */,
@@ -1022,6 +1027,7 @@
 				02485FB6150A80CB003B4565 /* DXSEUserInfoTwitter.m in Sources */,
 				028FEF44150B7062006531CE /* FoursquareWebLogin.m in Sources */,
 				028FEF4A150BC11C006531CE /* DXSEUserInfo4Square.m in Sources */,
+				E6CF5D25153326310043ABEE /* DXSEUserInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

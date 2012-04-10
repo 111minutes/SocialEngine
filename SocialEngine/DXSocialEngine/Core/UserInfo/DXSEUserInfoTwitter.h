@@ -10,8 +10,8 @@
 
 @interface DXSEUserInfoTwitter : DXSEUserInfo
 
-@property (nonatomic, retain) NSString* name;
-@property (nonatomic, retain) NSString* screenName;
+@property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSString* screenName;
 
 + (id) userInfoTwitter;
 

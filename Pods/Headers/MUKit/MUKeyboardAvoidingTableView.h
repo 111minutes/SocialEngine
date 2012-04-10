@@ -1,1 +1,1 @@
-../../MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingTableView.h
+../../MUKit/MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingTableView.h

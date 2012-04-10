@@ -10,10 +10,10 @@
 
 @interface DXSEUserInfoFacebook : DXSEUserInfo
 
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *email;
-@property (nonatomic, retain) NSDate *birthdayDate;
-@property (nonatomic, retain) NSURL *avatarURL;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSDate *birthdayDate;
+@property (nonatomic, strong) NSURL *avatarURL;
 
 + (id) userInfo;
 

@@ -15,16 +15,13 @@
 //==============================================================================
 + (id) userInfoTwitter
 {
-    return [[[DXSEUserInfoTwitter alloc] init] autorelease];
+    return [[DXSEUserInfoTwitter alloc] init];
 }
 
 //==============================================================================
 - (void) dealloc
 {
-    [name release];
-    [screenName release];
-    
-    [super dealloc];
+
 }
 
 //==============================================================================

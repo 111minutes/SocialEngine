@@ -13,10 +13,5 @@
 
 
 @interface DXSETwitter : DXSEModule <OAuthSignInViewControllerDelegate, MGTwitterEngineDelegate>
-{
-	OAuthSignInViewController* signInController;
-    
-    NSString* userInfoIdentifier;
-}
 
 @end

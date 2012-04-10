@@ -10,6 +10,6 @@
 
 @interface DXSEUserInfo : NSObject
 
-@property (nonatomic, retain) NSString *ID;
+@property (nonatomic, strong) NSString *ID;
 
 @end

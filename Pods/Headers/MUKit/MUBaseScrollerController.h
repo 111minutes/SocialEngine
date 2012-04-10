@@ -1,1 +1,1 @@
-../../MUKit/MUControls/ViewControllers/MUBaseScrollerController.h
+../../MUKit/MUKit/MUControllers/MUBaseScrollerController.h

@@ -8,7 +8,19 @@
 
 #import "DXSEModule.h"
 
+
+@interface DXSEModule ()
+
+@property (nonatomic, strong) NSMutableDictionary* successBlocks;
+@property (nonatomic, strong) NSMutableDictionary* failureBlocks;
+@property (nonatomic, readwrite, strong) DXSEntryConfig* entryConfig;
+
+@end
+
 @implementation DXSEModule
+
+@synthesize successBlocks;
+@synthesize failureBlocks;
 
 @synthesize entryConfig;
 //@synthesize accessToken;
@@ -17,7 +29,6 @@
 //==============================================================================
 - (id) init
 {
-    [self release];
     return nil;
 }
 
@@ -26,11 +37,11 @@
 {
     if( (self = [super init]) )
     {
-        entryConfig = [anInitialConfig retain];
+        self.entryConfig = anInitialConfig;
         NSLog(@"entryConfig: %@", entryConfig);
 
-        successBlocks = [NSMutableDictionary new];
-        failureBlocks = [NSMutableDictionary new];
+        self.successBlocks = [NSMutableDictionary dictionary];
+        self.failureBlocks = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -38,11 +49,7 @@
 //==============================================================================
 - (void) dealloc
 {
-    [entryConfig release];
-    [successBlocks release];
-    [failureBlocks release];
-    
-    [super dealloc];
+
 }
 
 #pragma mark - Authentication
@@ -117,13 +124,13 @@
 //==============================================================================
 - (void) registerSuccessBlock:(DXSESuccessBlock)successBlock forKey:(NSString*)aBlockKey
 {
-    [successBlocks setObject:[[successBlock copy] autorelease] forKey:aBlockKey];
+    [successBlocks setObject:[successBlock copy] forKey:aBlockKey];
 }
 
 //==============================================================================
 - (void) registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString*)aBlockKey
 {
-    [failureBlocks setObject:[[failureBlock copy] autorelease] forKey:aBlockKey];
+    [failureBlocks setObject:[failureBlock copy] forKey:aBlockKey];
 }
 
 //==============================================================================

@@ -1,1 +1,1 @@
-../../MUKit/MUControls/MUSpinneredView.h
+../../MUKit/MUKit/MUControls/MUSpinneredView.h

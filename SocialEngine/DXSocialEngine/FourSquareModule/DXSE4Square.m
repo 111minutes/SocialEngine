@@ -31,7 +31,6 @@
 //==============================================================================
 - (id) init
 {
-    [self release];
     return nil;
 }
 
@@ -40,7 +39,7 @@
 {
     if( (self = [super initWithEntryConfig:anInitialConfig]) )
     {
-        [Foursquare2 setOAuthKey:entryConfig.oauthKey secret:entryConfig.oauthSecret redirectURL:entryConfig.redirectURL];
+        [Foursquare2 setOAuthKey:self.entryConfig.oauthKey secret:self.entryConfig.oauthSecret redirectURL:self.entryConfig.redirectURL];
     }
     return self;
 }
@@ -52,13 +51,12 @@
     [self registerSuccessBlock:aSuccess forKey:LOGIN];
     [self registerFailureBlock:aFailure forKey:LOGIN];
     
-    NSString *url = [NSString stringWithFormat:@"https://foursquare.com/oauth2/authenticate?display=touch&client_id=%@&response_type=code&redirect_uri=%@",entryConfig.oauthKey,entryConfig.redirectURL];
+    NSString *url = [NSString stringWithFormat:@"https://foursquare.com/oauth2/authenticate?display=touch&client_id=%@&response_type=code&redirect_uri=%@",self.entryConfig.oauthKey,self.entryConfig.redirectURL];
     FoursquareWebLogin* webLoginController = [[FoursquareWebLogin alloc] initWithUrl:url];
     webLoginController.delegate = self;
     webLoginController.selector = @selector(setCode:);
     
     [self showLoginController:webLoginController];
-    [webLoginController release];
 }
 
 //==============================================================================

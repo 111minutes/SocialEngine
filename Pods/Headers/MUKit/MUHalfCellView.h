@@ -1,1 +1,1 @@
-../../MUKit/MUControls/MUTableViewCell2Half/MUHalfCellView.h
+../../MUKit/MUKit/MUControls/MUTableViewCell2Half/MUHalfCellView.h

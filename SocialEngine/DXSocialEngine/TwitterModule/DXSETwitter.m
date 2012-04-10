@@ -6,6 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <Twitter/Twitter.h>
+#import <Accounts/Accounts.h>
+
 #import "DXSETwitter.h"
 #import "MGTwitterEngine.h"
 #import "TwitterEngine.h"
@@ -14,14 +17,22 @@
 #define LOGIN               @"LOGIN"
 #define GET_USER_INFO       @"GET_USER_INFO"
 
+@interface DXSETwitter ()
+
+@property (nonatomic, strong) OAuthSignInViewController* signInController;
+@property (nonatomic, strong) NSString* userInfoIdentifier;
+
+@end
 
 @implementation DXSETwitter
+
+@synthesize signInController = _signInController;
+@synthesize userInfoIdentifier = _userInfoIdentifier;
 
 #pragma mark - Init/Dealloc
 //==============================================================================
 - (id) init
 {
-    [self release];
     return nil;
 }
 
@@ -31,7 +42,7 @@
     if( (self = [super initWithEntryConfig:anInitialConfig]) )
     {
         [TwitterEngine sharedEngineWithDelegate:self];
-        [[TwitterEngine sharedEngine] setConsumerKey:entryConfig.oauthKey secret:entryConfig.oauthSecret];
+        [[TwitterEngine sharedEngine] setConsumerKey:self.entryConfig.oauthKey secret:self.entryConfig.oauthSecret];
     }
     return self;
 }
@@ -39,9 +50,7 @@
 //==============================================================================
 - (void) dealloc
 {    
-    [userInfoIdentifier release];
 
-    [super dealloc];
 }
 
 #pragma mark - Authentication
@@ -53,7 +62,7 @@
 
 	[[TwitterEngine sharedEngine] requestRequestToken:self onSuccess:@selector(onRequestTokenSuccess:withData:) onFail:@selector(onRequestTokenFailed:withData:)];
 	
-	signInController = [[OAuthSignInViewController alloc] initWithDelegate:self];
+	self.signInController = [[OAuthSignInViewController alloc] initWithDelegate:self];
 }
 
 //==============================================================================
@@ -80,12 +89,11 @@
 //==============================================================================
 - (void) getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
-    if(!userInfoIdentifier)
+    if(!_userInfoIdentifier)
     {
         [self registerSuccessBlock:aSuccess forKey:GET_USER_INFO];
         [self registerFailureBlock:aFailure forKey:GET_USER_INFO];
-        userInfoIdentifier = [[TwitterEngine sharedEngine] getUserInformationFor:[TwitterEngine sharedEngine].username];
-        [userInfoIdentifier retain];
+        self.userInfoIdentifier = [[TwitterEngine sharedEngine] getUserInformationFor:[TwitterEngine sharedEngine].username];
     }
 //    NSAssert(NO, @"Not implement yet");
 }
@@ -133,10 +141,10 @@
 	[sharedEngine setRequestToken:ticket withData:data];
 	
 	//now we can start the sign in process.
-	[signInController loadRequest:[sharedEngine authorizeURLRequest]];
+	[_signInController loadRequest:[sharedEngine authorizeURLRequest]];
     
     // show login controller here
-    [self showLoginController:signInController];
+    [self showLoginController:_signInController];
 }
 
 //==============================================================================
@@ -171,15 +179,14 @@
 //==============================================================================
 - (void) showLoginController:(UIViewController *)aLoginController
 {
-    [super showLoginController:signInController];
-    [signInController release];
+    [super showLoginController:_signInController];
 }
 
 //==============================================================================
 - (void) hideLoginController
 {
     [super hideLoginController];
-    signInController = nil;
+    self.signInController = nil;
 }
 
 #pragma mark - MGTwitterEngineDelegate
@@ -199,14 +206,13 @@
 //==============================================================================
 - (void)userInfoReceived:(NSArray *)aUserInfo forRequest:(NSString *)connectionIdentifier
 {
-    if(![connectionIdentifier isEqualToString:userInfoIdentifier])
+    if(![connectionIdentifier isEqualToString:_userInfoIdentifier])
     {
         [self executeFailureBlockForKey:GET_USER_INFO withError:nil];
         return;
     }
-    
-    [userInfoIdentifier release];
-    userInfoIdentifier = nil;
+
+    self.userInfoIdentifier = nil;
     
     NSDictionary* userDict = [aUserInfo lastObject];
     

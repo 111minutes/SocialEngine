@@ -15,18 +15,13 @@
 //==============================================================================
 + (id) userInfo4Square
 {
-    return [[[DXSEUserInfo4Square alloc] init] autorelease];
+    return [[DXSEUserInfo4Square alloc] init];
 }
 
 //==============================================================================
 - (void) dealloc
 {
-    [firstName release];
-    [lastName release];
-    [email release];
-    [avatarURL release];
-    
-    [super dealloc];
+
 }
 
 //==============================================================================

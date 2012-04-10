@@ -10,9 +10,9 @@
 
 @interface DXSEntryConfig : NSObject
 
-@property (nonatomic, readonly) NSString* oauthKey;
-@property (nonatomic, readonly) NSString* oauthSecret;
-@property (nonatomic, readonly) NSString* redirectURL;
+@property (nonatomic, readonly, strong) NSString* oauthKey;
+@property (nonatomic, readonly, strong) NSString* oauthSecret;
+@property (nonatomic, readonly, strong) NSString* redirectURL;
 
 - (id) initWithDictionary:(NSDictionary*)aDictionary;
 

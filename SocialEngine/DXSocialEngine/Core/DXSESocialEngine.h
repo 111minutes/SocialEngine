@@ -17,9 +17,9 @@
 {
 }
 
-@property (nonatomic, readonly) DXSEFacebook* facebook;
-@property (nonatomic, readonly) DXSETwitter* twitter;
-@property (nonatomic, readonly) DXSE4Square* fourSquare;
+@property (nonatomic, readonly, strong) DXSEFacebook* facebook;
+@property (nonatomic, readonly, strong) DXSETwitter* twitter;
+@property (nonatomic, readonly, strong) DXSE4Square* fourSquare;
 
 + (DXSESocialEngine*) sharedInstance;
 

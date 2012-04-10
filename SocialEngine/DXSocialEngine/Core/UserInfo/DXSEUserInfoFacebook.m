@@ -15,18 +15,13 @@
 //==============================================================================
 + (id) userInfo
 {
-    return [[[DXSEUserInfoFacebook alloc] init] autorelease];
+    return [[DXSEUserInfoFacebook alloc] init];
 }
 
 //==============================================================================
 - (void) dealloc
 {
-    [name release];
-    [email release];
-    [avatarURL release];
-    [birthdayDate release];
-    
-    [super dealloc];
+
 }
 
 //==============================================================================

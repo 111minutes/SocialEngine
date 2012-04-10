@@ -1,1 +1,1 @@
-../../MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Img1.h
+../../MUKit/MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Img1.h

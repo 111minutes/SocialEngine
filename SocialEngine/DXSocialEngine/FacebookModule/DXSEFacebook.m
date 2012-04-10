@@ -17,7 +17,6 @@
 //==============================================================================
 - (id) init
 {
-    [self release];
     return nil;
 }
 
@@ -26,7 +25,7 @@
 {
     if( (self = [super initWithEntryConfig:anInitialConfig]) )
     {
-        [SCFacebook shared].oauthKey = entryConfig.oauthKey;
+        [SCFacebook shared].oauthKey = self.entryConfig.oauthKey;
         [[SCFacebook shared] configure];
     }
     return self;

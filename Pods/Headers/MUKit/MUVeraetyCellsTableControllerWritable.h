@@ -1,1 +1,1 @@
-../../MUKit/MUControls/ViewControllers/MUVeraetyCellsTableControllerWritable.h
+../../MUKit/MUKit/MUControllers/MUVeraetyCellsTableControllerWritable.h

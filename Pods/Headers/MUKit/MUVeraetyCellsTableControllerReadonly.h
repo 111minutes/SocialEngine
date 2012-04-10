@@ -1,1 +1,1 @@
-../../MUKit/MUControls/ViewControllers/MUVeraetyCellsTableControllerReadonly.h
+../../MUKit/MUKit/MUControllers/MUVeraetyCellsTableControllerReadonly.h

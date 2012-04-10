@@ -14,8 +14,7 @@
 
 - (void) dealloc
 {
-    [ID release];
-    [super dealloc];
+
 }
 
 @end

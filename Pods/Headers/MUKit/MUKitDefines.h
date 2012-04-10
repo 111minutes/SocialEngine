@@ -1,1 +1,1 @@
-../../MUKit/MUCore/MUKitDefines.h
+../../MUKit/MUKit/MUCore/MUKitDefines.h

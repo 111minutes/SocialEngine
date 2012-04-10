@@ -18,14 +18,8 @@ typedef void (^DXSEFailureBlock)(DXSEModule* module, NSError* error);
 
 //==============================================================================
 @interface DXSEModule : NSObject
-{
-    DXSEntryConfig* entryConfig;
 
-    NSMutableDictionary* successBlocks;
-    NSMutableDictionary* failureBlocks;
-}
-
-@property (nonatomic, readonly) DXSEntryConfig* entryConfig;
+@property (nonatomic, readonly, strong) DXSEntryConfig* entryConfig;
 
 - (id) initWithEntryConfig:(DXSEntryConfig*) anInitialConfig;
 

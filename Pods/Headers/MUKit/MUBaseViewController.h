@@ -1,1 +1,1 @@
-../../MUKit/MUControls/ViewControllers/MUBaseViewController.h
+../../MUKit/MUKit/MUControllers/MUBaseViewController.h

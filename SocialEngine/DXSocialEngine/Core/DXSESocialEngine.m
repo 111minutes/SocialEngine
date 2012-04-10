@@ -12,6 +12,15 @@
 //==============================================================================
 //==============================================================================
 //==============================================================================
+
+@interface DXSESocialEngine ()
+
+@property (nonatomic, readwrite, strong) DXSEFacebook* facebook;
+@property (nonatomic, readwrite, strong) DXSETwitter* twitter;
+@property (nonatomic, readwrite, strong) DXSE4Square* fourSquare;
+
+@end
+
 @interface DXSESocialEngine (Private)
 
 - (void) configure;
@@ -56,11 +65,7 @@
 //==============================================================================
 - (void) dealloc
 {
-    [facebook release];
-    [twitter release];
-    [fourSquare release];
-    
-    [super dealloc];
+
 }
 
 //==============================================================================
@@ -71,9 +76,9 @@
     NSAssert(dictConfig, @"Need config file!");
     NSLog(@"config %@", dictConfig);
 
-    facebook = [(DXSEFacebook*)[self initializeModuleWithKey:@"DXSEFacebook" fromDictionary:dictConfig] retain];
-    twitter = [(DXSETwitter*)[self initializeModuleWithKey:@"DXSETwitter" fromDictionary:dictConfig] retain];
-    fourSquare = [(DXSE4Square*)[self initializeModuleWithKey:@"DXSE4Square" fromDictionary:dictConfig] retain];
+    self.facebook = (DXSEFacebook*)[self initializeModuleWithKey:@"DXSEFacebook" fromDictionary:dictConfig];
+    self.twitter = (DXSETwitter*)[self initializeModuleWithKey:@"DXSETwitter" fromDictionary:dictConfig];
+    self.fourSquare = (DXSE4Square*)[self initializeModuleWithKey:@"DXSE4Square" fromDictionary:dictConfig];
 }
 
 //==============================================================================
@@ -85,8 +90,8 @@
     {
         DXSEntryConfig* initialConfig = [[DXSEntryConfig alloc] initWithDictionary:moduleDict];
         if(initialConfig)
-            result = [[[NSClassFromString(aModuleKey) alloc] initWithEntryConfig:initialConfig] autorelease];
-        [initialConfig release];
+            result = [[NSClassFromString(aModuleKey) alloc] initWithEntryConfig:initialConfig];
+        initialConfig = nil;
     }
     
     return result;

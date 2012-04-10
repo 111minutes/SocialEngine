@@ -1,1 +1,1 @@
-../../MUKit/MUControls/MUAutoresizeButton.h
+../../MUKit/MUKit/MUControls/MUAutoresizeButton.h

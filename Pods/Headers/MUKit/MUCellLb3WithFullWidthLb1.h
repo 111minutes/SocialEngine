@@ -1,1 +1,1 @@
-../../MUKit/MUControls/MUTableViewCell2Half/MUCellLb3WithFullWidthLb1.h
+../../MUKit/MUKit/MUControls/MUTableViewCell2Half/MUCellLb3WithFullWidthLb1.h

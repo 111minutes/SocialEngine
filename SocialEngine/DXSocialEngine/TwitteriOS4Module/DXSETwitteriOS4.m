@@ -6,10 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Twitter/Twitter.h>
-#import <Accounts/Accounts.h>
-
-#import "DXSETwitter.h"
+#import "DXSETwitteriOS4.h"
 #import "MGTwitterEngine.h"
 #import "TwitterEngine.h"
 #import "DXSEUserInfoTwitter.h"
@@ -17,18 +14,14 @@
 #define LOGIN               @"LOGIN"
 #define GET_USER_INFO       @"GET_USER_INFO"
 
-#define IOS_VERSION_5 ([[[UIDevice currentDevice] systemVersion] compare:@"5.0" options:NSNumericSearch] != NSOrderedAscending)
-
-@interface DXSETwitter ()
+@interface DXSETwitteriOS4 ()
 
 @property (nonatomic, strong) OAuthSignInViewController* signInController;
 @property (nonatomic, strong) NSString* userInfoIdentifier;
 
-- (BOOL)twitterAccountExists;
-
 @end
 
-@implementation DXSETwitter
+@implementation DXSETwitteriOS4
 
 @synthesize signInController = _signInController;
 @synthesize userInfoIdentifier = _userInfoIdentifier;
@@ -63,10 +56,10 @@
 {
     [self registerSuccessBlock:aSuccess forKey:LOGIN];
     [self registerFailureBlock:aFailure forKey:LOGIN];
-
-	[[TwitterEngine sharedEngine] requestRequestToken:self onSuccess:@selector(onRequestTokenSuccess:withData:) onFail:@selector(onRequestTokenFailed:withData:)];
+    
+    [[TwitterEngine sharedEngine] requestRequestToken:self onSuccess:@selector(onRequestTokenSuccess:withData:) onFail:@selector(onRequestTokenFailed:withData:)];
 	
-	self.signInController = [[OAuthSignInViewController alloc] initWithDelegate:self];
+    self.signInController = [[OAuthSignInViewController alloc] initWithDelegate:self];
 }
 
 //==============================================================================
@@ -228,22 +221,6 @@
     [self executeSuccessBlockForKey:GET_USER_INFO withData:userInfo];
 //    NSLog(@"Twitter - UserInfo:\n%@", aUserInfo);
     
-}
-
-
-#pragma mark Internal 
-
-- (BOOL)twitterAccountExists{
-    
-    if(IOS_VERSION_5){
-        ACAccountStore *accountStore = [ACAccountStore new];
-        ACAccountType *accountTypeTwitter = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-        NSArray *twitterAccounts = [accountStore accountsWithAccountType:accountTypeTwitter];
-    
-        return [twitterAccounts objectAtIndex:0] != nil;
-    }
-    
-    return NO;
 }
 
 @end

@@ -17,21 +17,29 @@
 #define LOGIN               @"LOGIN"
 #define GET_USER_INFO       @"GET_USER_INFO"
 
-#define IOS_VERSION_5 ([[[UIDevice currentDevice] systemVersion] compare:@"5.0" options:NSNumericSearch] != NSOrderedAscending)
+#define IOS_VERSION_5 (NSClassFromString(@"ACAccount") != NULL)
 
 @interface DXSETwitter ()
 
 @property (nonatomic, strong) OAuthSignInViewController* signInController;
 @property (nonatomic, strong) NSString* userInfoIdentifier;
-
-- (BOOL)twitterAccountExists;
+@property (nonatomic, strong) NSArray* twitterAccounts;
 
 @end
 
-@implementation DXSETwitter
+@interface DXSETwitter (iOS5)
+
+- (BOOL)twitterAccountsExist;
+- (void)requestAccessToTwitter;
+
+@end
+
+@implementation DXSETwitter{
+}
 
 @synthesize signInController = _signInController;
 @synthesize userInfoIdentifier = _userInfoIdentifier;
+@synthesize twitterAccounts = _twitterAccounts;
 
 #pragma mark - Init/Dealloc
 //==============================================================================
@@ -66,7 +74,9 @@
 
 	[[TwitterEngine sharedEngine] requestRequestToken:self onSuccess:@selector(onRequestTokenSuccess:withData:) onFail:@selector(onRequestTokenFailed:withData:)];
 	
-	self.signInController = [[OAuthSignInViewController alloc] initWithDelegate:self];
+    if([self twitterAccountsExist] == NO){
+        self.signInController = [[OAuthSignInViewController alloc] initWithDelegate:self];
+    }
 }
 
 //==============================================================================
@@ -97,7 +107,13 @@
     {
         [self registerSuccessBlock:aSuccess forKey:GET_USER_INFO];
         [self registerFailureBlock:aFailure forKey:GET_USER_INFO];
-        self.userInfoIdentifier = [[TwitterEngine sharedEngine] getUserInformationFor:[TwitterEngine sharedEngine].username];
+        
+        if([self twitterAccountsExist]){
+            self.userInfoIdentifier = [[TwitterEngine sharedEngine] getUserInformationFor:[(ACAccount*)[self.twitterAccounts objectAtIndex:0] username]];
+        }
+        else{
+            self.userInfoIdentifier = [[TwitterEngine sharedEngine] getUserInformationFor:[TwitterEngine sharedEngine].username];
+        }
     }
 //    NSAssert(NO, @"Not implement yet");
 }
@@ -143,12 +159,17 @@
 {
 	TwitterEngine* sharedEngine = [TwitterEngine sharedEngine];
 	[sharedEngine setRequestToken:ticket withData:data];
-	
-	//now we can start the sign in process.
-	[_signInController loadRequest:[sharedEngine authorizeURLRequest]];
     
-    // show login controller here
-    [self showLoginController:_signInController];
+    if([self twitterAccountsExist]){
+        [self requestAccessToTwitter];
+    }
+    else{
+        //now we can start the sign in process.
+        [_signInController loadRequest:[sharedEngine authorizeURLRequest]];
+    
+        // show login controller here
+        [self showLoginController:_signInController];
+    }
 }
 
 //==============================================================================
@@ -230,20 +251,54 @@
     
 }
 
+@end
 
-#pragma mark Internal 
 
-- (BOOL)twitterAccountExists{
+@implementation DXSETwitter (iOS5)
+
+- (BOOL)twitterAccountsExist{
     
     if(IOS_VERSION_5){
+        
         ACAccountStore *accountStore = [ACAccountStore new];
         ACAccountType *accountTypeTwitter = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+        
         NSArray *twitterAccounts = [accountStore accountsWithAccountType:accountTypeTwitter];
-    
+            
         return [twitterAccounts objectAtIndex:0] != nil;
     }
     
     return NO;
+}
+
+
+- (void)requestAccessToTwitter{
+    
+    if([self twitterAccountsExist]){
+        
+        __block ACAccountStore *accountStore = [ACAccountStore new];
+        __block ACAccountType *accountTypeTwitter = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+        
+        void (^successBlock)(void) = ^{
+            self.twitterAccounts = [accountStore accountsWithAccountType:accountTypeTwitter];
+            [self executeSuccessBlockForKey:LOGIN withData:nil];
+        };
+        
+        if([accountTypeTwitter accessGranted]){
+            successBlock();
+        }
+        else{
+            [accountStore requestAccessToAccountsWithType:accountTypeTwitter withCompletionHandler:^(BOOL granted, NSError *error){
+                
+                if(granted){
+                    successBlock();
+                }
+                else{
+                    [self executeFailureBlockForKey:LOGIN withError:nil];
+                }
+            }];
+        }
+    }
 }
 
 @end

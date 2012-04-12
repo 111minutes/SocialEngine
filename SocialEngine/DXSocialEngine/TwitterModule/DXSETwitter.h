@@ -12,6 +12,6 @@
 #import "OAuthSignInViewController.h"
 
 
-@interface DXSETwitter : DXSEModule <OAuthSignInViewControllerDelegate, MGTwitterEngineDelegate>
+@interface DXSETwitter : DXSEModule <OAuthSignInViewControllerDelegate, MGTwitterEngineDelegate, UIAlertViewDelegate>
 
 @end

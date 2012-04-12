@@ -43,7 +43,7 @@
 {
     [[DXSESocialEngine sharedInstance].twitter login:^(DXSEModule *module, id data)
     {
-        [[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"logged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
         
         [[DXSESocialEngine sharedInstance].twitter getUserInfo:^(DXSEModule *module, id data)
         {

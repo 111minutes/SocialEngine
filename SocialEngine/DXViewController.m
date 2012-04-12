@@ -105,6 +105,30 @@
     }];
 }
 
+
+//==============================================================================
+- (IBAction)instagramLoginPressed:(id)sender{
+    
+    [[DXSESocialEngine sharedInstance].instagram login:^(DXSEModule *module, id data)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Instagram" message:@"logged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+         
+         [[DXSESocialEngine sharedInstance].instagram getUserInfo:^(DXSEModule *module, id data)
+          {
+              NSLog(@"UserInfo(Instagram): %@", data);
+              
+          } failure:^(DXSEModule *module, NSError *error)
+          {
+              NSLog(@"UserInfo: failed");
+          }];
+         
+     } failure:^(DXSEModule *module, NSError *error)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Instagram" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+     }];
+}
+
+
 //==============================================================================
 - (IBAction)facebookLogout
 {

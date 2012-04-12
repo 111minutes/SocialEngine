@@ -18,6 +18,7 @@
 @property (nonatomic, readwrite, strong) DXSEFacebook* facebook;
 @property (nonatomic, readwrite, strong) DXSETwitter* twitter;
 @property (nonatomic, readwrite, strong) DXSE4Square* fourSquare;
+@property (nonatomic, readwrite, strong) DXSEInstagram* instagram;
 
 @end
 
@@ -37,6 +38,7 @@
 @synthesize facebook;
 @synthesize twitter;
 @synthesize fourSquare;
+@synthesize instagram;
 
 #pragma mark - Init/Dealloc
 //==============================================================================
@@ -79,6 +81,7 @@
     self.facebook = (DXSEFacebook*)[self initializeModuleWithKey:@"DXSEFacebook" fromDictionary:dictConfig];
     self.twitter = (DXSETwitter*)[self initializeModuleWithKey:@"DXSETwitter" fromDictionary:dictConfig];
     self.fourSquare = (DXSE4Square*)[self initializeModuleWithKey:@"DXSE4Square" fromDictionary:dictConfig];
+    self.instagram = (DXSEInstagram*)[self initializeModuleWithKey:@"DXSEInstagram" fromDictionary:dictConfig];
 }
 
 //==============================================================================
@@ -100,7 +103,7 @@
 //==============================================================================
 - (DXSEModule *) firstAuthorizedModule
 {
-    return [facebook isAuthorized] ? facebook : [twitter isAuthorized] ? twitter : [fourSquare isAuthorized] ? fourSquare : nil; 
+    return [facebook isAuthorized] ? facebook : [twitter isAuthorized] ? twitter : [fourSquare isAuthorized] ? fourSquare : [instagram isAuthorized] ? instagram : nil; 
 }
 
 @end

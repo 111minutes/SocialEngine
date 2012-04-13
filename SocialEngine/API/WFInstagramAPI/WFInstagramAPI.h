@@ -22,6 +22,8 @@
 
 #import "NSURL+WillFleming.h"
 
+#define DidEnterAuthNotification @"DidEnterAuthNotification"
+
 @interface WFInstagramAPI : NSObject
 
 + (void) setClientId:(NSString*)clientId;

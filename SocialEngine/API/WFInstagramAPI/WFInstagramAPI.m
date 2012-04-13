@@ -172,17 +172,19 @@ UIWindow *g_authWindow = nil;
   WFIGAuthController *authController = [[WFIGAuthController alloc] init];
   UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:authController];
   navController.navigationBarHidden = YES;
-  
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:DidEnterAuthNotification object:navController];
+    
   // swap out current window for a window containing our auth view
-  UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
-  UIWindow *authWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  authWindow.rootViewController = navController;
-  [self setAuthWindow:authWindow];  // otherwise it gets released silently
-  [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionTransitionCurlDown animations:^{
-    [keyWindow resignKeyWindow];
-    keyWindow.hidden = YES;
-    [authWindow makeKeyAndVisible];
-  } completion:NULL];
+//  UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+//  UIWindow *authWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//  authWindow.rootViewController = navController;
+//  [self setAuthWindow:authWindow];  // otherwise it gets released silently
+//  [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionTransitionCurlDown animations:^{
+//    [keyWindow resignKeyWindow];
+//    keyWindow.hidden = YES;
+//    [authWindow makeKeyAndVisible];
+//  } completion:NULL];
 }
 
 + (WFIGResponse*) accessTokenForCode:(NSString*)code {

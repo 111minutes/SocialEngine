@@ -18,6 +18,7 @@
 @property (nonatomic, strong) WFIGAuthController* signInController;
 
 - (void)didRecieveURLNotification:(NSNotification*)notification;
+- (void)didEnterAuthNotification:(NSNotification*)notification;
 
 @end
 
@@ -45,6 +46,11 @@
                                                  selector:@selector(didRecieveURLNotification:)
                                                      name:DXSE_OPEN_URL
                                                    object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(didEnterAuthNotification:)
+                                                     name:DidEnterAuthNotification
+                                                   object:nil];
     }
     return self;
 }
@@ -53,6 +59,18 @@
 - (void) dealloc
 {    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+//==============================================================================
+- (void) showLoginController:(UIViewController *)aLoginController
+{
+    [super showLoginController:aLoginController];
+}
+
+//==============================================================================
+- (void) hideLoginController
+{
+    [super hideLoginController];
 }
 
 #pragma mark - Authentication
@@ -130,11 +148,22 @@
         NSDictionary *json = [response parsedBody];
         [WFInstagramAPI setAccessToken:[json objectForKey:@"access_token"]];
         
+        [self hideLoginController];
+        
         [self executeSuccessBlockForKey:LOGIN withData:nil];
     }   
     else{
+        
+        [self hideLoginController];
+        
         [self executeFailureBlockForKey:LOGIN withError:nil]; 
     }
+}
+
+- (void)didEnterAuthNotification:(NSNotification*)notification{
+    
+    UIViewController* authController = (UIViewController*)notification.object;
+    [self showLoginController:authController];
 }
 
 @end

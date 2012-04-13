@@ -14,8 +14,8 @@
  * Convert NSXMLDocument to an NSDictionary
  * @see NSXMLElement#toDictionary
  */
-- (NSMutableDictionary *)toDictionary
-{
-   return [[self rootElement] toDictionary];
+- (NSMutableDictionary *)toDictionary {
+    return [[self rootElement] toDictionary];
 }
+
 @end

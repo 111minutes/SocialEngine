@@ -12,144 +12,114 @@
 @implementation DXViewController
 
 #pragma mark - View lifecycle
-//==============================================================================
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 }
 
-//==============================================================================
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
 }
 
-//==============================================================================
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
-//==============================================================================
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 #pragma mark - Button Action
-//==============================================================================
-- (IBAction)twitterLoginPressed:(id)sender
-{
-    [[DXSESocialEngine sharedInstance].twitter login:^(DXSEModule *module, id data)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"logged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        
-        [[DXSESocialEngine sharedInstance].twitter getUserInfo:^(DXSEModule *module, id data)
-        {
-            NSLog(@"UserInfo(Twitter): %@", [data description]);
-            
-        } failure:^(DXSEModule *module, NSError *error)
-        {
-            NSLog(@"UserInfo: failed");
-        }];
-        
-    } failure:^(DXSEModule *module, NSError *error)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    }];
+- (IBAction)twitterLoginPressed:(id)sender {
+    [[DXSESocialEngine sharedInstance].twitter login:^(DXSEModule * module, id data)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"logged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+
+         [[DXSESocialEngine sharedInstance].twitter getUserInfo:^(DXSEModule * module, id data)
+          {
+              NSLog (@"UserInfo(Twitter): %@", [data description]);
+          } failure:^(DXSEModule * module, NSError * error)
+          {
+              NSLog (@"UserInfo: failed");
+          }];
+     } failure:^(DXSEModule * module, NSError * error)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+     }];
 }
 
-//==============================================================================
-- (IBAction)facebookLoginPressed:(id)sender
-{
-    [[DXSESocialEngine sharedInstance].facebook login:^(DXSEModule *module, id data)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        NSLog(@"facebook accessToken %@",[[DXSESocialEngine sharedInstance].facebook accessToken]);
-        [[DXSESocialEngine sharedInstance].facebook getUserInfo:^(DXSEModule *module, id data)
-        {
-            NSLog(@"facebook accessToken %@",[[DXSESocialEngine sharedInstance].facebook accessToken]);
-            NSLog(@"UserInfo(Facebook): %@", [data description]);
-            
-        } failure:^(DXSEModule *module, NSError *error)
-        {
-            NSLog(@"UserInfo: failed");
-        }];
-    
-    } failure:^(DXSEModule *module, NSError *error)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    }];
+- (IBAction)facebookLoginPressed:(id)sender {
+    [[DXSESocialEngine sharedInstance].facebook login:^(DXSEModule * module, id data)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+         NSLog (@"facebook accessToken %@", [[DXSESocialEngine sharedInstance].facebook accessToken]);
+         [[DXSESocialEngine sharedInstance].facebook getUserInfo:^(DXSEModule * module, id data)
+          {
+              NSLog (@"facebook accessToken %@", [[DXSESocialEngine sharedInstance].facebook accessToken]);
+              NSLog (@"UserInfo(Facebook): %@", [data description]);
+          } failure:^(DXSEModule * module, NSError * error)
+          {
+              NSLog (@"UserInfo: failed");
+          }];
+     } failure:^(DXSEModule * module, NSError * error)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+     }];
 }
 
-//==============================================================================
-- (IBAction)foursquareLoginPressed:(id)sender
-{
-    [[DXSESocialEngine sharedInstance].fourSquare login:^(DXSEModule *module, id data)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"4Square" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        
-        [[DXSESocialEngine sharedInstance].fourSquare getUserInfo:^(DXSEModule *module, id data)
-        {
-            NSLog(@"UserInfo(FourSquare): %@", data);
-            
-        } failure:^(DXSEModule *module, NSError *error)
-        {
-            NSLog(@"UserInfo: failed");
-        }];
+- (IBAction)foursquareLoginPressed:(id)sender {
+    [[DXSESocialEngine sharedInstance].fourSquare login:^(DXSEModule * module, id data)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"4Square" message:@"loged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 
-    } failure:^(DXSEModule *module, NSError *error)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"4Square" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    }];
+         [[DXSESocialEngine sharedInstance].fourSquare getUserInfo:^(DXSEModule * module, id data)
+          {
+              NSLog (@"UserInfo(FourSquare): %@", data);
+          } failure:^(DXSEModule * module, NSError * error)
+          {
+              NSLog (@"UserInfo: failed");
+          }];
+     } failure:^(DXSEModule * module, NSError * error)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"4Square" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+     }];
 }
 
 
-//==============================================================================
-- (IBAction)instagramLoginPressed:(id)sender{
-    
-    [[DXSESocialEngine sharedInstance].instagram login:^(DXSEModule *module, id data)
+- (IBAction)instagramLoginPressed:(id)sender {
+    [[DXSESocialEngine sharedInstance].instagram login:^(DXSEModule * module, id data)
      {
          [[[UIAlertView alloc] initWithTitle:@"Instagram" message:@"logged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-         
-         [[DXSESocialEngine sharedInstance].instagram getUserInfo:^(DXSEModule *module, id data)
+
+         [[DXSESocialEngine sharedInstance].instagram getUserInfo:^(DXSEModule * module, id data)
           {
-              NSLog(@"UserInfo(Instagram): %@", data);
-              
-          } failure:^(DXSEModule *module, NSError *error)
+              NSLog (@"UserInfo(Instagram): %@", data);
+          } failure:^(DXSEModule * module, NSError * error)
           {
-              NSLog(@"UserInfo: failed");
+              NSLog (@"UserInfo: failed");
           }];
-         
-     } failure:^(DXSEModule *module, NSError *error)
+     } failure:^(DXSEModule * module, NSError * error)
      {
          [[[UIAlertView alloc] initWithTitle:@"Instagram" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
      }];
 }
 
 
-//==============================================================================
-- (IBAction)facebookLogout
-{
-    [[DXSESocialEngine sharedInstance].facebook logout:^(DXSEModule *module, id data)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-
-    } failure:^(DXSEModule *module, NSError *error)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"logout error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    }];
+- (IBAction)facebookLogout {
+    [[DXSESocialEngine sharedInstance].facebook logout:^(DXSEModule * module, id data)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+     } failure:^(DXSEModule * module, NSError * error)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Facebook" message:@"logout error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+     }];
 }
 
-//==============================================================================
-- (IBAction)twitterLogout
-{
-    [[DXSESocialEngine sharedInstance].twitter logout:^(DXSEModule *module, id data)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        
-    } failure:nil];
+- (IBAction)twitterLogout {
+    [[DXSESocialEngine sharedInstance].twitter logout:^(DXSEModule * module, id data)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+     } failure:nil];
 }
 
 @end

@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (EscapingUtils)
-- (NSString *) stringByPreparingForURL;
+- (NSString *)stringByPreparingForURL;
 @end

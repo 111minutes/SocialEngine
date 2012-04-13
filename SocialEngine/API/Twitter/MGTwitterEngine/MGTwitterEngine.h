@@ -22,23 +22,23 @@
     NSString *_clientVersion;
     NSString *_clientURL;
     NSString *_clientSourceToken;
-	NSString *_APIDomain;
+    NSString *_APIDomain;
 #if YAJL_AVAILABLE || TOUCHJSON_AVAILABLE
-	NSString *_searchDomain;
+    NSString *_searchDomain;
 #endif
     BOOL _secureConnection;
-	BOOL _clearsCookies;
+    BOOL _clearsCookies;
 #if YAJL_AVAILABLE || TOUCHJSON_AVAILABLE
-	MGTwitterEngineDeliveryOptions _deliveryOptions;
+    MGTwitterEngineDeliveryOptions _deliveryOptions;
 #endif
-	
-	// OAuth
-	NSString *_consumerKey;
-	NSString *_consumerSecret;
-	OAToken  *_accessToken;
-	
-	// basic auth - deprecated
-	NSString *_username;
+
+    // OAuth
+    NSString *_consumerKey;
+    NSString *_consumerSecret;
+    OAToken *_accessToken;
+
+    // basic auth - deprecated
+    NSString *_username;
     NSString *_password;
 }
 
@@ -78,7 +78,7 @@
 - (void)closeAllConnections;
 
 // Utility methods
-/// Note: the -getImageAtURL: method works for any image URL, not just Twitter images.
+// / Note: the -getImageAtURL: method works for any image URL, not just Twitter images.
 // It does not require authentication, and is provided here for convenience.
 // As with the Twitter API methods below, it returns a unique connection identifier.
 // Retrieved images are sent to the delegate via the -imageReceived:forRequest: method.
@@ -86,36 +86,34 @@
 
 #pragma mark REST API methods
 
-// ======================================================================================================
 // Twitter REST API methods
 // See documentation at: http://apiwiki.twitter.com/Twitter-API-Documentation
 // All methods below return a unique connection identifier.
-// ======================================================================================================
 
 // Status methods
 
 - (NSString *)getPublicTimeline; // statuses/public_timeline
 
-- (NSString *)getHomeTimelineSinceID:(MGTwitterEngineID)sinceID startingAtPage:(int)pageNum count:(int)count; // statuses/home_timeline
-- (NSString *)getHomeTimelineSinceID:(MGTwitterEngineID)sinceID withMaximumID:(MGTwitterEngineID)maxID startingAtPage:(int)pageNum count:(int)count; // statuses/home_timeline
+- (NSString *)getHomeTimelineSinceID:(MGTwitterEngineID) sinceID startingAtPage:(int)pageNum count:(int)count; // statuses/home_timeline
+- (NSString *)getHomeTimelineSinceID:(MGTwitterEngineID) sinceID withMaximumID:(MGTwitterEngineID) maxID startingAtPage:(int)pageNum count:(int)count; // statuses/home_timeline
 
-- (NSString *)getFollowedTimelineSinceID:(MGTwitterEngineID)sinceID startingAtPage:(int)pageNum count:(int)count; // statuses/friends_timeline
-- (NSString *)getFollowedTimelineSinceID:(MGTwitterEngineID)sinceID withMaximumID:(MGTwitterEngineID)maxID startingAtPage:(int)pageNum count:(int)count; // statuses/friends_timeline
+- (NSString *)getFollowedTimelineSinceID:(MGTwitterEngineID) sinceID startingAtPage:(int)pageNum count:(int)count; // statuses/friends_timeline
+- (NSString *)getFollowedTimelineSinceID:(MGTwitterEngineID) sinceID withMaximumID:(MGTwitterEngineID) maxID startingAtPage:(int)pageNum count:(int)count; // statuses/friends_timeline
 
-- (NSString *)getUserTimelineFor:(NSString *)username sinceID:(MGTwitterEngineID)sinceID startingAtPage:(int)pageNum count:(int)count; // statuses/user_timeline & statuses/user_timeline/user
-- (NSString *)getUserTimelineFor:(NSString *)username sinceID:(MGTwitterEngineID)sinceID withMaximumID:(MGTwitterEngineID)maxID startingAtPage:(int)pageNum count:(int)count; // statuses/user_timeline & statuses/user_timeline/user
+- (NSString *)getUserTimelineFor:(NSString *)username sinceID:(MGTwitterEngineID) sinceID startingAtPage:(int)pageNum count:(int)count; // statuses/user_timeline & statuses/user_timeline/user
+- (NSString *)getUserTimelineFor:(NSString *)username sinceID:(MGTwitterEngineID) sinceID withMaximumID:(MGTwitterEngineID) maxID startingAtPage:(int)pageNum count:(int)count; // statuses/user_timeline & statuses/user_timeline/user
 
 - (NSString *)getUpdate:(MGTwitterEngineID)updateID; // statuses/show
 - (NSString *)sendUpdate:(NSString *)status; // statuses/update
 
-- (NSString *)sendUpdate:(NSString *)status withLatitude:(MGTwitterEngineLocationDegrees)latitude longitude:(MGTwitterEngineLocationDegrees)longitude; // statuses/update
+- (NSString *)sendUpdate:(NSString *)status withLatitude:(MGTwitterEngineLocationDegrees) latitude longitude:(MGTwitterEngineLocationDegrees)longitude; // statuses/update
 - (NSString *)sendUpdate:(NSString *)status inReplyTo:(MGTwitterEngineID)updateID; // statuses/update
-- (NSString *)sendUpdate:(NSString *)status inReplyTo:(MGTwitterEngineID)updateID withLatitude:(MGTwitterEngineLocationDegrees)latitude longitude:(MGTwitterEngineLocationDegrees)longitude; // statuses/update
+- (NSString *)sendUpdate:(NSString *)status inReplyTo:(MGTwitterEngineID) updateID withLatitude:(MGTwitterEngineLocationDegrees) latitude longitude:(MGTwitterEngineLocationDegrees)longitude; // statuses/update
 - (NSString *)sendRetweet:(MGTwitterEngineID)tweetID; // statuses/retweet
 
 - (NSString *)getRepliesStartingAtPage:(int)pageNum; // statuses/mentions
-- (NSString *)getRepliesSinceID:(MGTwitterEngineID)sinceID startingAtPage:(int)pageNum count:(int)count; // statuses/mentions
-- (NSString *)getRepliesSinceID:(MGTwitterEngineID)sinceID withMaximumID:(MGTwitterEngineID)maxID startingAtPage:(int)pageNum count:(int)count; // statuses/mentions
+- (NSString *)getRepliesSinceID:(MGTwitterEngineID) sinceID startingAtPage:(int)pageNum count:(int)count; // statuses/mentions
+- (NSString *)getRepliesSinceID:(MGTwitterEngineID) sinceID withMaximumID:(MGTwitterEngineID) maxID startingAtPage:(int)pageNum count:(int)count; // statuses/mentions
 
 - (NSString *)deleteUpdate:(MGTwitterEngineID)updateID; // statuses/destroy
 
@@ -135,33 +133,33 @@
 
 //	List Methods
 
-//	List the lists of the specified user. Private lists will be included if the 
+//	List the lists of the specified user. Private lists will be included if the
 //	authenticated users is the same as the user who's lists are being returned.
 - (NSString *)getListsForUser:(NSString *)username;
 
 //	Creates a new list for the authenticated user. Accounts are limited to 20 lists.
 //	Options include:
-//	mode - Whether your list is public or private. Values can be public or private. 
+//	mode - Whether your list is public or private. Values can be public or private.
 //		If no mode is specified the list will be public.
 //	description - The description to give the list.
 - (NSString *)createListForUser:(NSString *)username withName:(NSString *)listName withOptions:(NSDictionary *)options;
 
 //	update an existing list
-- (NSString *)updateListForUser:(NSString *)username withID:(MGTwitterEngineID)listID withOptions:(NSDictionary *)options;
+- (NSString *)updateListForUser:(NSString *)username withID:(MGTwitterEngineID) listID withOptions:(NSDictionary *)options;
 
 //	Show the specified list. Private lists will only be shown if the authenticated user owns the specified list.
 - (NSString *)getListForUser:(NSString *)username withID:(MGTwitterEngineID)listID;
 
 // Direct Message methods
 
-- (NSString *)getDirectMessagesSinceID:(MGTwitterEngineID)sinceID startingAtPage:(int)pageNum; // direct_messages
-- (NSString *)getDirectMessagesSinceID:(MGTwitterEngineID)sinceID withMaximumID:(MGTwitterEngineID)maxID startingAtPage:(int)pageNum count:(int)count; // direct_messages
+- (NSString *)getDirectMessagesSinceID:(MGTwitterEngineID) sinceID startingAtPage:(int)pageNum; // direct_messages
+- (NSString *)getDirectMessagesSinceID:(MGTwitterEngineID) sinceID withMaximumID:(MGTwitterEngineID) maxID startingAtPage:(int)pageNum count:(int)count; // direct_messages
 
-- (NSString *)getSentDirectMessagesSinceID:(MGTwitterEngineID)sinceID startingAtPage:(int)pageNum; // direct_messages/sent
-- (NSString *)getSentDirectMessagesSinceID:(MGTwitterEngineID)sinceID withMaximumID:(MGTwitterEngineID)maxID startingAtPage:(int)pageNum count:(int)count; // direct_messages/sent
+- (NSString *)getSentDirectMessagesSinceID:(MGTwitterEngineID) sinceID startingAtPage:(int)pageNum; // direct_messages/sent
+- (NSString *)getSentDirectMessagesSinceID:(MGTwitterEngineID) sinceID withMaximumID:(MGTwitterEngineID) maxID startingAtPage:(int)pageNum count:(int)count; // direct_messages/sent
 
 - (NSString *)sendDirectMessage:(NSString *)message to:(NSString *)username; // direct_messages/new
-- (NSString *)deleteDirectMessage:(MGTwitterEngineID)updateID;// direct_messages/destroy
+- (NSString *)deleteDirectMessage:(MGTwitterEngineID)updateID; // direct_messages/destroy
 
 
 // Friendship methods
@@ -195,7 +193,7 @@
 
 - (NSString *)getFavoriteUpdatesFor:(NSString *)username startingAtPage:(int)pageNum; // favorites
 
-- (NSString *)markUpdate:(MGTwitterEngineID)updateID asFavorite:(BOOL)flag; // favorites/create, favorites/destroy
+- (NSString *)markUpdate:(MGTwitterEngineID) updateID asFavorite:(BOOL)flag; // favorites/create, favorites/destroy
 
 
 // Notification methods
@@ -224,19 +222,17 @@
 
 #pragma mark Search API methods
 
-// ======================================================================================================
 // Twitter Search API methods
 // See documentation at: http://apiwiki.twitter.com/Twitter-API-Documentation
 // All methods below return a unique connection identifier.
-// ======================================================================================================
 
 #if YAJL_AVAILABLE || TOUCHJSON_AVAILABLE
 
 // Search method
 
 - (NSString *)getSearchResultsForQuery:(NSString *)query;
-- (NSString *)getSearchResultsForQuery:(NSString *)query sinceID:(MGTwitterEngineID)sinceID startingAtPage:(int)pageNum count:(int)count; // search
-- (NSString *)getSearchResultsForQuery:(NSString *)query sinceID:(MGTwitterEngineID)sinceID startingAtPage:(int)pageNum count:(int)count geocode:(NSString *)geocode;
+- (NSString *)getSearchResultsForQuery:(NSString *)query sinceID:(MGTwitterEngineID) sinceID startingAtPage:(int)pageNum count:(int)count; // search
+- (NSString *)getSearchResultsForQuery:(NSString *)query sinceID:(MGTwitterEngineID) sinceID startingAtPage:(int)pageNum count:(int)count geocode:(NSString *)geocode;
 
 // Trends method
 
@@ -249,7 +245,7 @@
 @interface MGTwitterEngine (BasicAuth)
 
 - (NSString *)username;
-- (void)setUsername:(NSString *) newUsername;
+- (void)setUsername:(NSString *)newUsername;
 
 - (NSString *)password DEPRECATED_ATTRIBUTE;
 - (void)setUsername:(NSString *)username password:(NSString *)password DEPRECATED_ATTRIBUTE;
@@ -262,13 +258,13 @@
 - (NSString *)consumerKey;
 - (NSString *)consumerSecret;
 
-- (void)setAccessToken: (OAToken *)token;
+- (void)setAccessToken:(OAToken *)token;
 - (OAToken *)accessToken;
 
 // XAuth login - NOTE: You MUST email Twitter with your application's OAuth key/secret to
 // get OAuth access. This will not work if you don't do this.
-- (NSString *)getXAuthAccessTokenForUsername:(NSString *)username 
-									password:(NSString *)password;
+- (NSString *)getXAuthAccessTokenForUsername:(NSString *)username
+   password:(NSString *)password;
 
 @end
 

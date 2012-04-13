@@ -14,13 +14,12 @@
 #pragma mark NSXMLParser delegate methods
 
 
-- (void)parser:(NSXMLParser *)theParser didStartElement:(NSString *)elementName 
-  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName 
-    attributes:(NSDictionary *)attributeDict
-{
-    //NSLog(@"Started element: %@ (%@)", elementName, attributeDict);
+- (void)parser:(NSXMLParser *)theParser didStartElement:(NSString *)elementName
+   namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName
+   attributes:(NSDictionary *)attributeDict {
+    // NSLog(@"Started element: %@ (%@)", elementName, attributeDict);
     [self setLastOpenedElement:elementName];
-    
+
     if ([elementName isEqualToString:@"list"]) {
         // Make new entry in parsedObjects.
         NSMutableDictionary *newNode = [NSMutableDictionary dictionaryWithCapacity:0];
@@ -37,9 +36,8 @@
     }
 }
 
-- (void)parser:(NSXMLParser *)theParser didEndElement:(NSString *)elementName 
-  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-{
+- (void)parser:(NSXMLParser *)theParser didEndElement:(NSString *)elementName
+   namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     [super parser:theParser didEndElement:elementName namespaceURI:namespaceURI qualifiedName:qName];
 
     if ([elementName isEqualToString:@"list"]) {
@@ -49,6 +47,5 @@
         currentNode = nil;
     }
 }
-
 
 @end

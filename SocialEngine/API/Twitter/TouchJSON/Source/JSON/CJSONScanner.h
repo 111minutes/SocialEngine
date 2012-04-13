@@ -29,11 +29,11 @@
 
 #import "CDataScanner.h"
 
-/// CDataScanner subclass that understands JSON syntax natively. You should generally use CJSONDeserializer instead of this class. (TODO - this could have been a category?)
+// / CDataScanner subclass that understands JSON syntax natively. You should generally use CJSONDeserializer instead of this class. (TODO - this could have been a category?)
 @interface CJSONScanner : CDataScanner {
-	BOOL strictEscapeCodes;
+    BOOL strictEscapeCodes;
     id nullObject;
-	NSStringEncoding allowedEncoding;
+    NSStringEncoding allowedEncoding;
 }
 
 @property (readwrite, nonatomic, assign) BOOL strictEscapeCodes;
@@ -50,4 +50,4 @@
 
 @end
 
-extern NSString *const kJSONScannerErrorDomain /* = @"CJSONScannerErrorDomain" */;
+extern NSString * const kJSONScannerErrorDomain /* = @"CJSONScannerErrorDomain" */;

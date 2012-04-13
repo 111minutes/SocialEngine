@@ -19,35 +19,36 @@
 
 @implementation HRRestModel
 static NSMutableDictionary *attributes;
-+ (void)initialize {    
-    if(!attributes)
++ (void)initialize {
+    if (!attributes) {
         attributes = [[NSMutableDictionary alloc] init];
+    }
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Class Attributes
 
-// Given that we want to allow classes to define default attributes we need to create 
-// a classname-based dictionary store that maps a subclass name to a dictionary 
+// Given that we want to allow classes to define default attributes we need to create
+// a classname-based dictionary store that maps a subclass name to a dictionary
 // containing its attributes.
 + (NSMutableDictionary *)classAttributes {
-    NSString *className = NSStringFromClass([self class]);
-    
+    NSString *className = NSStringFromClass ([self class]);
+
     NSMutableDictionary *newDict;
     NSMutableDictionary *dict = [attributes objectForKey:className];
-    
-    if(dict) {
+
+    if (dict) {
         return dict;
     } else {
         newDict = [NSMutableDictionary dictionaryWithObject:[NSNumber numberWithInt:HRDataFormatJSON] forKey:@"format"];
         [attributes setObject:newDict forKey:className];
     }
-    
+
     return newDict;
 }
 
 + (NSObject *)delegate {
-   return [[self classAttributes] objectForKey:kHRClassAttributesDelegateKey];
+    return [[self classAttributes] objectForKey:kHRClassAttributesDelegateKey];
 }
 
 + (void)setDelegate:(NSObject *)del {
@@ -55,7 +56,7 @@ static NSMutableDictionary *attributes;
 }
 
 + (NSURL *)baseURL {
-   return [[self classAttributes] objectForKey:kHRClassAttributesBaseURLKey];
+    return [[self classAttributes] objectForKey:kHRClassAttributesBaseURLKey];
 }
 
 + (void)setBaseURL:(NSURL *)uri {
@@ -76,6 +77,7 @@ static NSMutableDictionary *attributes;
 
 + (void)setBasicAuthWithUsername:(NSString *)username password:(NSString *)password {
     NSDictionary *authDict = [NSDictionary dictionaryWithObjectsAndKeys:username, kHRClassAttributesUsernameKey, password, kHRClassAttributesPasswordKey, nil];
+
     [self setAttributeValue:authDict forKey:kHRClassAttributesBasicAuthKey];
 }
 
@@ -99,43 +101,46 @@ static NSMutableDictionary *attributes;
     [[self classAttributes] setObject:attr forKey:key];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - REST Methods
 
 + (NSOperation *)getPath:(NSString *)path withOptions:(NSDictionary *)options object:(id)obj {
-    return [self requestWithMethod:HRRequestMethodGet path:path options:options object:obj];               
+    return [self requestWithMethod:HRRequestMethodGet path:path options:options object:obj];
 }
 
 + (NSOperation *)postPath:(NSString *)path withOptions:(NSDictionary *)options object:(id)obj {
-    return [self requestWithMethod:HRRequestMethodPost path:path options:options object:obj];                
+    return [self requestWithMethod:HRRequestMethodPost path:path options:options object:obj];
 }
 
 + (NSOperation *)putPath:(NSString *)path withOptions:(NSDictionary *)options object:(id)obj {
-    return [self requestWithMethod:HRRequestMethodPut path:path options:options object:obj];              
+    return [self requestWithMethod:HRRequestMethodPut path:path options:options object:obj];
 }
 
 + (NSOperation *)deletePath:(NSString *)path withOptions:(NSDictionary *)options object:(id)obj {
-    return [self requestWithMethod:HRRequestMethodDelete path:path options:options object:obj];        
+    return [self requestWithMethod:HRRequestMethodDelete path:path options:options object:obj];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Private
 
 + (NSOperation *)requestWithMethod:(HRRequestMethod)method path:(NSString *)path options:(NSDictionary *)options object:(id)obj {
     NSMutableDictionary *opts = [self mergedOptions:options];
+
     return [HRRequestOperation requestWithMethod:method path:path options:opts object:obj];
 }
 
 + (NSMutableDictionary *)mergedOptions:(NSDictionary *)options {
     NSMutableDictionary *defaultParams = [NSMutableDictionary dictionaryWithDictionary:[self defaultParams]];
+
     [defaultParams addEntriesFromDictionary:[options valueForKey:kHRClassAttributesParamsKey]];
-    
+
     options = [NSMutableDictionary dictionaryWithDictionary:options];
-    [(NSMutableDictionary *)options setObject:defaultParams forKey:kHRClassAttributesParamsKey];
+    [(NSMutableDictionary *) options setObject:defaultParams forKey:kHRClassAttributesParamsKey];
     NSMutableDictionary *opts = [NSMutableDictionary dictionaryWithDictionary:[self classAttributes]];
     [opts addEntriesFromDictionary:options];
     [opts removeObjectForKey:kHRClassAttributesDefaultParamsKey];
 
     return opts;
 }
+
 @end

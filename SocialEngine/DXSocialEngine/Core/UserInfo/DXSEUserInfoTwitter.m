@@ -12,21 +12,14 @@
 
 @synthesize name, screenName;
 
-//==============================================================================
-+ (id) userInfoTwitter
-{
++ (id)userInfoTwitter {
     return [[DXSEUserInfoTwitter alloc] init];
 }
 
-//==============================================================================
-- (void) dealloc
-{
-
+- (void)dealloc {
 }
 
-//==============================================================================
-- (NSString*) description
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"id=%@; name=%@; screenName=%@;",
             self.ID, name, screenName];
 }

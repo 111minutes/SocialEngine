@@ -11,25 +11,27 @@
 #import "HRFormatXML.h"
 #import "PhotoFormatter.h"
 
-@implementation HRRequestOperation(PhotoFormatter)
+@implementation HRRequestOperation (PhotoFormatter)
 - (id)formatterFromFormat {
     NSNumber *format = [[self options] objectForKey:kHRClassAttributesFormatKey];
     id theFormatter = nil;
-    switch([format intValue]) {
-        case HRDataFormatJSON:
+
+    switch ([format intValue]) {
+        case HRDataFormatJSON :
             theFormatter = [HRFormatJSON class];
-			break;
-        case HRDataFormatXML:
+            break;
+        case HRDataFormatXML :
             theFormatter = [HRFormatXML class];
-			break;
-        default:
+            break;
+        default :
             theFormatter = [PhotoFormatter class];
-			break;   
+            break;
     }
-    
-    NSString *errorMessage = [NSString stringWithFormat:@"Invalid Formatter %@", NSStringFromClass(theFormatter)];
-    NSAssert([theFormatter conformsToProtocol:@protocol(HRFormatterProtocol)], errorMessage); 
-    
+
+    NSString *errorMessage = [NSString stringWithFormat:@"Invalid Formatter %@", NSStringFromClass (theFormatter)];
+    NSAssert ([theFormatter conformsToProtocol:@protocol(HRFormatterProtocol)], errorMessage);
+
     return theFormatter;
 }
+
 @end

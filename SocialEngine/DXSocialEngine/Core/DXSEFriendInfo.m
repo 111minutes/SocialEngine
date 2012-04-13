@@ -10,7 +10,6 @@
 
 @implementation DXSEFriendInfo
 
-//==============================================================================
 @synthesize userID, userName, userAvatorURL;
 
 @end

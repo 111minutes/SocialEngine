@@ -9,20 +9,20 @@
 #import <Foundation/Foundation.h>
 
 enum {
-	kOAProblemSignatureMethodRejected = 0,
-	kOAProblemParameterAbsent,
-	kOAProblemVersionRejected,
-	kOAProblemConsumerKeyUnknown,
-	kOAProblemTokenRejected,
-	kOAProblemSignatureInvalid,
-	kOAProblemNonceUsed,
-	kOAProblemTimestampRefused,
-	kOAProblemTokenExpired,
-	kOAProblemTokenNotRenewable
+    kOAProblemSignatureMethodRejected = 0,
+    kOAProblemParameterAbsent,
+    kOAProblemVersionRejected,
+    kOAProblemConsumerKeyUnknown,
+    kOAProblemTokenRejected,
+    kOAProblemSignatureInvalid,
+    kOAProblemNonceUsed,
+    kOAProblemTimestampRefused,
+    kOAProblemTokenExpired,
+    kOAProblemTokenNotRenewable
 };
 
 @interface OAProblem : NSObject {
-	const NSString *problem;
+    const NSString *problem;
 }
 
 @property (readonly) const NSString *problem;

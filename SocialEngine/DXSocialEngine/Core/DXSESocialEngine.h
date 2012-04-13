@@ -12,19 +12,19 @@
 #import "DXSE4Square.h"
 #import "DXSEInstagram.h"
 
-#define DXSE_OPEN_URL @"OPEN_URL"
+#define DXSE_OPEN_URL @ "OPEN_URL"
 
 @interface DXSESocialEngine : NSObject
 {
 }
 
-@property (nonatomic, readonly, strong) DXSEFacebook* facebook;
-@property (nonatomic, readonly, strong) DXSETwitter* twitter;
-@property (nonatomic, readonly, strong) DXSE4Square* fourSquare;
-@property (nonatomic, readonly, strong) DXSEInstagram* instagram;
+@property (nonatomic, readonly, strong) DXSEFacebook *facebook;
+@property (nonatomic, readonly, strong) DXSETwitter *twitter;
+@property (nonatomic, readonly, strong) DXSE4Square *fourSquare;
+@property (nonatomic, readonly, strong) DXSEInstagram *instagram;
 
-+ (DXSESocialEngine*) sharedInstance;
++ (DXSESocialEngine *)sharedInstance;
 
-- (DXSEModule *) firstAuthorizedModule;
+- (DXSEModule *)firstAuthorizedModule;
 
 @end

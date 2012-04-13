@@ -10,7 +10,6 @@
 #import "HRFormatterProtocol.h"
 
 @interface PhotoFormatter : NSObject<HRFormatterProtocol> {
-
 }
 
 @end

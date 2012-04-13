@@ -12,21 +12,14 @@
 
 @synthesize name, email, avatarURL, birthdayDate;
 
-//==============================================================================
-+ (id) userInfo
-{
++ (id)userInfo {
     return [[DXSEUserInfoFacebook alloc] init];
 }
 
-//==============================================================================
-- (void) dealloc
-{
-
+- (void)dealloc {
 }
 
-//==============================================================================
-- (NSString*) description
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"id=%@; name=%@; email=%@; birthdate=%@; avatarURL=%@",
             self.ID, name, email, birthdayDate, avatarURL];
 }

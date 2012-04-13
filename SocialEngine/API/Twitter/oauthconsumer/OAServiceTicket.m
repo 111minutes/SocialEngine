@@ -34,22 +34,21 @@
     [super init];
     request = aRequest;
     response = aResponse;
-	data = aData;
+    data = aData;
     didSucceed = success;
     return self;
 }
 
-- (NSString *)body
-{
-	if (!data) {
-		return nil;
-	}
-	
-	return [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+- (NSString *)body {
+    if (!data) {
+        return nil;
+    }
+
+    return [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"<OAServiceTicket: body=%@>", [self body]];
+    return [NSString stringWithFormat:@"<OAServiceTicket: body=%@>", [self body]];
 }
 
 @end

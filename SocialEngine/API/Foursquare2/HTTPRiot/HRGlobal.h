@@ -3,65 +3,65 @@
  */
 #import <Foundation/Foundation.h>
 
-/// Key for delgate
+// / Key for delgate
 extern NSString *kHRClassAttributesDelegateKey;
-/// Key for base url
+// / Key for base url
 extern NSString *kHRClassAttributesBaseURLKey;
-/// Key for headers
+// / Key for headers
 extern NSString *kHRClassAttributesHeadersKey;
-/// Key for basic auth
+// / Key for basic auth
 extern NSString *kHRClassAttributesBasicAuthKey;
-/// Key for username
+// / Key for username
 extern NSString *kHRClassAttributesUsernameKey;
-/// Key for password
+// / Key for password
 extern NSString *kHRClassAttributesPasswordKey;
-/// Key for format
+// / Key for format
 extern NSString *kHRClassAttributesFormatKey;
-/// Key for default params
+// / Key for default params
 extern NSString *kHRClassAttributesDefaultParamsKey;
-/// Key for params
+// / Key for params
 extern NSString *kHRClassAttributesParamsKey;
-/// Key for body
+// / Key for body
 extern NSString *kHRClassAttributesBodyKey;
 
- 
+
 /**
  * Supported REST methods.
  * @see HRRequestOperation
  */
 typedef enum {
-    /// Unknown [NOT USED]
+    // / Unknown [NOT USED]
     HRRequestMethodUnknown = -1,
-    /// GET
+    // / GET
     HRRequestMethodGet,
-    /// POST
+    // / POST
     HRRequestMethodPost,
-    /// PUT
+    // / PUT
     HRRequestMethodPut,
-    /// DELETE
+    // / DELETE
     HRRequestMethodDelete
 } HRRequestMethod;
 
 /**
- Supported formats.
- @see HRRestModel#setFormat
+ * Supported formats.
+ * @see HRRestModel#setFormat
  */
 typedef enum {
-    /// Unknown [NOT USED]
+    // / Unknown [NOT USED]
     HRDataFormatUnknown = -1,
-    /// JSON Format
+    // / JSON Format
     HRDataFormatJSON,
-    /// XML Format
+    // / XML Format
     HRDataFormatXML
 } HRDataFormat;
 
-/// HTTPRiot's error domain
-#define HTTPRiotErrorDomain @"com.labratrevenge.HTTPRiot.ErrorDomain"
+// / HTTPRiot's error domain
+#define HTTPRiotErrorDomain @ "com.labratrevenge.HTTPRiot.ErrorDomain"
 #define DEBUG
 #ifdef DEBUG
-/// Logging Helper
-#define HRLOG NSLog
+// / Logging Helper
+#define HRLOG               NSLog
 #else
-/// Logging Helper
-#define HRLOG    
+// / Logging Helper
+#define HRLOG
 #endif

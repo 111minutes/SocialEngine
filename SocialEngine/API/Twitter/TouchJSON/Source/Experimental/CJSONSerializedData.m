@@ -13,21 +13,18 @@
 
 @synthesize data;
 
-- (id)initWithData:(NSData *)inData
-    {
-    if ((self = [super init]) != NULL)
-        {
+- (id)initWithData:(NSData *)inData {
+    if ((self = [super init]) != NULL) {
         data = [inData retain];
-        }
-    return(self);
     }
+    return(self);
+}
 
-- (void)dealloc
-    {
+- (void)dealloc {
     [data release];
     data = NULL;
     //
     [super dealloc];
-    }
+}
 
 @end

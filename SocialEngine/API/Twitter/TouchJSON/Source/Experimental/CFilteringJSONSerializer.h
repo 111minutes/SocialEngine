@@ -8,12 +8,12 @@
 
 #import "CJSONSerializer.h"
 
-typedef NSString *(^JSONConversionTest)(id inObject);
-typedef id (^JSONConversionConverter)(id inObject);
+typedef NSString *(^ JSONConversionTest)(id inObject);
+typedef id (^ JSONConversionConverter)(id inObject);
 
 @interface CFilteringJSONSerializer : CJSONSerializer {
-	NSSet *tests;
-	NSDictionary *convertersByName;
+    NSSet *tests;
+    NSDictionary *convertersByName;
 }
 
 @property (readwrite, nonatomic, retain) NSSet *tests;

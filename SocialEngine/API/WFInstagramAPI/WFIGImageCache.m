@@ -10,10 +10,10 @@
 #import "WFIGConnection.h"
 
 @interface WFIGImageCache ()
-+ (NSString*) relativePathForURL:(NSString*)urlStr;
-+ (NSURL*) absolutePathForURL:(NSString*)urlStr;
-+ (NSString*) relativeDirectoryForPath:(NSString*)urlStr;
-+ (NSURL*) absoluteDirectoryForURL:(NSString*)urlStr;
++ (NSString *)relativePathForURL:(NSString *)urlStr;
++ (NSURL *)absolutePathForURL:(NSString *)urlStr;
++ (NSString *)relativeDirectoryForPath:(NSString *)urlStr;
++ (NSURL *)absoluteDirectoryForURL:(NSString *)urlStr;
 @end
 
 /**
@@ -24,61 +24,64 @@
  */
 @implementation WFIGImageCache
 
-+ (NSURL*) cacheDirectory {
-  static NSURL *cachDir = nil;
-  if (!cachDir) {
-    cachDir = [[NSURL fileURLWithPath:NSTemporaryDirectory()] URLByAppendingPathComponent:@"IGInstagramCache"];
-  }
-  return cachDir;
-}
++ (NSURL *)cacheDirectory {
+    static NSURL *cachDir = nil;
 
-+ (UIImage*) getImageAtURL:(NSString*)url {
-  NSString *cachePath = [[self absolutePathForURL:url] path];
-  
-  UIImage *image = nil;
-  
-  if ([[NSFileManager defaultManager] fileExistsAtPath:cachePath]) {
-    NSData *data = [NSData dataWithContentsOfFile:cachePath];
-    image = [UIImage imageWithData:data];
-  } else {    
-    WFIGResponse *response = [WFIGConnection get:url];
-    if ([response isSuccess]) {
-      image = [UIImage imageWithData:response.rawBody];
-      
-      // cache the image
-      NSString *cacheDir = [[self absoluteDirectoryForURL:url] path];
-      NSError *err = nil;
-      if ([[NSFileManager defaultManager] createDirectoryAtPath:cacheDir withIntermediateDirectories:YES attributes:nil error:&err]) {
-        [response.rawBody writeToFile:cachePath atomically:YES];
-      }
+    if (!cachDir) {
+        cachDir = [[NSURL fileURLWithPath:NSTemporaryDirectory ()] URLByAppendingPathComponent:@"IGInstagramCache"];
     }
-  }
-  
-  return image;
+    return cachDir;
 }
 
++ (UIImage *)getImageAtURL:(NSString *)url {
+    NSString *cachePath = [[self absolutePathForURL:url] path];
+
+    UIImage *image = nil;
+
+    if ([[NSFileManager defaultManager] fileExistsAtPath:cachePath]) {
+        NSData *data = [NSData dataWithContentsOfFile:cachePath];
+        image = [UIImage imageWithData:data];
+    } else {
+        WFIGResponse *response = [WFIGConnection get:url];
+        if ([response isSuccess]) {
+            image = [UIImage imageWithData:response.rawBody];
+
+            // cache the image
+            NSString *cacheDir = [[self absoluteDirectoryForURL:url] path];
+            NSError *err = nil;
+            if ([[NSFileManager defaultManager] createDirectoryAtPath:cacheDir withIntermediateDirectories:YES attributes:nil error:&err]) {
+                [response.rawBody writeToFile:cachePath atomically:YES];
+            }
+        }
+    }
+
+    return image;
+}
 
 #pragma mark - utility/private methods
-+ (NSString*) relativePathForURL:(NSString*)urlStr {
-  NSURL *url = [NSURL URLWithString:urlStr];
-  NSString *path = [url path];
-  return [path substringFromIndex:1]; // remove initial slash, we want a relative path
++ (NSString *)relativePathForURL:(NSString *)urlStr {
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSString *path = [url path];
+
+    return [path substringFromIndex:1]; // remove initial slash, we want a relative path
 }
 
-+ (NSURL*) absolutePathForURL:(NSString*)urlStr {
-  return [[self cacheDirectory] URLByAppendingPathComponent:[self relativePathForURL:urlStr]];
++ (NSURL *)absolutePathForURL:(NSString *)urlStr {
+    return [[self cacheDirectory] URLByAppendingPathComponent:[self relativePathForURL:urlStr]];
 }
 
-+ (NSString*) relativeDirectoryForPath:(NSString*)urlStr {
-  NSURL *url = [NSURL URLWithString:urlStr];
-  NSMutableArray *pathComponents = [NSMutableArray arrayWithArray:[url pathComponents]];
-  [pathComponents removeObjectAtIndex:([pathComponents count] - 1)];
-  return [NSString pathWithComponents:pathComponents];
++ (NSString *)relativeDirectoryForPath:(NSString *)urlStr {
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableArray *pathComponents = [NSMutableArray arrayWithArray:[url pathComponents]];
+
+    [pathComponents removeObjectAtIndex:([pathComponents count] - 1)];
+    return [NSString pathWithComponents:pathComponents];
 }
 
-+ (NSURL*) absoluteDirectoryForURL:(NSString*)urlStr {
-  NSString *relativeDirectory = [self relativeDirectoryForPath:urlStr];
-  return [[self cacheDirectory] URLByAppendingPathComponent:relativeDirectory];
++ (NSURL *)absoluteDirectoryForURL:(NSString *)urlStr {
+    NSString *relativeDirectory = [self relativeDirectoryForPath:urlStr];
+
+    return [[self cacheDirectory] URLByAppendingPathComponent:relativeDirectory];
 }
 
 @end

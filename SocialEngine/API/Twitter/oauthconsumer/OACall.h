@@ -25,39 +25,39 @@
 @class OAServiceTicket;
 
 @interface OACall : NSObject {
-	NSURL *url;
-	NSString *method;
-	NSArray *parameters;
-	NSDictionary *files;
-	NSObject <OACallDelegate> *delegate;
-	SEL finishedSelector;
-	OADataFetcher *fetcher;
-	OAMutableURLRequest *request;
-	OAServiceTicket *ticket;
+    NSURL *url;
+    NSString *method;
+    NSArray *parameters;
+    NSDictionary *files;
+    NSObject <OACallDelegate> *delegate;
+    SEL finishedSelector;
+    OADataFetcher *fetcher;
+    OAMutableURLRequest *request;
+    OAServiceTicket *ticket;
 }
 
-@property(readonly) NSURL *url;
-@property(readonly) NSString *method;
-@property(readonly) NSArray *parameters;
-@property(readonly) NSDictionary *files;
-@property(nonatomic, retain) OAServiceTicket *ticket;
+@property (readonly) NSURL *url;
+@property (readonly) NSString *method;
+@property (readonly) NSArray *parameters;
+@property (readonly) NSDictionary *files;
+@property (nonatomic, retain) OAServiceTicket *ticket;
 
 - (id)init;
 - (id)initWithURL:(NSURL *)aURL;
 - (id)initWithURL:(NSURL *)aURL method:(NSString *)aMethod;
 - (id)initWithURL:(NSURL *)aURL parameters:(NSArray *)theParameters;
 - (id)initWithURL:(NSURL *)aURL method:(NSString *)aMethod parameters:(NSArray *)theParameters;
-- (id)initWithURL:(NSURL *)aURL parameters:(NSArray *)theParameters files:(NSDictionary*)theFiles;
+- (id)initWithURL:(NSURL *)aURL parameters:(NSArray *)theParameters files:(NSDictionary *)theFiles;
 
 - (id)initWithURL:(NSURL *)aURL
-		   method:(NSString *)aMethod
-	   parameters:(NSArray *)theParameters
-			files:(NSDictionary*)theFiles;
+   method:(NSString *)aMethod
+   parameters:(NSArray *)theParameters
+   files:(NSDictionary *)theFiles;
 
 - (void)perform:(OAConsumer *)consumer
-		  token:(OAToken *)token
-		  realm:(NSString *)realm
-	   delegate:(NSObject <OACallDelegate> *)aDelegate
-	  didFinish:(SEL)finished;
+   token:(OAToken *)token
+   realm:(NSString *)realm
+   delegate:(NSObject <OACallDelegate> *) aDelegate
+   didFinish:(SEL)finished;
 
 @end

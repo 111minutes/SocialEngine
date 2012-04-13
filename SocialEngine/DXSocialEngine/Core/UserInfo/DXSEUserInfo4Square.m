@@ -12,21 +12,14 @@
 
 @synthesize firstName, lastName, email, avatarURL;
 
-//==============================================================================
-+ (id) userInfo4Square
-{
++ (id)userInfo4Square {
     return [[DXSEUserInfo4Square alloc] init];
 }
 
-//==============================================================================
-- (void) dealloc
-{
-
+- (void)dealloc {
 }
 
-//==============================================================================
-- (NSString*) description
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"id=%@; firstName=%@; lastName=%@; email=%@; avatarURL=%@;",
             self.ID, firstName, lastName, email, avatarURL];
 }

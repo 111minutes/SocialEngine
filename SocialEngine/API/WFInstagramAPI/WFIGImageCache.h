@@ -8,7 +8,7 @@
 
 @interface WFIGImageCache : NSObject
 
-+ (NSURL*) cacheDirectory;
-+ (UIImage*) getImageAtURL:(NSString*)url;
++ (NSURL *)cacheDirectory;
++ (UIImage *)getImageAtURL:(NSString *)url;
 
 @end

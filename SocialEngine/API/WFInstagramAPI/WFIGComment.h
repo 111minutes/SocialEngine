@@ -17,9 +17,9 @@
 @property (strong, nonatomic) NSNumber *commentId;
 @property (strong, nonatomic) NSDictionary *userData;
 
-+ (NSMutableArray*) commentsWithJSON:(NSArray*)json;
++ (NSMutableArray *)commentsWithJSON:(NSArray *)json;
 
-- (id) initWithJSONFragment:(NSDictionary*)json;
+- (id)initWithJSONFragment:(NSDictionary *)json;
 
 /**
  * The user from the local -userData JSON.
@@ -28,8 +28,8 @@
  * You should use -[WFIGUser remoteUserWithId:error:] if you
  * require more user data.
  */
-- (WFIGUser*) user;
+- (WFIGUser *)user;
 
-- (BOOL) postToMedia:(WFIGMedia*)media error:(NSError* __autoreleasing*)error;
+- (BOOL)postToMedia:(WFIGMedia *)media error:(NSError * __autoreleasing *)error;
 
 @end

@@ -12,21 +12,21 @@
 
 @protocol FoursquareWebLoginDelegate <NSObject>
 
-- (void) foursquareWebLoginWasCanceled:(FoursquareWebLogin*) aWebLogin;
+- (void)foursquareWebLoginWasCanceled:(FoursquareWebLogin *)aWebLogin;
 
 @end
 
 @interface FoursquareWebLogin : UIViewController<UIWebViewDelegate>
 {
-	NSString *_url;
-	UIWebView *webView;
-	SEL selector;
+    NSString *_url;
+    UIWebView *webView;
+    SEL selector;
     id<FoursquareWebLoginDelegate> delegate;
-    UIActivityIndicatorView* activityIndicator;
+    UIActivityIndicatorView *activityIndicator;
 }
 
-@property (nonatomic,assign) id delegate;
-@property (nonatomic,assign)SEL selector;
+@property (nonatomic, assign) id delegate;
+@property (nonatomic, assign) SEL selector;
 
-- (id) initWithUrl:(NSString*)url;
+- (id)initWithUrl:(NSString *)url;
 @end

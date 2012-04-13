@@ -11,7 +11,7 @@
 #import "MGTwitterStatusesParser.h"
 
 @interface MGTwitterSocialGraphParser : MGTwitterStatusesParser {
-	NSMutableArray * twitterIDs;
+    NSMutableArray *twitterIDs;
 }
 
 @end

@@ -11,12 +11,12 @@
 
 @interface WFIGConnectionDelegate : NSObject
 
-- (BOOL) isDone;
-- (void) cancel;
+- (BOOL)isDone;
+- (void)cancel;
 
-@property(nonatomic, strong) NSURLResponse *response;
-@property(nonatomic, strong) NSMutableData *data;
-@property(nonatomic, strong) NSError *error;
-@property(nonatomic, strong) NSURLConnection *connection;
+@property (nonatomic, strong) NSURLResponse *response;
+@property (nonatomic, strong) NSMutableData *data;
+@property (nonatomic, strong) NSError *error;
+@property (nonatomic, strong) NSURLConnection *connection;
 
 @end

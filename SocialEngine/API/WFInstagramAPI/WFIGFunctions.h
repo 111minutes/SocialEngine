@@ -14,13 +14,13 @@
  * decoded JSON objects. This function takes a string of a number
  * and returns a date.
  */
-NSDate* WFIGDateFromJSONString(NSString* str);
+NSDate * WFIGDateFromJSONString(NSString *str);
 
 /**
  * Takes any string, hex-encodes URL-unsafe characters (?, +, etc.),
  * and returns the result.
  */
-NSString* WFIGURLEncodedString(NSString *str);
+NSString * WFIGURLEncodedString(NSString *str);
 
 /**
  * Encodes the given `params` according as `application/x-www-form-urlencoded values`,

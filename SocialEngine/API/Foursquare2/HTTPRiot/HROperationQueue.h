@@ -13,7 +13,6 @@
  * Gives you access to the shared operation queue used to manage all connections.
  */
 @interface HROperationQueue : NSOperationQueue {
-
 }
 
 /**

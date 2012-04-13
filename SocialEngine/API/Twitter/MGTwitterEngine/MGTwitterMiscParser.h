@@ -11,7 +11,6 @@
 #import "MGTwitterStatusesParser.h"
 
 @interface MGTwitterMiscParser : MGTwitterStatusesParser {
-	
 }
 
 @end

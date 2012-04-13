@@ -11,7 +11,6 @@
 #import "MGTwitterLibXMLParser.h"
 
 @interface MGTwitterMiscLibXMLParser : MGTwitterLibXMLParser {
-
 }
 
 @end

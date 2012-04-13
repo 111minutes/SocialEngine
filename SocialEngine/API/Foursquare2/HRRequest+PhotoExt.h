@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "HTTPRiot.h"
 
-@interface HRRequestOperation(PhotoFormatter)
+@interface HRRequestOperation (PhotoFormatter)
 
 @end

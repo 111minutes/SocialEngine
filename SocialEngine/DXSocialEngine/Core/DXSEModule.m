@@ -8,37 +8,23 @@
 
 #import "DXSEModule.h"
 
-
-@interface DXSEModule ()
-
-@property (nonatomic, strong) NSMutableDictionary* successBlocks;
-@property (nonatomic, strong) NSMutableDictionary* failureBlocks;
-@property (nonatomic, readwrite, strong) DXSEntryConfig* entryConfig;
-
-@end
-
 @implementation DXSEModule
 
 @synthesize successBlocks;
 @synthesize failureBlocks;
 
 @synthesize entryConfig;
-//@synthesize accessToken;
+// @synthesize accessToken;
 
 #pragma mark - Init/Dealloc
-//==============================================================================
-- (id) init
-{
+- (id)init {
     return nil;
 }
 
-//==============================================================================
-- (id) initWithEntryConfig:(DXSEntryConfig*) anInitialConfig
-{
-    if( (self = [super init]) )
-    {
+- (id)initWithEntryConfig:(DXSEntryConfig *)anInitialConfig {
+    if ( (self = [super init]) ) {
         self.entryConfig = anInitialConfig;
-        NSLog(@"entryConfig: %@", entryConfig);
+        NSLog (@"entryConfig: %@", entryConfig);
 
         self.successBlocks = [NSMutableDictionary dictionary];
         self.failureBlocks = [NSMutableDictionary dictionary];
@@ -46,106 +32,82 @@
     return self;
 }
 
-//==============================================================================
-- (void) dealloc
-{
-
+- (void)dealloc {
 }
 
 #pragma mark - Authentication
-//==============================================================================
-- (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
-{
-    NSAssert(NO, @"You need override this method");
+- (void)login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
+    NSAssert (NO, @"You need override this method");
 }
 
-//==============================================================================
-- (void) logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
-{
-    NSAssert(NO, @"You need override this method");
+- (void)logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
+    NSAssert (NO, @"You need override this method");
 }
 
-//==============================================================================
-- (BOOL) isAuthorized
-{
-    NSAssert(NO, @"You need override this method");
+- (BOOL)isAuthorized {
+    NSAssert (NO, @"You need override this method");
     return NO;
 }
 
-//==============================================================================
-- (NSString*) accessToken
-{
-    NSAssert(NO, @"You need override this method");
+- (NSString *)accessToken {
+    NSAssert (NO, @"You need override this method");
     return nil;
 }
 
 #pragma mark - UserInfo
-//==============================================================================
-- (void) getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
-{
-    NSAssert(NO, @"You need override this method");
+- (void)getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
+    NSAssert (NO, @"You need override this method");
 }
 
-//==============================================================================
-- (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
-{
-    NSAssert(NO, @"You need override this method");
+- (void)getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
+    NSAssert (NO, @"You need override this method");
 }
 
 @end
 
-//==============================================================================
-//==============================================================================
-//==============================================================================
 @implementation DXSEModule (OnlyForSubclasses)
 
-//==============================================================================
-- (void) showLoginController:(UIViewController*)aLoginController
-{
-    UIView* view = (UIView*)[UIApplication sharedApplication].keyWindow;
-    if([view.subviews count] > 0)
+- (void)showLoginController:(UIViewController *)aLoginController {
+    UIView *view = (UIView *)[UIApplication sharedApplication].keyWindow;
+
+    if ([view.subviews count] > 0) {
         view = [view.subviews objectAtIndex:0];
-    
-    UIViewController* controller = [view firstAvailableUIViewController];
+    }
+
+    UIViewController *controller = [view firstAvailableUIViewController];
     [controller presentModalViewController:aLoginController animated:YES];
 }
 
-//==============================================================================
-- (void) hideLoginController
-{
-    UIView* view = (UIView*)[UIApplication sharedApplication].keyWindow;
-    if([view.subviews count] > 0)
+- (void)hideLoginController {
+    UIView *view = (UIView *)[UIApplication sharedApplication].keyWindow;
+
+    if ([view.subviews count] > 0) {
         view = [view.subviews objectAtIndex:0];
-    
-    UIViewController* controller = [view firstAvailableUIViewController];
+    }
+
+    UIViewController *controller = [view firstAvailableUIViewController];
     [controller dismissModalViewControllerAnimated:YES];
 }
 
-//==============================================================================
-- (void) registerSuccessBlock:(DXSESuccessBlock)successBlock forKey:(NSString*)aBlockKey
-{
+- (void)registerSuccessBlock:(DXSESuccessBlock)successBlock forKey:(NSString *)aBlockKey {
     [successBlocks setObject:[successBlock copy] forKey:aBlockKey];
 }
 
-//==============================================================================
-- (void) registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString*)aBlockKey
-{
+- (void)registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString *)aBlockKey {
     [failureBlocks setObject:[failureBlock copy] forKey:aBlockKey];
 }
 
-//==============================================================================
-- (void) executeSuccessBlockForKey:(NSString*)aBlockKey withData:(id)aData
-{
+- (void)executeSuccessBlockForKey:(NSString *)aBlockKey withData:(id)aData {
     DXSESuccessBlock success = [successBlocks objectForKey:aBlockKey];
-    success(self, aData);
+
+    success (self, aData);
     [successBlocks removeObjectForKey:aBlockKey];
 }
 
-//==============================================================================
-- (void) executeFailureBlockForKey:(NSString*)aBlockKey withError:(NSError*)anError
-{
+- (void)executeFailureBlockForKey:(NSString *)aBlockKey withError:(NSError *)anError {
     DXSEFailureBlock failure = [failureBlocks objectForKey:aBlockKey];
-    failure(self, anError);
+
+    failure (self, anError);
     [failureBlocks removeObjectForKey:aBlockKey];
 }
 

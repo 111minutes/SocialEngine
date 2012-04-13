@@ -12,9 +12,7 @@
 
 @synthesize ID;
 
-- (void) dealloc
-{
-
+- (void)dealloc {
 }
 
 @end

@@ -6,13 +6,13 @@
  * You may obtain a copy of the License at
  *
  *    http://www.apache.org/licenses/LICENSE-2.0
-
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
-*/
+ */
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -26,35 +26,35 @@
  */
 
 @interface FBDialog : UIView <UIWebViewDelegate> {
-  id<FBDialogDelegate> _delegate;
-  NSMutableDictionary *_params;
-  NSString * _serverURL;
-  NSURL* _loadingURL;
-  UIWebView* _webView;
-  UIActivityIndicatorView* _spinner;
-  UIButton* _closeButton;
-  UIInterfaceOrientation _orientation;
-  BOOL _showingKeyboard;
+    id<FBDialogDelegate> _delegate;
+    NSMutableDictionary *_params;
+    NSString *_serverURL;
+    NSURL *_loadingURL;
+    UIWebView *_webView;
+    UIActivityIndicatorView *_spinner;
+    UIButton *_closeButton;
+    UIInterfaceOrientation _orientation;
+    BOOL _showingKeyboard;
 
-  // Ensures that UI elements behind the dialog are disabled.
-  UIView* _modalBackgroundView;
+    // Ensures that UI elements behind the dialog are disabled.
+    UIView *_modalBackgroundView;
 }
 
 /**
  * The delegate.
  */
-@property(nonatomic,assign) id<FBDialogDelegate> delegate;
+@property (nonatomic, assign) id<FBDialogDelegate> delegate;
 
 /**
  * The parameters.
  */
-@property(nonatomic, retain) NSMutableDictionary* params;
+@property (nonatomic, retain) NSMutableDictionary *params;
 
-- (NSString *) getStringFromUrl: (NSString*) url needle:(NSString *) needle;
+- (NSString *)getStringFromUrl:(NSString *)url needle:(NSString *)needle;
 
-- (id)initWithURL: (NSString *) loadingURL
-           params: (NSMutableDictionary *) params
-         delegate: (id <FBDialogDelegate>) delegate;
+- (id)initWithURL:(NSString *)loadingURL
+   params:(NSMutableDictionary *)params
+   delegate:(id <FBDialogDelegate>)delegate;
 
 /**
  * Displays the view with an animation.
@@ -73,18 +73,18 @@
 /**
  * Displays a URL in the dialog.
  */
-- (void)loadURL:(NSString*)url
-            get:(NSDictionary*)getParams;
+- (void)loadURL:(NSString *)url
+   get:(NSDictionary *)getParams;
 
 /**
  * Hides the view and notifies delegates of success or cancellation.
  */
-- (void)dismissWithSuccess:(BOOL)success animated:(BOOL)animated;
+- (void)dismissWithSuccess:(BOOL) success animated:(BOOL)animated;
 
 /**
  * Hides the view and notifies delegates of an error.
  */
-- (void)dismissWithError:(NSError*)error animated:(BOOL)animated;
+- (void)dismissWithError:(NSError *)error animated:(BOOL)animated;
 
 /**
  * Subclasses may override to perform actions just prior to showing the dialog.
@@ -111,10 +111,10 @@
 - (void)dialogDidCancel:(NSURL *)url;
 @end
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
- *Your application should implement this delegate
+ * *Your application should implement this delegate
  */
 @protocol FBDialogDelegate <NSObject>
 
@@ -143,7 +143,7 @@
 /**
  * Called when dialog failed to load due to an error.
  */
-- (void)dialog:(FBDialog*)dialog didFailWithError:(NSError *)error;
+- (void)dialog:(FBDialog *)dialog didFailWithError:(NSError *)error;
 
 /**
  * Asks if a link touched by a user should be opened in an external browser.
@@ -155,6 +155,6 @@
  * should hold onto the URL and once you have received their acknowledgement open the URL yourself
  * using [[UIApplication sharedApplication] openURL:].
  */
-- (BOOL)dialog:(FBDialog*)dialog shouldOpenURLInExternalBrowser:(NSURL *)url;
+- (BOOL)dialog:(FBDialog *)dialog shouldOpenURLInExternalBrowser:(NSURL *)url;
 
 @end

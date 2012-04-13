@@ -10,6 +10,6 @@
 
 
 @interface NSObject (InvocationUtils)
-- (void)performSelectorOnMainThread:(SEL)selector withObjects:(id)obj1, ...;
-- (void)performSelectorOnMainThread:(SEL)selector withObjectArray:(NSArray *)objects;
+- (void)performSelectorOnMainThread:(SEL) selector withObjects:(id)obj1, ...;
+- (void)performSelectorOnMainThread:(SEL) selector withObjectArray:(NSArray *)objects;
 @end

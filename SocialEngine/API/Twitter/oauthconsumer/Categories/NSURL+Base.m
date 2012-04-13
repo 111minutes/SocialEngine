@@ -31,6 +31,7 @@
 
 - (NSString *)URLStringWithoutQuery {
     NSArray *parts = [[self absoluteString] componentsSeparatedByString:@"?"];
+
     return [parts objectAtIndex:0];
 }
 

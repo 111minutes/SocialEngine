@@ -10,15 +10,15 @@
 
 @property (strong, nonatomic) NSString *nextPageURL;
 
-- (id) initWithJSON:(NSDictionary*)json;
+- (id)initWithJSON:(NSDictionary *)json;
 
-- (BOOL) hasNextPage;
-- (WFIGMediaCollection*) nextPageWithError:(NSError* __autoreleasing *)error;
-- (BOOL) loadAndMergeNextPageWithError:(NSError* __autoreleasing *)error;
+- (BOOL)hasNextPage;
+- (WFIGMediaCollection *)nextPageWithError:(NSError * __autoreleasing *)error;
+- (BOOL)loadAndMergeNextPageWithError:(NSError * __autoreleasing *)error;
 
 // NSArray proxy methods
-- (NSUInteger) count;
-- (BOOL) containsObject:(id)object;
-- (id) objectAtIndex:(NSUInteger)index;
+- (NSUInteger)count;
+- (BOOL)containsObject:(id)object;
+- (id)objectAtIndex:(NSUInteger)index;
 
 @end

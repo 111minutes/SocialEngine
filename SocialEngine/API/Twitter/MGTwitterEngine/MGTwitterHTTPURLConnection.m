@@ -12,13 +12,13 @@
 
 
 @interface NSURLRequest (OAuthExtensions)
--(void)prepare;
+- (void)prepare;
 @end
 
 @implementation NSURLRequest (OAuthExtensions)
 
--(void)prepare{
-	// do nothing
+- (void)prepare {
+    // do nothing
 }
 
 @end
@@ -33,86 +33,67 @@
 #pragma mark Initializer
 
 
-- (id)initWithRequest:(NSURLRequest *)request delegate:(id)delegate 
-          requestType:(MGTwitterRequestType)requestType responseType:(MGTwitterResponseType)responseType
-{
-	// OAuth requests need to have -prepare called on them first. handle that case before the NSURLConnection sends it
-	[request prepare];
-	
+- (id)initWithRequest:(NSURLRequest *)request delegate:(id)delegate
+   requestType:(MGTwitterRequestType)requestType responseType:(MGTwitterResponseType)responseType {
+    // OAuth requests need to have -prepare called on them first. handle that case before the NSURLConnection sends it
+    [request prepare];
+
     if ((self = [super initWithRequest:request delegate:delegate])) {
         _data = [[NSMutableData alloc] initWithCapacity:0];
         _identifier = [[NSString stringWithNewUUID] retain];
         _requestType = requestType;
         _responseType = responseType;
-		_URL = [[request URL] retain];
+        _URL = [[request URL] retain];
     }
-    
+
     return self;
 }
 
-
-- (void)dealloc
-{
+- (void)dealloc {
     [_response release];
     [_data release];
     [_identifier release];
-	[_URL release];
+    [_URL release];
     [super dealloc];
 }
-
 
 #pragma mark Data helper methods
 
 
-- (void)resetDataLength
-{
+- (void)resetDataLength {
     [_data setLength:0];
 }
 
-
-- (void)appendData:(NSData *)data
-{
+- (void)appendData:(NSData *)data {
     [_data appendData:data];
 }
-
 
 #pragma mark Accessors
 
 
-- (NSString *)identifier
-{
+- (NSString *)identifier {
     return [[_identifier retain] autorelease];
 }
 
-
-- (NSData *)data
-{
+- (NSData *)data {
     return [[_data retain] autorelease];
 }
 
-
-- (NSURL *)URL
-{
+- (NSURL *)URL {
     return [[_URL retain] autorelease];
 }
 
-
-- (MGTwitterRequestType)requestType
-{
+- (MGTwitterRequestType)requestType {
     return _requestType;
 }
 
-
-- (MGTwitterResponseType)responseType
-{
+- (MGTwitterResponseType)responseType {
     return _responseType;
 }
 
-
-- (NSString *)description
-{
+- (NSString *)description {
     NSString *description = [super description];
-    
+
     return [description stringByAppendingFormat:@" (requestType = %d, identifier = %@)", _requestType, _identifier];
 }
 

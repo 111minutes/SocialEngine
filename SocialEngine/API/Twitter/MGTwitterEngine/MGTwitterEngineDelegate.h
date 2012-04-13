@@ -10,13 +10,13 @@
 @class OAToken;
 
 typedef enum _MGTwitterEngineDeliveryOptions {
-	// all results will be delivered as an array via statusesReceived: and similar delegate methods
+    // all results will be delivered as an array via statusesReceived: and similar delegate methods
     MGTwitterEngineDeliveryAllResultsOption = 1 << 0,
 
-	// individual results will be delivered as a dictionary via the receivedObject: delegate method
+    // individual results will be delivered as a dictionary via the receivedObject: delegate method
     MGTwitterEngineDeliveryIndividualResultsOption = 1 << 1,
-	
-	// these options can be combined with the | operator
+
+    // these options can be combined with the | operator
 } MGTwitterEngineDeliveryOptions;
 
 
@@ -35,7 +35,7 @@ typedef enum _MGTwitterEngineDeliveryOptions {
 - (void)receivedObject:(NSDictionary *)dictionary forRequest:(NSString *)connectionIdentifier;
 #endif
 
-// These delegate methods are called after all results are parsed from the connection. If 
+// These delegate methods are called after all results are parsed from the connection. If
 // the deliveryOption is configured for MGTwitterEngineDeliveryAllResults (the default), a
 // collection of all results is also returned.
 - (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier;

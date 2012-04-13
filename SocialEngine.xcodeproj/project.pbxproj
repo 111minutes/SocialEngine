@@ -968,6 +968,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 024687B214FE2642009E2CB9 /* Build configuration list for PBXNativeTarget "SocialEngine" */;
 			buildPhases = (
+				500B28D115386A4200C73CAC /* ShellScript */,
 				0246879014FE2642009E2CB9 /* Sources */,
 				0246879114FE2642009E2CB9 /* Frameworks */,
 				0246879214FE2642009E2CB9 /* Resources */,
@@ -1024,6 +1025,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		500B28D115386A4200C73CAC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /usr/local/etc/formatter.rb;
+		};
 		E565640D3AF147C0B5743427 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

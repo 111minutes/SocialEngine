@@ -29,12 +29,12 @@
 
 
 @interface OARequestParameter : NSObject {
-@protected
+    @protected
     NSString *name;
     NSString *value;
 }
-@property(copy, readwrite) NSString *name;
-@property(copy, readwrite) NSString *value;
+@property (copy, readwrite) NSString *name;
+@property (copy, readwrite) NSString *value;
 
 - (id)initWithName:(NSString *)aName value:(NSString *)aValue;
 - (NSString *)URLEncodedName;

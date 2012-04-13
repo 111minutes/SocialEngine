@@ -10,9 +10,9 @@
 
 @interface DXSEntryConfig ()
 
-@property (nonatomic, readwrite, strong) NSString* oauthKey;
-@property (nonatomic, readwrite, strong) NSString* oauthSecret;
-@property (nonatomic, readwrite, strong) NSString* redirectURL;
+@property (nonatomic, readwrite, strong) NSString *oauthKey;
+@property (nonatomic, readwrite, strong) NSString *oauthSecret;
+@property (nonatomic, readwrite, strong) NSString *redirectURL;
 
 @end
 
@@ -23,16 +23,12 @@
 @synthesize oauthSecret;
 @synthesize redirectURL;
 
-//==============================================================================
-- (id) initWithDictionary:(NSDictionary*)aDictionary
-{
-    if( (self = [super init]) )
-    {
-        if(!aDictionary)
-        {
+- (id)initWithDictionary:(NSDictionary *)aDictionary {
+    if ( (self = [super init]) ) {
+        if (!aDictionary) {
             return nil;
         }
-        
+
         self.oauthKey = [aDictionary objectForKey:@"oauthKey"];
         self.oauthSecret = [aDictionary objectForKey:@"oauthSecret"];
         self.redirectURL = [aDictionary objectForKey:@"redirectURL"];
@@ -40,9 +36,7 @@
     return self;
 }
 
-//==============================================================================
-- (NSString*) description
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"oauthKey=%@; oauthSecret=%@; redirectURL=%@", oauthKey, oauthSecret, redirectURL];
 }
 

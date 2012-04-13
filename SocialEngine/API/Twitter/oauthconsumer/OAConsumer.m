@@ -32,22 +32,22 @@
 #pragma mark init
 
 - (id)initWithKey:(const NSString *)aKey secret:(const NSString *)aSecret {
-	[super init];
-	self.key = [aKey retain];
-	self.secret = [aSecret retain];
-	return self;
+    [super init];
+    self.key = [aKey retain];
+    self.secret = [aSecret retain];
+    return self;
 }
 
 - (BOOL)isEqual:(id)object {
-	if ([object isKindOfClass:[self class]]) {
-		return [self isEqualToConsumer:(OAConsumer*)object];
-	}
-	return NO;
+    if ([object isKindOfClass:[self class]]) {
+        return [self isEqualToConsumer:(OAConsumer *)object];
+    }
+    return NO;
 }
 
 - (BOOL)isEqualToConsumer:(OAConsumer *)aConsumer {
-	return ([self.key isEqualToString:aConsumer.key] &&
-			[self.secret isEqualToString:aConsumer.secret]);
+    return ([self.key isEqualToString:aConsumer.key] &&
+            [self.secret isEqualToString:aConsumer.secret]);
 }
 
 @end

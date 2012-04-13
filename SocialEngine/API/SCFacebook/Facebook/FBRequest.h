@@ -6,7 +6,7 @@
  * You may obtain a copy of the License at
  *
  *    http://www.apache.org/licenses/LICENSE-2.0
-
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -23,26 +23,26 @@
  * Do not use this interface directly, instead, use method in Facebook.h
  */
 @interface FBRequest : NSObject {
-  id<FBRequestDelegate> _delegate;
-  NSString*             _url;
-  NSString*             _httpMethod;
-  NSMutableDictionary*  _params;
-  NSURLConnection*      _connection;
-  NSMutableData*        _responseText;
+    id<FBRequestDelegate> _delegate;
+    NSString *_url;
+    NSString *_httpMethod;
+    NSMutableDictionary *_params;
+    NSURLConnection *_connection;
+    NSMutableData *_responseText;
 }
 
 
-@property(nonatomic,assign) id<FBRequestDelegate> delegate;
+@property (nonatomic, assign) id<FBRequestDelegate> delegate;
 
 /**
  * The URL which will be contacted to execute the request.
  */
-@property(nonatomic,copy) NSString* url;
+@property (nonatomic, copy) NSString *url;
 
 /**
  * The API method which will be called.
  */
-@property(nonatomic,copy) NSString* httpMethod;
+@property (nonatomic, copy) NSString *httpMethod;
 
 /**
  * The dictionary of parameters to pass to the method.
@@ -50,32 +50,32 @@
  * These values in the dictionary will be converted to strings using the
  * standard Objective-C object-to-string conversion facilities.
  */
-@property(nonatomic,retain) NSMutableDictionary* params;
-@property(nonatomic,assign) NSURLConnection*  connection;
-@property(nonatomic,assign) NSMutableData* responseText;
+@property (nonatomic, retain) NSMutableDictionary *params;
+@property (nonatomic, assign) NSURLConnection *connection;
+@property (nonatomic, assign) NSMutableData *responseText;
 
 
-+ (NSString*)serializeURL:(NSString *)baseUrl
-                   params:(NSDictionary *)params;
++ (NSString *)serializeURL:(NSString *)baseUrl
+   params:(NSDictionary *)params;
 
-+ (NSString*)serializeURL:(NSString *)baseUrl
-                   params:(NSDictionary *)params
-               httpMethod:(NSString *)httpMethod;
++ (NSString *)serializeURL:(NSString *)baseUrl
+   params:(NSDictionary *)params
+   httpMethod:(NSString *)httpMethod;
 
-+ (FBRequest*)getRequestWithParams:(NSMutableDictionary *) params
-                        httpMethod:(NSString *) httpMethod
-                          delegate:(id<FBRequestDelegate>)delegate
-                        requestURL:(NSString *) url;
-- (BOOL) loading;
++ (FBRequest *)getRequestWithParams:(NSMutableDictionary *)params
+   httpMethod:(NSString *)httpMethod
+   delegate:(id<FBRequestDelegate>) delegate
+   requestURL:(NSString *)url;
+- (BOOL)loading;
 
-- (void) connect;
+- (void)connect;
 
 @end
 
-////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////
 
 /*
- *Your application should implement this delegate
+ * *Your application should implement this delegate
  */
 @protocol FBRequestDelegate <NSObject>
 

@@ -29,7 +29,7 @@
 
 
 @interface OADataFetcher : NSObject {
-@private
+    @private
     OAMutableURLRequest *request;
     NSURLResponse *response;
     NSURLConnection *connection;
@@ -41,6 +41,6 @@
 
 @property (nonatomic, assign) id delegate;
 
-- (void)fetchDataWithRequest:(OAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector;
+- (void)fetchDataWithRequest:(OAMutableURLRequest *)aRequest delegate:(id) aDelegate didFinishSelector:(SEL) finishSelector didFailSelector:(SEL)failSelector;
 
 @end

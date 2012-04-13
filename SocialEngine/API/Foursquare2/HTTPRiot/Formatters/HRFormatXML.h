@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 #import "HRFormatterProtocol.h"
 @interface HRFormatXML : NSObject <HRFormatterProtocol> {
-
 }
 
 @end

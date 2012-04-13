@@ -21,6 +21,6 @@
 @property (strong, nonatomic) NSNumber *followsCount;
 @property (strong, nonatomic) NSNumber *mediaCount;
 
-+ (id) userInfoInstagram;
++ (id)userInfoInstagram;
 
 @end

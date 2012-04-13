@@ -22,12 +22,11 @@
 @synthesize mediaCount;
 
 
-+ (id)userInfoInstagram{
++ (id)userInfoInstagram {
     return [DXSEUserInfoInstagram new];
 }
 
-- (NSString*) description
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"id=%@; name=%@; screenName=%@;", self.instagramId, self.fullName, self.username];
 }
 

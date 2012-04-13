@@ -10,6 +10,6 @@
 
 @interface NSURL (WillFleming)
 
-- (NSDictionary*) queryDictionary;
+- (NSDictionary *)queryDictionary;
 
 @end

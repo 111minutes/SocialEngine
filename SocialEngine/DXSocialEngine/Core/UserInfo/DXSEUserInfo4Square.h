@@ -15,6 +15,6 @@
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSURL *avatarURL;
 
-+ (id) userInfo4Square;
++ (id)userInfo4Square;
 
 @end

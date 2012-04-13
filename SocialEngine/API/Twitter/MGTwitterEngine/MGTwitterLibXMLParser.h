@@ -12,23 +12,23 @@
 #import "MGTwitterParserDelegate.h"
 
 @interface MGTwitterLibXMLParser : NSObject {
-	__weak NSObject <MGTwitterParserDelegate> *delegate; // weak ref
-	NSString *identifier;
-	MGTwitterRequestType requestType;
-	MGTwitterResponseType responseType;
-	NSURL *URL;
-	NSData *xml;
-	NSMutableArray *parsedObjects;
-	
-	xmlTextReaderPtr _reader;
+    __weak NSObject <MGTwitterParserDelegate> *delegate;     // weak ref
+    NSString *identifier;
+    MGTwitterRequestType requestType;
+    MGTwitterResponseType responseType;
+    NSURL *URL;
+    NSData *xml;
+    NSMutableArray *parsedObjects;
+
+    xmlTextReaderPtr _reader;
 }
 
-+ (id)parserWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate 
-connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType)reqType 
-	   responseType:(MGTwitterResponseType)respType URL:(NSURL *)URL;
-- (id)initWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate 
-connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType)reqType 
-	 responseType:(MGTwitterResponseType)respType URL:(NSURL *)URL;
++ (id)parserWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate
+   connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType) reqType
+   responseType:(MGTwitterResponseType) respType URL:(NSURL *)URL;
+- (id)initWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate
+   connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType) reqType
+   responseType:(MGTwitterResponseType) respType URL:(NSURL *)URL;
 
 - (void)parse;
 

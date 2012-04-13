@@ -21,20 +21,20 @@
     NSString *lastOpenedElement;
 }
 
-+ (id)parserWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate 
-connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType)reqType 
-       responseType:(MGTwitterResponseType)respType;
-- (id)initWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate 
-connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType)reqType 
-     responseType:(MGTwitterResponseType)respType;
++ (id)parserWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate
+   connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType) reqType
+   responseType:(MGTwitterResponseType)respType;
+- (id)initWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate
+   connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType) reqType
+   responseType:(MGTwitterResponseType)respType;
 
 - (NSString *)lastOpenedElement;
 - (void)setLastOpenedElement:(NSString *)value;
 
 - (void)addSource;
 
-- (void)parser:(NSXMLParser *)theParser didEndElement:(NSString *)elementName 
-  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName;
+- (void)parser:(NSXMLParser *)theParser didEndElement:(NSString *)elementName
+   namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName;
 
-	
+
 @end

@@ -38,7 +38,7 @@
 }
 
 - (NSString *)URLEncodedName {
-	return self.name;
+    return self.name;
 //    return [self.name encodedURLParameterString];
 }
 
@@ -51,22 +51,20 @@
 }
 
 - (BOOL)isEqual:(id)object {
-	if ([object isKindOfClass:[self class]]) {
-		return [self isEqualToRequestParameter:(OARequestParameter *)object];
-	}
-	
-	return NO;
+    if ([object isKindOfClass:[self class]]) {
+        return [self isEqualToRequestParameter:(OARequestParameter *)object];
+    }
+
+    return NO;
 }
 
 - (BOOL)isEqualToRequestParameter:(OARequestParameter *)parameter {
-	return ([self.name isEqualToString:parameter.name] &&
-			[self.value isEqualToString:parameter.value]);
+    return ([self.name isEqualToString:parameter.name] &&
+            [self.value isEqualToString:parameter.value]);
 }
 
-
-+ (id)requestParameter:(NSString *)aName value:(NSString *)aValue
-{
-	return [[[self alloc] initWithName:aName value:aValue] autorelease];
++ (id)requestParameter:(NSString *)aName value:(NSString *)aValue {
+    return [[[self alloc] initWithName:aName value:aValue] autorelease];
 }
 
 @end

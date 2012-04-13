@@ -15,6 +15,6 @@
 @property (nonatomic, strong) NSDate *birthdayDate;
 @property (nonatomic, strong) NSURL *avatarURL;
 
-+ (id) userInfo;
++ (id)userInfo;
 
 @end

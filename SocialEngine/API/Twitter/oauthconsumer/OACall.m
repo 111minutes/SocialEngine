@@ -28,145 +28,143 @@
 @synthesize url, method, parameters, files, ticket;
 
 - (id)init {
-	return [self initWithURL:nil
-					  method:nil
-				  parameters:nil
-					   files:nil];
+    return [self initWithURL:nil
+            method:nil
+            parameters:nil
+            files:nil];
 }
 
 - (id)initWithURL:(NSURL *)aURL {
-	return [self initWithURL:aURL
-					  method:nil
-				  parameters:nil
-					   files:nil];
+    return [self initWithURL:aURL
+            method:nil
+            parameters:nil
+            files:nil];
 }
 
 - (id)initWithURL:(NSURL *)aURL method:(NSString *)aMethod {
-	return [self initWithURL:aURL
-					  method:aMethod
-				  parameters:nil
-					   files:nil];
+    return [self initWithURL:aURL
+            method:aMethod
+            parameters:nil
+            files:nil];
 }
 
 - (id)initWithURL:(NSURL *)aURL parameters:(NSArray *)theParameters {
-	return [self initWithURL:aURL
-					  method:nil
-				  parameters:theParameters];
+    return [self initWithURL:aURL
+            method:nil
+            parameters:theParameters];
 }
 
 - (id)initWithURL:(NSURL *)aURL method:(NSString *)aMethod parameters:(NSArray *)theParameters {
-	return [self initWithURL:aURL
-					  method:aMethod
-				  parameters:theParameters
-					   files:nil];
+    return [self initWithURL:aURL
+            method:aMethod
+            parameters:theParameters
+            files:nil];
 }
 
-- (id)initWithURL:(NSURL *)aURL parameters:(NSArray *)theParameters files:(NSDictionary*)theFiles {
-	return [self initWithURL:aURL
-					  method:@"POST"
-				  parameters:theParameters
-					   files:theFiles];
+- (id)initWithURL:(NSURL *)aURL parameters:(NSArray *)theParameters files:(NSDictionary *)theFiles {
+    return [self initWithURL:aURL
+            method:@"POST"
+            parameters:theParameters
+            files:theFiles];
 }
 
 - (id)initWithURL:(NSURL *)aURL
-		   method:(NSString *)aMethod
-	   parameters:(NSArray *)theParameters
-			files:(NSDictionary*)theFiles {
-	url = [aURL retain];
-	method = [aMethod retain];
-	parameters = [theParameters retain];
-	files = [theFiles retain];
-	fetcher = nil;
-	request = nil;
-	
-	return self;
+   method:(NSString *)aMethod
+   parameters:(NSArray *)theParameters
+   files:(NSDictionary *)theFiles {
+    url = [aURL retain];
+    method = [aMethod retain];
+    parameters = [theParameters retain];
+    files = [theFiles retain];
+    fetcher = nil;
+    request = nil;
+
+    return self;
 }
 
 - (void)dealloc {
-	[url release];
-	[method release];
-	[parameters release];
-	[files release];
-	[fetcher release];
-	[request release];
-	[ticket release];
-	[super dealloc];
+    [url release];
+    [method release];
+    [parameters release];
+    [files release];
+    [fetcher release];
+    [request release];
+    [ticket release];
+    [super dealloc];
 }
 
 - (void)callFailed:(OAServiceTicket *)aTicket withError:(NSError *)error {
-	NSLog(@"error body: %@", aTicket.body);
-	self.ticket = aTicket;
-	[aTicket release];
-	OAProblem *problem = [OAProblem problemWithResponseBody:ticket.body];
-	if (problem) {
-		[delegate call:self failedWithProblem:problem];
-	} else {
-		[delegate call:self failedWithError:error];
-	}
+    NSLog (@"error body: %@", aTicket.body);
+    self.ticket = aTicket;
+    [aTicket release];
+    OAProblem *problem = [OAProblem problemWithResponseBody:ticket.body];
+    if (problem) {
+        [delegate call:self failedWithProblem:problem];
+    } else {
+        [delegate call:self failedWithError:error];
+    }
 }
 
 - (void)callFinished:(OAServiceTicket *)aTicket withData:(NSData *)data {
-	self.ticket = aTicket;
-	[aTicket release];
-	if (ticket.didSucceed) {
+    self.ticket = aTicket;
+    [aTicket release];
+    if (ticket.didSucceed) {
 //		NSLog(@"Call body: %@", ticket.body);
-		[delegate performSelector:finishedSelector withObject:self withObject:ticket.body];
-	} else {
+        [delegate performSelector:finishedSelector withObject:self withObject:ticket.body];
+    } else {
 //		NSLog(@"Failed call body: %@", ticket.body);
-		[self callFailed:[ticket retain] withError:nil];
-	}
+        [self callFailed:[ticket retain] withError:nil];
+    }
 }
 
 - (void)perform:(OAConsumer *)consumer
-		  token:(OAToken *)token
-		  realm:(NSString *)realm
-	   delegate:(NSObject <OACallDelegate> *)aDelegate
-	didFinish:(SEL)finished
+   token:(OAToken *)token
+   realm:(NSString *)realm
+   delegate:(NSObject <OACallDelegate> *)aDelegate
+   didFinish:(SEL)finished {
+    delegate = aDelegate;
+    finishedSelector = finished;
 
-{
-	delegate = aDelegate;
-	finishedSelector = finished;
+    request = [[OAMutableURLRequest alloc] initWithURL:url
+               consumer:consumer
+               token:token
+               realm:realm
+               signatureProvider:nil];
+    if (method) {
+        [request setHTTPMethod:method];
+    }
 
-	request = [[OAMutableURLRequest alloc] initWithURL:url
-											  consumer:consumer
-												token:token
-												 realm:realm
-									 signatureProvider:nil];
-	if(method) {
-		[request setHTTPMethod:method];
-	}
+    if (self.parameters) {
+        [request setParameters:self.parameters];
+    }
 
-	if (self.parameters) {
-		[request setParameters:self.parameters];
-	}
-	
 //	if (self.files) {
 //		for (NSString *key in self.files) {
 //			[request attachFileWithName:@"file" filename:NSLocalizedString(@"Photo.jpg", @"") data:[self.files objectForKey:key]];
 //		}
 //	}
-	
-	fetcher = [[OADataFetcher alloc] init];
-	[fetcher fetchDataWithRequest:request
-						 delegate:self
-				didFinishSelector:@selector(callFinished:withData:)
-				  didFailSelector:@selector(callFailed:withError:)];
+
+    fetcher = [[OADataFetcher alloc] init];
+    [fetcher fetchDataWithRequest:request
+     delegate:self
+     didFinishSelector:@selector(callFinished:withData:)
+     didFailSelector:@selector(callFailed:withError:)];
 }
 
 /*- (BOOL)isEqual:(id)object {
-	if ([object isKindOfClass:[self class]]) {
-		return [self isEqualToCall:(OACall *)object];
-	}
-	return NO;
-}
-
-- (BOOL)isEqualToCall:(OACall *)aCall {
-	return (delegate == aCall->delegate
-			&& finishedSelector == aCall->finishedSelector 
-			&& [url isEqualTo:aCall.url]
-			&& [method isEqualToString:aCall.method]
-			&& [parameters isEqualToArray:aCall.parameters]
-			&& [files isEqualToDictionary:aCall.files]);
-}*/
+ *      if ([object isKindOfClass:[self class]]) {
+ *              return [self isEqualToCall:(OACall *)object];
+ *      }
+ *      return NO;
+ * }
+ *
+ * - (BOOL)isEqualToCall:(OACall *)aCall {
+ *      return (delegate == aCall->delegate
+ *                      && finishedSelector == aCall->finishedSelector
+ *                      && [url isEqualTo:aCall.url]
+ *                      && [method isEqualToString:aCall.method]
+ *                      && [parameters isEqualToArray:aCall.parameters]
+ *                      && [files isEqualToDictionary:aCall.files]);
+ * }*/
 
 @end

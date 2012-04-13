@@ -11,7 +11,7 @@
 #import "MGTwitterLibXMLParser.h"
 
 @interface MGTwitterSocialGraphLibXMLParser : MGTwitterLibXMLParser {
-	NSMutableArray * twitterIDs;	
+    NSMutableArray *twitterIDs;
 }
 
 - (NSDictionary *)_socialGraphDictionaryForNodeWithName:(const xmlChar *)parentNodeName;

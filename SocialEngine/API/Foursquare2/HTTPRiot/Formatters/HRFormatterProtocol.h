@@ -1,7 +1,7 @@
 /**
  * @file HRFormatterProtocol.h Protocol for the formatters.
  */
- 
+
 //
 //  HRFormatterProtocol.h
 //  HTTPRiot
@@ -13,11 +13,11 @@
 
 /**
  * @protocol HRFormatterProtocol
- * 
+ *
  * Formatters used in formatting response data
  * Formatters should be able to encode and decode a specific data type.
  */
-@protocol HRFormatterProtocol 
+@protocol HRFormatterProtocol
 
 /**
  * The file extension.  Example: json, xml, plist, n3, etc.
@@ -43,5 +43,5 @@
  * @param object The Obj-C object to be encoded by the formatter.
  * @param error Returns any errors that happened while encoding.
  */
-+ (NSString *)encode:(id)object error:(NSError **)error;
++ (NSString *)encode:(id) object error:(NSError **)error;
 @end

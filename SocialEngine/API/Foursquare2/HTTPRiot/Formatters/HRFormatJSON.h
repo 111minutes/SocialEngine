@@ -9,7 +9,6 @@
 #import "HRFormatterProtocol.h"
 
 @interface HRFormatJSON : NSObject <HRFormatterProtocol> {
-
 }
 
 @end

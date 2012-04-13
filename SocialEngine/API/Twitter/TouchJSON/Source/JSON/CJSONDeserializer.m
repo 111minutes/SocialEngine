@@ -41,120 +41,107 @@ NSString *const kJSONDeserializerErrorDomain  = @"CJSONDeserializerErrorDomain";
 
 @synthesize scanner;
 
-+ (id)deserializer
-{
-return([[[self alloc] init] autorelease]);
++ (id)deserializer {
+    return([[[self alloc] init] autorelease]);
 }
 
-- (id)init
-{
-if ((self = [super init]) != NULL)
-    {
+- (id)init {
+    if ((self = [super init]) != NULL) {
     }
-return(self);
+    return(self);
 }
 
-- (void)dealloc
-{
-[scanner release];
-scanner = NULL;
+- (void)dealloc {
+    [scanner release];
+    scanner = NULL;
 //
-[super dealloc];
+    [super dealloc];
 }
 
 #pragma mark -
 
-- (CJSONScanner *)scanner
-{
-if (scanner == NULL)
-	{
-	scanner = [[CJSONScanner alloc] init];
-	}
-return(scanner);
+- (CJSONScanner *)scanner {
+    if (scanner == NULL) {
+        scanner = [[CJSONScanner alloc] init];
+    }
+    return(scanner);
 }
 
-- (id)nullObject
-    {
+- (id)nullObject {
     return(self.scanner.nullObject);
-    }
+}
 
-- (void)setNullObject:(id)inNullObject
-    {
+- (void)setNullObject:(id)inNullObject {
     self.scanner.nullObject = inNullObject;
+}
+
+#pragma mark -
+
+- (NSStringEncoding)allowedEncoding {
+    return(self.scanner.allowedEncoding);
+}
+
+- (void)setAllowedEncoding:(NSStringEncoding)inAllowedEncoding {
+    self.scanner.allowedEncoding = inAllowedEncoding;
+}
+
+#pragma mark -
+
+- (id)deserialize:(NSData *)inData error:(NSError **)outError {
+    if (inData == NULL || [inData length] == 0) {
+        if (outError) {
+            *outError = [NSError errorWithDomain:kJSONDeserializerErrorDomain code:-1 userInfo:NULL];
+        }
+
+        return(NULL);
     }
-
-#pragma mark -
-
-- (NSStringEncoding)allowedEncoding
-	{
-	return(self.scanner.allowedEncoding);
-	}
-
-- (void)setAllowedEncoding:(NSStringEncoding)inAllowedEncoding
-	{
-	self.scanner.allowedEncoding = inAllowedEncoding;
-	}
-
-#pragma mark -
-
-- (id)deserialize:(NSData *)inData error:(NSError **)outError
-{
-if (inData == NULL || [inData length] == 0)
-	{
-	if (outError)
-		*outError = [NSError errorWithDomain:kJSONDeserializerErrorDomain code:-1 userInfo:NULL];
-
-	return(NULL);
-	}
-if ([self.scanner setData:inData error:outError] == NO)
-	{
-	return(NULL);
-	}
-id theObject = NULL;
-if ([self.scanner scanJSONObject:&theObject error:outError] == YES)
-	return(theObject);
-else
-	return(NULL);
+    if ([self.scanner setData:inData error:outError] == NO) {
+        return(NULL);
+    }
+    id theObject = NULL;
+    if ([self.scanner scanJSONObject:&theObject error:outError] == YES) {
+        return(theObject);
+    } else {
+        return(NULL);
+    }
 }
 
-- (id)deserializeAsDictionary:(NSData *)inData error:(NSError **)outError
-{
-if (inData == NULL || [inData length] == 0)
-	{
-	if (outError)
-		*outError = [NSError errorWithDomain:kJSONDeserializerErrorDomain code:-1 userInfo:NULL];
+- (id)deserializeAsDictionary:(NSData *)inData error:(NSError **)outError {
+    if (inData == NULL || [inData length] == 0) {
+        if (outError) {
+            *outError = [NSError errorWithDomain:kJSONDeserializerErrorDomain code:-1 userInfo:NULL];
+        }
 
-	return(NULL);
-	}
-if ([self.scanner setData:inData error:outError] == NO)
-	{
-	return(NULL);
-	}
-NSDictionary *theDictionary = NULL;
-if ([self.scanner scanJSONDictionary:&theDictionary error:outError] == YES)
-	return(theDictionary);
-else
-	return(NULL);
+        return(NULL);
+    }
+    if ([self.scanner setData:inData error:outError] == NO) {
+        return(NULL);
+    }
+    NSDictionary *theDictionary = NULL;
+    if ([self.scanner scanJSONDictionary:&theDictionary error:outError] == YES) {
+        return(theDictionary);
+    } else {
+        return(NULL);
+    }
 }
 
-- (id)deserializeAsArray:(NSData *)inData error:(NSError **)outError
-{
-if (inData == NULL || [inData length] == 0)
-	{
-	if (outError)
-		*outError = [NSError errorWithDomain:kJSONDeserializerErrorDomain code:-1 userInfo:NULL];
+- (id)deserializeAsArray:(NSData *)inData error:(NSError **)outError {
+    if (inData == NULL || [inData length] == 0) {
+        if (outError) {
+            *outError = [NSError errorWithDomain:kJSONDeserializerErrorDomain code:-1 userInfo:NULL];
+        }
 
-	return(NULL);
-	}
-if ([self.scanner setData:inData error:outError] == NO)
-	{
-	return(NULL);
-	}
-NSArray *theArray = NULL;
-if ([self.scanner scanJSONArray:&theArray error:outError] == YES)
-	return(theArray);
-else
-	return(NULL);
+        return(NULL);
+    }
+    if ([self.scanner setData:inData error:outError] == NO) {
+        return(NULL);
+    }
+    NSArray *theArray = NULL;
+    if ([self.scanner scanJSONArray:&theArray error:outError] == YES) {
+        return(theArray);
+    } else {
+        return(NULL);
+    }
 }
 
 @end

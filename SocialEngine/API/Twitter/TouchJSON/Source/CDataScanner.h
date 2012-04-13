@@ -32,12 +32,12 @@
 // NSScanner
 
 @interface CDataScanner : NSObject {
-	NSData *data;
+    NSData *data;
 
-	u_int8_t *start;
-	u_int8_t *end;
-	u_int8_t *current;
-	NSUInteger length;
+    u_int8_t *start;
+    u_int8_t *end;
+    u_int8_t *current;
+    NSUInteger length;
 }
 
 @property (readwrite, nonatomic, retain) NSData *data;
@@ -61,7 +61,7 @@
 - (BOOL)scanNumber:(NSNumber **)outValue;
 - (BOOL)scanDecimalNumber:(NSDecimalNumber **)outValue;
 
-- (BOOL)scanDataOfLength:(NSUInteger)inLength intoData:(NSData **)outData;
+- (BOOL)scanDataOfLength:(NSUInteger) inLength intoData:(NSData **)outData;
 
 - (void)skipWhitespace;
 

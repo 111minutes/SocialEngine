@@ -33,95 +33,88 @@
 
 @implementation CDataScanner (CDataScanner_Extensions)
 
-- (BOOL)scanCStyleComment:(NSString **)outComment
-{
-if ([self scanString:@"/*" intoString:NULL] == YES)
-	{
-	NSString *theComment = NULL;
-	if ([self scanUpToString:@"*/" intoString:&theComment] == NO)
-		[NSException raise:NSGenericException format:@"Started to scan a C style comment but it wasn't terminated."];
-		
-	if ([theComment rangeOfString:@"/*"].location != NSNotFound)
-		[NSException raise:NSGenericException format:@"C style comments should not be nested."];
-	
-	if ([self scanString:@"*/" intoString:NULL] == NO)
-		[NSException raise:NSGenericException format:@"C style comment did not end correctly."];
-		
-	if (outComment != NULL)
-		*outComment = theComment;
+- (BOOL)scanCStyleComment:(NSString **)outComment {
+    if ([self scanString:@"/*" intoString:NULL] == YES) {
+        NSString *theComment = NULL;
+        if ([self scanUpToString:@"*/" intoString:&theComment] == NO) {
+            [NSException raise:NSGenericException format:@"Started to scan a C style comment but it wasn't terminated."];
+        }
 
-	return(YES);
-	}
-else
-	{
-	return(NO);
-	}
+        if ([theComment rangeOfString:@"/*"].location != NSNotFound) {
+            [NSException raise:NSGenericException format:@"C style comments should not be nested."];
+        }
+
+        if ([self scanString:@"*/" intoString:NULL] == NO) {
+            [NSException raise:NSGenericException format:@"C style comment did not end correctly."];
+        }
+
+        if (outComment != NULL) {
+            *outComment = theComment;
+        }
+
+        return(YES);
+    } else {
+        return(NO);
+    }
 }
 
-- (BOOL)scanCPlusPlusStyleComment:(NSString **)outComment
-{
-if ([self scanString:@"//" intoString:NULL] == YES)
-	{
-	NSString *theComment = NULL;
-	[self scanUpToCharactersFromSet:[NSCharacterSet linebreaksCharacterSet] intoString:&theComment];
-	[self scanCharactersFromSet:[NSCharacterSet linebreaksCharacterSet] intoString:NULL];
+- (BOOL)scanCPlusPlusStyleComment:(NSString **)outComment {
+    if ([self scanString:@"//" intoString:NULL] == YES) {
+        NSString *theComment = NULL;
+        [self scanUpToCharactersFromSet:[NSCharacterSet linebreaksCharacterSet] intoString:&theComment];
+        [self scanCharactersFromSet:[NSCharacterSet linebreaksCharacterSet] intoString:NULL];
 
-	if (outComment != NULL)
-		*outComment = theComment;
+        if (outComment != NULL) {
+            *outComment = theComment;
+        }
 
-	return(YES);
-	}
-else
-	{
-	return(NO);
-	}
+        return(YES);
+    } else {
+        return(NO);
+    }
 }
 
-- (NSUInteger)lineOfScanLocation
-{
-NSUInteger theLine = 0;
-for (const u_int8_t *C = start; C < current; ++C)
-    {
-    // TODO: JIW What about MS-DOS line endings you bastard! (Also other unicode line endings)
-    if (*C == '\n' || *C == '\r')
-        {
-        ++theLine;
+- (NSUInteger)lineOfScanLocation {
+    NSUInteger theLine = 0;
+
+    for (const u_int8_t *C = start; C < current; ++C) {
+        // TODO: JIW What about MS-DOS line endings you bastard! (Also other unicode line endings)
+        if (*C == '\n' || *C == '\r') {
+            ++theLine;
         }
     }
-return(theLine);
+    return(theLine);
 }
 
-- (NSDictionary *)userInfoForScanLocation
-{
-NSUInteger theLine = 0;
-const u_int8_t *theLineStart = start;
-for (const u_int8_t *C = start; C < current; ++C)
-    {
-    if (*C == '\n' || *C == '\r')
-        {
-        theLineStart = C - 1;
-        ++theLine;
+- (NSDictionary *)userInfoForScanLocation {
+    NSUInteger theLine = 0;
+    const u_int8_t *theLineStart = start;
+
+    for (const u_int8_t *C = start; C < current; ++C) {
+        if (*C == '\n' || *C == '\r') {
+            theLineStart = C - 1;
+            ++theLine;
         }
     }
 
-NSUInteger theCharacter = current - theLineStart;
+    NSUInteger theCharacter = current - theLineStart;
 
-NSRange theStartRange = NSIntersectionRange((NSRange){ .location = MAX((NSInteger)self.scanLocation - 20, 0), .length = 20 + (NSInteger)self.scanLocation - 20 }, (NSRange){ .location = 0, .length = self.data.length });
-NSRange theEndRange = NSIntersectionRange((NSRange){ .location = self.scanLocation, .length = 20 }, (NSRange){ .location = 0, .length = self.data.length });
+    NSRange theStartRange = NSIntersectionRange ((NSRange) {.location = MAX ((NSInteger)self.scanLocation - 20, 0), .length = 20 + (NSInteger)self.scanLocation - 20 }, (NSRange) {.location = 0, .length = self.data.length });
+    NSRange theEndRange = NSIntersectionRange ((NSRange) {.location = self.scanLocation, .length = 20 }, (NSRange) {.location = 0, .length = self.data.length });
 
 
-NSString *theSnippet = [NSString stringWithFormat:@"%@!HERE>!%@",
-    [[[NSString alloc] initWithData:[self.data subdataWithRange:theStartRange] encoding:NSUTF8StringEncoding] autorelease],
-    [[[NSString alloc] initWithData:[self.data subdataWithRange:theEndRange] encoding:NSUTF8StringEncoding] autorelease]
-    ];
+    NSString *theSnippet = [NSString stringWithFormat:@"%@!HERE>!%@",
+                            [[[NSString alloc] initWithData:[self.data subdataWithRange:theStartRange] encoding:NSUTF8StringEncoding] autorelease],
+                            [[[NSString alloc] initWithData:[self.data subdataWithRange:theEndRange] encoding:NSUTF8StringEncoding] autorelease]
+        ];
 
-NSDictionary *theUserInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-    [NSNumber numberWithUnsignedInteger:theLine], @"line",
-    [NSNumber numberWithUnsignedInteger:theCharacter], @"character",
-    [NSNumber numberWithUnsignedInteger:self.scanLocation], @"location",
-    theSnippet, @"snippet",
-    NULL];
-return(theUserInfo);    
+    NSDictionary *theUserInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 [NSNumber numberWithUnsignedInteger:theLine], @"line",
+                                 [NSNumber numberWithUnsignedInteger:theCharacter], @"character",
+                                 [NSNumber numberWithUnsignedInteger:self.scanLocation], @"location",
+                                 theSnippet, @"snippet",
+                                 NULL];
+    return(theUserInfo);
 }
 
 @end

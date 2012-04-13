@@ -21,19 +21,20 @@
 + (id)decode:(NSData *)data error:(NSError **)error {
     NSError *parseError = nil;
     NSXMLDocument *doc = [[[NSXMLDocument alloc] initWithData:data options:NSXMLDocumentTidyXML error:&parseError] autorelease];
-    
-    if(parseError != nil) {        
-        if(error != nil)
+
+    if (parseError != nil) {
+        if (error != nil) {
             *error = parseError;
-        
+        }
+
         return nil;
     }
-    
+
     return [doc toDictionary];
 }
 
 + (NSString *)encode:(id)data error:(NSError **)error {
-    NSAssert(true, @"XML Encoding is not supported.  Currently accepting patches");
+    NSAssert (true, @"XML Encoding is not supported.  Currently accepting patches");
     return nil;
 }
 

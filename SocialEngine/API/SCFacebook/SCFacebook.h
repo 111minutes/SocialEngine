@@ -27,17 +27,17 @@
 #import "Facebook.h"
 
 
-//#warning Your application App ID/API Key Facebook
-//#define kAppId @"140422319335414"
+// #warning Your application App ID/API Key Facebook
+// #define kAppId @"140422319335414"
 
-#define OPEN_URL @"OPEN_URL"
-#define FQL_USER_STANDARD @"uid, name, email, birthday_date, about_me, pic"
-#define PERMISSIONS @"user_about_me",@"user_birthday",@"email", @"user_photos"
+#define OPEN_URL          @ "OPEN_URL"
+#define FQL_USER_STANDARD @ "uid, name, email, birthday_date, about_me, pic"
+#define PERMISSIONS       @ "user_about_me", @ "user_birthday", @ "email", @ "user_photos"
 
 
-#define Alert(title,msg)  [[[[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease] show];
+#define Alert(title, msg) [[[[UIAlertView alloc] initWithTitle : title message : msg delegate : self cancelButtonTitle : @ "OK" otherButtonTitles : nil, nil] autorelease] show];
 
-typedef void(^SCFacebookCallback)(BOOL success, id result);
+typedef void (^ SCFacebookCallback)(BOOL success, id result);
 
 typedef enum {
     FBPostTypeStatus = 0,
@@ -53,23 +53,23 @@ typedef enum {
     FBPostType postType;
 }
 
-@property (nonatomic, copy) NSString* oauthKey;
+@property (nonatomic, copy) NSString *oauthKey;
 
-@property (nonatomic, readonly) Facebook* facebook;
+@property (nonatomic, readonly) Facebook *facebook;
 @property (nonatomic, assign) FBPostType postType;
 
-+(SCFacebook *)shared;
-+(void)loginCallBack:(SCFacebookCallback)callBack;
-+(void)logoutCallBack:(SCFacebookCallback)callBack;
-+(void)getUserFQL:(NSString*)fql callBack:(SCFacebookCallback)callBack;
-+(void)getUserFriendsCallBack:(SCFacebookCallback)callBack;
-+(void)feedPostWithLinkPath:(NSString*)_url caption:(NSString*)_caption callBack:(SCFacebookCallback)callBack;
-+(void)feedPostWithMessage:(NSString*)_message callBack:(SCFacebookCallback)callBack;
-+(void)feedPostWithMessageDialogCallBack:(SCFacebookCallback)callBack;
-+(void)feedPostWithPhoto:(UIImage*)_photo caption:(NSString*)_caption callBack:(SCFacebookCallback)callBack;
-+(void)myFeedCallBack:(SCFacebookCallback)callBack;
-+(void)inviteFriendsWithMessage:(NSString *)_message callBack:(SCFacebookCallback)callBack;
++ (SCFacebook *)shared;
++ (void)loginCallBack:(SCFacebookCallback)callBack;
++ (void)logoutCallBack:(SCFacebookCallback)callBack;
++ (void)getUserFQL:(NSString *)fql callBack:(SCFacebookCallback)callBack;
++ (void)getUserFriendsCallBack:(SCFacebookCallback)callBack;
++ (void)feedPostWithLinkPath:(NSString *)_url caption:(NSString *)_caption callBack:(SCFacebookCallback)callBack;
++ (void)feedPostWithMessage:(NSString *)_message callBack:(SCFacebookCallback)callBack;
++ (void)feedPostWithMessageDialogCallBack:(SCFacebookCallback)callBack;
++ (void)feedPostWithPhoto:(UIImage *)_photo caption:(NSString *)_caption callBack:(SCFacebookCallback)callBack;
++ (void)myFeedCallBack:(SCFacebookCallback)callBack;
++ (void)inviteFriendsWithMessage:(NSString *)_message callBack:(SCFacebookCallback)callBack;
 
-- (void) configure;
+- (void)configure;
 
 @end

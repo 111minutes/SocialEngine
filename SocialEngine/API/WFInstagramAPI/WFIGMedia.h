@@ -8,7 +8,7 @@
 
 @class WFIGMedia, WFIGUser, WFIGMediaCollection;
 
-typedef void (^WFIGMediaImageCallback)(WFIGMedia *media, UIImage *image);
+typedef void (^ WFIGMediaImageCallback)(WFIGMedia *media, UIImage *image);
 
 @interface WFIGMedia : NSObject {
 }
@@ -25,25 +25,25 @@ typedef void (^WFIGMediaImageCallback)(WFIGMedia *media, UIImage *image);
 @property (strong, nonatomic) NSDictionary *userData;
 @property (strong, nonatomic) NSDictionary *locationData;
 
-+ (WFIGMediaCollection*) popularMediaWithError:(NSError* __autoreleasing*)error;
++ (WFIGMediaCollection *)popularMediaWithError:(NSError * __autoreleasing *)error;
 
-- (id) initWithJSONFragment:(NSDictionary*)json;
+- (id)initWithJSONFragment:(NSDictionary *)json;
 
 /**
  * An instagram:// URL to view the photo in the local client
  */
-- (NSString*) iOSURL;
+- (NSString *)iOSURL;
 
 /**
  * instance created from -userData JSON
  */
-- (WFIGUser*) user;
+- (WFIGUser *)user;
 
 /**
  * array of WFIGComment instances, initially
  * generated from -commentsData JSON
  */
-- (NSMutableArray*) comments;
+- (NSMutableArray *)comments;
 
 /**
  * Media methods. Variants with a completion block argument execute
@@ -52,11 +52,11 @@ typedef void (^WFIGMediaImageCallback)(WFIGMedia *media, UIImage *image);
  *
  * Variants without the completion block are synchronous.
  */
-- (UIImage*) image;
-- (void) imageCompletionBlock:(WFIGMediaImageCallback)completionBlock;
-- (UIImage*) thumbnail;
-- (void) thumbnailCompletionBlock:(WFIGMediaImageCallback)completionBlock;
-- (UIImage*) lowResolutionImage;
-- (void) lowResolutionImageWithCompletionBlock:(WFIGMediaImageCallback)completionBlock;
+- (UIImage *)image;
+- (void)imageCompletionBlock:(WFIGMediaImageCallback)completionBlock;
+- (UIImage *)thumbnail;
+- (void)thumbnailCompletionBlock:(WFIGMediaImageCallback)completionBlock;
+- (UIImage *)lowResolutionImage;
+- (void)lowResolutionImageWithCompletionBlock:(WFIGMediaImageCallback)completionBlock;
 
 @end

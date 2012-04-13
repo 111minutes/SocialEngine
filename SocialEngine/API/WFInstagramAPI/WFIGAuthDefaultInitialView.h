@@ -9,13 +9,13 @@
 @class WFIGAuthController;
 
 @protocol WFIGAuthInitialView
-- (id) initWithController:(WFIGAuthController*)controller;
+- (id)initWithController:(WFIGAuthController *)controller;
 @end
 
 
 #pragma mark -
 @interface WFIGAuthDefaultInitialView : UIView <WFIGAuthInitialView> {
-  WFIGAuthController *_controller;
+    WFIGAuthController *_controller;
 }
 
 @end

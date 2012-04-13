@@ -26,28 +26,28 @@
  * pop-ups promoting for credentials, permissions, stream posts, etc.)
  */
 @interface Facebook : NSObject<FBLoginDialogDelegate>{
-  NSString* _accessToken;
-  NSDate* _expirationDate;
-  id<FBSessionDelegate> _sessionDelegate;
-  FBRequest* _request;
-  FBDialog* _loginDialog;
-  FBDialog* _fbDialog;
-  NSString* _appId;
-  NSString* _urlSchemeSuffix;
-  NSArray* _permissions;
+    NSString *_accessToken;
+    NSDate *_expirationDate;
+    id<FBSessionDelegate> _sessionDelegate;
+    FBRequest *_request;
+    FBDialog *_loginDialog;
+    FBDialog *_fbDialog;
+    NSString *_appId;
+    NSString *_urlSchemeSuffix;
+    NSArray *_permissions;
 }
 
-@property(nonatomic, copy) NSString* accessToken;
-@property(nonatomic, copy) NSDate* expirationDate;
-@property(nonatomic, assign) id<FBSessionDelegate> sessionDelegate;
-@property(nonatomic, copy) NSString* urlSchemeSuffix;
+@property (nonatomic, copy) NSString *accessToken;
+@property (nonatomic, copy) NSDate *expirationDate;
+@property (nonatomic, assign) id<FBSessionDelegate> sessionDelegate;
+@property (nonatomic, copy) NSString *urlSchemeSuffix;
 
 - (id)initWithAppId:(NSString *)appId
-        andDelegate:(id<FBSessionDelegate>)delegate;
+   andDelegate:(id<FBSessionDelegate>)delegate;
 
 - (id)initWithAppId:(NSString *)appId
-    urlSchemeSuffix:(NSString *)urlSchemeSuffix
-        andDelegate:(id<FBSessionDelegate>)delegate;
+   urlSchemeSuffix:(NSString *)urlSchemeSuffix
+   andDelegate:(id<FBSessionDelegate>)delegate;
 
 - (void)authorize:(NSArray *)permissions;
 
@@ -55,38 +55,38 @@
 
 - (void)logout:(id<FBSessionDelegate>)delegate;
 
-- (FBRequest*)requestWithParams:(NSMutableDictionary *)params
-                    andDelegate:(id <FBRequestDelegate>)delegate;
+- (FBRequest *)requestWithParams:(NSMutableDictionary *)params
+   andDelegate:(id <FBRequestDelegate>)delegate;
 
-- (FBRequest*)requestWithMethodName:(NSString *)methodName
-                          andParams:(NSMutableDictionary *)params
-                      andHttpMethod:(NSString *)httpMethod
-                        andDelegate:(id <FBRequestDelegate>)delegate;
+- (FBRequest *)requestWithMethodName:(NSString *)methodName
+   andParams:(NSMutableDictionary *)params
+   andHttpMethod:(NSString *)httpMethod
+   andDelegate:(id <FBRequestDelegate>)delegate;
 
-- (FBRequest*)requestWithGraphPath:(NSString *)graphPath
-                       andDelegate:(id <FBRequestDelegate>)delegate;
+- (FBRequest *)requestWithGraphPath:(NSString *)graphPath
+   andDelegate:(id <FBRequestDelegate>)delegate;
 
-- (FBRequest*)requestWithGraphPath:(NSString *)graphPath
-                         andParams:(NSMutableDictionary *)params
-                       andDelegate:(id <FBRequestDelegate>)delegate;
+- (FBRequest *)requestWithGraphPath:(NSString *)graphPath
+   andParams:(NSMutableDictionary *)params
+   andDelegate:(id <FBRequestDelegate>)delegate;
 
-- (FBRequest*)requestWithGraphPath:(NSString *)graphPath
-                         andParams:(NSMutableDictionary *)params
-                     andHttpMethod:(NSString *)httpMethod
-                       andDelegate:(id <FBRequestDelegate>)delegate;
+- (FBRequest *)requestWithGraphPath:(NSString *)graphPath
+   andParams:(NSMutableDictionary *)params
+   andHttpMethod:(NSString *)httpMethod
+   andDelegate:(id <FBRequestDelegate>)delegate;
 
 - (void)dialog:(NSString *)action
    andDelegate:(id<FBDialogDelegate>)delegate;
 
 - (void)dialog:(NSString *)action
-     andParams:(NSMutableDictionary *)params
+   andParams:(NSMutableDictionary *)params
    andDelegate:(id <FBDialogDelegate>)delegate;
 
 - (BOOL)isSessionValid;
 
 @end
 
-////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////
 
 /**
  * Your application should implement this delegate to receive session callbacks.

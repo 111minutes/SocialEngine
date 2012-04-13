@@ -14,13 +14,14 @@ static HROperationQueue *sharedOperationQueue = nil;
 
 @implementation HROperationQueue
 + (HROperationQueue *)sharedOperationQueue {
-    @synchronized(self) {
+    @synchronized (self) {
         if (sharedOperationQueue == nil) {
-                sharedOperationQueue = [[HROperationQueue alloc] init];
-                sharedOperationQueue.maxConcurrentOperationCount = 3;
+            sharedOperationQueue = [[HROperationQueue alloc] init];
+            sharedOperationQueue.maxConcurrentOperationCount = 3;
         }
     }
 
     return sharedOperationQueue;
 }
+
 @end

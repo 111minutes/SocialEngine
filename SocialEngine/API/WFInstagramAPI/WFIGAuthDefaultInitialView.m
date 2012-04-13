@@ -12,7 +12,7 @@
 - (id) initWithController:(WFIGAuthController*)controller {
   if((self = [self init])) {
     _controller = controller;
-    
+      
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"Sign in with Instagram" forState:UIControlStateNormal];
     [button addTarget:_controller

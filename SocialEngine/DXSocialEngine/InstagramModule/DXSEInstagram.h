@@ -10,6 +10,8 @@
 #import "DXSEModule.h"
 #import "WFInstagramAPI.h"
 
+#define INSTAGRAM_CALLBACK_URL @"wfinst://"
+
 @interface DXSEInstagram : DXSEModule
 
 @end

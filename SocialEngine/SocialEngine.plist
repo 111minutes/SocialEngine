@@ -36,7 +36,7 @@
 		<key>oauthSecret</key>
 		<string>359c144fa174480ab8cca8bc6327e928</string>
 		<key>redirectURL</key>
-		<string>http://example.com</string>
+		<string>wfinst://</string>
 	</dict>
 </dict>
 </plist>

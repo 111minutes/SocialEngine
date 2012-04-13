@@ -40,10 +40,13 @@ Class initialViewClass = NULL;
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
+    [super loadView];
+    
   if (NULL != initialViewClass) {
     self.view = [[initialViewClass alloc] initWithController:self];
   } else {
-    self.view = [[WFIGAuthDefaultInitialView alloc] initWithController:self];
+//    self.view = [[WFIGAuthDefaultInitialView alloc] initWithController:self];
+    [self gotoInstagramAuthURL:nil];
   }
 }
 

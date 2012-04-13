@@ -32,6 +32,16 @@
 				<string>fb212660275441074</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>WFInstagramAPIURLScheme</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wfinst</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>

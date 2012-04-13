@@ -29,6 +29,8 @@
 		02E2227E1504FF3E00EF802E /* DXSE4Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222741504FF3E00EF802E /* DXSE4Square.m */; };
 		02E2227F1504FF3E00EF802E /* DXSETwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222771504FF3E00EF802E /* DXSETwitter.m */; };
 		02F420721507709200023A4C /* TwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F420711507709200023A4C /* TwitterEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		500B21DE153849C900C73CAC /* NSURL+WillFleming.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B21DD153849C900C73CAC /* NSURL+WillFleming.m */; };
+		500B21E215384C3600C73CAC /* DXSEUserInfoInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B21E115384C3600C73CAC /* DXSEUserInfoInstagram.m */; };
 		502B30FB15343F38006F032F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B30FA15343F38006F032F /* Twitter.framework */; };
 		502B30FD15343F3E006F032F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B30FC15343F3D006F032F /* Accounts.framework */; };
 		506450F1153719E30054B09C /* DXSEInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 506450F0153719E30054B09C /* DXSEInstagram.m */; };
@@ -173,6 +175,10 @@
 		02E222771504FF3E00EF802E /* DXSETwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSETwitter.m; sourceTree = "<group>"; };
 		02F420701507709200023A4C /* TwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterEngine.h; sourceTree = "<group>"; };
 		02F420711507709200023A4C /* TwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterEngine.m; sourceTree = "<group>"; };
+		500B21DC153849C900C73CAC /* NSURL+WillFleming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+WillFleming.h"; path = "WFInstagramAPI/NSURL+WillFleming.h"; sourceTree = "<group>"; };
+		500B21DD153849C900C73CAC /* NSURL+WillFleming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+WillFleming.m"; path = "WFInstagramAPI/NSURL+WillFleming.m"; sourceTree = "<group>"; };
+		500B21E015384C3600C73CAC /* DXSEUserInfoInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfoInstagram.h; sourceTree = "<group>"; };
+		500B21E115384C3600C73CAC /* DXSEUserInfoInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfoInstagram.m; sourceTree = "<group>"; };
 		502B30FA15343F38006F032F /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		502B30FC15343F3D006F032F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		506450EF153719E30054B09C /* DXSEInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXSEInstagram.h; path = InstagramModule/DXSEInstagram.h; sourceTree = "<group>"; };
@@ -482,6 +488,8 @@
 				02485FB5150A80CB003B4565 /* DXSEUserInfoTwitter.m */,
 				028FEF48150BC11B006531CE /* DXSEUserInfo4Square.h */,
 				028FEF49150BC11C006531CE /* DXSEUserInfo4Square.m */,
+				500B21E015384C3600C73CAC /* DXSEUserInfoInstagram.h */,
+				500B21E115384C3600C73CAC /* DXSEUserInfoInstagram.m */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -553,6 +561,8 @@
 		506450F215371B5C0054B09C /* WFInstagramAPI */ = {
 			isa = PBXGroup;
 			children = (
+				500B21DC153849C900C73CAC /* NSURL+WillFleming.h */,
+				500B21DD153849C900C73CAC /* NSURL+WillFleming.m */,
 				506450F315371B670054B09C /* WFIGAuthController.h */,
 				506450F415371B670054B09C /* WFIGAuthController.m */,
 				506450F515371B670054B09C /* WFIGAuthDefaultInitialView.h */,
@@ -1144,6 +1154,8 @@
 				5064511B15371B670054B09C /* WFIGResponse.m in Sources */,
 				5064511C15371B670054B09C /* WFIGUser.m in Sources */,
 				5064511D15371B670054B09C /* WFInstagramAPI.m in Sources */,
+				500B21DE153849C900C73CAC /* NSURL+WillFleming.m in Sources */,
+				500B21E215384C3600C73CAC /* DXSEUserInfoInstagram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

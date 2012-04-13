@@ -20,6 +20,8 @@
 #import "WFIGMediaCollection.h"
 #import "WFIGComment.h"
 
+#import "NSURL+WillFleming.h"
+
 @interface WFInstagramAPI : NSObject
 
 + (void) setClientId:(NSString*)clientId;

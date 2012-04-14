@@ -32,7 +32,7 @@
 		500B21DE153849C900C73CAC /* NSURL+WillFleming.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B21DD153849C900C73CAC /* NSURL+WillFleming.m */; };
 		500B21E215384C3600C73CAC /* DXSEUserInfoInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B21E115384C3600C73CAC /* DXSEUserInfoInstagram.m */; };
 		502B30FB15343F38006F032F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B30FA15343F38006F032F /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		502B30FD15343F3E006F032F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B30FC15343F3D006F032F /* Accounts.framework */; };
+		502B30FD15343F3E006F032F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B30FC15343F3D006F032F /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		506450F1153719E30054B09C /* DXSEInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 506450F0153719E30054B09C /* DXSEInstagram.m */; };
 		5064511015371B670054B09C /* WFIGAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506450F415371B670054B09C /* WFIGAuthController.m */; };
 		5064511115371B670054B09C /* WFIGAuthDefaultInitialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 506450F615371B670054B09C /* WFIGAuthDefaultInitialView.m */; };

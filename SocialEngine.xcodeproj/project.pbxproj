@@ -31,7 +31,7 @@
 		02F420721507709200023A4C /* TwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F420711507709200023A4C /* TwitterEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		500B21DE153849C900C73CAC /* NSURL+WillFleming.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B21DD153849C900C73CAC /* NSURL+WillFleming.m */; };
 		500B21E215384C3600C73CAC /* DXSEUserInfoInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B21E115384C3600C73CAC /* DXSEUserInfoInstagram.m */; };
-		502B30FB15343F38006F032F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B30FA15343F38006F032F /* Twitter.framework */; };
+		502B30FB15343F38006F032F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B30FA15343F38006F032F /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		502B30FD15343F3E006F032F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B30FC15343F3D006F032F /* Accounts.framework */; };
 		506450F1153719E30054B09C /* DXSEInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 506450F0153719E30054B09C /* DXSEInstagram.m */; };
 		5064511015371B670054B09C /* WFIGAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506450F415371B670054B09C /* WFIGAuthController.m */; };
@@ -968,7 +968,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 024687B214FE2642009E2CB9 /* Build configuration list for PBXNativeTarget "SocialEngine" */;
 			buildPhases = (
-				500B28D115386A4200C73CAC /* ShellScript */,
 				0246879014FE2642009E2CB9 /* Sources */,
 				0246879114FE2642009E2CB9 /* Frameworks */,
 				0246879214FE2642009E2CB9 /* Resources */,
@@ -1025,19 +1024,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		500B28D115386A4200C73CAC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = /usr/local/etc/formatter.rb;
-		};
 		E565640D3AF147C0B5743427 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

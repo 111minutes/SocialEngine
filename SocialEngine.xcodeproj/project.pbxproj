@@ -209,7 +209,6 @@
 		5064510A15371B670054B09C /* WFIGResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFIGResponse.m; path = WFInstagramAPI/WFIGResponse.m; sourceTree = "<group>"; };
 		5064510B15371B670054B09C /* WFIGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFIGUser.h; path = WFInstagramAPI/WFIGUser.h; sourceTree = "<group>"; };
 		5064510C15371B670054B09C /* WFIGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFIGUser.m; path = WFInstagramAPI/WFIGUser.m; sourceTree = "<group>"; };
-		5064510D15371B670054B09C /* WFInstagramAPI-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WFInstagramAPI-Prefix.pch"; path = "WFInstagramAPI/WFInstagramAPI-Prefix.pch"; sourceTree = "<group>"; };
 		5064510E15371B670054B09C /* WFInstagramAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFInstagramAPI.h; path = WFInstagramAPI/WFInstagramAPI.h; sourceTree = "<group>"; };
 		5064510F15371B670054B09C /* WFInstagramAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFInstagramAPI.m; path = WFInstagramAPI/WFInstagramAPI.m; sourceTree = "<group>"; };
 		5B58526CBD1A4729B697B353 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -589,7 +588,6 @@
 				5064510A15371B670054B09C /* WFIGResponse.m */,
 				5064510B15371B670054B09C /* WFIGUser.h */,
 				5064510C15371B670054B09C /* WFIGUser.m */,
-				5064510D15371B670054B09C /* WFInstagramAPI-Prefix.pch */,
 				5064510E15371B670054B09C /* WFInstagramAPI.h */,
 				5064510F15371B670054B09C /* WFInstagramAPI.m */,
 			);

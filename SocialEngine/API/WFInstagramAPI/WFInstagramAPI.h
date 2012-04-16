@@ -3,10 +3,42 @@
 //
 //  Created by William Fleming on 11/13/11.
 //
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+//TODO: it would be nice to decouple reliance on UIKit so use with Cocoa would be viable
+#import <UIKit/UIKit.h>
+#endif
+
+// define the WFIGDLOG macro
+#ifdef WFIGDEBUG
+#define WFIGDLOG(fmt, ...) NSLog(@"%s(%d): " fmt, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define WFIGDLOG(fmt, ...) ((void)0)
+#endif
+
+// define the WFIGDASSERT macro
+#ifdef WFIGDEBUG
+
+#if TARGET_IPHONE_SIMULATOR
+
+// make an assertion, throw a signal if it fails.
+#define WFIGDASSERT(con) { if (!(con)) { WFIGDLOG(@"WFIGDASSERT failed: %s", #con); \
+{ __asm__("int $3\n" : : ); }; } \
+} ((void)0)
+
+#else
+
+// make an assert, DO NOT THROW A SIGNAL: it's not a valid instruction on arm
+#define WFIGDASSERT(xx) { if (!(xx)) { WFIGDLOG(@"WFIGDASSERT failed: %s", #xx); } } ((void)0)
+
+#endif // #if TARGET_IPHONE_SIMULATOR
+
+#else
+#define WFIGDASSERT(con) ((void)0)
+#endif  // END define DASSERT macro
+
 
 #import <Foundation/Foundation.h>
-
-#import "WFInstagramAPI-Prefix.pch"
 
 #import "WFIGConnection.h"
 #import "WFIGResponse.h"

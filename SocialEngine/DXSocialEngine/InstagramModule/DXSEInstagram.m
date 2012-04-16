@@ -113,21 +113,24 @@
 
 - (void)didRecieveURLNotification:(NSNotification *)notification {
     NSURL *recievedURL = (NSURL *)notification.object;
+    
+    if ([recievedURL.description rangeOfString:self.entryConfig.redirectURL].location != NSNotFound)
+    {
+        NSDictionary *params = [recievedURL queryDictionary];
 
-    NSDictionary *params = [recievedURL queryDictionary];
+        if ([params objectForKey:@"code"]) {
+            WFIGResponse *response = [WFInstagramAPI accessTokenForCode:[params objectForKey:@"code"]];
+            NSDictionary *json = [response parsedBody];
+            [WFInstagramAPI setAccessToken:[json objectForKey:@"access_token"]];
 
-    if ([params objectForKey:@"code"]) {
-        WFIGResponse *response = [WFInstagramAPI accessTokenForCode:[params objectForKey:@"code"]];
-        NSDictionary *json = [response parsedBody];
-        [WFInstagramAPI setAccessToken:[json objectForKey:@"access_token"]];
+            [self hideLoginController];
 
-        [self hideLoginController];
+            [self executeSuccessBlockForKey:LOGIN withData:nil];
+        } else {
+            [self hideLoginController];
 
-        [self executeSuccessBlockForKey:LOGIN withData:nil];
-    } else {
-        [self hideLoginController];
-
-        [self executeFailureBlockForKey:LOGIN withError:nil];
+            [self executeFailureBlockForKey:LOGIN withError:nil];
+        }
     }
 }
 

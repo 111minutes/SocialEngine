@@ -9,12 +9,19 @@
 
 #define STATUS_HEIGHT 44.0
 
+@interface WFIGAuthController ()
+
+@end
+
 @interface WFIGAuthController (Private)
 - (UIWebView *)webView;
 - (UIActivityIndicatorView *)activityIndicator;
 - (UILabel *)statusLabel;
 - (UIView *)statusContainerView;
 - (UIButton *)startOverButton;
+
+- (IBAction)cancelAuth:(id)sender;
+
 @end
 
 #pragma mark -
@@ -47,13 +54,10 @@ Class initialViewClass = NULL;
     }
 }
 
-/*
- * // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
- * - (void)viewDidLoad
- * {
- *  [super viewDidLoad];
- * }
- */
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+// - (void)viewDidLoad {
+//    [super viewDidLoad];
+// }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
@@ -75,9 +79,13 @@ Class initialViewClass = NULL;
     // rebuild view for webview
     UIView *newView = [[UIView alloc] initWithFrame:self.view.frame];
 
+    [[self statusContainerView] addSubview:[self cancelButton]];
+
     [newView addSubview:[self statusContainerView]];
     [newView addSubview:[self webView]];
     self.view = newView;
+
+
 
     // go to the url
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[WFInstagramAPI authURL]]];
@@ -180,6 +188,7 @@ Class initialViewClass = NULL;
 - (UIView *)statusContainerView {
     if (!_statusContainer) {
         _statusContainer = [[UIView alloc] initWithFrame:CGRectMake (0, 0, self.view.frame.size.width, STATUS_HEIGHT)];
+
         _statusContainer.backgroundColor = [UIColor blackColor];
         [_statusContainer addSubview:[self activityIndicator]];
         [_statusContainer addSubview:[self statusLabel]];
@@ -191,7 +200,7 @@ Class initialViewClass = NULL;
 - (UIButton *)startOverButton {
     if (!_startOverButton) {
         _startOverButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        CGFloat width = 100.0, hPadding = 20.0, height = 34.0;
+        CGFloat width = 100.0, hPadding = 10.0, height = 34.0;
         _startOverButton.frame = CGRectMake ([self statusContainerView].frame.size.width - width - hPadding,
                                              ([self statusContainerView].frame.size.height - height) / 2.0,
                                              width,
@@ -200,6 +209,24 @@ Class initialViewClass = NULL;
         [_startOverButton addTarget:self action:@selector(startOver) forControlEvents:UIControlEventTouchUpInside];
     }
     return _startOverButton;
+}
+
+- (UIButton *)cancelButton {
+    if (!_cancelButton) {
+        _cancelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        CGFloat width = 80.0, hPadding = 7.0, height = 32.0;
+        _cancelButton.frame = CGRectMake ([self statusContainerView].frame.size.width - width - hPadding,
+                                          ([self statusContainerView].frame.size.height - height) / 2.0,
+                                          width,
+                                          height);
+        [_cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+        [_cancelButton addTarget:self action:@selector(cancelAuth:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _cancelButton;
+}
+
+- (IBAction)cancelAuth:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:DidCancelAuthNotification object:nil];
 }
 
 @end

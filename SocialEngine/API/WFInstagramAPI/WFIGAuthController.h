@@ -7,6 +7,8 @@
 #import <UIKit/UIKit.h>
 #import "WFIGAuthDefaultInitialView.h"
 
+#define DidCancelAuthNotification @ "DidCancelAuthNotification"
+
 @interface WFIGAuthController : UIViewController<UIWebViewDelegate> {
     UIWebView *_webView;
     UIActivityIndicatorView *_activityIndicator;
@@ -14,6 +16,7 @@
     UIButton *_startOverButton;
     UIView *_statusContainer;
     UIView<WFIGAuthInitialView> *_initialView;
+    UIButton *_cancelButton;
 }
 
 + (void)setInitialViewClass:(Class<WFIGAuthInitialView>)viewClass;

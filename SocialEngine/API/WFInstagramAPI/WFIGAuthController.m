@@ -21,6 +21,7 @@
 - (UIButton *)startOverButton;
 
 - (IBAction)cancelAuth:(id)sender;
+- (UIButton *)cancelButton;
 
 @end
 

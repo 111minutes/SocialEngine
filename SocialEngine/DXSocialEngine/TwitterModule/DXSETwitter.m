@@ -17,7 +17,7 @@
 #define LOGIN         @"LOGIN"
 #define GET_USER_INFO @"GET_USER_INFO"
 
-#define IOS_VERSION_5 (NSClassFromString (@"ACAccount") != NULL)
+#define IOS_VERSION_5 (NSClassFromString (@"ACAccount") != nil)
 
 @interface DXSETwitter ()
 

@@ -19,6 +19,7 @@
 
 - (void)didRecieveURLNotification:(NSNotification *)notification;
 - (void)didEnterAuthNotification:(NSNotification *)notification;
+- (void)didCancelAuthNotification:(NSNotification *)notification;
 
 @end
 
@@ -45,6 +46,11 @@
         [[NSNotificationCenter defaultCenter] addObserver:self
          selector:@selector(didEnterAuthNotification:)
          name:DidEnterAuthNotification
+         object:nil];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self
+         selector:@selector(didCancelAuthNotification:)
+         name:DidCancelAuthNotification
          object:nil];
     }
     return self;
@@ -138,6 +144,11 @@
     UIViewController *authController = (UIViewController *)notification.object;
 
     [self showLoginController:authController];
+}
+
+- (void)didCancelAuthNotification:(NSNotification *)notification {
+    [self hideLoginController];
+    [self executeFailureBlockForKey:LOGIN withError:nil];
 }
 
 @end

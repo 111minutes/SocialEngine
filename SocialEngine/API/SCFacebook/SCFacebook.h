@@ -32,7 +32,7 @@
 
 #define OPEN_URL @"OPEN_URL"
 #define FQL_USER_STANDARD @"uid, name, email, birthday_date, about_me, pic"
-#define PERMISSIONS @"user_about_me",@"user_birthday",@"email", @"user_photos"
+#define PERMISSIONS @"user_about_me",@"user_birthday",@"email", @"user_photos", @"offline_access", @"publish_stream", @"publish_actions"
 
 
 #define Alert(title,msg)  [[[[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease] show];

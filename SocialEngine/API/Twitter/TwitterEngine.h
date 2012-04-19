@@ -100,11 +100,11 @@
 #pragma mark oAuth end
 
 // TODO: we may not need to have these properties, or just make them private. It's easier to manage the retain, release cycle this way.
-@property (retain, nonatomic) NSURLConnection *streamingConnection;
-@property (retain, nonatomic) NSURL *_requestTokenURL;
-@property (retain, nonatomic) NSURL *_accessTokenURL;
-@property (retain, nonatomic) NSURL *_authorizeTokenURL;
-@property (retain, nonatomic) NSString *_pin;
-@property (retain, nonatomic) OAToken *_requestToken;
+@property (strong, nonatomic) NSURLConnection *streamingConnection;
+@property (strong, nonatomic) NSURL *_requestTokenURL;
+@property (strong, nonatomic) NSURL *_accessTokenURL;
+@property (strong, nonatomic) NSURL *_authorizeTokenURL;
+@property (strong, nonatomic) NSString *_pin;
+@property (strong, nonatomic) OAToken *_requestToken;
 
 @end

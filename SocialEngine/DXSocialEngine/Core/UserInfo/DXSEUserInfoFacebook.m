@@ -16,8 +16,6 @@
     return [[DXSEUserInfoFacebook alloc] init];
 }
 
-- (void)dealloc {
-}
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"id=%@; name=%@; email=%@; birthdate=%@; avatarURL=%@",

@@ -32,8 +32,6 @@
     return self;
 }
 
-- (void)dealloc {
-}
 
 #pragma mark - Authentication
 - (void)login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {

@@ -47,37 +47,37 @@ static TwitterEngine *sharedEngine = nil;
     OAMutableURLRequest *request = [[OAMutableURLRequest alloc]
                                     initWithURL:self._authorizeTokenURL consumer:nil token:_requestToken realm:nil signatureProvider:nil];
 
-    [request setParameters:[NSArray arrayWithObject:[[[OARequestParameter alloc] initWithName:@"oauth_token" value:_requestToken.key] autorelease]]];
+    [request setParameters:[NSArray arrayWithObject:[[OARequestParameter alloc] initWithName:@"oauth_token" value:_requestToken.key]]];
 
-    [request autorelease];
+
     return request;
 }
 
 - (void)requestRequestToken:(id)aDelegate onSuccess:(SEL)success onFail:(SEL)fail {
     NSLog (@"requesting request token");
-    OAConsumer *consumer = [[[OAConsumer alloc] initWithKey:[self consumerKey] secret:[self consumerSecret]] autorelease];
-    OAMutableURLRequest *request = [[[OAMutableURLRequest alloc]
+    OAConsumer *consumer = [[OAConsumer alloc] initWithKey:[self consumerKey] secret:[self consumerSecret]];
+    OAMutableURLRequest *request = [[OAMutableURLRequest alloc]
                                      initWithURL:self._requestTokenURL
-                                     consumer:consumer token:nil realm:nil signatureProvider:nil] autorelease];
+                                     consumer:consumer token:nil realm:nil signatureProvider:nil];
 
     [request setHTTPMethod:@"POST"];
 
     NSLog (@"fetching request token");
-    OADataFetcher *fetcher = [[[OADataFetcher alloc] init] autorelease];
+    OADataFetcher *fetcher = [[OADataFetcher alloc] init];
     [fetcher fetchDataWithRequest:request delegate:aDelegate didFinishSelector:success didFailSelector:fail];
 }
 
 - (void)requestAccessToken:(id)aDelegate onSuccess:(SEL)success onFail:(SEL)fail {
     self._requestToken.verifier = self._pin;
 
-    OAConsumer *consumer = [[[OAConsumer alloc] initWithKey:[self consumerKey] secret:[self consumerSecret]] autorelease];
-    OAMutableURLRequest *request = [[[OAMutableURLRequest alloc]
+    OAConsumer *consumer = [[OAConsumer alloc] initWithKey:[self consumerKey] secret:[self consumerSecret]];
+    OAMutableURLRequest *request = [[OAMutableURLRequest alloc]
                                      initWithURL:self._accessTokenURL
-                                     consumer:consumer token:self._requestToken realm:nil signatureProvider:nil] autorelease];
+                                     consumer:consumer token:self._requestToken realm:nil signatureProvider:nil];
 
     [request setHTTPMethod:@"POST"];
 
-    OADataFetcher *fetcher = [[[OADataFetcher alloc] init] autorelease];
+    OADataFetcher *fetcher = [[OADataFetcher alloc] init];
     [fetcher fetchDataWithRequest:request delegate:aDelegate didFinishSelector:success didFailSelector:fail];
 }
 
@@ -87,13 +87,12 @@ static TwitterEngine *sharedEngine = nil;
         return;
     }
 
-    NSString *dataString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+    NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
     if (!dataString) {
         return;
     }
 
-    [_requestToken release];
     _requestToken = [[OAToken alloc] initWithHTTPResponseBody:dataString];
 
     NSLog (@"request token set");
@@ -105,7 +104,7 @@ static TwitterEngine *sharedEngine = nil;
         return;
     }
 
-    NSString *dataString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+    NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
     if (!dataString) {
         return;
@@ -120,13 +119,12 @@ static TwitterEngine *sharedEngine = nil;
     self.username = [self extractUsernameFromHTTPBody:dataString];
 
     // assign the new access token;
-    [self setAccessToken:[[[OAToken alloc] initWithHTTPResponseBody:dataString] autorelease]];
+    [self setAccessToken:[[OAToken alloc] initWithHTTPResponseBody:dataString]];
 }
 
 // Clear the access token from the engine, this is equivalent to login out.
 - (void)clearAccessToken {
     [self setAccessToken:nil];
-    [_requestToken release];
     _requestToken = nil;
     self._pin = nil;
 }
@@ -151,26 +149,10 @@ static TwitterEngine *sharedEngine = nil;
 // overrides so that no new instance would be created by accident. because the singleton instance exists through out the application life cycle
 // we never increase or decrease its refrence count.
 + (id)allocWithZone:(NSZone *)zone {
-    return [[self sharedEngine] retain];
+    return [self sharedEngine];
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-    return self;
-}
-
-- (id)retain {
-    return self;
-}
-
-- (NSUInteger)retainCount {
-    return NSUIntegerMax;  // denotes an object that cannot be released
-}
-
-- (void)release {
-    // do nothing
-}
-
-- (id)autorelease {
     return self;
 }
 
@@ -193,20 +175,10 @@ static TwitterEngine *sharedEngine = nil;
 
     self.streamingConnection = [[NSURLConnection alloc] initWithRequest:streamingRequest delegate:delegate startImmediately:YES];
 
-    [consumer release];
-    [streamingRequest release];
 }
 
 #pragma mark end streaming
 
-- (void)dealloc {
-    [_requestTokenURL release];
-    [_accessTokenURL release];
-    [_authorizeTokenURL release];
-    [_pin release];
-    [streamingConnection release];
-    [super dealloc];
-}
 
 #pragma mark - Add by Malaar
 - (NSString *)extractUsernameFromHTTPBody:(NSString *)body {

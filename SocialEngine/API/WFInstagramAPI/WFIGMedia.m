@@ -99,10 +99,10 @@ createdTime, caption, commentsData, tags, userData, locationData;
 }
 
 - (void)imageCompletionBlock:(WFIGMediaImageCallback)completionBlock {
-    __block WFIGMedia *blockSelf = self;
+    __unsafe_unretained WFIGMedia *blockSelf = self;
 
     dispatch_async (dispatch_get_global_queue (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        __block UIImage *image = [blockSelf image];
+                        __unsafe_unretained UIImage *image = [blockSelf image];
                         dispatch_async (dispatch_get_main_queue (), ^{
                                             completionBlock (blockSelf, image);
                                         });
@@ -114,10 +114,10 @@ createdTime, caption, commentsData, tags, userData, locationData;
 }
 
 - (void)thumbnailCompletionBlock:(WFIGMediaImageCallback)completionBlock {
-    __block WFIGMedia *blockSelf = self;
+    __unsafe_unretained WFIGMedia *blockSelf = self;
 
     dispatch_async (dispatch_get_global_queue (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        __block UIImage *image = [blockSelf thumbnail];
+                        __unsafe_unretained UIImage *image = [blockSelf thumbnail];
                         dispatch_async (dispatch_get_main_queue (), ^{
                                             completionBlock (blockSelf, image);
                                         });
@@ -129,10 +129,10 @@ createdTime, caption, commentsData, tags, userData, locationData;
 }
 
 - (void)lowResolutionImageWithCompletionBlock:(WFIGMediaImageCallback)completionBlock {
-    __block WFIGMedia *blockSelf = self;
+    __unsafe_unretained WFIGMedia *blockSelf = self;
 
     dispatch_async (dispatch_get_global_queue (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        __block UIImage *image = [blockSelf lowResolutionImage];
+                        __unsafe_unretained UIImage *image = [blockSelf lowResolutionImage];
                         dispatch_async (dispatch_get_main_queue (), ^{
                                             completionBlock (blockSelf, image);
                                         });

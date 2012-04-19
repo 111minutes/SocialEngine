@@ -33,23 +33,15 @@
 @synthesize delegate;
 
 - (id)init {
-    [super init];
+    self = [super init];
     responseData = [[NSMutableData alloc] init];
     return self;
 }
 
-- (void)dealloc {
-    [connection release];
-    [response release];
-    [responseData release];
-    [request release];
-    [super dealloc];
-}
 
 /* Protocol for async URL loading */
 - (void)connection:(NSURLConnection *)aConnection didReceiveResponse:(NSURLResponse *)aResponse {
-    [response release];
-    response = [aResponse retain];
+    response = aResponse;
     [responseData setLength:0];
 }
 
@@ -59,7 +51,7 @@
                                data:responseData
                                didSucceed:NO];
 
-    [ticket autorelease];
+
     [delegate performSelector:didFailSelector withObject:ticket withObject:error];
     // TODO: document this, obviously you don't autorelease and then release again!
     // [ticket release], ticket = nil;
@@ -76,7 +68,7 @@
                                response:response
                                data:responseData
                                didSucceed:[(NSHTTPURLResponse *) response statusCode] < 400];
-    [ticket autorelease];
+    
     if ([ticket didSucceed]) {
         [delegate performSelector:didFinishSelector withObject:ticket withObject:responseData];
     } else {
@@ -88,7 +80,7 @@
 }
 
 - (void)fetchDataWithRequest:(OAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector {
-    request = [aRequest retain];
+    request = aRequest;
     delegate = aDelegate;
     didFinishSelector = finishSelector;
     didFailSelector = failSelector;

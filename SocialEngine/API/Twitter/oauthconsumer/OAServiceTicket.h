@@ -30,16 +30,16 @@
 
 @interface OAServiceTicket : NSObject {
     @private
-    OAMutableURLRequest *request;
-    NSURLResponse *response;
-    NSData *data;
+    OAMutableURLRequest *__unsafe_unretained request;
+    NSURLResponse *__unsafe_unretained response;
+    NSData *__unsafe_unretained data;
     BOOL didSucceed;
 }
-@property (readonly) OAMutableURLRequest *request;
-@property (readonly) NSURLResponse *response;
-@property (readonly) NSData *data;
+@property (unsafe_unretained, readonly) OAMutableURLRequest *request;
+@property (unsafe_unretained, readonly) NSURLResponse *response;
+@property (unsafe_unretained, readonly) NSData *data;
 @property (readonly) BOOL didSucceed;
-@property (readonly) NSString *body;
+@property (unsafe_unretained, readonly) NSString *body;
 
 - (id)initWithRequest:(OAMutableURLRequest *)aRequest response:(NSURLResponse *)aResponse data:(NSData *)aData didSucceed:(BOOL)success;
 

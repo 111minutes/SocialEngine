@@ -60,11 +60,6 @@ static SCFacebook *_scFacebook = nil;
     return _scFacebook;
 }
 
-- (void)dealloc {
-    [oauthKey release];
-
-    [super dealloc];
-}
 
 #pragma mark -
 #pragma mark Private Methods
@@ -132,7 +127,6 @@ static SCFacebook *_scFacebook = nil;
 
         Alert (@"ERROR", error)
         callBack (NO, error);
-        [callBack release];
         return;
     } else {
         // Now check that the URL scheme fb[app_id]://authorize is in the .plist and can
@@ -165,7 +159,6 @@ static SCFacebook *_scFacebook = nil;
 
             Alert (@"ERROR", error)
             callBack (NO, error);
-            [callBack release];
             return;
         }
 
@@ -189,7 +182,6 @@ static SCFacebook *_scFacebook = nil;
             self.callback = callBack;
         } else {
             callBack (YES, @"Logged");
-            [callBack release];
         }
     }
 }
@@ -202,7 +194,6 @@ static SCFacebook *_scFacebook = nil;
 - (void)_getUserFQL:(NSString *)fql callBack:(SCFacebookCallback)callBack {
     if (![_facebook isSessionValid]) {
         callBack (NO, @"Not logged in");
-        [callBack release];
         return;
     }
 
@@ -214,7 +205,6 @@ static SCFacebook *_scFacebook = nil;
 - (void)_getUserFriendsCallBack:(SCFacebookCallback)callBack {
     if (![_facebook isSessionValid]) {
         callBack (NO, @"Not logged in");
-        [callBack release];
         return;
     }
 
@@ -225,11 +215,10 @@ static SCFacebook *_scFacebook = nil;
 - (void)_feedPostWithLinkPath:(NSString *)_url caption:(NSString *)_caption message:(NSString *)_message photo:(UIImage *)_photo dialog:(BOOL)_dialog callBack:(SCFacebookCallback)callBack {
     if (![_facebook isSessionValid]) {
         callBack (NO, @"Not logged in");
-        [callBack release];
         return;
     }
 
-    NSMutableDictionary *params = [[[NSMutableDictionary alloc] init] autorelease];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     // Need to provide POST parameters to the Facebook SDK for the specific post type
     NSString *graphPath = @"me/feed";
 
@@ -268,7 +257,6 @@ static SCFacebook *_scFacebook = nil;
 - (void)_myFeedCallBack:(SCFacebookCallback)callBack {
     if (![_facebook isSessionValid]) {
         callBack (NO, @"Not logged in");
-        [callBack release];
         return;
     }
 

@@ -35,7 +35,7 @@
 #define PERMISSIONS       @ "user_about_me", @ "user_birthday", @ "email", @ "user_photos", @"offline_access"
 
 
-#define Alert(title, msg) [[[[UIAlertView alloc] initWithTitle : title message : msg delegate : self cancelButtonTitle : @ "OK" otherButtonTitles : nil, nil] autorelease] show];
+#define Alert(title, msg) [[[UIAlertView alloc] initWithTitle : title message : msg delegate : self cancelButtonTitle : @ "OK" otherButtonTitles : nil, nil] show];
 
 typedef void (^ SCFacebookCallback)(BOOL success, id result);
 

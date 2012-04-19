@@ -53,8 +53,6 @@
     return self;
 }
 
-- (void)dealloc {
-}
 
 #pragma mark - Authentication
 - (void)login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
@@ -221,8 +219,8 @@
 
 - (void)requestAccessToTwitter {
     if ([self twitterAccountsExist]) {
-        __block ACAccountStore *accountStore = [ACAccountStore new];
-        __block ACAccountType *accountTypeTwitter = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+        __unsafe_unretained ACAccountStore *accountStore = [ACAccountStore new];
+        __unsafe_unretained ACAccountType *accountTypeTwitter = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
 
         void (^successBlock)(void) = ^{
             self.twitterAccounts = [accountStore accountsWithAccountType:accountTypeTwitter];

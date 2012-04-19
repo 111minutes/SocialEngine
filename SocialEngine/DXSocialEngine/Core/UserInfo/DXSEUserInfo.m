@@ -12,7 +12,5 @@
 
 @synthesize ID;
 
-- (void)dealloc {
-}
 
 @end

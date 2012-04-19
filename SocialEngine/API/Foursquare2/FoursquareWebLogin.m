@@ -44,7 +44,6 @@
     [webView loadRequest:request];
     [webView setDelegate:self];
     [self.view addSubview:webView];
-    [webView release];
 
 //    self.view.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = [UIColor colorWithRed:9 / 255.0f green:166 / 255.0f blue:199 / 255.0f alpha:255 / 255.0f];
@@ -62,7 +61,6 @@
     activityIndicator.center = webView.center;
     activityIndicator.hidesWhenStopped = YES;
     [self.view addSubview:activityIndicator];
-    [activityIndicator release];
 }
 
 - (void)cancel {
@@ -138,8 +136,5 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
 
 @end

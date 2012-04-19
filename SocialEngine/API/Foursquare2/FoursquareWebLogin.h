@@ -21,11 +21,11 @@
     NSString *_url;
     UIWebView *webView;
     SEL selector;
-    id<FoursquareWebLoginDelegate> delegate;
+    id<FoursquareWebLoginDelegate> __unsafe_unretained delegate;
     UIActivityIndicatorView *activityIndicator;
 }
 
-@property (nonatomic, assign) id delegate;
+@property (nonatomic, unsafe_unretained) id delegate;
 @property (nonatomic, assign) SEL selector;
 
 - (id)initWithUrl:(NSString *)url;

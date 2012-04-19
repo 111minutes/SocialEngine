@@ -53,8 +53,6 @@
     return self;
 }
 
-- (void)dealloc {
-}
 
 - (void)configure {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SocialEngine" ofType:@"plist"];

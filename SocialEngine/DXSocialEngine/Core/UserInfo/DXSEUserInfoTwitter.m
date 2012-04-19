@@ -16,8 +16,6 @@
     return [[DXSEUserInfoTwitter alloc] init];
 }
 
-- (void)dealloc {
-}
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"id=%@; name=%@; screenName=%@;",

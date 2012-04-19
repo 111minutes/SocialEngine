@@ -16,8 +16,6 @@
     return [[DXSEUserInfo4Square alloc] init];
 }
 
-- (void)dealloc {
-}
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"id=%@; firstName=%@; lastName=%@; email=%@; avatarURL=%@;",

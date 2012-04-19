@@ -61,11 +61,11 @@ BOOL isIPad() {
     //    NSString* bgImagePath = [twitterBundle pathForResource:@"twitter_load" ofType:@"png" inDirectory:@"images"];
 
     NSString *bgImagePath = @"Twitter.bundle/images/twitter_load.png";
-    _backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:bgImagePath]] autorelease];
+    _backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:bgImagePath]];
 
-    self.view = [[[UIView alloc] initWithFrame:isIPad () ? IPAD_VIEW_FRAME:IPHONE_VIEW_FRAME ] autorelease];
+    self.view = [[UIView alloc] initWithFrame:isIPad () ? IPAD_VIEW_FRAME:IPHONE_VIEW_FRAME ];
     _backgroundView.frame =  isIPad () ? IPAD_BACKGROUND_VIEW_FRAME : IPHONE_BACKGROUND_VIEW_FRAME;
-    _navBar = [[[UINavigationBar alloc] initWithFrame:isIPad () ? IPAD_NAVIGATION_BAR_FRAME:IPHONE_NAVIGATION_BAR_FRAME] autorelease];
+    _navBar = [[UINavigationBar alloc] initWithFrame:isIPad () ? IPAD_NAVIGATION_BAR_FRAME:IPHONE_NAVIGATION_BAR_FRAME];
 
     _navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
     _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -77,13 +77,13 @@ BOOL isIPad() {
 
     [self.view addSubview:_navBar];
 
-    _blockerView = [[[UIView alloc] initWithFrame:CGRectMake (0, 0, 200, 60)] autorelease];
+    _blockerView = [[UIView alloc] initWithFrame:CGRectMake (0, 0, 200, 60)];
     _blockerView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.8];
     _blockerView.center = CGPointMake (self.view.bounds.size.width / 2, self.view.bounds.size.height / 2);
     _blockerView.alpha = 0.0;
     _blockerView.clipsToBounds = YES;
 
-    UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake (0, 5, _blockerView.bounds.size.width, 15)] autorelease];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake (0, 5, _blockerView.bounds.size.width, 15)];
     label.text = NSLocalizedString (@"Please Wait…", nil);
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
@@ -91,14 +91,14 @@ BOOL isIPad() {
     label.font = [UIFont boldSystemFontOfSize:15];
     [_blockerView addSubview:label];
 
-    UIActivityIndicatorView *spinner = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite] autorelease];
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     spinner.center = CGPointMake (_blockerView.bounds.size.width / 2, _blockerView.bounds.size.height / 2 + 10);
     [_blockerView addSubview:spinner];
     [self.view addSubview:_blockerView];
     [spinner startAnimating];
 
-    UINavigationItem *navItem = [[[UINavigationItem alloc] initWithTitle:NSLocalizedString (@"Twitter Sign In", nil)] autorelease];
-    navItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)] autorelease];
+    UINavigationItem *navItem = [[UINavigationItem alloc] initWithTitle:NSLocalizedString (@"Twitter Sign In", nil)];
+    navItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
 
     [_navBar pushNavigationItem:navItem animated:NO];
 }
@@ -240,13 +240,5 @@ BOOL isIPad() {
     // e.g. self.myOutlet = nil;
 }
 
-- (void)dealloc {
-    [_webView release];
-    // Malaar: fuck my mind!
-//	[_navBar release];
-//	[_backgroundView release];
-//	[_blockerView release];
-    [super dealloc];
-}
 
 @end

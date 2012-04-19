@@ -40,7 +40,7 @@
 @property (readonly) NSString *method;
 @property (readonly) NSArray *parameters;
 @property (readonly) NSDictionary *files;
-@property (nonatomic, retain) OAServiceTicket *ticket;
+@property (nonatomic, strong) OAServiceTicket *ticket;
 
 - (id)init;
 - (id)initWithURL:(NSURL *)aURL;

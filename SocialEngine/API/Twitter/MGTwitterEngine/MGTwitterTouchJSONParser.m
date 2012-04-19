@@ -18,13 +18,13 @@
    responseType:(MGTwitterResponseType)respType
    URL:(NSURL *)URL
    deliveryOptions:(MGTwitterEngineDeliveryOptions)deliveryOptions {
-    return [[[self alloc] initWithJSON:theJSON
+    return [[self alloc] initWithJSON:theJSON
              delegate:theDelegate
              connectionIdentifier:identifier
              requestType:reqType
              responseType:respType
              URL:URL
-             deliveryOptions:deliveryOptions] autorelease];
+             deliveryOptions:deliveryOptions];
 }
 
 - (id)initWithJSON:(NSData *)theJSON
@@ -35,11 +35,11 @@
    URL:(NSURL *)theURL
    deliveryOptions:(MGTwitterEngineDeliveryOptions)theDeliveryOptions {
     if (self = [super init]) {
-        json = [theJSON retain];
-        identifier = [theIdentifier retain];
+        json = theJSON;
+        identifier = theIdentifier;
         requestType = reqType;
         responseType = respType;
-        URL = [theURL retain];
+        URL = theURL;
         deliveryOptions = theDeliveryOptions;
         delegate = theDelegate;
 
@@ -54,9 +54,9 @@
             //   friendships/exists: returns "true" or "false"
             //   help/test: returns "ok"
             // An empty response of "[]" is a special case.
-            NSString *result = [[[NSString alloc] initWithBytes:[json bytes] length:[json length] encoding:NSUTF8StringEncoding] autorelease];
+            NSString *result = [[NSString alloc] initWithBytes:[json bytes] length:[json length] encoding:NSUTF8StringEncoding];
             if (![result isEqualToString:@"[]"]) {
-                NSMutableDictionary *dictionary = [[[NSMutableDictionary alloc] initWithCapacity:1] autorelease];
+                NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithCapacity:1];
 
                 if ([result isEqualToString:@"\"ok\""]) {
                     [dictionary setObject:[NSNumber numberWithBool:YES] forKey:@"ok"];
@@ -88,13 +88,8 @@
 }
 
 - (void)dealloc {
-    [parsedObjects release];
-    [json release];
-    [identifier release];
-    [URL release];
 
     delegate = nil;
-    [super dealloc];
 }
 
 #pragma mark Delegate callbacks

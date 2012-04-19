@@ -23,7 +23,7 @@
  * Do not use this interface directly, instead, use method in Facebook.h
  */
 @interface FBRequest : NSObject {
-    id<FBRequestDelegate> _delegate;
+    id<FBRequestDelegate> __unsafe_unretained _delegate;
     NSString *_url;
     NSString *_httpMethod;
     NSMutableDictionary *_params;
@@ -32,7 +32,7 @@
 }
 
 
-@property (nonatomic, assign) id<FBRequestDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id<FBRequestDelegate> delegate;
 
 /**
  * The URL which will be contacted to execute the request.
@@ -50,9 +50,9 @@
  * These values in the dictionary will be converted to strings using the
  * standard Objective-C object-to-string conversion facilities.
  */
-@property (nonatomic, retain) NSMutableDictionary *params;
-@property (nonatomic, assign) NSURLConnection *connection;
-@property (nonatomic, assign) NSMutableData *responseText;
+@property (nonatomic, strong) NSMutableDictionary *params;
+@property (nonatomic) NSURLConnection *connection;
+@property (nonatomic) NSMutableData *responseText;
 
 
 + (NSString *)serializeURL:(NSString *)baseUrl

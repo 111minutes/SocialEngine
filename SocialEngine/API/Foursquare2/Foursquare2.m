@@ -48,11 +48,8 @@ static NSString *redirectURL = nil;
 @implementation Foursquare2
 
 + (void)setOAuthKey:(NSString *)aOauthKey secret:(NSString *)aSecret redirectURL:(NSString *)aRedirectURL {
-    [oauthKey release];
     oauthKey = [aOauthKey copy];
-    [oauthSecret release];
     oauthSecret = [aSecret copy];
-    [redirectURL release];
     redirectURL = [aRedirectURL copy];
 }
 
@@ -780,7 +777,6 @@ static NSString *redirectURL = nil;
     Foursquare2Callback callback = (Foursquare2Callback)object;
 
     callback (NO, error);
-    [callback release];
 }
 
 + (void)restConnection:(NSURLConnection *)connection
@@ -790,7 +786,6 @@ static NSString *redirectURL = nil;
     Foursquare2Callback callback = (Foursquare2Callback)object;
 
     callback (NO, error);
-    [callback release];
 }
 
 + (void)restConnection:(NSURLConnection *)connection
@@ -800,7 +795,6 @@ static NSString *redirectURL = nil;
     Foursquare2Callback callback = (Foursquare2Callback)object;
 
     callback (NO, error);
-    [callback release];
 }
 
 + (void)restConnection:(NSURLConnection *)connection
@@ -812,7 +806,6 @@ static NSString *redirectURL = nil;
     Foursquare2Callback callback = (Foursquare2Callback)object;
 
     callback (YES, resource);
-    [callback release];
 }
 
 #pragma mark Private methods
@@ -917,7 +910,7 @@ static NSString *redirectURL = nil;
         }
     }
 
-    return [dict autorelease];
+    return dict;
 }
 
 + (void)request:(NSString *)methodName

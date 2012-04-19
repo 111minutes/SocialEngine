@@ -34,5 +34,5 @@
 - (void)loadRequest:(NSURLRequest *)request;
 
 // This is a weak reference since we don't retain the delegate.
-@property (nonatomic, assign) id <OAuthSignInViewControllerDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id <OAuthSignInViewControllerDelegate> delegate;
 @end

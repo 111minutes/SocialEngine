@@ -50,11 +50,11 @@
 - (id)initWithConsumer:(OAConsumer *)aConsumer token:(OAToken *)aToken oauthBase:(const NSString *)base
    realm:(const NSString *)aRealm callback:(const NSString *)aCallback
    delegate:(NSObject <OATokenManagerDelegate> *)aDelegate {
-    [super init];
-    consumer = [aConsumer retain];
+    self = [super init];
+    consumer = aConsumer;
     acToken = nil;
     reqToken = nil;
-    initialToken = [aToken retain];
+    initialToken = aToken;
     authorizedTokenKey = nil;
     oauthBase = [base copy];
     realm = [aRealm copy];
@@ -68,20 +68,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [consumer release];
-    [acToken release];
-    [reqToken release];
-    [initialToken release];
-    [authorizedTokenKey release];
-    [oauthBase release];
-    [realm release];
-    [callback release];
-    [calls release];
-    [selectors release];
-    [delegates release];
-    [super dealloc];
-}
 
 // The application got a new authorized
 // request token and is notifying us
@@ -89,8 +75,7 @@
     if (reqToken && [aKey isEqualToString:reqToken.key]) {
         [self exchangeToken];
     } else {
-        [authorizedTokenKey release];
-        authorizedTokenKey = [aKey retain];
+        authorizedTokenKey = aKey;
     }
 }
 
@@ -172,7 +157,6 @@
     if (idx == NSNotFound) {
         @synchronized (calls) {
             [calls addObject:call];
-            [call release];
             [selectors addObject:NSStringFromSelector (selector)];
         }
     }
@@ -209,7 +193,7 @@
 
 - (void)requestToken {
     /* Try to load an access token from settings */
-    OAToken *atoken = [[[OAToken alloc] initWithUserDefaultsUsingServiceProviderName:oauthBase prefix:[@"access:" stringByAppendingString:realm]] autorelease];
+    OAToken *atoken = [[OAToken alloc] initWithUserDefaultsUsingServiceProviderName:oauthBase prefix:[@"access:" stringByAppendingString:realm]];
 
     if (atoken && [atoken isValid]) {
         [self setAccessToken:atoken];
@@ -217,11 +201,11 @@
     }
     /* Try to load a stored requestToken from
      * settings (useful for iPhone) */
-    OAToken *token = [[[OAToken alloc] initWithUserDefaultsUsingServiceProviderName:oauthBase prefix:[@"request:" stringByAppendingString:realm]] autorelease];
+    OAToken *token = [[OAToken alloc] initWithUserDefaultsUsingServiceProviderName:oauthBase prefix:[@"request:" stringByAppendingString:realm]];
     /* iPhone specific, the manager must have got the authorized token before reaching this point */
     NSLog (@"request token in settings %@", token);
     if (token && token.key && [authorizedTokenKey isEqualToString:token.key]) {
-        reqToken = [token retain];
+        reqToken = token;
         [self exchangeToken];
         return;
     }
@@ -241,10 +225,9 @@
 - (void)requestTokenReceived:(OACall *)call body:(NSString *)body {
     /* XXX: Check if token != nil */
     NSLog (@"Received request token %@", body);
-    OAToken *token = [[[OAToken alloc] initWithHTTPResponseBody:body] autorelease];
+    OAToken *token = [[OAToken alloc] initWithHTTPResponseBody:body];
     if (token) {
-        [reqToken release];
-        reqToken = [token retain];
+        reqToken = token;
 
         [reqToken storeInUserDefaultsWithServiceProviderName:oauthBase prefix:[@"request:" stringByAppendingString:realm]];
         /* Save the token in case we exit and start again
@@ -258,7 +241,6 @@
         [[NSWorkspace sharedWorkspace] openURL:url];
 #endif
     }
-    [call release];
 }
 
 // Exchaing a request token for an access token
@@ -306,8 +288,7 @@
      * this access token */
     [self deleteSavedRequestToken];
     if (token) {
-        [acToken release];
-        acToken = [token retain];
+        acToken = token;
         [acToken storeInUserDefaultsWithServiceProviderName:oauthBase prefix:[@"access:" stringByAppendingString:realm]];
         @synchronized (self) {
             isDispatching = NO;
@@ -315,7 +296,6 @@
         [self dispatch];
     } else {
         /* Clear the in-memory and saved access tokens */
-        [acToken release];
         acToken = nil;
         [OAToken removeFromUserDefaultsWithServiceProviderName:oauthBase prefix:[@"access:" stringByAppendingString:realm]];
     }
@@ -323,7 +303,6 @@
 
 - (void)deleteSavedRequestToken {
     [OAToken removeFromUserDefaultsWithServiceProviderName:oauthBase prefix:[@"request:" stringByAppendingString:realm]];
-    [reqToken release];
     reqToken = nil;
 }
 

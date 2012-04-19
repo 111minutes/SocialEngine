@@ -24,15 +24,15 @@
                  requestType:reqType
                  responseType:respType];
 
-    return [parser autorelease];
+    return parser;
 }
 
 - (id)initWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate
    connectionIdentifier:(NSString *)theIdentifier requestType:(MGTwitterRequestType)reqType
    responseType:(MGTwitterResponseType)respType {
     if ((self = [super init])) {
-        xml = [theXML retain];
-        identifier = [theIdentifier retain];
+        xml = theXML;
+        identifier = theIdentifier;
         requestType = reqType;
         responseType = respType;
         delegate = theDelegate;
@@ -53,12 +53,7 @@
 }
 
 - (void)dealloc {
-    [parser release];
-    [parsedObjects release];
-    [xml release];
-    [identifier release];
     delegate = nil;
-    [super dealloc];
 }
 
 #pragma mark NSXMLParser delegate methods
@@ -103,7 +98,6 @@
         [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
         dateFormatter.dateFormat = @"EEE MMM dd HH:mm:ss +0000 yyyy";
         NSDate *creationDate = [dateFormatter dateFromString:[currentNode objectForKey:elementName]];
-        [dateFormatter release];
         if (creationDate) {
             [currentNode setObject:creationDate forKey:elementName];
         }
@@ -129,12 +123,11 @@
 
 
 - (NSString *)lastOpenedElement {
-    return [[lastOpenedElement retain] autorelease];
+    return lastOpenedElement;
 }
 
 - (void)setLastOpenedElement:(NSString *)value {
     if (lastOpenedElement != value) {
-        [lastOpenedElement release];
         lastOpenedElement = [value copy];
     }
 }

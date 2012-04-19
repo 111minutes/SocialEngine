@@ -14,9 +14,18 @@
  * limitations under the License.
 */
 
-#import "FBSession.h"
-#import "FBRequest.h"
-#import "FBLoginButton.h"
 #import "FBLoginDialog.h"
-#import "FBPermissionDialog.h"
-#import "FBStreamDialog.h"
+
+@interface FBPermissionDialog : FBLoginDialog {
+  NSString* _permission;
+  NSTimer* _redirectTimer;
+}
+
+/**
+ * The extended permission to request.
+ *
+ * See http://wiki.developers.facebook.com/index.php/Extended_permissions
+ */
+@property(nonatomic,copy) NSString* permission;
+
+@end

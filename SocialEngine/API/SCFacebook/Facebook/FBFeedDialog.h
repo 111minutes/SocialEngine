@@ -14,9 +14,29 @@
  * limitations under the License.
 */
 
-#import "FBSession.h"
-#import "FBRequest.h"
-#import "FBLoginButton.h"
-#import "FBLoginDialog.h"
-#import "FBPermissionDialog.h"
-#import "FBStreamDialog.h"
+#import "FBDialog.h"
+
+@interface FBFeedDialog : FBDialog {
+  long long _templateBundleId;
+  NSString* _templateData;
+  NSString* _bodyGeneral;
+}
+
+/**
+ * The id for a previously registered template bundle.
+ */
+@property(nonatomic) long long templateBundleId;
+
+/**
+ * A JSON string containing template data.
+ *
+ * See http://wiki.developers.facebook.com/index.php/Template_Data
+ */
+@property(nonatomic,copy) NSString* templateData;
+
+/**
+ * Additional markup for a short story.
+ */
+@property(nonatomic,copy) NSString* bodyGeneral;
+
+@end

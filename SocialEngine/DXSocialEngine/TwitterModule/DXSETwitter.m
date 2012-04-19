@@ -197,7 +197,11 @@
 
 - (void)connectionFinished:(NSString *)connectionIdentifier
 {
-    NSLog(@"Connection finished: %@", connectionIdentifier);
+    if (postSuccessBlock)
+    {
+        postSuccessBlock(self, nil);
+    }
+    postSuccessBlock = nil;
 }
 
 #pragma mark - UserInfo
@@ -229,6 +233,15 @@
 
 - (void) postText:(NSString *)aText andURL:(NSString *)anURL withSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
+    if (![self isAuthorized])
+    {
+        if (aFailure)
+        {
+            aFailure(self, nil);
+        }
+        return;
+    }
+    
     if ([anURL length] > 139)
     {
         if (aFailure)
@@ -237,6 +250,8 @@
         }
         return;
     }
+    
+    postSuccessBlock = aSuccess;
     if ([aText length] + [anURL length] > 139)
     {
         aText = [aText substringToIndex:(139 - [anURL length])];

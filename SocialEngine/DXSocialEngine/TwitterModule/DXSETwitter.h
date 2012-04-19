@@ -17,6 +17,7 @@
 	OAuthSignInViewController* signInController;
     
     DXSESuccessBlock postSuccessBlock;
+    DXSEFailureBlock postFailureBlock;
     
     NSString* userInfoIdentifier;
 }

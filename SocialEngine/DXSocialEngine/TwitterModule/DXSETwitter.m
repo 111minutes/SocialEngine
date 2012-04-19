@@ -186,22 +186,28 @@
 //==============================================================================
 - (void)requestSucceeded:(NSString *)connectionIdentifier;
 {
-    // ...
-}
-
-//==============================================================================
-- (void)requestFailed:(NSString *)connectionIdentifier withError:(NSError *)error
-{
-    // ...
-}
-
-- (void)connectionFinished:(NSString *)connectionIdentifier
-{
     if (postSuccessBlock)
     {
         postSuccessBlock(self, nil);
     }
     postSuccessBlock = nil;
+    postFailureBlock = nil;
+}
+
+//==============================================================================
+- (void)requestFailed:(NSString *)connectionIdentifier withError:(NSError *)error
+{
+    if (postFailureBlock)
+    {
+        postFailureBlock(self, error);
+    }
+    postSuccessBlock = nil;
+    postFailureBlock = nil;
+}
+
+- (void)connectionFinished:(NSString *)connectionIdentifier
+{
+
 }
 
 #pragma mark - UserInfo
@@ -252,6 +258,7 @@
     }
     
     postSuccessBlock = aSuccess;
+    postFailureBlock = aFailure;
     if ([aText length] + [anURL length] > 139)
     {
         aText = [aText substringToIndex:(139 - [anURL length])];

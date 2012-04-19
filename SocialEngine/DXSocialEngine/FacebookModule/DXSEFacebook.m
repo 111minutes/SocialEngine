@@ -87,7 +87,7 @@
 }
 
 #pragma mark - UserInfo
-//==============================================================================
+
 - (void) getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
     [SCFacebook getUserFQL:FQL_USER_STANDARD callBack:^(BOOL success, id result)
@@ -113,10 +113,23 @@
     }];
 }
 
-//==============================================================================
 - (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
     NSAssert(NO, @"Not implement yet");
+}
+
+- (void) postText:(NSString *)aText andURL:(NSString *)anURL withSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
+{
+    [SCFacebook feedPostWithLinkPath:anURL caption:aText callBack:^(BOOL success, id result) {
+        if(success)
+        {
+            aSuccess(self, result);
+        }
+        else
+        {
+            aFailure(self, nil);
+        }
+    }];
 }
 
 @end

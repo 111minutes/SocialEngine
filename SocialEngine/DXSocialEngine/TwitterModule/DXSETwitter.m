@@ -195,8 +195,13 @@
     // ...
 }
 
+- (void)connectionFinished:(NSString *)connectionIdentifier
+{
+    NSLog(@"Connection finished: %@", connectionIdentifier);
+}
+
 #pragma mark - UserInfo
-//==============================================================================
+
 - (void)userInfoReceived:(NSArray *)aUserInfo forRequest:(NSString *)connectionIdentifier
 {
     if(![connectionIdentifier isEqualToString:userInfoIdentifier])
@@ -218,6 +223,26 @@
     [self executeSuccessBlockForKey:GET_USER_INFO withData:userInfo];
 //    NSLog(@"Twitter - UserInfo:\n%@", aUserInfo);
     
+}
+
+#pragma mark - Posting
+
+- (void) postText:(NSString *)aText andURL:(NSString *)anURL withSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
+{
+    if ([anURL length] > 139)
+    {
+        if (aFailure)
+        {
+            aFailure(self, nil);
+        }
+        return;
+    }
+    if ([aText length] + [anURL length] > 139)
+    {
+        aText = [aText substringToIndex:(139 - [anURL length])];
+    }
+    NSString *postedString = [NSString stringWithFormat:@"%@ %@", aText, anURL];
+    [[TwitterEngine sharedEngine] sendUpdate:postedString];
 }
 
 @end

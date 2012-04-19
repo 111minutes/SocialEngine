@@ -39,8 +39,8 @@ typedef void (^DXSEFailureBlock)(DXSEModule* module, NSError* error);
 - (void) getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 - (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 
-#pragma mark - 
-// other
+#pragma mark - Posting Status
+- (void) postText:(NSString *)aText andURL:(NSString *)anURL withSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 
 @end
 

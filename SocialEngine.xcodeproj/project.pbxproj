@@ -386,8 +386,8 @@
 		02E222631504FF3E00EF802E /* DXSocialEngine */ = {
 			isa = PBXGroup;
 			children = (
-				506450ED1537151B0054B09C /* InstagramModule */,
 				02E222641504FF3E00EF802E /* Core */,
+				506450ED1537151B0054B09C /* InstagramModule */,
 				02E2226F1504FF3E00EF802E /* FacebookModule */,
 				02E222721504FF3E00EF802E /* FourSquareModule */,
 				02E222751504FF3E00EF802E /* TwitterModule */,

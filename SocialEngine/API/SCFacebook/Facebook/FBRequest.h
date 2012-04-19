@@ -27,8 +27,8 @@
     NSString *_url;
     NSString *_httpMethod;
     NSMutableDictionary *_params;
-    NSURLConnection *_connection;
-    NSMutableData *_responseText;
+    __unsafe_unretained NSURLConnection *_connection;
+    __unsafe_unretained NSMutableData *_responseText;
 }
 
 

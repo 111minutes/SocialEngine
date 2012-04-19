@@ -14,4 +14,6 @@
 
 @interface DXSETwitter : DXSEModule <OAuthSignInViewControllerDelegate, MGTwitterEngineDelegate, UIAlertViewDelegate>
 
+- (NSString *)accessSecret;
+
 @end

@@ -124,12 +124,18 @@
 
 - (IBAction)foursquareLogout
 {
-    ;
+    [[DXSESocialEngine sharedInstance].fourSquare logout:^(DXSEModule * module, id data)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"FourSquare" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+     } failure:nil];
 }
 
 - (IBAction)instagramLogout
 {
-    ;
+    [[DXSESocialEngine sharedInstance].instagram logout:^(DXSEModule * module, id data)
+     {
+         [[[UIAlertView alloc] initWithTitle:@"Instagram" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+     } failure:nil];
 }
 
 

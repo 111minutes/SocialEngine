@@ -21,6 +21,8 @@
 - (void)didEnterAuthNotification:(NSNotification *)notification;
 - (void)didCancelAuthNotification:(NSNotification *)notification;
 
+- (void)clearAllInstagramCookies;
+
 @end
 
 @implementation DXSEInstagram
@@ -77,7 +79,10 @@
 }
 
 - (void)logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
-    NSAssert (NO, @"Not implemented yet");
+    [WFInstagramAPI setAccessToken:nil];
+    [self clearAllInstagramCookies];
+    if (aSuccess)
+        aSuccess (self, nil);
 }
 
 - (BOOL)isAuthorized {
@@ -149,6 +154,16 @@
 - (void)didCancelAuthNotification:(NSNotification *)notification {
     [self hideLoginController];
     [self executeFailureBlockForKey:LOGIN withError:nil];
+}
+
+- (void)clearAllInstagramCookies {
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];    
+    NSEnumerator *enumerator = [[cookieStorage cookies] objectEnumerator];
+    NSHTTPCookie *cookie = nil;
+    
+    while ((cookie = [enumerator nextObject])) {
+        [cookieStorage deleteCookie:cookie];
+    }
 }
 
 @end

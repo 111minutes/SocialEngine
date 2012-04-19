@@ -9,6 +9,11 @@
 #import "TwitterEngine.h"
 // #import "StreamingDelegate.h"
 
+@interface TwitterEngine()
+
+- (NSString *)extractUsernameFromHTTPBody:(NSString *)body;
+
+@end
 
 static TwitterEngine *sharedEngine = nil;
 

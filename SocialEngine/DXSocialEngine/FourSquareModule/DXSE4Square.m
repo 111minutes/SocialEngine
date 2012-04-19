@@ -16,6 +16,7 @@
 @interface DXSE4Square (Private)
 
 - (void)setCode:(NSString *)aCode;
+- (void)clearAll4SquareCookies;
 
 @end
 
@@ -33,6 +34,19 @@
     return self;
 }
 
+- (void)clearAll4SquareCookies{
+    NSString *urlString = @"foursquare.com";
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSEnumerator *enumerator = [[cookieStorage cookiesForURL:url] objectEnumerator];
+    NSHTTPCookie *cookie = nil;
+    
+    while ((cookie = [enumerator nextObject])) {
+        [cookieStorage deleteCookie:cookie];
+    }
+}
+
 #pragma mark - Authentication
 - (void)login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
     [self registerSuccessBlock:aSuccess forKey:LOGIN];
@@ -48,6 +62,7 @@
 
 - (void)logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
     [Foursquare2 removeAccessToken];
+    [self clearAll4SquareCookies];
     aSuccess (self, nil);
 }
 

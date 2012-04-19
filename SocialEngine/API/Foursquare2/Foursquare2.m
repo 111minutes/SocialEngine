@@ -7,6 +7,7 @@
 //
 
 #import "Foursquare2.h"
+#import "HRGlobal.h"
 
 static NSString *oauthKey = nil;
 static NSString *oauthSecret = nil;

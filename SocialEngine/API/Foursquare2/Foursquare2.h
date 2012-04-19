@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Constants.h"
-#import "HTTPRiot.h"
+#import "AFNetworking.h"
+#import "HRRestModel.h"
 
 typedef void (^ Foursquare2Callback)(BOOL success, id result);
 

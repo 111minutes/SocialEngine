@@ -122,4 +122,15 @@
      } failure:nil];
 }
 
+- (IBAction)foursquareLogout
+{
+    ;
+}
+
+- (IBAction)instagramLogout
+{
+    ;
+}
+
+
 @end

@@ -127,7 +127,9 @@
         }
         else
         {
-            aFailure(self, nil);
+            NSInteger statusCode = 1000;
+            NSError *error = [NSError errorWithDomain:@"HTTP" code:statusCode userInfo:result];
+            aFailure(self, error);
         }
     }];
 }

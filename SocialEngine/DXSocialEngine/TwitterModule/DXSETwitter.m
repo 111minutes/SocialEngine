@@ -13,6 +13,7 @@
 
 #define LOGIN               @"LOGIN"
 #define GET_USER_INFO       @"GET_USER_INFO"
+#define POST_STATUS         @"POST_STATUS"
 
 
 @implementation DXSETwitter
@@ -186,23 +187,13 @@
 //==============================================================================
 - (void)requestSucceeded:(NSString *)connectionIdentifier;
 {
-    if (postSuccessBlock)
-    {
-        postSuccessBlock(self, nil);
-    }
-    postSuccessBlock = nil;
-    postFailureBlock = nil;
+    [self executeSuccessBlockForKey:POST_STATUS withData:nil];
 }
 
 //==============================================================================
 - (void)requestFailed:(NSString *)connectionIdentifier withError:(NSError *)error
 {
-    if (postFailureBlock)
-    {
-        postFailureBlock(self, error);
-    }
-    postSuccessBlock = nil;
-    postFailureBlock = nil;
+    [self executeFailureBlockForKey:POST_STATUS withError:error];
 }
 
 - (void)connectionFinished:(NSString *)connectionIdentifier
@@ -257,8 +248,8 @@
         return;
     }
     
-    postSuccessBlock = aSuccess;
-    postFailureBlock = aFailure;
+    [self registerSuccessBlock:aSuccess forKey:POST_STATUS];
+    [self registerFailureBlock:aFailure forKey:POST_STATUS];
     if ([aText length] + [anURL length] > 139)
     {
         aText = [aText substringToIndex:(139 - [anURL length])];

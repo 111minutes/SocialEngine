@@ -109,7 +109,7 @@
         DXSEUserInfoInstagram *userInfo = [DXSEUserInfoInstagram userInfoInstagram];
 
         userInfo.username = MU_NULL_PROTECT (currentUser.username);
-        userInfo.instagramId = MU_NULL_PROTECT (currentUser.instagramId);
+        userInfo.ID = MU_NULL_PROTECT (currentUser.instagramId);
         userInfo.profilePicture = MU_NULL_PROTECT (currentUser.profilePicture);
         userInfo.website = MU_NULL_PROTECT (currentUser.website);
         userInfo.fullName = MU_NULL_PROTECT (currentUser.fullName);

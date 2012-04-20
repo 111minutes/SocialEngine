@@ -12,7 +12,6 @@
 
 
 @synthesize username;
-@synthesize instagramId;
 @synthesize profilePicture;
 @synthesize website;
 @synthesize fullName;
@@ -31,14 +30,13 @@
 //==============================================================================
 - (NSString *)description 
 {
-    return [NSString stringWithFormat:@"id=%@; name=%@; screenName=%@;", self.instagramId, self.fullName, self.username];
+    return [NSString stringWithFormat:@"id=%@; name=%@; screenName=%@;", self.ID, self.fullName, self.username];
 }
 
 //==============================================================================
 - (void) dealloc
 {
     [username release];
-    [instagramId release];
     [profilePicture release];
     [website release];
     [fullName release];

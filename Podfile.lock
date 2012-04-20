@@ -1,7 +1,0 @@
-PODS:
-  - AFNetworking (0.9.1)
-  - MUKit (0.0.5):
-    - AFNetworking
-
-DEPENDENCIES:
-  - MUKit

@@ -130,7 +130,10 @@
 - (void) executeSuccessBlockForKey:(NSString*)aBlockKey withData:(id)aData
 {
     DXSESuccessBlock success = [successBlocks objectForKey:aBlockKey];
-    success(self, aData);
+    if (success)
+    {
+        success(self, aData);
+    }
     [successBlocks removeObjectForKey:aBlockKey];
 }
 
@@ -138,7 +141,10 @@
 - (void) executeFailureBlockForKey:(NSString*)aBlockKey withError:(NSError*)anError
 {
     DXSEFailureBlock failure = [failureBlocks objectForKey:aBlockKey];
-    failure(self, anError);
+    if (failure)
+    {
+        failure(self, anError);
+    }
     [failureBlocks removeObjectForKey:aBlockKey];
 }
 

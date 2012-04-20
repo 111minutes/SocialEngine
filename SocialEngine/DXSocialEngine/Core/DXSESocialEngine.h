@@ -10,6 +10,7 @@
 #import "DXSEFacebook.h"
 #import "DXSETwitter.h"
 #import "DXSE4Square.h"
+#import "DXSEInstagram.h"
 
 #define DXSE_OPEN_URL @"OPEN_URL"
 
@@ -20,6 +21,7 @@
 @property (nonatomic, readonly) DXSEFacebook* facebook;
 @property (nonatomic, readonly) DXSETwitter* twitter;
 @property (nonatomic, readonly) DXSE4Square* fourSquare;
+@property (nonatomic, readonly) DXSEInstagram *instagram;
 
 + (DXSESocialEngine*) sharedInstance;
 

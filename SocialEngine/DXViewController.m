@@ -106,6 +106,26 @@
 }
 
 //==============================================================================
+- (IBAction)instagramLoginPressed:(id)sender 
+{
+    [[DXSESocialEngine sharedInstance].instagram login:^(DXSEModule * module, id data)
+     {
+         [[[[UIAlertView alloc] initWithTitle:@"Instagram" message:@"logged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+         
+         [[DXSESocialEngine sharedInstance].instagram getUserInfo:^(DXSEModule * module, id data)
+          {
+              NSLog (@"UserInfo(Instagram): %@", data);
+          } failure:^(DXSEModule * module, NSError * error)
+          {
+              NSLog (@"UserInfo: failed");
+          }];
+     } failure:^(DXSEModule * module, NSError * error)
+     {
+         [[[[UIAlertView alloc] initWithTitle:@"Instagram" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+     }];
+}
+
+//==============================================================================
 - (IBAction)facebookLogout
 {
     [[DXSESocialEngine sharedInstance].facebook logout:^(DXSEModule *module, id data)
@@ -126,6 +146,24 @@
         [[[[UIAlertView alloc] initWithTitle:@"Twitter" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
         
     } failure:nil];
+}
+
+//==============================================================================
+- (IBAction)foursquareLogout
+{
+    [[DXSESocialEngine sharedInstance].fourSquare logout:^(DXSEModule * module, id data)
+     {
+         [[[[UIAlertView alloc] initWithTitle:@"FourSquare" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+     } failure:nil];
+}
+
+//==============================================================================
+- (IBAction)instagramLogout
+{
+    [[DXSESocialEngine sharedInstance].instagram logout:^(DXSEModule * module, id data)
+     {
+         [[[[UIAlertView alloc] initWithTitle:@"Instagram" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+     } failure:nil];
 }
 
 @end

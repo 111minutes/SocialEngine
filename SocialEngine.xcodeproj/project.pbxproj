@@ -30,6 +30,9 @@
 		02E2227F1504FF3E00EF802E /* DXSETwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222771504FF3E00EF802E /* DXSETwitter.m */; };
 		02F420721507709200023A4C /* TwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F420711507709200023A4C /* TwitterEngine.m */; };
 		5A85C38B197543E8BAFEC418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58526CBD1A4729B697B353 /* libPods.a */; };
+		E67319DA15418AF400AE8673 /* DXSEInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = E67319D915418AF400AE8673 /* DXSEInstagram.m */; };
+		E67319DE15418B0A00AE8673 /* DXSEUserInfoInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = E67319DD15418B0A00AE8673 /* DXSEUserInfoInstagram.m */; };
+		E6A39AD315418C5E0075AA67 /* Pods.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6A39AD215418C5E0075AA67 /* Pods.xcconfig */; };
 		E6CF5D25153326310043ABEE /* DXSEUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CF5D24153326300043ABEE /* DXSEUserInfo.m */; };
 		E6EEE6A31504ED3B0096C4CB /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D21504ED3B0096C4CB /* Foursquare2.m */; };
 		E6EEE6A41504ED3B0096C4CB /* HRRequest+PhotoExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D41504ED3B0096C4CB /* HRRequest+PhotoExt.m */; };
@@ -100,17 +103,6 @@
 		E6EEE6EC1504ED3B0096C4CB /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6811504ED3B0096C4CB /* OATokenManager.m */; };
 		E6EEE6ED1504ED3B0096C4CB /* README in Resources */ = {isa = PBXBuildFile; fileRef = E6EEE6831504ED3B0096C4CB /* README */; };
 		E6EEE6EE1504ED3B0096C4CB /* OAuthSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6861504ED3B0096C4CB /* OAuthSignInViewController.m */; };
-		E6EEE6EF1504ED3B0096C4CB /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE68A1504ED3B0096C4CB /* CDataScanner.m */; };
-		E6EEE6F01504ED3B0096C4CB /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE68D1504ED3B0096C4CB /* CFilteringJSONSerializer.m */; };
-		E6EEE6F11504ED3B0096C4CB /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE68F1504ED3B0096C4CB /* CJSONDeserializer_BlocksExtensions.m */; };
-		E6EEE6F21504ED3B0096C4CB /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6911504ED3B0096C4CB /* CJSONSerializedData.m */; };
-		E6EEE6F31504ED3B0096C4CB /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6941504ED3B0096C4CB /* CDataScanner_Extensions.m */; };
-		E6EEE6F41504ED3B0096C4CB /* NSCharacterSet_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6961504ED3B0096C4CB /* NSCharacterSet_Extensions.m */; };
-		E6EEE6F51504ED3B0096C4CB /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6981504ED3B0096C4CB /* NSDictionary_JSONExtensions.m */; };
-		E6EEE6F61504ED3B0096C4CB /* NSScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE69A1504ED3B0096C4CB /* NSScanner_Extensions.m */; };
-		E6EEE6F71504ED3B0096C4CB /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE69D1504ED3B0096C4CB /* CJSONDeserializer.m */; };
-		E6EEE6F81504ED3B0096C4CB /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE69F1504ED3B0096C4CB /* CJSONScanner.m */; };
-		E6EEE6F91504ED3B0096C4CB /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6A11504ED3B0096C4CB /* CJSONSerializer.m */; };
 		E6EEE7001504EDBE0096C4CB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE6FF1504EDBE0096C4CB /* Security.framework */; };
 		E6EEE70F1504EE760096C4CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE70E1504EE760096C4CB /* QuartzCore.framework */; };
 		E6EEE7111504EEAC0096C4CB /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE7101504EEAC0096C4CB /* libxml2.2.7.3.dylib */; };
@@ -157,7 +149,11 @@
 		02F420701507709200023A4C /* TwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterEngine.h; sourceTree = "<group>"; };
 		02F420711507709200023A4C /* TwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterEngine.m; sourceTree = "<group>"; };
 		5B58526CBD1A4729B697B353 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B412CF15C9504E38B5FEE5CE /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		E67319D815418AF400AE8673 /* DXSEInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEInstagram.h; sourceTree = "<group>"; };
+		E67319D915418AF400AE8673 /* DXSEInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEInstagram.m; sourceTree = "<group>"; };
+		E67319DC15418B0A00AE8673 /* DXSEUserInfoInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfoInstagram.h; sourceTree = "<group>"; };
+		E67319DD15418B0A00AE8673 /* DXSEUserInfoInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfoInstagram.m; sourceTree = "<group>"; };
+		E6A39AD215418C5E0075AA67 /* Pods.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E6CF5D231533262F0043ABEE /* DXSEUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfo.h; sourceTree = "<group>"; };
 		E6CF5D24153326300043ABEE /* DXSEUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfo.m; sourceTree = "<group>"; };
 		E6EEE5D11504ED3B0096C4CB /* Foursquare2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare2.h; sourceTree = "<group>"; };
@@ -311,29 +307,6 @@
 		E6EEE6831504ED3B0096C4CB /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		E6EEE6851504ED3B0096C4CB /* OAuthSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSignInViewController.h; sourceTree = "<group>"; };
 		E6EEE6861504ED3B0096C4CB /* OAuthSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthSignInViewController.m; sourceTree = "<group>"; };
-		E6EEE6891504ED3B0096C4CB /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
-		E6EEE68A1504ED3B0096C4CB /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
-		E6EEE68C1504ED3B0096C4CB /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
-		E6EEE68D1504ED3B0096C4CB /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
-		E6EEE68E1504ED3B0096C4CB /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
-		E6EEE68F1504ED3B0096C4CB /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
-		E6EEE6901504ED3B0096C4CB /* CJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializedData.h; sourceTree = "<group>"; };
-		E6EEE6911504ED3B0096C4CB /* CJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializedData.m; sourceTree = "<group>"; };
-		E6EEE6931504ED3B0096C4CB /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
-		E6EEE6941504ED3B0096C4CB /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
-		E6EEE6951504ED3B0096C4CB /* NSCharacterSet_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCharacterSet_Extensions.h; sourceTree = "<group>"; };
-		E6EEE6961504ED3B0096C4CB /* NSCharacterSet_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet_Extensions.m; sourceTree = "<group>"; };
-		E6EEE6971504ED3B0096C4CB /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
-		E6EEE6981504ED3B0096C4CB /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		E6EEE6991504ED3B0096C4CB /* NSScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScanner_Extensions.h; sourceTree = "<group>"; };
-		E6EEE69A1504ED3B0096C4CB /* NSScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScanner_Extensions.m; sourceTree = "<group>"; };
-		E6EEE69C1504ED3B0096C4CB /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		E6EEE69D1504ED3B0096C4CB /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		E6EEE69E1504ED3B0096C4CB /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
-		E6EEE69F1504ED3B0096C4CB /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
-		E6EEE6A01504ED3B0096C4CB /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		E6EEE6A11504ED3B0096C4CB /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
-		E6EEE6A21504ED3B0096C4CB /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		E6EEE6FF1504EDBE0096C4CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E6EEE70E1504EE760096C4CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E6EEE7101504EEAC0096C4CB /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
@@ -365,7 +338,7 @@
 				0246879E14FE2642009E2CB9 /* SocialEngine */,
 				0246879714FE2642009E2CB9 /* Frameworks */,
 				0246879514FE2642009E2CB9 /* Products */,
-				B412CF15C9504E38B5FEE5CE /* Pods.xcconfig */,
+				E6A39AD215418C5E0075AA67 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -428,6 +401,8 @@
 				02485FB5150A80CB003B4565 /* DXSEUserInfoTwitter.m */,
 				028FEF48150BC11B006531CE /* DXSEUserInfo4Square.h */,
 				028FEF49150BC11C006531CE /* DXSEUserInfo4Square.m */,
+				E67319DC15418B0A00AE8673 /* DXSEUserInfoInstagram.h */,
+				E67319DD15418B0A00AE8673 /* DXSEUserInfoInstagram.m */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -439,6 +414,7 @@
 				02E2226F1504FF3E00EF802E /* FacebookModule */,
 				02E222721504FF3E00EF802E /* FourSquareModule */,
 				02E222751504FF3E00EF802E /* TwitterModule */,
+				E67319D715418AF400AE8673 /* InstagramModule */,
 			);
 			path = DXSocialEngine;
 			sourceTree = "<group>";
@@ -484,6 +460,15 @@
 				02E222771504FF3E00EF802E /* DXSETwitter.m */,
 			);
 			path = TwitterModule;
+			sourceTree = "<group>";
+		};
+		E67319D715418AF400AE8673 /* InstagramModule */ = {
+			isa = PBXGroup;
+			children = (
+				E67319D815418AF400AE8673 /* DXSEInstagram.h */,
+				E67319D915418AF400AE8673 /* DXSEInstagram.m */,
+			);
+			path = InstagramModule;
 			sourceTree = "<group>";
 		};
 		E6EEE5CF1504ED3B0096C4CB /* API */ = {
@@ -666,7 +651,6 @@
 				E6EEE6331504ED3B0096C4CB /* MGTwitterEngine */,
 				E6EEE65C1504ED3B0096C4CB /* oauthconsumer */,
 				E6EEE6841504ED3B0096C4CB /* OAuthSignInViewController */,
-				E6EEE6871504ED3B0096C4CB /* TouchJSON */,
 				028FEF46150BBA1D006531CE /* Twitter.bundle */,
 			);
 			path = Twitter;
@@ -788,68 +772,6 @@
 			path = OAuthSignInViewController;
 			sourceTree = "<group>";
 		};
-		E6EEE6871504ED3B0096C4CB /* TouchJSON */ = {
-			isa = PBXGroup;
-			children = (
-				E6EEE6881504ED3B0096C4CB /* Source */,
-			);
-			path = TouchJSON;
-			sourceTree = "<group>";
-		};
-		E6EEE6881504ED3B0096C4CB /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				E6EEE6891504ED3B0096C4CB /* CDataScanner.h */,
-				E6EEE68A1504ED3B0096C4CB /* CDataScanner.m */,
-				E6EEE68B1504ED3B0096C4CB /* Experimental */,
-				E6EEE6921504ED3B0096C4CB /* Extensions */,
-				E6EEE69B1504ED3B0096C4CB /* JSON */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		E6EEE68B1504ED3B0096C4CB /* Experimental */ = {
-			isa = PBXGroup;
-			children = (
-				E6EEE68C1504ED3B0096C4CB /* CFilteringJSONSerializer.h */,
-				E6EEE68D1504ED3B0096C4CB /* CFilteringJSONSerializer.m */,
-				E6EEE68E1504ED3B0096C4CB /* CJSONDeserializer_BlocksExtensions.h */,
-				E6EEE68F1504ED3B0096C4CB /* CJSONDeserializer_BlocksExtensions.m */,
-				E6EEE6901504ED3B0096C4CB /* CJSONSerializedData.h */,
-				E6EEE6911504ED3B0096C4CB /* CJSONSerializedData.m */,
-			);
-			path = Experimental;
-			sourceTree = "<group>";
-		};
-		E6EEE6921504ED3B0096C4CB /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E6EEE6931504ED3B0096C4CB /* CDataScanner_Extensions.h */,
-				E6EEE6941504ED3B0096C4CB /* CDataScanner_Extensions.m */,
-				E6EEE6951504ED3B0096C4CB /* NSCharacterSet_Extensions.h */,
-				E6EEE6961504ED3B0096C4CB /* NSCharacterSet_Extensions.m */,
-				E6EEE6971504ED3B0096C4CB /* NSDictionary_JSONExtensions.h */,
-				E6EEE6981504ED3B0096C4CB /* NSDictionary_JSONExtensions.m */,
-				E6EEE6991504ED3B0096C4CB /* NSScanner_Extensions.h */,
-				E6EEE69A1504ED3B0096C4CB /* NSScanner_Extensions.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E6EEE69B1504ED3B0096C4CB /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				E6EEE69C1504ED3B0096C4CB /* CJSONDeserializer.h */,
-				E6EEE69D1504ED3B0096C4CB /* CJSONDeserializer.m */,
-				E6EEE69E1504ED3B0096C4CB /* CJSONScanner.h */,
-				E6EEE69F1504ED3B0096C4CB /* CJSONScanner.m */,
-				E6EEE6A01504ED3B0096C4CB /* CJSONSerializer.h */,
-				E6EEE6A11504ED3B0096C4CB /* CJSONSerializer.m */,
-				E6EEE6A21504ED3B0096C4CB /* JSONRepresentation.h */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -907,6 +829,7 @@
 				E6EEE6ED1504ED3B0096C4CB /* README in Resources */,
 				027238A9150521370090730A /* SocialEngine.plist in Resources */,
 				028FEF47150BBA1D006531CE /* Twitter.bundle in Resources */,
+				E6A39AD315418C5E0075AA67 /* Pods.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,17 +927,6 @@
 				E6EEE6EB1504ED3B0096C4CB /* OAToken.m in Sources */,
 				E6EEE6EC1504ED3B0096C4CB /* OATokenManager.m in Sources */,
 				E6EEE6EE1504ED3B0096C4CB /* OAuthSignInViewController.m in Sources */,
-				E6EEE6EF1504ED3B0096C4CB /* CDataScanner.m in Sources */,
-				E6EEE6F01504ED3B0096C4CB /* CFilteringJSONSerializer.m in Sources */,
-				E6EEE6F11504ED3B0096C4CB /* CJSONDeserializer_BlocksExtensions.m in Sources */,
-				E6EEE6F21504ED3B0096C4CB /* CJSONSerializedData.m in Sources */,
-				E6EEE6F31504ED3B0096C4CB /* CDataScanner_Extensions.m in Sources */,
-				E6EEE6F41504ED3B0096C4CB /* NSCharacterSet_Extensions.m in Sources */,
-				E6EEE6F51504ED3B0096C4CB /* NSDictionary_JSONExtensions.m in Sources */,
-				E6EEE6F61504ED3B0096C4CB /* NSScanner_Extensions.m in Sources */,
-				E6EEE6F71504ED3B0096C4CB /* CJSONDeserializer.m in Sources */,
-				E6EEE6F81504ED3B0096C4CB /* CJSONScanner.m in Sources */,
-				E6EEE6F91504ED3B0096C4CB /* CJSONSerializer.m in Sources */,
 				02E222781504FF3E00EF802E /* DXSEFriendInfo.m in Sources */,
 				02E222791504FF3E00EF802E /* DXSEntryConfig.m in Sources */,
 				02E2227A1504FF3E00EF802E /* DXSEModule.m in Sources */,
@@ -1028,6 +940,8 @@
 				028FEF44150B7062006531CE /* FoursquareWebLogin.m in Sources */,
 				028FEF4A150BC11C006531CE /* DXSEUserInfo4Square.m in Sources */,
 				E6CF5D25153326310043ABEE /* DXSEUserInfo.m in Sources */,
+				E67319DA15418AF400AE8673 /* DXSEInstagram.m in Sources */,
+				E67319DE15418B0A00AE8673 /* DXSEUserInfoInstagram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1055,6 +969,7 @@
 /* Begin XCBuildConfiguration section */
 		024687B014FE2642009E2CB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6A39AD215418C5E0075AA67 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -1072,7 +987,14 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				HEADER_SEARCH_PATHS = (
+					"\"$(PODS_ROOT)/Headers\"",
+					"\"$(PODS_ROOT)/Headers/DXSocialEngineARCThirdParty\"",
+					"$(SDKROOT)/usr/include/libxml2",
+					"\"$(PODS_ROOT)/Headers/AFNetworking\"",
+					"\"$(PODS_ROOT)/Headers/MUKit\"",
+					"\"$(PODS_ROOT)/Headers/TouchJSON\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
@@ -1080,6 +1002,7 @@
 		};
 		024687B114FE2642009E2CB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6A39AD215418C5E0075AA67 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -1090,7 +1013,14 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				HEADER_SEARCH_PATHS = (
+					"\"$(PODS_ROOT)/Headers\"",
+					"\"$(PODS_ROOT)/Headers/DXSocialEngineARCThirdParty\"",
+					"$(SDKROOT)/usr/include/libxml2",
+					"\"$(PODS_ROOT)/Headers/AFNetworking\"",
+					"\"$(PODS_ROOT)/Headers/MUKit\"",
+					"\"$(PODS_ROOT)/Headers/TouchJSON\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -1100,7 +1030,7 @@
 		};
 		024687B314FE2642009E2CB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B412CF15C9504E38B5FEE5CE /* Pods.xcconfig */;
+			baseConfigurationReference = E6A39AD215418C5E0075AA67 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -1109,10 +1039,14 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"\"$(PODS_ROOT)/Headers\"",
+					"$(SDKROOT)/usr/include/libxml2",
+					"\"$(PODS_ROOT)/Headers/AFNetworking\"",
 					"\"$(PODS_ROOT)/Headers/MUKit\"",
-					"/usr/include/libxml2/**",
+					"\"$(PODS_ROOT)/Headers/TouchJSON\"",
+					"\"$(PODS_ROOT)/Headers/DXSocialEngineARCThirdParty\"",
 				);
 				INFOPLIST_FILE = "SocialEngine/SocialEngine-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -1123,7 +1057,7 @@
 		};
 		024687B414FE2642009E2CB9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B412CF15C9504E38B5FEE5CE /* Pods.xcconfig */;
+			baseConfigurationReference = E6A39AD215418C5E0075AA67 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -1132,10 +1066,14 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"\"$(PODS_ROOT)/Headers\"",
+					"$(SDKROOT)/usr/include/libxml2",
+					"\"$(PODS_ROOT)/Headers/AFNetworking\"",
 					"\"$(PODS_ROOT)/Headers/MUKit\"",
-					"/usr/include/libxml2/**",
+					"\"$(PODS_ROOT)/Headers/TouchJSON\"",
+					"\"$(PODS_ROOT)/Headers/DXSocialEngineARCThirdParty\"",
 				);
 				INFOPLIST_FILE = "SocialEngine/SocialEngine-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;

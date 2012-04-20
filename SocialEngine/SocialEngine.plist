@@ -29,5 +29,16 @@
 		<key>redirectURL</key>
 		<string>https://dev.roundonme.com/</string>
 	</dict>
+	<key>DXSEInstagram</key>
+	<dict>
+		<key>oauthKey</key>
+		<string>0b1a50c74f224b15b71f7c37e8f8b3af</string>
+		<key>oauthSecret</key>
+		<string>359c144fa174480ab8cca8bc6327e928</string>
+		<key>redirectURL</key>
+		<string>wfinst://</string>
+		<key>scope</key>
+		<string>basic+comments</string>
+	</dict>
 </dict>
 </plist>

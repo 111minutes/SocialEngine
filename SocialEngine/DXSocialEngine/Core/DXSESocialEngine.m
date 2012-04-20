@@ -28,6 +28,7 @@
 @synthesize facebook;
 @synthesize twitter;
 @synthesize fourSquare;
+@synthesize instagram;
 
 #pragma mark - Init/Dealloc
 //==============================================================================
@@ -74,6 +75,7 @@
     facebook = [(DXSEFacebook*)[self initializeModuleWithKey:@"DXSEFacebook" fromDictionary:dictConfig] retain];
     twitter = [(DXSETwitter*)[self initializeModuleWithKey:@"DXSETwitter" fromDictionary:dictConfig] retain];
     fourSquare = [(DXSE4Square*)[self initializeModuleWithKey:@"DXSE4Square" fromDictionary:dictConfig] retain];
+    instagram = [(DXSEInstagram*)[self initializeModuleWithKey:@"DXSEInstagram" fromDictionary:dictConfig] retain];
 }
 
 //==============================================================================

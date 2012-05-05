@@ -81,7 +81,14 @@
     [self registerSuccessBlock:aSuccess forKey:LOGIN];
     [self registerFailureBlock:aFailure forKey:LOGIN];
 
-    [WFInstagramAPI authenticateUser];
+    if ([WFInstagramAPI accessToken]) 
+    {
+        [self executeSuccessBlockForKey:LOGIN withData:nil];
+    }
+    else
+    {
+        [WFInstagramAPI authenticateUser];
+    }
 }
 
 - (void)logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {

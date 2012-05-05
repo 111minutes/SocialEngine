@@ -54,5 +54,6 @@ typedef void (^DXSEFailureBlock)(DXSEModule* module, NSError* error);
 - (void) registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString*)aBlockKey;
 - (void) executeSuccessBlockForKey:(NSString*)aBlockKey withData:(id)aData;
 - (void) executeFailureBlockForKey:(NSString*)aBlockKey withError:(NSError*)anError;
+- (void) removeBlockForKey:(NSString*)aBlockKey;
 
 @end

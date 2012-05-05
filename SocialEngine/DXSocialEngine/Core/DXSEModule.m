@@ -131,7 +131,7 @@
 {
     DXSESuccessBlock success = [successBlocks objectForKey:aBlockKey];
     success(self, aData);
-    [successBlocks removeObjectForKey:aBlockKey];
+    [self removeBlockForKey:aBlockKey];
 }
 
 //==============================================================================
@@ -139,6 +139,13 @@
 {
     DXSEFailureBlock failure = [failureBlocks objectForKey:aBlockKey];
     failure(self, anError);
+    [self removeBlockForKey:aBlockKey];
+}
+
+//==============================================================================
+- (void) removeBlockForKey:(NSString*)aBlockKey
+{
+    [successBlocks removeObjectForKey:aBlockKey];
     [failureBlocks removeObjectForKey:aBlockKey];
 }
 

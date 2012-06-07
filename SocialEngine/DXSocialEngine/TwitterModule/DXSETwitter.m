@@ -221,6 +221,9 @@
     userInfo.name = MU_NULL_PROTECT([userDict objectForKey:@"name"]);
     userInfo.screenName = MU_NULL_PROTECT([userDict objectForKey:@"screen_name"]);
     
+    NSString *urlString = MU_NULL_PROTECT([userInfo valueForKey:@"profile_image_url"]);
+    userInfo.avatarURL = [NSURL URLWithString:urlString];
+    
     [self executeSuccessBlockForKey:GET_USER_INFO withData:userInfo];
 //    NSLog(@"Twitter - UserInfo:\n%@", aUserInfo);
     

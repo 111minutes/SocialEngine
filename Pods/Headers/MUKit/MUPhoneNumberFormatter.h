@@ -1,1 +1,1 @@
-../../MUKit/MUCore/MUPhoneNumberFormatter.h
+../../MUKit/MUKit/MUCore/MUPhoneNumberFormatter.h

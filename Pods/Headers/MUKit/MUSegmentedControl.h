@@ -1,1 +1,1 @@
-../../MUKit/MUControls/MUSegmentedControl.h
+../../MUKit/MUKit/MUControls/MUSegmentedControl.h

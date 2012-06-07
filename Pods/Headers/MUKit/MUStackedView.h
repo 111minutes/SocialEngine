@@ -1,1 +1,1 @@
-../../MUKit/MUControls/MUStackedView.h
+../../MUKit/MUKit/MUControls/MUStackedView.h

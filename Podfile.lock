@@ -1,7 +1,7 @@
 PODS:
-  - AFNetworking (0.9.0)
-  - MUKit (0.0.3):
-    - AFNetworking
+  - AFNetworking-Fork (0.9.1)
+  - MUKit (0.0.7):
+    - AFNetworking-Fork
 
 DEPENDENCIES:
   - MUKit

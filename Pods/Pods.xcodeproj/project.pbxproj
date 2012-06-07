@@ -10,21 +10,10 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>00EF6BB45BC149CD820BF25E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFHTTPRequestOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFHTTPRequestOperation.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>01476183E20E439DB3A028D5</key>
+		<key>003C85D88B244845BB5F149D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F31E3A301331422DA6AD0B3B</string>
+			<string>5629579ADE7741F18EE30E4F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -33,35 +22,35 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>0198A1E476B14735AAFDC629</key>
+		<key>01A220BC47384360A2C08AE6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F633BB3C00B48B0B9B05C69</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>02E6C994E9F542F795584B2D</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUCellLb1Lb1.h</string>
+			<string>MUCommandRepeatCommand.m</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Lb1.h</string>
+			<string>MUKit/MUKit/MUCommands/MUCommandRepeatCommand.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>0351EB5EB95648D8952B018E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTabBar.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTabBar.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>044010BD64FA46BE949F7635</key>
+		<key>031ECACE3E2E4FCCB0FCAF0D</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>4EA12A1A5D454D5A96AF7B4F</string>
-				<string>1EAF8BEFCE5A4D6AA95B8DB4</string>
-				<string>FDB4FE1BFB9F46718A0ECAAA</string>
+				<string>FA6E3A952837484D828C1D56</string>
+				<string>EC7C659AA9DE4C12AAB10A6B</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -70,67 +59,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>08315D3B07C44D05B60E45F7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSDate-Utilities.m</string>
-			<key>path</key>
-			<string>MUKit/ThirdParty/DateExtentions/NSDate-Utilities.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>085387E7804D409E9E66649D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb1Lb1.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Lb1.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>08C887D3D07D45DEB9760501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFHTTPClient.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFHTTPClient.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>08EF1F13433F4089AFACECE7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUPhoneNumberFormatter.h</string>
-			<key>path</key>
-			<string>MUKit/MUCore/MUPhoneNumberFormatter.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>0A38CF0CE0E44275941727A0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>044010BD64FA46BE949F7635</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0A6A073E1758414EB152E6A2</key>
+		<key>04AA398F874346638BC8D34C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8828343C47E248499FCA4F02</string>
+			<string>773BDD55184E4A69B5E28DC9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -139,34 +71,590 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>0C2FBFB697D1493EB4B01A83</key>
+		<key>0614D056C66F43D5AF8F81AB</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogger.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/MULogger.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>06A0BFC2D00340E8B0833949</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataSwitch.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataSwitch.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0706DC4D9C7740D0AFFC8F13</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellButton.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellButton.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0721CD6A8B754883BC3803A7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellSwitch.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellSwitch.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>07612A79DE414BDBB5C07C9B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>55D7CB5AEEC14E3BA3E50DA0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>0896B5AA9B984D66B280D666</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUFilter.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUFilter.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0B2BA66553654699B8801290</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogMessage.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/Core/MULogMessage.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0B7B3CB33C54457085FCF138</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellTextView.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellTextView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0B9B9FC3D7574ED1B2D991E1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTitledID.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUTitledID.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0BE51047DEDE495BA445CE43</key>
+		<dict>
+			<key>fileRef</key>
+			<string>425BF1AF00684880928E912C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>0C6130CE30AD43FA8B196FC2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellSwitch.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellSwitch.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0D36F145A299477EB7A937E6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUHelper.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUHelper.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0D6D223422FA43D1B410C904</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A1E7552C20C04A36A5FED508</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>0E3CA5FEC47A47CEAA419A8A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2CF0FCAE238B4D77B32FE98C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>0FDDE6A53A8749E48CCD0968</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataMaped.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/MUCellDataMaped.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0FF5C81A7E7A421CB8DD3FC0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3022466E3A4943F0A9768BB4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>0FF885A8B8C24580841AD8D2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupViewController.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/ShowStrategy/MUPopupViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>10D9297CC41948B18C0B55D4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupDateTimePicker.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupDateTimePicker.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>114AC2CD68174C2C863C206E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTableDisposer.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/TableDisposers/MUTableDisposer.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>121BAC82459F43CB96884956</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUAutoresizeButton.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUAutoresizeButton.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>12427AED16BE4A83BEB2B353</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUFetchable.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUFetchable.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>124901790BC141F394CC99A7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>130F11C71DCC4A66A8FA48D0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFJSONRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFJSONRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>13DEA65D7BE04B40AAD9B5EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKeyboardToolbar.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardToolbar.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>14271A4FC5A641479ABCED36</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7F58FE7003FB40F48221956A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>14D7EC9DDDE64BB7B331C01D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCoreDataManager.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCoreData/MUCoreDataManager.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>14EE71C4E1E44143BDCFEC07</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6415FCB3B973479690A7BDF4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>15948BCC4E0844F1923A1CF4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupTimePicker.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupTimePicker.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>15A3602B8A8448C083D5C33B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataButton.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataButton.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>15EBF2460FB94CBEB6A1650C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupDatePicker.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupDatePicker.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>1611B02BC791406AB17C21CF</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods.a</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1691ACA2EB314AB897F77B8A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A08B9C606BB74715A24357B2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>186C82F631984F198C2A6469</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A2341DA253EF47879EC15A8E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>19373B14488A4D5BBB8CD6E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>124901790BC141F394CC99A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>19627CD3A0824210846FC4DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKeyboardAvoidingTableView.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingTableView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>1F633BB3C00B48B0B9B05C69</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DCRoundSwitchToggleLayer.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchToggleLayer.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>1F96CB441E104A9EA8070D02</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8104805A93504902AE3CB3A6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>20BA6BE5C3C24B81AAAF4D0A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDynamic.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellDynamic/MUCellDynamic.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>20E8645EF9C34713ADCC5B7F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FDDE6A53A8749E48CCD0968</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>233CFAA89BAF4EEDA6D249B1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTableDisposerModeled.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/TableDisposers/MUTableDisposerModeled.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>240D2FD75E144FC0A30CA73A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupDatePicker.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupDatePicker.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>24C851DA2E47463191E1D9A7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCommandSequence.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCommands/MUCommandSequence.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>25AD0E5C61EF4EC88723B114</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellLabel.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellLabel.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>26791AF81341412780F2ECBC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F9231EADCCFB4080B19C9C36</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>2750F8501DB54AB09DAF02B3</key>
+		<dict>
+			<key>children</key>
 			<array>
-				<string>CC18F01A45E64CB6A7C223F7</string>
+				<string>9F6FC054407B4058B1C89308</string>
+				<string>AB8DDF44D74B4AF9884F8482</string>
+				<string>B2FA2428761D400A87BA6D7A</string>
 			</array>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0D9FF38977C248F6852EFD3F</key>
+		<key>28DD8A9810904B18B4F6D243</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTableDisposers.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/MUTableDisposers.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2A314A65A9DA40A1801980F0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DCRoundSwitchKnobLayer.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchKnobLayer.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2BC8A35BCD514F0C99E6B72F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68B6640F86DB46B58B3539DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>2CF0FCAE238B4D77B32FE98C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUGateway.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUGateway/MUGateway.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2DD04B64CE1343D6A0F4E57E</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
 			<string>MULogger.h</string>
 			<key>path</key>
-			<string>MUKit/MULogger/MULogger.h</string>
+			<string>MUKit/MUKit/MULogger/MULogger.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>0DDA00F495F1434086E64BD6</key>
+		<key>2DEF2F94B4B349BEB54B70B6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSectionWritable.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Sections/MUSectionWritable.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2E886B1CD76C489C8082A498</key>
 		<dict>
 			<key>fileRef</key>
-			<string>243292A153F241799BA8ED45</string>
+			<string>7166CD1DB28140CBBC3BF10F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -175,139 +663,832 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>0E5F0BC7172640C9B57A7A3F</key>
+		<key>2F6735CB32BF4044BB6CA570</key>
+		<dict>
+			<key>fileRef</key>
+			<string>02E6C994E9F542F795584B2D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>3021142A15814AA6887ACB4A</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AFURLConnectionOperation.m</string>
+			<string>MUImageViewTapable.m</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFURLConnectionOperation.m</string>
+			<string>MUKit/MUKit/MUControls/MUImageViewTapable.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>0F049F6F2BC845D88D1E4851</key>
+		<key>3022466E3A4943F0A9768BB4</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUPair.m</string>
+			<string>MUCommandIdle.m</string>
 			<key>path</key>
-			<string>MUKit/MUCore/MUPair.m</string>
+			<string>MUKit/MUKit/MUCommands/MUCommandIdle.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>0F450B7876CA4FE3934E97C8</key>
+		<key>3103919823BE4A8D915BC43C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>97B94C2C8C9845168ACF790E</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F6E27DE398FF418989A4F436</string>
+				<string>A1684280923644AABDDB3107</string>
+				<string>709240045F5749EBB0F97A6D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>productName</key>
+			<string>Pods</string>
+			<key>productReference</key>
+			<string>1611B02BC791406AB17C21CF</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>3212A2C46185481CBA3137E2</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AFPropertyListRequestOperation.m</string>
+			<string>MUPopupPicker.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFPropertyListRequestOperation.m</string>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupPicker.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>0FFD90AA7351404181A45130</key>
+		<key>327D45CF65304AF0AB244A52</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C1E04D18AF24D8AB943D7B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>3450A71CA60F4E9BAE167107</key>
+		<dict>
+			<key>fileRef</key>
+			<string>46870ACC06C24C3884D86CDC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>352DAF26E4A74EDE972F885B</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MULogConsumerFile.m</string>
+			<string>MUProgressView.h</string>
 			<key>path</key>
-			<string>MUKit/MULogger/Consumers/MULogConsumerFile.m</string>
+			<string>MUKit/MUKit/MUControls/MUProgressView.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>130864C4247C4548BF71643C</key>
+		<key>35B2A2CE257A4A79B3834C99</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUCellLb1Sw1.m</string>
+			<string>MULogConsumer.m</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Sw1.m</string>
+			<string>MUKit/MUKit/MULogger/Consumers/MULogConsumer.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>1359CFAF449942EEAD285FE2</key>
+		<key>35B759B05725431598B95545</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>UIImageView+AFNetworking.h</string>
+			<string>MUTextViewAutosize.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/UIImageView+AFNetworking.h</string>
+			<string>MUKit/MUKit/MUControls/MUInputFields/MUTextViewAutosize.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>1476BC263597460EA9382D80</key>
+		<key>36DDD399D5BE48F38C19FDB8</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUKeyboardAvoidingScrollView.h</string>
+			<string>MUTabBarController.m</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingScrollView.h</string>
+			<string>MUKit/MUKit/MUControllers/MUTabBarController.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>14BE13BE64024A089F4C37D1</key>
+		<key>36EEFD6E0E7D4EFDB6CAFC6A</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DCRoundSwitchKnobLayer.h</string>
+			<string>MUTableDisposerMaped.m</string>
 			<key>path</key>
-			<string>MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchKnobLayer.h</string>
+			<string>MUKit/MUKit/MUTableDisposer/TableDisposers/MUTableDisposerMaped.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>161874EBB9A14F69BA89D417</key>
+		<key>37F0B5EE0E0243D5B93D6274</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DFDA4030A937470A9D1B1F84</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>382C094DE10D436893D4DCCE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0D36F145A299477EB7A937E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>387CCFA1472041CDB3E4C097</key>
+		<dict>
+			<key>fileRef</key>
+			<string>488662DE0F8745619409042E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>39AD6873FA9647A692FF1400</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AFHTTPClient.h</string>
+			<string>MUSectionReadonly.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFHTTPClient.h</string>
+			<string>MUKit/MUKit/MUTableDisposer/Sections/MUSectionReadonly.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>1749CCE7EFE54FCBBE019B01</key>
+		<key>3A62F8D942F741BF89221EED</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUKeyboardAvoidingScrollView.m</string>
+			<string>DCRoundSwitch.m</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingScrollView.m</string>
+			<string>MUKit/MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitch.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>175F8ED7075B4B91B87CDA37</key>
+		<key>3A9784A271604E59AFB89C6D</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUPhoneNumberFormatter.m</string>
+			<string>MUTableDisposer.h</string>
 			<key>path</key>
-			<string>MUKit/MUCore/MUPhoneNumberFormatter.m</string>
+			<string>MUKit/MUKit/MUTableDisposer/TableDisposers/MUTableDisposer.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>17973941F14F4327B407AD5E</key>
+		<key>3AA25F00739347E48B7378D8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogFormatterPlainText.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/Formatters/MULogFormatterPlainText.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3AF942087A1949AB839307EF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPair.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUPair.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3B400D60BA684890985ED65D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EE5EA3086FCC4FF89DB60E0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>3BB6987E9A5D4B269B7BFFA9</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
 			<string>AFNetworkActivityIndicatorManager.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.h</string>
+			<string>AFNetworking-Fork/AFNetworking/AFNetworkActivityIndicatorManager.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>18BCA6DE3E084EF58E39941C</key>
+		<key>3BE86FF26DC2424DAB0EB10A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupSimplePicker.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupSimplePicker.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3C2203F0208340F5A20AC4C8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FB8F647D20174A36AEC2C5FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>3D1D587B81F443C5BF85E5D9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFJSONUtilities.h</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFJSONUtilities.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3D29EB908C0A403F8099F2B2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogMessage.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/Core/MULogMessage.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3D62C39794A9429BBE7CFD23</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B1B93925545345E2AE6CCF07</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>3D7212AC0E674EF6BC8E614C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTextViewAutosize.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUInputFields/MUTextViewAutosize.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3E547BE1D9A84ADD86AF9EB6</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B2FA2428761D400A87BA6D7A</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Pods-prefix.pch</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>3F70C2269B3D470BA51F420E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUBaseScrollerController.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControllers/MUBaseScrollerController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>41C3919F542349CBA939EAE7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5187CBE611FD4509B9D9B791</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>4247D430B4EA4830A2E586F1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>124901790BC141F394CC99A7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>425BF1AF00684880928E912C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDynamic.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellDynamic/MUCellDynamic.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>43C02CB00FF94D46B04B0D9C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTitledID.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUTitledID.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>44FBEC680DDB492C8A2F67DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCocoaExtentions.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUExtentions/MUCocoaExtentions.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>451AA75FE1ED41F9AA25EC7B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSString+Base64Encoding.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUExtentions/NSString+Base64Encoding.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4523F4964980440192FCAECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUBaseTableController.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControllers/MUBaseTableController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>454F30F68A304992A955B5FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUWeakRef.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUWeakRef.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>46870ACC06C24C3884D86CDC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCheckableTableController.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControllers/MUCheckableTableController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>46CFD4827DF14D688D26D7E2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFNetworking.h</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFNetworking.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>48008A7F74E64BD5A31BF1CA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFImageRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFImageRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>488662DE0F8745619409042E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFHTTPClient.m</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFHTTPClient.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>48C9CD8AC468495898FB8689</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8022C3071CEC46BB81CAE502</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>49C9B3BFECD246F2AB9C47A8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKeyboardAvoidingScrollView.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingScrollView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4A6A6A0FD42545BF8362999B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5FF0474EFFD54FE2B6AF308E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>4AEB0AF153BA476A9D83BB9F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupSimplePicker.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupSimplePicker.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4C5E6473C3BE41D99679ABCD</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTargetAction.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUTargetAction.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4CA740AE8790479581C5559C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A2E35B58F54D4CB4943D57E0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>4CBEA35853544A67B7A379F3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>35B2A2CE257A4A79B3834C99</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>4F7223913FF1437A8C032BA5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D24DC27E5F724C25B5B49F6A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>5187CBE611FD4509B9D9B791</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKeyboardToolbar.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardToolbar.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>528572B7FD484DFC8E318495</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DCRoundSwitchKnobLayer.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchKnobLayer.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>52B507D53C584CD381020651</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>UIImageView+AFNetworking.h</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/UIImageView+AFNetworking.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>53608BCE5B0143BC87B1ED77</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUControls.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUControls.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>55D7CB5AEEC14E3BA3E50DA0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCommand.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCommands/MUCommand.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5629579ADE7741F18EE30E4F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSectionWritable.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Sections/MUSectionWritable.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>57204DCBDEAB4488BAA657E7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogConsumer.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/Consumers/MULogConsumer.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5931D0B4ABF645078DF3AE29</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUBaseViewController.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControllers/MUBaseViewController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>59815FD579654459870FF833</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C29D569322EC4E08BEAF10D4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>59CAEB0F1C51404B9923971A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F5E634E234354047AAE6D582</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>59FB601350D1425D9FE40A4B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A4C56AA3AD064C9CA7B87BBC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>5AAEF5AECD034AA885444184</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupViewController.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/ShowStrategy/MUPopupViewController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5B5577FA72AB44029DDCA983</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3B444EBBA2B42DA8C493140</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>5CA26CA674904A16AC5C4CC3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUStackedView.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUStackedView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5D4B1EC8D26F4DD2A0B93CF1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataMaped.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/MUCellDataMaped.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5DAB945FA830483A8693E5FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCreditCardNumberFormatter.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUCreditCardNumberFormatter.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5E080A3C7BA9448BB47A2317</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCore.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUCore.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5E929BC695F644A2AE823DF3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataModeledDynamic.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataDynamic/MUCellDataModeledDynamic.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5EE27AEAB30E47CC8124D3C6</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>60DC6CBAA35740C2A234031D</string>
+				<string>BF6820744675430984B6E60F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>5FF0474EFFD54FE2B6AF308E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUProgressView.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUProgressView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>60DC6CBAA35740C2A234031D</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -362,170 +1543,146 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>19AA5243CE2D4196874B1D75</key>
+		<key>60E0A176CBB44E358FA00EC7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>031ECACE3E2E4FCCB0FCAF0D</string>
+				<string>4247D430B4EA4830A2E586F1</string>
+				<string>E24D2FF02FB049B6AD38353B</string>
+				<string>BBF3BC2D11FA407ABDA9E48D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>61450FDC2BFE42A6AF68F3A4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>48008A7F74E64BD5A31BF1CA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>61F982CEFB2243998C5A72DE</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUCellLb2Lb1.m</string>
+			<string>MUBaseViewController.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb2Lb1.m</string>
+			<string>MUKit/MUKit/MUControllers/MUBaseViewController.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>1A69E4035E71401193C5E1A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E597281DC3EC4241825CAD3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>1B9CE116B5184ABDB324F38A</key>
+		<key>6346EEA489424902BAC93DF3</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUWeakRef.h</string>
+			<string>MUCommandRepeated.m</string>
 			<key>path</key>
-			<string>MUKit/MUCore/MUWeakRef.h</string>
+			<string>MUKit/MUKit/MUCommands/MUCommandRepeated.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>1D38E644D1924AA293832677</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C0612C0E08E0477D834AAEC9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>1DBF32955966490F96A0377D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8F0ECC39197744729B7E0206</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>1EAF8BEFCE5A4D6AA95B8DB4</key>
+		<key>63BAA2D5FD4F48A2B12E27C1</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>Pods-prefix.pch</string>
+			<string>MUCellTextField.h</string>
 			<key>path</key>
-			<string>Pods-prefix.pch</string>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellTextField.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>1F7BF7BFE0B54BBE9E459858</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3CB24F700CCC4A5CA3FFC6A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>201BEACFD185418E9EDA1447</key>
-		<dict>
-			<key>fileRef</key>
-			<string>547CF6423AF244119761F683</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>216A12CF046F4F499B051554</key>
+		<key>63EFCB98C0CE4DF1839C32C5</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUGatewayResponse.h</string>
+			<string>MUPopupHoursMinutesPicker.h</string>
 			<key>path</key>
-			<string>MUKit/MUGateway/MUGatewayResponse.h</string>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupHoursMinutesPicker.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>243292A153F241799BA8ED45</key>
+		<key>6415FCB3B973479690A7BDF4</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUCreditCardNumberFormatter.m</string>
+			<string>MUCellDataSwitch.m</string>
 			<key>path</key>
-			<string>MUKit/MUCore/MUCreditCardNumberFormatter.m</string>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataSwitch.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>245430CE2F134FB2AB8B4E40</key>
+		<key>64A1C4F3E1004E46BB412A18</key>
 		<dict>
-			<key>fileRef</key>
-			<string>130864C4247C4548BF71643C</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSpinneredView.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUSpinneredView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>257850C537E64E75ADA87943</key>
+		<key>6568E702FF6148399DC80D81</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataButton.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataButton.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>65A297132D9041188A0706A5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUAutoresizeButton.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUAutoresizeButton.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>65C27555CF18491699AAF045</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
 			<string>AFHTTPRequestOperation.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFHTTPRequestOperation.h</string>
+			<string>AFNetworking-Fork/AFNetworking/AFHTTPRequestOperation.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>26F5427D75B54E9A947508B9</key>
+		<key>65F1F3CBBAAD408EBD293D57</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUProgressView.m</string>
+			<string>MUCellDataTextView.m</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUProgressView.m</string>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataTextView.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>26F64FC3591C4EA6B60E6AFF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTextFieldPadding.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/InputFields/MUTextFieldPadding.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>271A1CD84D4A456DAFD4B2B8</key>
+		<key>687DCA22A19B406380F2D996</key>
 		<dict>
 			<key>fileRef</key>
-			<string>175F8ED7075B4B91B87CDA37</string>
+			<string>2A314A65A9DA40A1801980F0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -534,10 +1691,10 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>27E08D09E956454CBB0F818A</key>
+		<key>6894BF1BEEDB4349A47C0BA8</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9AE19AFD3A72466D9C9A82FC</string>
+			<string>36DDD399D5BE48F38C19FDB8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -546,100 +1703,21 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>29A54D09F10E4EDF93089DB1</key>
+		<key>68B6640F86DB46B58B3539DF</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AFPropertyListRequestOperation.h</string>
+			<string>MUCellDataTextPair.m</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFPropertyListRequestOperation.h</string>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataTextPair.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>2A2978D826EA41BBA9A8F3D2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUKeyboardAvoidingTableView.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingTableView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2A449BB7D71540CE87E910C4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DCRoundSwitch.h</string>
-			<key>path</key>
-			<string>MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitch.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2A839EF6F9B6477A9C3AC5B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb1RoundSw1.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1RoundSw1.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2B4C3500CD724F2993B4ADDC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUVeraetyCellsTableControllerWritable.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUVeraetyCellsTableControllerWritable.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2C0B20DD4EB94CDA854849F6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUKeyboardAvoidingTableView.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingTableView.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2C6C2DD097AC46F2952EB028</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MULogConsumer.h</string>
-			<key>path</key>
-			<string>MUKit/MULogger/Consumers/MULogConsumer.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2C91519311624F4FB1C36852</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>2D1BD5690B084F26AA29790C</key>
+		<key>69EB4F0E727741CDA8AB211B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C39C4C136E5A40E68E6083F3</string>
+			<string>5931D0B4ABF645078DF3AE29</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -648,10 +1726,10 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>2D558DBBB20749228A433B49</key>
+		<key>6A710823A1E3411A85A88252</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E56BC95DC5AE41A0A906DDD0</string>
+			<string>15EBF2460FB94CBEB6A1650C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -660,10 +1738,10 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>2E92B368205442808CAFE17D</key>
+		<key>6AC21625EE8B45758E67695C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B6940144F6854F2FB07722C5</string>
+			<string>114AC2CD68174C2C863C206E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -672,343 +1750,29 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>2FC1A42CE4EF4C0FBE6F775B</key>
+		<key>6E97FA9571AC42FEAD392F2F</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUCreditCardNumberFormatter.h</string>
+			<string>MUPopupPicker.m</string>
 			<key>path</key>
-			<string>MUKit/MUCore/MUCreditCardNumberFormatter.h</string>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupPicker.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>2FE29E810D314B75A2289422</key>
-		<dict>
-			<key>fileRef</key>
-			<string>26F5427D75B54E9A947508B9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>312D693605D849B09F9D82F2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E2604218E9E64FC4B5444DAB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>31A53E8142C6427280166ACD</key>
+		<key>6F22F5FF2CA74226B741DF34</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DCRoundSwitchKnobLayer.m</string>
+			<string>MUCommand.h</string>
 			<key>path</key>
-			<string>MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchKnobLayer.m</string>
+			<string>MUKit/MUKit/MUCommands/MUCommand.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>3408F0F58819475EB581A9AC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUKitDefines.h</string>
-			<key>path</key>
-			<string>MUKit/MUCore/MUKitDefines.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>350E37D03BA84B78BA39F59C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFURLConnectionOperation.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFURLConnectionOperation.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>353EFE7C9BEA42CC94717D49</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTextView.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/InputFields/MUTextView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>36D3EEA219EF4E1A8A276BEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb2WithFullWidthLb1.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb2WithFullWidthLb1.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3858E00A4D104CA3BE9FF1E5</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FDB4FE1BFB9F46718A0ECAAA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3999F17BE99C48F19D218972</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFXMLRequestOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFXMLRequestOperation.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>39B8500473E4456F8A4D05F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MULogger.m</string>
-			<key>path</key>
-			<string>MUKit/MULogger/MULogger.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3ACB7224AEAA4510B0F6EEC6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MULogMessage.h</string>
-			<key>path</key>
-			<string>MUKit/MULogger/Core/MULogMessage.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3CB24F700CCC4A5CA3FFC6A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUSearchBar.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUSearchBar.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>41BA4649FA4E496DBEB32402</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb1Tf1.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Tf1.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>423A77EA5D1E4F969759DF58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>26F64FC3591C4EA6B60E6AFF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>42C4B5A60E174B16A0BD1EF5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUBaseTableController.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUBaseTableController.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4409612491C848948FB6AE74</key>
-		<dict>
-			<key>fileRef</key>
-			<string>00EF6BB45BC149CD820BF25E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>4487003386E34ECFA0F3FD90</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLbTextView.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLbTextView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4583E775FB2F4C08812D4F79</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1749CCE7EFE54FCBBE019B01</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>46D33422C9EE406C9956F17F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>608E1BB85D004312A61C3C87</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>49A49E0C36354EB380576CB7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFNetworking.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFNetworking.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4B00768647324C3698AAF944</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B02FCC7D5484FA59145332B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>4C726D495E4C4CA2B803BCE2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E2A31FE3D1074FFC958A2DFA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>4C8FA67B786341AA82CF6935</key>
-		<dict>
-			<key>fileRef</key>
-			<string>88ABD4B15FDE4C3789C759F0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>4D21C8FABC78437B9B72F89E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MULogConsumer.m</string>
-			<key>path</key>
-			<string>MUKit/MULogger/Consumers/MULogConsumer.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4D4EDAB8A6DF4E6BAF31D532</key>
-		<dict>
-			<key>fileRef</key>
-			<string>39B8500473E4456F8A4D05F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>4E94D774593345CEB4711EBF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>55FE9E6BAE5044B98791DF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>4EA12A1A5D454D5A96AF7B4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods-resources.sh</string>
-			<key>path</key>
-			<string>Pods-resources.sh</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>50917C26884A41DC9285AE80</key>
+		<key>709240045F5749EBB0F97A6D</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
@@ -1023,32 +1787,21 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>51EDA89090E24CFF94DD8947</key>
+		<key>7166CD1DB28140CBBC3BF10F</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUHTTPClient.m</string>
+			<string>MUCellData.m</string>
 			<key>path</key>
-			<string>MUKit/MUGateway/MUHTTPClient.m</string>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/MUCellData.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>5220A41EFB644B2AABA749A0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUSegmentedControl.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUSegmentedControl.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>539DAAF657FF4C5A828A3417</key>
+		<key>7195857842594C498FB30133</key>
 		<dict>
 			<key>fileRef</key>
-			<string>08C887D3D07D45DEB9760501</string>
+			<string>FF659D51EFC04D87843305B1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1057,133 +1810,10 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>547CF6423AF244119761F683</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb1Tf1.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Tf1.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>549BB246E6F445D2B79182D1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb3WithFullWidthLb1.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb3WithFullWidthLb1.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>55CF1B390B0B4006A1E929E0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb1Sw1.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Sw1.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>55FE9E6BAE5044B98791DF77</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUGatewayTask.m</string>
-			<key>path</key>
-			<string>MUKit/MUGateway/MUGatewayTask.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>5A6AF2FD9EA744099877A23C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>539DAAF657FF4C5A828A3417</string>
-				<string>4409612491C848948FB6AE74</string>
-				<string>CC64717554BE4B7DA245DB62</string>
-				<string>312D693605D849B09F9D82F2</string>
-				<string>F3D9CE02ED7342A795C00A30</string>
-				<string>86BE905341A74485B6E38A4A</string>
-				<string>BC1198F397B54E719AE9126A</string>
-				<string>D5C8C8B215F7464B95C8352D</string>
-				<string>C4F9C260A09241BD8AD60134</string>
-				<string>27E08D09E956454CBB0F818A</string>
-				<string>6FFA1CA7914F447CA4662A91</string>
-				<string>423A77EA5D1E4F969759DF58</string>
-				<string>E62BA52842B34295B1CF884F</string>
-				<string>A7DAE6318A6749F6BF27097B</string>
-				<string>64A5C2C41EB34D5FAED65A97</string>
-				<string>A6C8D11F49F7433EA55A134D</string>
-				<string>4583E775FB2F4C08812D4F79</string>
-				<string>96BD5630808343938269CBDF</string>
-				<string>2FE29E810D314B75A2289422</string>
-				<string>1F7BF7BFE0B54BBE9E459858</string>
-				<string>79774A2EA59E416CA41EE400</string>
-				<string>2D558DBBB20749228A433B49</string>
-				<string>6E5B15B61A3048499888A26C</string>
-				<string>AE0C059735AF43ADB56247A2</string>
-				<string>4B00768647324C3698AAF944</string>
-				<string>6F0BE65EAC8840969C89E413</string>
-				<string>98C1518E331146A3B6B302AC</string>
-				<string>245430CE2F134FB2AB8B4E40</string>
-				<string>201BEACFD185418E9EDA1447</string>
-				<string>7FBA19A6D8FE4868A77A14A0</string>
-				<string>9D3AD826F55B47F3850D343A</string>
-				<string>1D38E644D1924AA293832677</string>
-				<string>FDBF385DC8D34A0983BF3539</string>
-				<string>4C8FA67B786341AA82CF6935</string>
-				<string>697EF28D895F40E3B81D0E1B</string>
-				<string>B1FCB9E89CD9467D8D56A714</string>
-				<string>2E92B368205442808CAFE17D</string>
-				<string>1DBF32955966490F96A0377D</string>
-				<string>2D1BD5690B084F26AA29790C</string>
-				<string>ACA3A086CC8F4238806B4530</string>
-				<string>5D0BA974DD5E4699A0CF7908</string>
-				<string>CA838120A515485195820C78</string>
-				<string>B5F31F99DB634F9D9D39FD10</string>
-				<string>0DDA00F495F1434086E64BD6</string>
-				<string>8220BD36FF2340CB96B09C96</string>
-				<string>271A1CD84D4A456DAFD4B2B8</string>
-				<string>C70A912E67B248C68E858A88</string>
-				<string>0A6A073E1758414EB152E6A2</string>
-				<string>4C726D495E4C4CA2B803BCE2</string>
-				<string>B7FAFEAC0B6848D7B5CC32FF</string>
-				<string>B80BC2FB50AE4E468CA97905</string>
-				<string>A0CCCDDB70874D7380CEB10D</string>
-				<string>B7DC37C627C047159D833227</string>
-				<string>1A69E4035E71401193C5E1A8</string>
-				<string>4E94D774593345CEB4711EBF</string>
-				<string>775903B05CCC4F53BCC053B3</string>
-				<string>726A424E3901433289E06441</string>
-				<string>BB60C1375628412C9A98F99E</string>
-				<string>8512E16E04384AB281211808</string>
-				<string>46D33422C9EE406C9956F17F</string>
-				<string>F9DCD2609DDE4B3C88FDF839</string>
-				<string>4D4EDAB8A6DF4E6BAF31D532</string>
-				<string>A2C287BF50AC4433835BEB2C</string>
-				<string>8C7CD8EB5D244A1D9311E73D</string>
-				<string>5A7DCE0A90D7407D933C02A4</string>
-				<string>67AC4ECDE22444999CD6DD67</string>
-				<string>01476183E20E439DB3A028D5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5A7DCE0A90D7407D933C02A4</key>
+		<key>745250D7B0E84EB6A3D08828</key>
 		<dict>
 			<key>fileRef</key>
-			<string>31A53E8142C6427280166ACD</string>
+			<string>FA02B533E659454BAB2B1E3F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1192,10 +1822,32 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>5D0BA974DD5E4699A0CF7908</key>
+		<key>773BDD55184E4A69B5E28DC9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellTextView.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellTextView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>77B91F8B328F4B53821E2B3F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataModeled.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/MUCellDataModeled.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>79E78BCC7759469F8D9D8736</key>
 		<dict>
 			<key>fileRef</key>
-			<string>AC1F76F482954000B93BB68C</string>
+			<string>D0FD363184604B2DA2AE2612</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1204,65 +1856,65 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>608E1BB85D004312A61C3C87</key>
+		<key>7C1E04D18AF24D8AB943D7B8</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MULogMessage.m</string>
+			<string>MUCellStandart.m</string>
 			<key>path</key>
-			<string>MUKit/MULogger/Core/MULogMessage.m</string>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellStandart.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>60AE46255FE44D819A1CD009</key>
+		<key>7C85B46892F64011A6C02914</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUSpinneredView.h</string>
+			<string>MUTabedToolbar.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUSpinneredView.h</string>
+			<string>MUKit/MUKit/MUControls/MUTabedToolbar.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>618562797C2543F782140133</key>
+		<key>7D2A1136207D47CF8612958D</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MULogConsumerFile.h</string>
+			<string>MUTextFieldPadding.m</string>
 			<key>path</key>
-			<string>MUKit/MULogger/Consumers/MULogConsumerFile.h</string>
+			<string>MUKit/MUKit/MUControls/MUInputFields/MUTextFieldPadding.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>62F00F8BA66A4432B6F505A3</key>
+		<key>7D46983563014672B2F850C6</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUSegmentedControl.m</string>
+			<string>MUCell.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUSegmentedControl.m</string>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/MUCell.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>638F9A8ACBF1417FBED92E66</key>
+		<key>7D47E79A5693495B989D72E4</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DCRoundSwitch.m</string>
+			<string>MUHelper.h</string>
 			<key>path</key>
-			<string>MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitch.m</string>
+			<string>MUKit/MUKit/MUCore/MUHelper.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>64A5C2C41EB34D5FAED65A97</key>
+		<key>7E9FC521BD064372A468AFEF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FE0C2EB78F02423AAD21B63C</string>
+			<string>3A62F8D942F741BF89221EED</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1271,32 +1923,43 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>66CD67BF9BEC407DAE7BB25C</key>
+		<key>7F58FE7003FB40F48221956A</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
 			<string>NSString+Base64Encoding.m</string>
 			<key>path</key>
-			<string>MUKit/MUExtentions/NSString+Base64Encoding.m</string>
+			<string>MUKit/MUKit/MUExtentions/NSString+Base64Encoding.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>679091CF6905435D9FF281A5</key>
+		<key>7FD793CD205541169441603C</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUValidator.h</string>
+			<string>MUCreditCardNumberFormatter.m</string>
 			<key>path</key>
-			<string>MUKit/MUCore/MUValidator.h</string>
+			<string>MUKit/MUKit/MUCore/MUCreditCardNumberFormatter.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>67AC4ECDE22444999CD6DD67</key>
+		<key>8022C3071CEC46BB81CAE502</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFURLConnectionOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFURLConnectionOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>809BA7D683744CD1B3882ED0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>76F65B3A7E33436EBD2C30F2</string>
+			<string>E168657D11714B6F90F749E5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1305,21 +1968,32 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>68E133919ABB43C9AE53E5F4</key>
+		<key>8104805A93504902AE3CB3A6</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUTextView.h</string>
+			<string>NSDate-Utilities.m</string>
 			<key>path</key>
-			<string>MUKit/MUControls/InputFields/MUTextView.h</string>
+			<string>MUKit/MUKit/ThirdParty/DateExtentions/NSDate-Utilities.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>697EF28D895F40E3B81D0E1B</key>
+		<key>81E8CCDC85B0457D9AF9E865</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUFilter.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUFilter.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>8317E4C83F4743C78EE18146</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4487003386E34ECFA0F3FD90</string>
+			<string>5E929BC695F644A2AE823DF3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1328,65 +2002,54 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>6A2971AF2BAD422A8E7FACE5</key>
+		<key>83A9D2406267470E9E08B101</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AFJSONRequestOperation.h</string>
+			<string>MUControllers.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFJSONRequestOperation.h</string>
+			<string>MUKit/MUKit/MUControllers/MUControllers.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>6A420A2094E244DB8668B268</key>
+		<key>83C203D84E5842328982ABB3</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUAlertWithTextField.h</string>
+			<string>MUCellDataTextPair.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUAlertWithTextField.h</string>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataTextPair.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>6A7CCF58D46A4E1CBFAE5819</key>
+		<key>847D6F07B6054AFBA97EB63E</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUCellLb1RoundSw1.h</string>
+			<string>MUCellDataStandart.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1RoundSw1.h</string>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataStandart.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>6C16A8BA33D244B6B625E8FA</key>
+		<key>85C9A251D460447392B8F9E3</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUCellLb3WithFullWidth2Lb1.h</string>
+			<string>MUPhoneNumberFormatter.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb3WithFullWidth2Lb1.h</string>
+			<string>MUKit/MUKit/MUCore/MUPhoneNumberFormatter.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>6C3D9753D7CB4BFBA20B95D6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUWeakRef.m</string>
-			<key>path</key>
-			<string>MUKit/MUCore/MUWeakRef.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>6E5B15B61A3048499888A26C</key>
+		<key>85F326789B8F49AD8978010F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D35763240A314536B0146F17</string>
+			<string>65F1F3CBBAAD408EBD293D57</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1395,21 +2058,21 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>6EBABEB2EEB143AC9FA5173F</key>
+		<key>8755DE9358954A47B6F7389F</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUGatewayTask.h</string>
+			<string>MUCellLabel.m</string>
 			<key>path</key>
-			<string>MUKit/MUGateway/MUGatewayTask.h</string>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellLabel.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>6F0BE65EAC8840969C89E413</key>
+		<key>89BD99B58D7C4119880D6632</key>
 		<dict>
 			<key>fileRef</key>
-			<string>085387E7804D409E9E66649D</string>
+			<string>121BAC82459F43CB96884956</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1418,390 +2081,21 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>6FFA1CA7914F447CA4662A91</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A9AE75140C184DF5BC04E4AE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>71BD2972A99B41ED95750A0B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>726A424E3901433289E06441</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4D21C8FABC78437B9B72F89E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>72A44C44A64147AB8CF93F3D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MULogFormatter.h</string>
-			<key>path</key>
-			<string>MUKit/MULogger/Formatters/MULogFormatter.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>741F0F33A87742B8A12FDA88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUPair.h</string>
-			<key>path</key>
-			<string>MUKit/MUCore/MUPair.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>76F65B3A7E33436EBD2C30F2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DCRoundSwitchOutlineLayer.m</string>
-			<key>path</key>
-			<string>MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchOutlineLayer.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>775903B05CCC4F53BCC053B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>51EDA89090E24CFF94DD8947</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>79774A2EA59E416CA41EE400</key>
-		<dict>
-			<key>fileRef</key>
-			<string>62F00F8BA66A4432B6F505A3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>7B02FCC7D5484FA59145332B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb1Img1.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Img1.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>7E1F1A1DE0FD49D495D776CF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLbTextView.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLbTextView.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>7FA442527A4346E38A573E26</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUSearchBar.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUSearchBar.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>7FBA19A6D8FE4868A77A14A0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>19AA5243CE2D4196874B1D75</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>81E2F4C216F048A282E8BA88</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFXMLRequestOperation.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFXMLRequestOperation.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>8220BD36FF2340CB96B09C96</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0F049F6F2BC845D88D1E4851</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>8512E16E04384AB281211808</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C48B1F2201574EA19040F75C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>86BE905341A74485B6E38A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CE6E75BCC65403A93633B32</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>8828343C47E248499FCA4F02</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUValidationGroup.m</string>
-			<key>path</key>
-			<string>MUKit/MUCore/MUValidationGroup.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>88ABD4B15FDE4C3789C759F0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb3WithFullWidthLb1.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb3WithFullWidthLb1.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>899E9539AD2D4662B712F460</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTabBar.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTabBar.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>8B05E88DDAA147F1A49E9E19</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTitledID.m</string>
-			<key>path</key>
-			<string>MUKit/MUCore/MUTitledID.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>8B8CB2883F6D42DEBA034D2C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTextFieldPadding.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/InputFields/MUTextFieldPadding.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>8C7CD8EB5D244A1D9311E73D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>638F9A8ACBF1417FBED92E66</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>8CE6E75BCC65403A93633B32</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFNetworkActivityIndicatorManager.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>8E9DE2EA08074D648A701E5A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUVeraetyCellsTableControllerReadonly.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUVeraetyCellsTableControllerReadonly.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>8F0ECC39197744729B7E0206</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUToolbar.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUToolbar.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>90759B4114004357BF6CFD59</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUBaseScrollerController.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUBaseScrollerController.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>934E8A03B1F24FF7BDFCBEB6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DCRoundSwitchOutlineLayer.h</string>
-			<key>path</key>
-			<string>MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchOutlineLayer.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>966454E20138464EBB8DEE47</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>9AA23D4CA24A43C89E98FA33</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5A6AF2FD9EA744099877A23C</string>
-				<string>0C2FBFB697D1493EB4B01A83</string>
-				<string>50917C26884A41DC9285AE80</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>71BD2972A99B41ED95750A0B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>96A3EB0E941448E48FF1CC60</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUHTTPClient.h</string>
-			<key>path</key>
-			<string>MUKit/MUGateway/MUHTTPClient.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>96B0D04DE62E419190F161A4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTextViewAutosize.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/InputFields/MUTextViewAutosize.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>96BD5630808343938269CBDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2A2978D826EA41BBA9A8F3D2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>96DBE6C8BBD44AFDBD88C59D</key>
+		<key>89ED882AA25B44B9A6D2AEBD</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
 			<string>MUCocoaExtentions.h</string>
 			<key>path</key>
-			<string>MUKit/MUExtentions/MUCocoaExtentions.h</string>
+			<string>MUKit/MUKit/MUExtentions/MUCocoaExtentions.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>98C1518E331146A3B6B302AC</key>
+		<key>8A8A0047E33044D7AE6D4E2D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2A839EF6F9B6477A9C3AC5B6</string>
+			<string>BB9A32E1B5BC4D3C815B60E3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1810,75 +2104,282 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>98ED94D19A15417EBF32E853</key>
+		<key>8AF6F51DD101433A85FBF584</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A3C1B2333B1D4521B097EB70</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>8B009B601BEA4B81B959A354</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A1E67529AB5E4EB099FBC6A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>8BD2A9C0BE454D7F8345A396</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>NSDate-Utilities.h</string>
+			<string>DCRoundSwitch.h</string>
 			<key>path</key>
-			<string>MUKit/ThirdParty/DateExtentions/NSDate-Utilities.h</string>
+			<string>MUKit/MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitch.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>9925250C417B4E93AF9F28C1</key>
+		<key>8BD6AFE6536041938CC3040E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BEBCFA6E5CE742CCB2334BA8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>8BE34A36AE004701A74E57BE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0B2BA66553654699B8801290</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>8C67E9BD0EC84279A10E5D83</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUVeraetyCellsTableControllerReadonly.h</string>
+			<string>MUCellDataTextField.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUVeraetyCellsTableControllerReadonly.h</string>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataTextField.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>992DD7ED214A49F19CD3DD84</key>
+		<key>8C82540261A24162800D51A7</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUValidationGroup.h</string>
+			<string>MUTableDisposerRequested.h</string>
 			<key>path</key>
-			<string>MUKit/MUCore/MUValidationGroup.h</string>
+			<string>MUKit/MUKit/MUTableDisposer/TableDisposers/MUTableDisposerRequested.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>9AA23D4CA24A43C89E98FA33</key>
+		<key>8C8F4B5C07904CFCA2F2CF79</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3F70C2269B3D470BA51F420E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>8CDFFE331A56428497463FF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellStandart.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellStandart.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>8CFB20785C204985862F59ED</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUImageViewTapable.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUImageViewTapable.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>8EFB177ED5C84FD7A4DA3EF1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCommandRepeated.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCommands/MUCommandRepeated.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>8FDCA5A43E1443F8BE7A8749</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A6BEAB720C69428DB57638FC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>90E493FD3414475D8174ECB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogFormatter.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/Formatters/MULogFormatter.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>90ED133F63194851A958DB9A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AAEF5AECD034AA885444184</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>9144A029CF87463E8A6BC655</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKeyboardAvoidingScrollView.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingScrollView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>91BFFA41C3B040B89688D103</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSwitchController.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControllers/MUSwitchController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>94AEFAF5250E478B82088E31</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCheckableTableController.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControllers/MUCheckableTableController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>94B9014776C64F4EB78AAE62</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUHTTPClient.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUGateway/MUHTTPClient.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>94DDDAABE73342539F983BE4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTabedToolbar.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUTabedToolbar.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>954CA8BCC28D4732BCF0191B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTextView.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUInputFields/MUTextView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>95DF0477FDE84CC0933AE3C4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94B9014776C64F4EB78AAE62</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>97B069A392D74D3ABAD76F73</key>
+		<dict>
+			<key>fileRef</key>
+			<string>454F30F68A304992A955B5FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>97B94C2C8C9845168ACF790E</key>
 		<dict>
 			<key>buildConfigurations</key>
 			<array>
-				<string>3858E00A4D104CA3BE9FF1E5</string>
-				<string>F40BC311221948B28F18804C</string>
+				<string>CDFEC85A389C473DA34D103A</string>
+				<string>3E547BE1D9A84ADD86AF9EB6</string>
 			</array>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>9AE19AFD3A72466D9C9A82FC</key>
+		<key>983D1632425542F88F7E401B</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>UIImageView+AFNetworking.m</string>
+			<string>AFNetworkActivityIndicatorManager.m</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/UIImageView+AFNetworking.m</string>
+			<string>AFNetworking-Fork/AFNetworking/AFNetworkActivityIndicatorManager.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>9B8F135273444D1F9D900865</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUBaseTableController.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUBaseTableController.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>9D3AD826F55B47F3850D343A</key>
+		<key>9871AA2694C142FD9935D648</key>
 		<dict>
 			<key>fileRef</key>
-			<string>36D3EEA219EF4E1A8A276BEA</string>
+			<string>44FBEC680DDB492C8A2F67DE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1887,43 +2388,10 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>9D4963815D274B568439AF40</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUGateway.m</string>
-			<key>path</key>
-			<string>MUKit/MUGateway/MUGateway.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>9FE72B224374408197228390</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb3Lb1.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb3Lb1.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>9FF809A063A74A0DA58A1517</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MULogFormatterPlainText.h</string>
-			<key>path</key>
-			<string>MUKit/MULogger/Formatters/MULogFormatterPlainText.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>A0CCCDDB70874D7380CEB10D</key>
+		<key>9A2CFEFFF3E3458A8A037FA7</key>
 		<dict>
 			<key>fileRef</key>
-			<string>66CD67BF9BEC407DAE7BB25C</string>
+			<string>EBB4336620B74A46857F409A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1932,150 +2400,168 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>A242F008042D4C5A84F21004</key>
+		<key>9B658CC0B5704F64B4C5A430</key>
 		<dict>
-			<key>children</key>
+			<key>fileRef</key>
+			<string>7FD793CD205541169441603C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>9BBA194192AA4D1DA0F67412</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUBaseScrollerController.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControllers/MUBaseScrollerController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9C847C1A8FFC49B080403115</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTextFieldPadding.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUInputFields/MUTextFieldPadding.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9F2F9FCE80FD441EBD4DCEE6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3D7212AC0E674EF6BC8E614C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>9F5938F6D37842B086D7FE77</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopoverViewController.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/ShowStrategy/MUPopoverViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9F6FC054407B4058B1C89308</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods-resources.sh</string>
+			<key>path</key>
+			<string>Pods-resources.sh</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A08B9C606BB74715A24357B2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogManager.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/Core/MULogManager.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A1684280923644AABDDB3107</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>AF228B39EB4341CEA0BE59E2</string>
-				<string>D79C00C2812145189FF07D09</string>
-				<string>AC933434AA864715AAC13611</string>
-				<string>0A38CF0CE0E44275941727A0</string>
+				<string>19373B14488A4D5BBB8CD6E7</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>A2566DDA03D94BE2ABE3220C</key>
+		<key>A1E67529AB5E4EB099FBC6A7</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUHalfCellView.h</string>
+			<string>MULogFormatterPlainText.m</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUHalfCellView.h</string>
+			<string>MUKit/MUKit/MULogger/Formatters/MULogFormatterPlainText.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>A2C287BF50AC4433835BEB2C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>08315D3B07C44D05B60E45F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>A565CF4C7B2A4D3FB8A8A8B8</key>
+		<key>A1E7552C20C04A36A5FED508</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUTitledID.h</string>
+			<string>MUPopupHoursMinutesPicker.m</string>
 			<key>path</key>
-			<string>MUKit/MUCore/MUTitledID.h</string>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupHoursMinutesPicker.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>A6C8D11F49F7433EA55A134D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FB09B1D99E0647E2B5068FD8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>A7DAE6318A6749F6BF27097B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>96B0D04DE62E419190F161A4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>A92DEE11E17F47F891F96673</key>
+		<key>A2341DA253EF47879EC15A8E</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
 			<string>AFJSONUtilities.m</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFJSONUtilities.m</string>
+			<string>AFNetworking-Fork/AFNetworking/AFJSONUtilities.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>A98421A74D724282A80CFFF0</key>
+		<key>A24ACC63EB9B472B9FD1249A</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUVeraetyCellsTableControllerWritable.h</string>
+			<string>MUBaseTableController.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUVeraetyCellsTableControllerWritable.h</string>
+			<string>MUKit/MUKit/MUControllers/MUBaseTableController.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>A9AE75140C184DF5BC04E4AE</key>
+		<key>A25D7069A26843F29FAE5609</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUTextField.m</string>
+			<string>MUHTTPClient.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/InputFields/MUTextField.m</string>
+			<string>MUKit/MUKit/MUGateway/MUHTTPClient.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>AAE9446B0F45443EB94FC6CB</key>
+		<key>A2E35B58F54D4CB4943D57E0</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUCellLb2WithFullWidthLb1.h</string>
+			<string>MUCell.m</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb2WithFullWidthLb1.h</string>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/MUCell.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>AC1F76F482954000B93BB68C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUBaseViewController.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUBaseViewController.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>AC933434AA864715AAC13611</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>71BD2972A99B41ED95750A0B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ACA3A086CC8F4238806B4530</key>
+		<key>A382BEAA53F84C37BF47E46D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>42C4B5A60E174B16A0BD1EF5</string>
+			<string>15A3602B8A8448C083D5C33B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2084,21 +2570,65 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>ACCF077CE39248C6BD49D031</key>
+		<key>A3B3594E4AFC4A0EA3FEFC59</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUBaseViewController.h</string>
+			<string>MUGatewayResponse.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUBaseViewController.h</string>
+			<string>MUKit/MUKit/MUGateway/MUGatewayResponse.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>AE0C059735AF43ADB56247A2</key>
+		<key>A3B444EBBA2B42DA8C493140</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellTextField.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellTextField.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A3C1B2333B1D4521B097EB70</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupView.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A4C56AA3AD064C9CA7B87BBC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSwitchController.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControllers/MUSwitchController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A6BEAB720C69428DB57638FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSpinneredView.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUSpinneredView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A6F120B54DB54EF79AEFCB98</key>
 		<dict>
 			<key>fileRef</key>
-			<string>899E9539AD2D4662B712F460</string>
+			<string>C372A4F0348D42A08BBE57CE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2107,32 +2637,338 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>AE92DFBF6F81428E97C3FB40</key>
+		<key>A750684AD2B247DEAADEC2AA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8755DE9358954A47B6F7389F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>A9DEA702D6AC4D6F9B1F1843</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUStackedView.h</string>
+			<string>MUPopupView.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUStackedView.h</string>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupView.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>AF228B39EB4341CEA0BE59E2</key>
+		<key>AB3A013E375E426291810C59</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopoverController.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/ShowStrategy/MUPopoverController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>AB8DDF44D74B4AF9884F8482</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods-prefix.pch</string>
+			<key>path</key>
+			<string>Pods-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>AC0A1790EDDB47C49BC41D39</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4CD08D79B7B4169B9FBDA19</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>AD47E19DE6294931921C14AA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4C5E6473C3BE41D99679ABCD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>AD5D8E8DA1674D3AB07072B6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUToolbar.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUToolbar.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>AEDE320271FF4A0E939588F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFHTTPClient.h</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFHTTPClient.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>AFA5D0BCF46A476E9FD949CA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DCRoundSwitchToggleLayer.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchToggleLayer.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B04C1562AA1245D7B32A5E47</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKitDefines.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUKitDefines.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B0740F425F7A4EB98E46FA05</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellData.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/MUCellData.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B07F59DF95B74BD7BC8F8025</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUStackedView.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUStackedView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B1B93925545345E2AE6CCF07</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUValidator.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUValidator.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B1FAD0AC39A64A27A9CB1321</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BDB48B5C308D4703940DF37D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>B2251799655A4245A197ABC5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCommandSequence.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCommands/MUCommandSequence.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B2FA2428761D400A87BA6D7A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B3A2B01653AA461D9CBEA6FB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94DDDAABE73342539F983BE4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>B4D0D0BFEA8146999F92FB5E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogConsumerFile.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/Consumers/MULogConsumerFile.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B60D59990D8F41CDAE394328</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0614D056C66F43D5AF8F81AB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>B71DC68203A04F5A9A4AFD48</key>
+		<dict>
+			<key>fileRef</key>
+			<string>10D9297CC41948B18C0B55D4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>B74144E9931D42EC9FDAD00B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogManager.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/Core/MULogManager.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B91AFC17598F46AD89FDC9D9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4523F4964980440192FCAECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>BB9A32E1B5BC4D3C815B60E3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataLabel.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataLabel.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>BBCFAC5D19214935B5123BBF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTableDisposerModeled.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/TableDisposers/MUTableDisposerModeled.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>BBF3BC2D11FA407ABDA9E48D</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>C3ED1B6DA6D0491390632948</string>
-				<string>D8BB181E374F45D4A45297B7</string>
+				<string>2750F8501DB54AB09DAF02B3</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Pods</string>
+			<string>Targets Support Files</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AFB70D33991247ACA8CDD531</key>
+		<key>BD52E99B31944D3CA871B6CC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUToolbar.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUToolbar.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>BDB48B5C308D4703940DF37D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSectionReadonly.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Sections/MUSectionReadonly.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>BEA81BA6F7664ABEBD2B9D90</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataLabel.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataLabel.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>BEBCFA6E5CE742CCB2334BA8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSearchBar.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUSearchBar.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>BF6820744675430984B6E60F</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -2178,10 +3014,21 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>B1FCB9E89CD9467D8D56A714</key>
+		<key>C00AA12A1DEC4C59A6CDA76E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUValidator.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUValidator.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C13B051D7A5A40348DBC1086</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EE4EA4A0C4324992999A6E92</string>
+			<string>6E97FA9571AC42FEAD392F2F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2190,635 +3037,65 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>B57F5587C97443D291485271</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCocoaExtentions.m</string>
-			<key>path</key>
-			<string>MUKit/MUExtentions/MUCocoaExtentions.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B5F31F99DB634F9D9D39FD10</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2B4C3500CD724F2993B4ADDC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>B6940144F6854F2FB07722C5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTableViewCell2Half.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUTableViewCell2Half.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B76FF11545DE4C3690D717A2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUAutoresizeButton.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUAutoresizeButton.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B7DC37C627C047159D833227</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9D4963815D274B568439AF40</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>B7FAFEAC0B6848D7B5CC32FF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6C3D9753D7CB4BFBA20B95D6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>B80BC2FB50AE4E468CA97905</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B57F5587C97443D291485271</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>B918721131704853B849CD26</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MULogFormatterPlainText.m</string>
-			<key>path</key>
-			<string>MUKit/MULogger/Formatters/MULogFormatterPlainText.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>BB60C1375628412C9A98F99E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0FFD90AA7351404181A45130</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>BC1198F397B54E719AE9126A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0F450B7876CA4FE3934E97C8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>C0612C0E08E0477D834AAEC9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb3Lb1.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb3Lb1.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>C2A524E3E3AB4D839E980312</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSString+Base64Encoding.h</string>
-			<key>path</key>
-			<string>MUKit/MUExtentions/NSString+Base64Encoding.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>C39C4C136E5A40E68E6083F3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUBaseScrollerController.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/ViewControllers/MUBaseScrollerController.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>C3ED1B6DA6D0491390632948</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>161874EBB9A14F69BA89D417</string>
-				<string>257850C537E64E75ADA87943</string>
-				<string>F5C1E69F00D44173A58ACE65</string>
-				<string>6A2971AF2BAD422A8E7FACE5</string>
-				<string>DD7F06E44D5441F388C917B1</string>
-				<string>17973941F14F4327B407AD5E</string>
-				<string>49A49E0C36354EB380576CB7</string>
-				<string>29A54D09F10E4EDF93089DB1</string>
-				<string>350E37D03BA84B78BA39F59C</string>
-				<string>81E2F4C216F048A282E8BA88</string>
-				<string>1359CFAF449942EEAD285FE2</string>
-				<string>08C887D3D07D45DEB9760501</string>
-				<string>00EF6BB45BC149CD820BF25E</string>
-				<string>CDA54DFA88464A7A9542633C</string>
-				<string>E2604218E9E64FC4B5444DAB</string>
-				<string>A92DEE11E17F47F891F96673</string>
-				<string>8CE6E75BCC65403A93633B32</string>
-				<string>0F450B7876CA4FE3934E97C8</string>
-				<string>0E5F0BC7172640C9B57A7A3F</string>
-				<string>3999F17BE99C48F19D218972</string>
-				<string>9AE19AFD3A72466D9C9A82FC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>AFNetworking</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C48B1F2201574EA19040F75C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MULogManager.m</string>
-			<key>path</key>
-			<string>MUKit/MULogger/Core/MULogManager.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>C4F9C260A09241BD8AD60134</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3999F17BE99C48F19D218972</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>C51B805BC3FC4584AE35E7B7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb2Lb1.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb2Lb1.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>C70A912E67B248C68E858A88</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8B05E88DDAA147F1A49E9E19</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>C7A03E5B7C09404BB2E8B656</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTableViewCell2Half.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUTableViewCell2Half.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>C8B59608596F4801AF82D77D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MULogManager.h</string>
-			<key>path</key>
-			<string>MUKit/MULogger/Core/MULogManager.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CA838120A515485195820C78</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8E9DE2EA08074D648A701E5A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>CB5E780EC3AD44B093C5ED6A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUToolbar.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUToolbar.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CC18F01A45E64CB6A7C223F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2C91519311624F4FB1C36852</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CC64717554BE4B7DA245DB62</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CDA54DFA88464A7A9542633C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>CD4E134F0C8C40579EA5927E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUProgressView.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUProgressView.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CDA54DFA88464A7A9542633C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFImageRequestOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFImageRequestOperation.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CE3A8F7E48244BC2B2915F48</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUTextViewAutosize.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/InputFields/MUTextViewAutosize.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>D35763240A314536B0146F17</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUStackedView.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUStackedView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>D529B21F2A31415AA0F764F7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUGateway.h</string>
-			<key>path</key>
-			<string>MUKit/MUGateway/MUGateway.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>D5C8C8B215F7464B95C8352D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0E5F0BC7172640C9B57A7A3F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> </string>
-			</dict>
-		</dict>
-		<key>D6EACBD1E8B64B1F8BA0DDF6</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0420</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>DB1D5FD2C3DD4B2A896BE078</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>A242F008042D4C5A84F21004</string>
-			<key>productRefGroup</key>
-			<string>AC933434AA864715AAC13611</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>966454E20138464EBB8DEE47</string>
-			</array>
-		</dict>
-		<key>D79C00C2812145189FF07D09</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2C91519311624F4FB1C36852</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8BB181E374F45D4A45297B7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F87D666762454686891F1802</string>
-				<string>8B8CB2883F6D42DEBA034D2C</string>
-				<string>68E133919ABB43C9AE53E5F4</string>
-				<string>CE3A8F7E48244BC2B2915F48</string>
-				<string>6A420A2094E244DB8668B268</string>
-				<string>B76FF11545DE4C3690D717A2</string>
-				<string>1476BC263597460EA9382D80</string>
-				<string>2C0B20DD4EB94CDA854849F6</string>
-				<string>CD4E134F0C8C40579EA5927E</string>
-				<string>7FA442527A4346E38A573E26</string>
-				<string>5220A41EFB644B2AABA749A0</string>
-				<string>60AE46255FE44D819A1CD009</string>
-				<string>AE92DFBF6F81428E97C3FB40</string>
-				<string>0351EB5EB95648D8952B018E</string>
-				<string>E3A7AD461F9741C49A475BFA</string>
-				<string>0198A1E476B14735AAFDC629</string>
-				<string>6A7CCF58D46A4E1CBFAE5819</string>
-				<string>55CF1B390B0B4006A1E929E0</string>
-				<string>41BA4649FA4E496DBEB32402</string>
-				<string>C51B805BC3FC4584AE35E7B7</string>
-				<string>AAE9446B0F45443EB94FC6CB</string>
-				<string>9FE72B224374408197228390</string>
-				<string>6C16A8BA33D244B6B625E8FA</string>
-				<string>549BB246E6F445D2B79182D1</string>
-				<string>7E1F1A1DE0FD49D495D776CF</string>
-				<string>A2566DDA03D94BE2ABE3220C</string>
-				<string>C7A03E5B7C09404BB2E8B656</string>
-				<string>CB5E780EC3AD44B093C5ED6A</string>
-				<string>90759B4114004357BF6CFD59</string>
-				<string>9B8F135273444D1F9D900865</string>
-				<string>ACCF077CE39248C6BD49D031</string>
-				<string>9925250C417B4E93AF9F28C1</string>
-				<string>A98421A74D724282A80CFFF0</string>
-				<string>2FC1A42CE4EF4C0FBE6F775B</string>
-				<string>3408F0F58819475EB581A9AC</string>
-				<string>741F0F33A87742B8A12FDA88</string>
-				<string>08EF1F13433F4089AFACECE7</string>
-				<string>A565CF4C7B2A4D3FB8A8A8B8</string>
-				<string>992DD7ED214A49F19CD3DD84</string>
-				<string>679091CF6905435D9FF281A5</string>
-				<string>1B9CE116B5184ABDB324F38A</string>
-				<string>96DBE6C8BBD44AFDBD88C59D</string>
-				<string>C2A524E3E3AB4D839E980312</string>
-				<string>D529B21F2A31415AA0F764F7</string>
-				<string>216A12CF046F4F499B051554</string>
-				<string>6EBABEB2EEB143AC9FA5173F</string>
-				<string>96A3EB0E941448E48FF1CC60</string>
-				<string>2C6C2DD097AC46F2952EB028</string>
-				<string>618562797C2543F782140133</string>
-				<string>C8B59608596F4801AF82D77D</string>
-				<string>3ACB7224AEAA4510B0F6EEC6</string>
-				<string>72A44C44A64147AB8CF93F3D</string>
-				<string>9FF809A063A74A0DA58A1517</string>
-				<string>0D9FF38977C248F6852EFD3F</string>
-				<string>98ED94D19A15417EBF32E853</string>
-				<string>2A449BB7D71540CE87E910C4</string>
-				<string>14BE13BE64024A089F4C37D1</string>
-				<string>934E8A03B1F24FF7BDFCBEB6</string>
-				<string>E52E71990B7D49E396518F28</string>
-				<string>A9AE75140C184DF5BC04E4AE</string>
-				<string>26F64FC3591C4EA6B60E6AFF</string>
-				<string>353EFE7C9BEA42CC94717D49</string>
-				<string>96B0D04DE62E419190F161A4</string>
-				<string>FE0C2EB78F02423AAD21B63C</string>
-				<string>FB09B1D99E0647E2B5068FD8</string>
-				<string>1749CCE7EFE54FCBBE019B01</string>
-				<string>2A2978D826EA41BBA9A8F3D2</string>
-				<string>26F5427D75B54E9A947508B9</string>
-				<string>3CB24F700CCC4A5CA3FFC6A5</string>
-				<string>62F00F8BA66A4432B6F505A3</string>
-				<string>E56BC95DC5AE41A0A906DDD0</string>
-				<string>D35763240A314536B0146F17</string>
-				<string>899E9539AD2D4662B712F460</string>
-				<string>7B02FCC7D5484FA59145332B</string>
-				<string>085387E7804D409E9E66649D</string>
-				<string>2A839EF6F9B6477A9C3AC5B6</string>
-				<string>130864C4247C4548BF71643C</string>
-				<string>547CF6423AF244119761F683</string>
-				<string>19AA5243CE2D4196874B1D75</string>
-				<string>36D3EEA219EF4E1A8A276BEA</string>
-				<string>C0612C0E08E0477D834AAEC9</string>
-				<string>EE84F0F800A24B2A9D400848</string>
-				<string>88ABD4B15FDE4C3789C759F0</string>
-				<string>4487003386E34ECFA0F3FD90</string>
-				<string>EE4EA4A0C4324992999A6E92</string>
-				<string>B6940144F6854F2FB07722C5</string>
-				<string>8F0ECC39197744729B7E0206</string>
-				<string>C39C4C136E5A40E68E6083F3</string>
-				<string>42C4B5A60E174B16A0BD1EF5</string>
-				<string>AC1F76F482954000B93BB68C</string>
-				<string>8E9DE2EA08074D648A701E5A</string>
-				<string>2B4C3500CD724F2993B4ADDC</string>
-				<string>243292A153F241799BA8ED45</string>
-				<string>0F049F6F2BC845D88D1E4851</string>
-				<string>175F8ED7075B4B91B87CDA37</string>
-				<string>8B05E88DDAA147F1A49E9E19</string>
-				<string>8828343C47E248499FCA4F02</string>
-				<string>E2A31FE3D1074FFC958A2DFA</string>
-				<string>6C3D9753D7CB4BFBA20B95D6</string>
-				<string>B57F5587C97443D291485271</string>
-				<string>66CD67BF9BEC407DAE7BB25C</string>
-				<string>9D4963815D274B568439AF40</string>
-				<string>E597281DC3EC4241825CAD3B</string>
-				<string>55FE9E6BAE5044B98791DF77</string>
-				<string>51EDA89090E24CFF94DD8947</string>
-				<string>4D21C8FABC78437B9B72F89E</string>
-				<string>0FFD90AA7351404181A45130</string>
-				<string>C48B1F2201574EA19040F75C</string>
-				<string>608E1BB85D004312A61C3C87</string>
-				<string>B918721131704853B849CD26</string>
-				<string>39B8500473E4456F8A4D05F3</string>
-				<string>08315D3B07C44D05B60E45F7</string>
-				<string>638F9A8ACBF1417FBED92E66</string>
-				<string>31A53E8142C6427280166ACD</string>
-				<string>76F65B3A7E33436EBD2C30F2</string>
-				<string>F31E3A301331422DA6AD0B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>MUKit</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DB1D5FD2C3DD4B2A896BE078</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>18BCA6DE3E084EF58E39941C</string>
-				<string>AFB70D33991247ACA8CDD531</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>DD7F06E44D5441F388C917B1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFJSONUtilities.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFJSONUtilities.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>E2604218E9E64FC4B5444DAB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFJSONRequestOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFJSONRequestOperation.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>E2A31FE3D1074FFC958A2DFA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUValidator.m</string>
-			<key>path</key>
-			<string>MUKit/MUCore/MUValidator.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>E3A7AD461F9741C49A475BFA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb1Img1.h</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb1Img1.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>E52E71990B7D49E396518F28</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DCRoundSwitchToggleLayer.h</string>
-			<key>path</key>
-			<string>MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchToggleLayer.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>E56BC95DC5AE41A0A906DDD0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUSpinneredView.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUSpinneredView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>E597281DC3EC4241825CAD3B</key>
+		<key>C29D569322EC4E08BEAF10D4</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
 			<string>MUGatewayResponse.m</string>
 			<key>path</key>
-			<string>MUKit/MUGateway/MUGatewayResponse.m</string>
+			<string>MUKit/MUKit/MUGateway/MUGatewayResponse.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>E62BA52842B34295B1CF884F</key>
+		<key>C2ECC6792CC349B78A8ECE78</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopoverViewController.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/ShowStrategy/MUPopoverViewController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C372A4F0348D42A08BBE57CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPair.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUPair.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C3B10395CF354E58B6DB6BD7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataModeledDynamic.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataDynamic/MUCellDataModeledDynamic.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C56BD35B00C14C8B8B785DF5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUGatewayTask.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUGateway/MUGatewayTask.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C5823F95974642F3A49085A5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>353EFE7C9BEA42CC94717D49</string>
+			<string>D5E3F326E2DD478485AAAE39</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2827,43 +3104,10 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>EE4EA4A0C4324992999A6E92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUHalfCellView.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUHalfCellView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>EE84F0F800A24B2A9D400848</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MUCellLb3WithFullWidth2Lb1.m</string>
-			<key>path</key>
-			<string>MUKit/MUControls/MUTableViewCell2Half/MUCellLb3WithFullWidth2Lb1.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>F31E3A301331422DA6AD0B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DCRoundSwitchToggleLayer.m</string>
-			<key>path</key>
-			<string>MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchToggleLayer.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>F3D9CE02ED7342A795C00A30</key>
+		<key>C6BA86686CE84DD5B67AC503</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A92DEE11E17F47F891F96673</string>
+			<string>43C02CB00FF94D46B04B0D9C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2872,10 +3116,90 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>F40BC311221948B28F18804C</key>
+		<key>C6E9EF5E8D984FA99BA7A179</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCommandIdle.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCommands/MUCommandIdle.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C7098C19E6354BF2BCA1A6EB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B07F59DF95B74BD7BC8F8025</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>C743CDBEF3A64563974971BD</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataModeled.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/MUCellDataModeled.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C90815949BB4445BB35CC5DA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7252F2526B44A828F545137</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>C932E27875014189B91867AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFPropertyListRequestOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFPropertyListRequestOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>CA962710EB8F49B198D886F8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MULogConsumerFile.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MULogger/Consumers/MULogConsumerFile.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>CBB62A0BB9564C4EB2228F58</key>
+		<dict>
+			<key>fileRef</key>
+			<string>233CFAA89BAF4EEDA6D249B1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>CDFEC85A389C473DA34D103A</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>FDB4FE1BFB9F46718A0ECAAA</string>
+			<string>B2FA2428761D400A87BA6D7A</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>DSTROOT</key>
@@ -2898,34 +3222,375 @@
 			<key>isa</key>
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Release</string>
+			<string>Debug</string>
 		</dict>
-		<key>F5C1E69F00D44173A58ACE65</key>
+		<key>CE69C10D310A41C2A05E9BBF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKit.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUKit.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>CECE73A699AA4AEB99E49BB2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B4D0D0BFEA8146999F92FB5E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>CFD5B91B544F4FC38FA898FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFXMLRequestOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFXMLRequestOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>CFD7892C8B99494E951B1620</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DEA204D6346A4DCEAA13F057</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>D0FD363184604B2DA2AE2612</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCoreDataManager.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCoreData/MUCoreDataManager.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D24DC27E5F724C25B5B49F6A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUValidationGroup.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUValidationGroup.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D32ECCD8153A407C94CD5390</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUExtentions.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUExtentions/MUExtentions.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D3CCBED10669446AB1E3F8E4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellProtocol.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/MUCellProtocol.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D3D3B7978CAB4AC2A0F88334</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTextView.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUInputFields/MUTextView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D411845806434CF093F858E7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUWeakRef.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUWeakRef.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D49183C7581C43C1AE189972</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0420</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>5EE27AEAB30E47CC8124D3C6</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>60E0A176CBB44E358FA00EC7</string>
+			<key>productRefGroup</key>
+			<string>E24D2FF02FB049B6AD38353B</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>3103919823BE4A8D915BC43C</string>
+			</array>
+		</dict>
+		<key>D4F7FFE9DD76491D98A1FD14</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D61C4CFDD0B246F88E5831BD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>D5E3F326E2DD478485AAAE39</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFPropertyListRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFPropertyListRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D61C4CFDD0B246F88E5831BD</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataStandart.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataStandart.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D6BB970BA48C49EF827ADE60</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFJSONRequestOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFJSONRequestOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D8716D64C6A14A00917E44B8</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
 			<string>AFImageRequestOperation.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFImageRequestOperation.h</string>
+			<string>AFNetworking-Fork/AFNetworking/AFImageRequestOperation.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>F87D666762454686891F1802</key>
+		<key>D8CBA2E86DBB434DB90963CF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFURLConnectionOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFURLConnectionOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D9BEC79CE75D4DEFA7E20228</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTargetAction.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUTargetAction.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>DA8B6A468A0C4853BE0DE289</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C56BD35B00C14C8B8B785DF5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>DAC0B688F34841EF8C57C934</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C2ECC6792CC349B78A8ECE78</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>DAE224E17D5E49FBA6F8CFB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0721CD6A8B754883BC3803A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>DAF52F60795A4AA38A98AEA0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSDate-Utilities.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/ThirdParty/DateExtentions/NSDate-Utilities.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>DBB1D1605CDC4BA6A12DB432</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7D2A1136207D47CF8612958D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>DC5C5079610B4B64A45C25A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0896B5AA9B984D66B280D666</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>DC7519C627964639A3353336</key>
+		<dict>
+			<key>fileRef</key>
+			<string>77B91F8B328F4B53821E2B3F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>DEA204D6346A4DCEAA13F057</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFXMLRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFXMLRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>DFDA4030A937470A9D1B1F84</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKeyboardAvoidingTableView.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingTableView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E01BE156F7D04469B586C6E5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>130F11C71DCC4A66A8FA48D0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>E15981326C10420DB6DEE09C</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
 			<string>MUTextField.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/InputFields/MUTextField.h</string>
+			<string>MUKit/MUKit/MUControls/MUInputFields/MUTextField.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>F9DCD2609DDE4B3C88FDF839</key>
+		<key>E168657D11714B6F90F749E5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTextField.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUInputFields/MUTextField.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E23A872BCFAA45EE992FEAA3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B918721131704853B849CD26</string>
+			<string>D3D3B7978CAB4AC2A0F88334</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2934,34 +3599,34 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>FB09B1D99E0647E2B5068FD8</key>
+		<key>E24D2FF02FB049B6AD38353B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1611B02BC791406AB17C21CF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E27F3DD302AF4A4AA023C8D4</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUAutoresizeButton.m</string>
+			<string>DCRoundSwitchOutlineLayer.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUAutoresizeButton.m</string>
+			<string>MUKit/MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchOutlineLayer.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>FDB4FE1BFB9F46718A0ECAAA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>FDBF385DC8D34A0983BF3539</key>
+		<key>E3BE7F1E1803410EB160AE3A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EE84F0F800A24B2A9D400848</string>
+			<string>9144A029CF87463E8A6BC655</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2970,19 +3635,695 @@
 				<string> </string>
 			</dict>
 		</dict>
-		<key>FE0C2EB78F02423AAD21B63C</key>
+		<key>E4E186967A0841D7BE596E4F</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>MUAlertWithTextField.m</string>
+			<string>MUCommandRepeatCommand.h</string>
 			<key>path</key>
-			<string>MUKit/MUControls/MUAlertWithTextField.m</string>
+			<string>MUKit/MUKit/MUCommands/MUCommandRepeatCommand.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E565C2B2722E434A9A7AD551</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTabBarController.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControllers/MUTabBarController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E60E4370E1C14ED28C215ED9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>983D1632425542F88F7E401B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>E737754DA4374B1DA6EB87B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BD52E99B31944D3CA871B6CC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>E7D9847AAF524BDE80221E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>36EEFD6E0E7D4EFDB6CAFC6A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>E7FB559A270C4CA78975D5EC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKeyboardAvoiderProtocol.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUInputFields/MUKeyboardAvoiderProtocol.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>EA61AC9E437346ABB6E6422C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTableDisposerMaped.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/TableDisposers/MUTableDisposerMaped.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>EB3763CFEF6C445A919781AF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUGateway.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUGateway/MUGateway.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>EBB013D3EC634075B9CBA610</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3021142A15814AA6887ACB4A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>EBB4336620B74A46857F409A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DCRoundSwitchOutlineLayer.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/ThirdParty/DCRoundSwitch/DCRoundSwitchOutlineLayer.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>EC7C659AA9DE4C12AAB10A6B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6F22F5FF2CA74226B741DF34</string>
+				<string>C6E9EF5E8D984FA99BA7A179</string>
+				<string>E4E186967A0841D7BE596E4F</string>
+				<string>8EFB177ED5C84FD7A4DA3EF1</string>
+				<string>B2251799655A4245A197ABC5</string>
+				<string>9BBA194192AA4D1DA0F67412</string>
+				<string>A24ACC63EB9B472B9FD1249A</string>
+				<string>61F982CEFB2243998C5A72DE</string>
+				<string>94AEFAF5250E478B82088E31</string>
+				<string>83A9D2406267470E9E08B101</string>
+				<string>91BFFA41C3B040B89688D103</string>
+				<string>E565C2B2722E434A9A7AD551</string>
+				<string>65A297132D9041188A0706A5</string>
+				<string>53608BCE5B0143BC87B1ED77</string>
+				<string>8CFB20785C204985862F59ED</string>
+				<string>E7FB559A270C4CA78975D5EC</string>
+				<string>E15981326C10420DB6DEE09C</string>
+				<string>9C847C1A8FFC49B080403115</string>
+				<string>954CA8BCC28D4732BCF0191B</string>
+				<string>35B759B05725431598B95545</string>
+				<string>F91EB657FE1C4CAC8E8DD33B</string>
+				<string>49C9B3BFECD246F2AB9C47A8</string>
+				<string>19627CD3A0824210846FC4DB</string>
+				<string>13DEA65D7BE04B40AAD9B5EF</string>
+				<string>240D2FD75E144FC0A30CA73A</string>
+				<string>F8D139D1FCB84A9382523B4C</string>
+				<string>63EFCB98C0CE4DF1839C32C5</string>
+				<string>3212A2C46185481CBA3137E2</string>
+				<string>3BE86FF26DC2424DAB0EB10A</string>
+				<string>15948BCC4E0844F1923A1CF4</string>
+				<string>A9DEA702D6AC4D6F9B1F1843</string>
+				<string>AB3A013E375E426291810C59</string>
+				<string>9F5938F6D37842B086D7FE77</string>
+				<string>0FF885A8B8C24580841AD8D2</string>
+				<string>352DAF26E4A74EDE972F885B</string>
+				<string>FFE48B3154B54D29956AE60E</string>
+				<string>EE62759F2CF34C7DB7C1950A</string>
+				<string>64A1C4F3E1004E46BB412A18</string>
+				<string>5CA26CA674904A16AC5C4CC3</string>
+				<string>7C85B46892F64011A6C02914</string>
+				<string>AD5D8E8DA1674D3AB07072B6</string>
+				<string>5E080A3C7BA9448BB47A2317</string>
+				<string>5DAB945FA830483A8693E5FC</string>
+				<string>12427AED16BE4A83BEB2B353</string>
+				<string>81E8CCDC85B0457D9AF9E865</string>
+				<string>7D47E79A5693495B989D72E4</string>
+				<string>B04C1562AA1245D7B32A5E47</string>
+				<string>3AF942087A1949AB839307EF</string>
+				<string>85C9A251D460447392B8F9E3</string>
+				<string>D9BEC79CE75D4DEFA7E20228</string>
+				<string>0B9B9FC3D7574ED1B2D991E1</string>
+				<string>FDCA2D6501E84F27832D0ADA</string>
+				<string>C00AA12A1DEC4C59A6CDA76E</string>
+				<string>D411845806434CF093F858E7</string>
+				<string>14D7EC9DDDE64BB7B331C01D</string>
+				<string>89ED882AA25B44B9A6D2AEBD</string>
+				<string>D32ECCD8153A407C94CD5390</string>
+				<string>451AA75FE1ED41F9AA25EC7B</string>
+				<string>EB3763CFEF6C445A919781AF</string>
+				<string>A3B3594E4AFC4A0EA3FEFC59</string>
+				<string>F3A99AFB1EA54259947149DF</string>
+				<string>A25D7069A26843F29FAE5609</string>
+				<string>CE69C10D310A41C2A05E9BBF</string>
+				<string>57204DCBDEAB4488BAA657E7</string>
+				<string>CA962710EB8F49B198D886F8</string>
+				<string>B74144E9931D42EC9FDAD00B</string>
+				<string>3D29EB908C0A403F8099F2B2</string>
+				<string>90E493FD3414475D8174ECB8</string>
+				<string>3AA25F00739347E48B7378D8</string>
+				<string>2DD04B64CE1343D6A0F4E57E</string>
+				<string>C3B10395CF354E58B6DB6BD7</string>
+				<string>6568E702FF6148399DC80D81</string>
+				<string>BEA81BA6F7664ABEBD2B9D90</string>
+				<string>847D6F07B6054AFBA97EB63E</string>
+				<string>06A0BFC2D00340E8B0833949</string>
+				<string>8C67E9BD0EC84279A10E5D83</string>
+				<string>83C203D84E5842328982ABB3</string>
+				<string>F41E2A1311EA4BE6992B80A2</string>
+				<string>B0740F425F7A4EB98E46FA05</string>
+				<string>5D4B1EC8D26F4DD2A0B93CF1</string>
+				<string>C743CDBEF3A64563974971BD</string>
+				<string>D3CCBED10669446AB1E3F8E4</string>
+				<string>20BA6BE5C3C24B81AAAF4D0A</string>
+				<string>0706DC4D9C7740D0AFFC8F13</string>
+				<string>25AD0E5C61EF4EC88723B114</string>
+				<string>8CDFFE331A56428497463FF9</string>
+				<string>0C6130CE30AD43FA8B196FC2</string>
+				<string>63BAA2D5FD4F48A2B12E27C1</string>
+				<string>0B7B3CB33C54457085FCF138</string>
+				<string>7D46983563014672B2F850C6</string>
+				<string>28DD8A9810904B18B4F6D243</string>
+				<string>39AD6873FA9647A692FF1400</string>
+				<string>2DEF2F94B4B349BEB54B70B6</string>
+				<string>3A9784A271604E59AFB89C6D</string>
+				<string>EA61AC9E437346ABB6E6422C</string>
+				<string>BBCFAC5D19214935B5123BBF</string>
+				<string>8C82540261A24162800D51A7</string>
+				<string>DAF52F60795A4AA38A98AEA0</string>
+				<string>8BD2A9C0BE454D7F8345A396</string>
+				<string>528572B7FD484DFC8E318495</string>
+				<string>E27F3DD302AF4A4AA023C8D4</string>
+				<string>AFA5D0BCF46A476E9FD949CA</string>
+				<string>55D7CB5AEEC14E3BA3E50DA0</string>
+				<string>3022466E3A4943F0A9768BB4</string>
+				<string>02E6C994E9F542F795584B2D</string>
+				<string>6346EEA489424902BAC93DF3</string>
+				<string>24C851DA2E47463191E1D9A7</string>
+				<string>3F70C2269B3D470BA51F420E</string>
+				<string>4523F4964980440192FCAECA</string>
+				<string>5931D0B4ABF645078DF3AE29</string>
+				<string>46870ACC06C24C3884D86CDC</string>
+				<string>A4C56AA3AD064C9CA7B87BBC</string>
+				<string>36DDD399D5BE48F38C19FDB8</string>
+				<string>121BAC82459F43CB96884956</string>
+				<string>3021142A15814AA6887ACB4A</string>
+				<string>E168657D11714B6F90F749E5</string>
+				<string>7D2A1136207D47CF8612958D</string>
+				<string>D3D3B7978CAB4AC2A0F88334</string>
+				<string>3D7212AC0E674EF6BC8E614C</string>
+				<string>9144A029CF87463E8A6BC655</string>
+				<string>DFDA4030A937470A9D1B1F84</string>
+				<string>5187CBE611FD4509B9D9B791</string>
+				<string>15EBF2460FB94CBEB6A1650C</string>
+				<string>10D9297CC41948B18C0B55D4</string>
+				<string>A1E7552C20C04A36A5FED508</string>
+				<string>6E97FA9571AC42FEAD392F2F</string>
+				<string>4AEB0AF153BA476A9D83BB9F</string>
+				<string>FB8F647D20174A36AEC2C5FA</string>
+				<string>A3C1B2333B1D4521B097EB70</string>
+				<string>FA02B533E659454BAB2B1E3F</string>
+				<string>C2ECC6792CC349B78A8ECE78</string>
+				<string>5AAEF5AECD034AA885444184</string>
+				<string>5FF0474EFFD54FE2B6AF308E</string>
+				<string>BEBCFA6E5CE742CCB2334BA8</string>
+				<string>F7252F2526B44A828F545137</string>
+				<string>A6BEAB720C69428DB57638FC</string>
+				<string>B07F59DF95B74BD7BC8F8025</string>
+				<string>94DDDAABE73342539F983BE4</string>
+				<string>BD52E99B31944D3CA871B6CC</string>
+				<string>7FD793CD205541169441603C</string>
+				<string>0896B5AA9B984D66B280D666</string>
+				<string>0D36F145A299477EB7A937E6</string>
+				<string>C372A4F0348D42A08BBE57CE</string>
+				<string>F088160E7411426193A5CD38</string>
+				<string>4C5E6473C3BE41D99679ABCD</string>
+				<string>43C02CB00FF94D46B04B0D9C</string>
+				<string>D24DC27E5F724C25B5B49F6A</string>
+				<string>B1B93925545345E2AE6CCF07</string>
+				<string>454F30F68A304992A955B5FA</string>
+				<string>D0FD363184604B2DA2AE2612</string>
+				<string>44FBEC680DDB492C8A2F67DE</string>
+				<string>7F58FE7003FB40F48221956A</string>
+				<string>2CF0FCAE238B4D77B32FE98C</string>
+				<string>C29D569322EC4E08BEAF10D4</string>
+				<string>C56BD35B00C14C8B8B785DF5</string>
+				<string>94B9014776C64F4EB78AAE62</string>
+				<string>35B2A2CE257A4A79B3834C99</string>
+				<string>B4D0D0BFEA8146999F92FB5E</string>
+				<string>A08B9C606BB74715A24357B2</string>
+				<string>0B2BA66553654699B8801290</string>
+				<string>A1E67529AB5E4EB099FBC6A7</string>
+				<string>0614D056C66F43D5AF8F81AB</string>
+				<string>5E929BC695F644A2AE823DF3</string>
+				<string>15A3602B8A8448C083D5C33B</string>
+				<string>BB9A32E1B5BC4D3C815B60E3</string>
+				<string>D61C4CFDD0B246F88E5831BD</string>
+				<string>6415FCB3B973479690A7BDF4</string>
+				<string>F5E634E234354047AAE6D582</string>
+				<string>68B6640F86DB46B58B3539DF</string>
+				<string>65F1F3CBBAAD408EBD293D57</string>
+				<string>7166CD1DB28140CBBC3BF10F</string>
+				<string>0FDDE6A53A8749E48CCD0968</string>
+				<string>77B91F8B328F4B53821E2B3F</string>
+				<string>425BF1AF00684880928E912C</string>
+				<string>F9231EADCCFB4080B19C9C36</string>
+				<string>8755DE9358954A47B6F7389F</string>
+				<string>7C1E04D18AF24D8AB943D7B8</string>
+				<string>0721CD6A8B754883BC3803A7</string>
+				<string>A3B444EBBA2B42DA8C493140</string>
+				<string>773BDD55184E4A69B5E28DC9</string>
+				<string>A2E35B58F54D4CB4943D57E0</string>
+				<string>BDB48B5C308D4703940DF37D</string>
+				<string>5629579ADE7741F18EE30E4F</string>
+				<string>114AC2CD68174C2C863C206E</string>
+				<string>36EEFD6E0E7D4EFDB6CAFC6A</string>
+				<string>233CFAA89BAF4EEDA6D249B1</string>
+				<string>FF659D51EFC04D87843305B1</string>
+				<string>8104805A93504902AE3CB3A6</string>
+				<string>3A62F8D942F741BF89221EED</string>
+				<string>2A314A65A9DA40A1801980F0</string>
+				<string>EBB4336620B74A46857F409A</string>
+				<string>1F633BB3C00B48B0B9B05C69</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MUKit</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EDE2FC8E488D4168BF35FB00</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24C851DA2E47463191E1D9A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>EE5EA3086FCC4FF89DB60E0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFHTTPRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/AFHTTPRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>EE62759F2CF34C7DB7C1950A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSegmentedControl.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUSegmentedControl.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F088160E7411426193A5CD38</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPhoneNumberFormatter.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUPhoneNumberFormatter.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F23E7AAC8CA74B86A57108CB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F088160E7411426193A5CD38</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>F3A99AFB1EA54259947149DF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUGatewayTask.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUGateway/MUGatewayTask.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F41E2A1311EA4BE6992B80A2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataTextView.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataTextView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F4CD08D79B7B4169B9FBDA19</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>UIImageView+AFNetworking.m</string>
+			<key>path</key>
+			<string>AFNetworking-Fork/AFNetworking/UIImageView+AFNetworking.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F5E634E234354047AAE6D582</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellDataTextField.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/CellDatas/CellDataSimple/MUCellDataTextField.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F6DB5A14484D4ED6823EB787</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6346EEA489424902BAC93DF3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>F6E27DE398FF418989A4F436</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>387CCFA1472041CDB3E4C097</string>
+				<string>3B400D60BA684890985ED65D</string>
+				<string>61450FDC2BFE42A6AF68F3A4</string>
+				<string>E01BE156F7D04469B586C6E5</string>
+				<string>186C82F631984F198C2A6469</string>
+				<string>E60E4370E1C14ED28C215ED9</string>
+				<string>C5823F95974642F3A49085A5</string>
+				<string>48C9CD8AC468495898FB8689</string>
+				<string>CFD7892C8B99494E951B1620</string>
+				<string>AC0A1790EDDB47C49BC41D39</string>
+				<string>07612A79DE414BDBB5C07C9B</string>
+				<string>0FF5C81A7E7A421CB8DD3FC0</string>
+				<string>2F6735CB32BF4044BB6CA570</string>
+				<string>F6DB5A14484D4ED6823EB787</string>
+				<string>EDE2FC8E488D4168BF35FB00</string>
+				<string>8C8F4B5C07904CFCA2F2CF79</string>
+				<string>B91AFC17598F46AD89FDC9D9</string>
+				<string>69EB4F0E727741CDA8AB211B</string>
+				<string>3450A71CA60F4E9BAE167107</string>
+				<string>59FB601350D1425D9FE40A4B</string>
+				<string>6894BF1BEEDB4349A47C0BA8</string>
+				<string>89BD99B58D7C4119880D6632</string>
+				<string>EBB013D3EC634075B9CBA610</string>
+				<string>809BA7D683744CD1B3882ED0</string>
+				<string>DBB1D1605CDC4BA6A12DB432</string>
+				<string>E23A872BCFAA45EE992FEAA3</string>
+				<string>9F2F9FCE80FD441EBD4DCEE6</string>
+				<string>E3BE7F1E1803410EB160AE3A</string>
+				<string>37F0B5EE0E0243D5B93D6274</string>
+				<string>41C3919F542349CBA939EAE7</string>
+				<string>6A710823A1E3411A85A88252</string>
+				<string>B71DC68203A04F5A9A4AFD48</string>
+				<string>0D6D223422FA43D1B410C904</string>
+				<string>C13B051D7A5A40348DBC1086</string>
+				<string>FB7CAFE2ED2D404997C76068</string>
+				<string>3C2203F0208340F5A20AC4C8</string>
+				<string>8AF6F51DD101433A85FBF584</string>
+				<string>745250D7B0E84EB6A3D08828</string>
+				<string>DAC0B688F34841EF8C57C934</string>
+				<string>90ED133F63194851A958DB9A</string>
+				<string>4A6A6A0FD42545BF8362999B</string>
+				<string>8BD6AFE6536041938CC3040E</string>
+				<string>C90815949BB4445BB35CC5DA</string>
+				<string>8FDCA5A43E1443F8BE7A8749</string>
+				<string>C7098C19E6354BF2BCA1A6EB</string>
+				<string>B3A2B01653AA461D9CBEA6FB</string>
+				<string>E737754DA4374B1DA6EB87B0</string>
+				<string>9B658CC0B5704F64B4C5A430</string>
+				<string>DC5C5079610B4B64A45C25A3</string>
+				<string>382C094DE10D436893D4DCCE</string>
+				<string>A6F120B54DB54EF79AEFCB98</string>
+				<string>F23E7AAC8CA74B86A57108CB</string>
+				<string>AD47E19DE6294931921C14AA</string>
+				<string>C6BA86686CE84DD5B67AC503</string>
+				<string>4F7223913FF1437A8C032BA5</string>
+				<string>3D62C39794A9429BBE7CFD23</string>
+				<string>97B069A392D74D3ABAD76F73</string>
+				<string>79E78BCC7759469F8D9D8736</string>
+				<string>9871AA2694C142FD9935D648</string>
+				<string>14271A4FC5A641479ABCED36</string>
+				<string>0E3CA5FEC47A47CEAA419A8A</string>
+				<string>59815FD579654459870FF833</string>
+				<string>DA8B6A468A0C4853BE0DE289</string>
+				<string>95DF0477FDE84CC0933AE3C4</string>
+				<string>4CBEA35853544A67B7A379F3</string>
+				<string>CECE73A699AA4AEB99E49BB2</string>
+				<string>1691ACA2EB314AB897F77B8A</string>
+				<string>8BE34A36AE004701A74E57BE</string>
+				<string>8B009B601BEA4B81B959A354</string>
+				<string>B60D59990D8F41CDAE394328</string>
+				<string>8317E4C83F4743C78EE18146</string>
+				<string>A382BEAA53F84C37BF47E46D</string>
+				<string>8A8A0047E33044D7AE6D4E2D</string>
+				<string>D4F7FFE9DD76491D98A1FD14</string>
+				<string>14EE71C4E1E44143BDCFEC07</string>
+				<string>59CAEB0F1C51404B9923971A</string>
+				<string>2BC8A35BCD514F0C99E6B72F</string>
+				<string>85F326789B8F49AD8978010F</string>
+				<string>2E886B1CD76C489C8082A498</string>
+				<string>20E8645EF9C34713ADCC5B7F</string>
+				<string>DC7519C627964639A3353336</string>
+				<string>0BE51047DEDE495BA445CE43</string>
+				<string>26791AF81341412780F2ECBC</string>
+				<string>A750684AD2B247DEAADEC2AA</string>
+				<string>327D45CF65304AF0AB244A52</string>
+				<string>DAE224E17D5E49FBA6F8CFB8</string>
+				<string>5B5577FA72AB44029DDCA983</string>
+				<string>04AA398F874346638BC8D34C</string>
+				<string>4CA740AE8790479581C5559C</string>
+				<string>B1FAD0AC39A64A27A9CB1321</string>
+				<string>003C85D88B244845BB5F149D</string>
+				<string>6AC21625EE8B45758E67695C</string>
+				<string>E7D9847AAF524BDE80221E16</string>
+				<string>CBB62A0BB9564C4EB2228F58</string>
+				<string>7195857842594C498FB30133</string>
+				<string>1F96CB441E104A9EA8070D02</string>
+				<string>7E9FC521BD064372A468AFEF</string>
+				<string>687DCA22A19B406380F2D996</string>
+				<string>9A2CFEFFF3E3458A8A037FA7</string>
+				<string>01A220BC47384360A2C08AE6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F7252F2526B44A828F545137</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSegmentedControl.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUSegmentedControl.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F8D139D1FCB84A9382523B4C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupDateTimePicker.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupDateTimePicker.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F91EB657FE1C4CAC8E8DD33B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUKeyboardAvoidingProtocol.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUKeyboardAvoiding/MUKeyboardAvoidingProtocol.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F9231EADCCFB4080B19C9C36</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUCellButton.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/Cells/CellSimple/MUCellButton.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>FA02B533E659454BAB2B1E3F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopoverController.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/ShowStrategy/MUPopoverController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>FA6E3A952837484D828C1D56</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AEDE320271FF4A0E939588F9</string>
+				<string>65C27555CF18491699AAF045</string>
+				<string>D8716D64C6A14A00917E44B8</string>
+				<string>D6BB970BA48C49EF827ADE60</string>
+				<string>3D1D587B81F443C5BF85E5D9</string>
+				<string>3BB6987E9A5D4B269B7BFFA9</string>
+				<string>46CFD4827DF14D688D26D7E2</string>
+				<string>C932E27875014189B91867AF</string>
+				<string>D8CBA2E86DBB434DB90963CF</string>
+				<string>CFD5B91B544F4FC38FA898FC</string>
+				<string>52B507D53C584CD381020651</string>
+				<string>488662DE0F8745619409042E</string>
+				<string>EE5EA3086FCC4FF89DB60E0D</string>
+				<string>48008A7F74E64BD5A31BF1CA</string>
+				<string>130F11C71DCC4A66A8FA48D0</string>
+				<string>A2341DA253EF47879EC15A8E</string>
+				<string>983D1632425542F88F7E401B</string>
+				<string>D5E3F326E2DD478485AAAE39</string>
+				<string>8022C3071CEC46BB81CAE502</string>
+				<string>DEA204D6346A4DCEAA13F057</string>
+				<string>F4CD08D79B7B4169B9FBDA19</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>AFNetworking-Fork</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FB7CAFE2ED2D404997C76068</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4AEB0AF153BA476A9D83BB9F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> </string>
+			</dict>
+		</dict>
+		<key>FB8F647D20174A36AEC2C5FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUPopupTimePicker.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUPopupControllers/MUPopupTimePicker.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>FDCA2D6501E84F27832D0ADA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUValidationGroup.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUCore/MUValidationGroup.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>FF659D51EFC04D87843305B1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUTableDisposerRequested.m</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUTableDisposer/TableDisposers/MUTableDisposerRequested.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>FFE48B3154B54D29956AE60E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MUSearchBar.h</string>
+			<key>path</key>
+			<string>MUKit/MUKit/MUControls/MUSearchBar.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
-	<string>D6EACBD1E8B64B1F8BA0DDF6</string>
+	<string>D49183C7581C43C1AE189972</string>
 </dict>
 </plist>

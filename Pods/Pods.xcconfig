@@ -1,4 +1,4 @@
-PODS_ROOT = $(SRCROOT)/Pods
-HEADER_SEARCH_PATHS = "$(PODS_ROOT)/Headers" "$(PODS_ROOT)/Headers/AFNetworking" "$(PODS_ROOT)/Headers/MUKit"
-ALWAYS_SEARCH_USER_PATHS = YES
 OTHER_LDFLAGS = -ObjC -all_load -framework SystemConfiguration -framework QuartzCore
+ALWAYS_SEARCH_USER_PATHS = YES
+HEADER_SEARCH_PATHS = "$(PODS_ROOT)/Headers" "$(PODS_ROOT)/Headers/AFNetworking-Fork" "$(PODS_ROOT)/Headers/MUKit"
+PODS_ROOT = $(SRCROOT)/Pods

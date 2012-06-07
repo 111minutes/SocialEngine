@@ -135,6 +135,7 @@
         success(self, aData);
     }
     [successBlocks removeObjectForKey:aBlockKey];
+    [failureBlocks removeObjectForKey:aBlockKey];
 }
 
 //==============================================================================
@@ -145,6 +146,7 @@
     {
         failure(self, anError);
     }
+    [successBlocks removeObjectForKey:aBlockKey];
     [failureBlocks removeObjectForKey:aBlockKey];
 }
 

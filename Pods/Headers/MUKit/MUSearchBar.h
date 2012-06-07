@@ -1,1 +1,1 @@
-../../MUKit/MUControls/MUSearchBar.h
+../../MUKit/MUKit/MUControls/MUSearchBar.h

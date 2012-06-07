@@ -1,1 +1,1 @@
-../../MUKit/MUExtentions/MUCocoaExtentions.h
+../../MUKit/MUKit/MUExtentions/MUCocoaExtentions.h

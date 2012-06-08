@@ -22,4 +22,6 @@
     NSString* userInfoIdentifier;
 }
 
+- (NSString*) accessSecret;
+
 @end

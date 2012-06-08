@@ -78,6 +78,10 @@
     return [TwitterEngine sharedEngine].accessToken.key;
 }
 
+- (NSString*) accessSecret {
+    return [TwitterEngine sharedEngine].accessToken.secret;
+}
+
 //==============================================================================
 - (void) getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {

@@ -89,8 +89,14 @@
          
          if (success)
          {
-             [Foursquare2 setAccessToken:[result objectForKey:@"access_token"]];
-             [self executeSuccessBlockForKey:LOGIN withData:nil];
+             if ([result objectForKey:@"access_token"])
+             {
+                 [Foursquare2 setAccessToken:[result objectForKey:@"access_token"]];
+                 [self executeSuccessBlockForKey:LOGIN withData:nil];
+             }
+             else {
+                 [self executeFailureBlockForKey:LOGIN withError:nil];
+             }
          }
          else
          {

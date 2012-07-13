@@ -65,7 +65,7 @@ BOOL isIPad()
     NSString* bgImagePath = @"Twitter.bundle/images/twitter_load.png";
 	_backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:bgImagePath]] autorelease];
     
-	self.view = [[[UIView alloc] initWithFrame: isIPad() ? IPAD_VIEW_FRAME : IPHONE_VIEW_FRAME ] autorelease];	
+//	self.view = [[[UIView alloc] initWithFrame: isIPad() ? IPAD_VIEW_FRAME : IPHONE_VIEW_FRAME ] autorelease];	
 	_backgroundView.frame =  isIPad() ? IPAD_BACKGROUND_VIEW_FRAME : IPHONE_BACKGROUND_VIEW_FRAME;
 	_navBar = [[[UINavigationBar alloc] initWithFrame: isIPad() ? IPAD_NAVIGATION_BAR_FRAME : IPHONE_NAVIGATION_BAR_FRAME] autorelease];
     

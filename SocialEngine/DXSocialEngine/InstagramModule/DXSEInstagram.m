@@ -99,7 +99,8 @@
 }
 
 - (BOOL)isAuthorized {
-    return [WFInstagramAPI currentUser] != nil;
+    BOOL result = [WFInstagramAPI currentUser] != nil && [WFInstagramAPI accessToken] != nil;
+    return result;
 }
 
 - (NSString *)accessToken {

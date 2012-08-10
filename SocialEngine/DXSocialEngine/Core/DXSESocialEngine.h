@@ -13,6 +13,7 @@
 #import "DXSEInstagram.h"
 
 #define DXSE_OPEN_URL @"OPEN_URL"
+#define DXSE_REMOVE_FACEBOOK_LOGIN_BLOC @"DXSE_REMOVE_FACEBOOK_LOGIN_BLOC"
 
 @interface DXSESocialEngine : NSObject
 {

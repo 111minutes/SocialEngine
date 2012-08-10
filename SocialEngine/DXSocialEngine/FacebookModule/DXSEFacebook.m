@@ -10,6 +10,10 @@
 #import "SCFacebook.h"
 #import "DXSEUserInfoFacebook.h"
 #import "MUKitDefines.h"
+#import "DXSESocialEngine.h"
+
+#define LOGIN               @"LOGIN"
+#define GET_USER_INFO       @"GET_USER_INFO"
 
 @implementation DXSEFacebook
 
@@ -28,6 +32,19 @@
     {
         [SCFacebook shared].oauthKey = entryConfig.oauthKey;
         [[SCFacebook shared] configure];
+        
+        //Notification
+        [[NSNotificationCenter defaultCenter] addObserverForName:DXSE_REMOVE_FACEBOOK_LOGIN_BLOC
+                                                          object:nil
+                                                           queue:[NSOperationQueue mainQueue]
+                                                      usingBlock:^(NSNotification *note)
+        {
+            DXSESuccessBlock aFailer = [failureBlocks objectForKey:LOGIN];
+            if (aFailer) {
+                aFailer(self, nil);
+                [self removeBlockForKey:LOGIN];
+            }
+        }];
     }
     return self;
 }
@@ -36,19 +53,25 @@
 //==============================================================================
 - (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
+    [self registerSuccessBlock:aSuccess forKey:LOGIN];
+    [self registerFailureBlock:aFailure forKey:LOGIN];
+    
     [SCFacebook loginCallBack:^(BOOL success, id result)
     {
         if (success)
         {
-            aSuccess(self, nil);
-//            accessToken = [[SCFacebook shared].facebook.accessToken retain];
+            if (aSuccess)
+            {
+                aSuccess(self, nil);
+                [self removeBlockForKey:LOGIN];
+            }
         }
         else
         {
-            if(result)
+            if (aFailure)
             {
-//                NSError* error = [[NSError alloc] initWithDomain:<#(NSString *)#> code:<#(NSInteger)#> userInfo:<#(NSDictionary *)#>]
                 aFailure(self, nil);
+                [self removeBlockForKey:LOGIN];
             }
         }
     }];
@@ -61,15 +84,13 @@
     {
         if (success)
         {
-            aSuccess(self, nil);
+            if (aSuccess)
+                aSuccess(self, nil);
         }
         else
         {
-            if(result)
-            {
-//                NSError* error = [[NSError alloc] initWithDomain:<#(NSString *)#> code:<#(NSInteger)#> userInfo:<#(NSDictionary *)#>]
+            if(aFailure)
                 aFailure(self, nil);
-            }
         }
     }];
 }
@@ -94,7 +115,6 @@
     {
         if(success)
         {
-//            NSLog(@"%@", result);
             DXSEUserInfoFacebook* userInfo = [DXSEUserInfoFacebook userInfo];
             
             userInfo.ID = MU_NULL_PROTECT([result objectForKey:@"uid"]);
@@ -103,11 +123,13 @@
             userInfo.birthdayDate = MU_NULL_PROTECT([result objectForKey:@"birthday_date"]);
             userInfo.avatarURL = [NSURL URLWithString:MU_NULL_PROTECT([result objectForKey:@"pic"])];
             
-            aSuccess(self, userInfo);
+            if (aSuccess)
+                aSuccess(self, userInfo);
         }
         else
         {
-            aFailure(self, nil);
+            if (aFailure)
+                aFailure(self, nil);
         }
         
     }];

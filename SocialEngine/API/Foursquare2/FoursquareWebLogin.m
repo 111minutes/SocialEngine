@@ -95,7 +95,7 @@
 		NSArray *arr = [url componentsSeparatedByString:@"="];
 		[delegate performSelector:selector withObject:[arr objectAtIndex:1]];
 		[self cancel];
-	}else if ([url rangeOfString:@"error="].length != 0) {
+    }else if (([url rangeOfString:@"error="].length != 0) && ([url rangeOfString:@"facebook"].location == NSNotFound)) {
 		NSArray *arr = [url componentsSeparatedByString:@"="];
 		[delegate performSelector:selector withObject:[arr objectAtIndex:1]];
 		NSLog(@"Foursquare: %@",[arr objectAtIndex:1]);

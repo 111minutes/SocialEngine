@@ -145,8 +145,9 @@
 //==============================================================================
 - (void) removeBlockForKey:(NSString*)aBlockKey
 {
-    [successBlocks removeObjectForKey:aBlockKey];
-    [failureBlocks removeObjectForKey:aBlockKey];
+// 2 login tries with failed credentials fix
+//    [successBlocks removeObjectForKey:aBlockKey];
+//    [failureBlocks removeObjectForKey:aBlockKey];
 }
 
 @end

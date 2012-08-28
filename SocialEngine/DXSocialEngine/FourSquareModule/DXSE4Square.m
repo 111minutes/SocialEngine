@@ -102,7 +102,7 @@
      {
          [Foursquare2 setBaseURL:[NSURL URLWithString:@"https://api.foursquare.com/v2/"]];
          
-         if (success)
+         if (success&&[result objectForKey:@"access_token"])
          {
              [Foursquare2 setAccessToken:[result objectForKey:@"access_token"]];
              [self executeSuccessBlockForKey:LOGIN withData:nil];

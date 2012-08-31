@@ -139,15 +139,15 @@
 {
     DXSEFailureBlock failure = [failureBlocks objectForKey:aBlockKey];
     failure(self, anError);
-    [self removeBlockForKey:aBlockKey];
+   // [self removeBlockForKey:aBlockKey];
 }
 
 //==============================================================================
 - (void) removeBlockForKey:(NSString*)aBlockKey
 {
 // 2 login tries with failed credentials fix
-//    [successBlocks removeObjectForKey:aBlockKey];
-//    [failureBlocks removeObjectForKey:aBlockKey];
+    [successBlocks removeObjectForKey:aBlockKey];
+    [failureBlocks removeObjectForKey:aBlockKey];
 }
 
 @end

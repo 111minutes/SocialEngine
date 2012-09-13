@@ -35,15 +35,11 @@
 }
 
 - (void)clearAll4SquareCookies{
-    NSString *urlString = @"foursquare.com";
-    NSURL *url = [NSURL URLWithString:urlString];
-    
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    NSEnumerator *enumerator = [[cookieStorage cookiesForURL:url] objectEnumerator];
-    NSHTTPCookie *cookie = nil;
-    
-    while ((cookie = [enumerator nextObject])) {
-        [cookieStorage deleteCookie:cookie];
+    for (NSHTTPCookie *cookie in [cookieStorage cookies]) {
+        if ([[cookie domain] rangeOfString:@"foursquare.com"].location != NSNotFound) {
+            [cookieStorage deleteCookie:cookie];
+        }
     }
 }
 

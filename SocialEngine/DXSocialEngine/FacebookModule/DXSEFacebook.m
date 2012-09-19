@@ -89,4 +89,20 @@
     NSAssert (NO, @"Not implement yet");
 }
 
+- (void) postURL:(NSURL *)aURL andCaption:(NSString*)aCaption withSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
+    
+    [SCFacebook feedPostWithLinkPath:[aURL absoluteString] caption:aCaption callBack:^(BOOL success, id result) {
+        if (success) {
+            if (aSuccess) {
+                aSuccess(self, result);
+            }
+        }
+        else {
+            if (aFailure) {
+                aFailure(self, nil);
+            }
+        }
+    }];
+}
+
 @end

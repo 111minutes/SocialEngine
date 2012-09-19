@@ -12,4 +12,6 @@
 
 @interface DXSEFacebook : DXSEModule
 
+- (void) postURL:(NSURL *)aURL andCaption:(NSString*)aCaption withSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+
 @end

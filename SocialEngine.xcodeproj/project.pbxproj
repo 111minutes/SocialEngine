@@ -99,7 +99,7 @@
 		E6EEE6EE1504ED3B0096C4CB /* OAuthSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6861504ED3B0096C4CB /* OAuthSignInViewController.m */; settings = {COMPILER_FLAGS = ""; }; };
 		E6EEE7001504EDBE0096C4CB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE6FF1504EDBE0096C4CB /* Security.framework */; };
 		E6EEE70F1504EE760096C4CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE70E1504EE760096C4CB /* QuartzCore.framework */; };
-		E6EEE7111504EEAC0096C4CB /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE7101504EEAC0096C4CB /* libxml2.2.7.3.dylib */; };
+		EF9DA754160A346F00DE0935 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9DA753160A346F00DE0935 /* libxml2.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -281,8 +281,8 @@
 		E6EEE6861504ED3B0096C4CB /* OAuthSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthSignInViewController.m; sourceTree = "<group>"; };
 		E6EEE6FF1504EDBE0096C4CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E6EEE70E1504EE760096C4CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		E6EEE7101504EEAC0096C4CB /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
 		E6EEE7121504EF220096C4CB /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		EF9DA753160A346F00DE0935 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,9 +290,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9DA754160A346F00DE0935 /* libxml2.2.dylib in Frameworks */,
 				502B30FD15343F3E006F032F /* Accounts.framework in Frameworks */,
 				502B30FB15343F38006F032F /* Twitter.framework in Frameworks */,
-				E6EEE7111504EEAC0096C4CB /* libxml2.2.7.3.dylib in Frameworks */,
 				E6EEE70F1504EE760096C4CB /* QuartzCore.framework in Frameworks */,
 				E6EEE7001504EDBE0096C4CB /* Security.framework in Frameworks */,
 				0246879914FE2642009E2CB9 /* UIKit.framework in Frameworks */,
@@ -329,12 +329,12 @@
 				E6C3BCF0154079AD007B620E /* Pods.xcconfig */,
 				502B30FC15343F3D006F032F /* Accounts.framework */,
 				502B30FA15343F38006F032F /* Twitter.framework */,
-				E6EEE7101504EEAC0096C4CB /* libxml2.2.7.3.dylib */,
 				E6EEE70E1504EE760096C4CB /* QuartzCore.framework */,
 				E6EEE6FF1504EDBE0096C4CB /* Security.framework */,
 				0246879814FE2642009E2CB9 /* UIKit.framework */,
 				0246879A14FE2642009E2CB9 /* Foundation.framework */,
 				0246879C14FE2642009E2CB9 /* CoreGraphics.framework */,
+				EF9DA753160A346F00DE0935 /* libxml2.2.dylib */,
 				5B58526CBD1A4729B697B353 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -911,6 +911,7 @@
 				GCC_PREFIX_HEADER = "SocialEngine/SocialEngine-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "SocialEngine/SocialEngine-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -931,6 +932,7 @@
 				GCC_PREFIX_HEADER = "SocialEngine/SocialEngine-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "SocialEngine/SocialEngine-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;

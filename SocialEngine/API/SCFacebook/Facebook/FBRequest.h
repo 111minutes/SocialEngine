@@ -27,8 +27,8 @@
     NSString *_url;
     NSString *_httpMethod;
     NSMutableDictionary *_params;
-    __unsafe_unretained NSURLConnection *_connection;
-    __unsafe_unretained NSMutableData *_responseText;
+    __weak NSURLConnection *_connection;
+    __weak NSMutableData *_responseText;
 }
 
 
@@ -51,8 +51,8 @@
  * standard Objective-C object-to-string conversion facilities.
  */
 @property (nonatomic, strong) NSMutableDictionary *params;
-@property (nonatomic) NSURLConnection *connection;
-@property (nonatomic) NSMutableData *responseText;
+@property (nonatomic, weak) NSURLConnection *connection;
+@property (nonatomic, weak) NSMutableData *responseText;
 
 
 + (NSString *)serializeURL:(NSString *)baseUrl

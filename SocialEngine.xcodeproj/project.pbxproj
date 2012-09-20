@@ -105,7 +105,7 @@
 		E6EEE6EE1504ED3B0096C4CB /* OAuthSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6861504ED3B0096C4CB /* OAuthSignInViewController.m */; };
 		E6EEE7001504EDBE0096C4CB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE6FF1504EDBE0096C4CB /* Security.framework */; };
 		E6EEE70F1504EE760096C4CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE70E1504EE760096C4CB /* QuartzCore.framework */; };
-		E6EEE7111504EEAC0096C4CB /* libxml2.2.7.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE7101504EEAC0096C4CB /* libxml2.2.7.3.dylib */; };
+		EFD25DB9160B30CE004EACD2 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD25DB8160B30CE004EACD2 /* libxml2.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -311,6 +311,7 @@
 		E6EEE70E1504EE760096C4CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E6EEE7101504EEAC0096C4CB /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
 		E6EEE7121504EF220096C4CB /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		EFD25DB8160B30CE004EACD2 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,7 +319,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6EEE7111504EEAC0096C4CB /* libxml2.2.7.3.dylib in Frameworks */,
+				EFD25DB9160B30CE004EACD2 /* libxml2.2.dylib in Frameworks */,
 				E6EEE70F1504EE760096C4CB /* QuartzCore.framework in Frameworks */,
 				E6EEE7001504EDBE0096C4CB /* Security.framework in Frameworks */,
 				0246879914FE2642009E2CB9 /* UIKit.framework in Frameworks */,
@@ -334,6 +335,7 @@
 		0246878914FE2642009E2CB9 = {
 			isa = PBXGroup;
 			children = (
+				EFD25DB8160B30CE004EACD2 /* libxml2.2.dylib */,
 				E6EEE5CF1504ED3B0096C4CB /* API */,
 				0246879E14FE2642009E2CB9 /* SocialEngine */,
 				0246879714FE2642009E2CB9 /* Frameworks */,

@@ -1,11 +1,11 @@
 PODS:
-  - AFNetworking (0.9.1)
+  - AFNetworking-Fork (0.9.1)
   - HTTPRiot (0.6.1):
     - KissXML
     - SBJson (= 2.2.3)
   - KissXML (5.0)
-  - MUKit (0.0.5):
-    - AFNetworking
+  - MUKit (0.0.7):
+    - AFNetworking-Fork
   - SBJson (2.2.3)
   - TouchJSON (1.0)
 

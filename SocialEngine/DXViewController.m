@@ -8,6 +8,7 @@
 
 #import "DXViewController.h"
 #import "DXSESocialEngine.h"
+#import "LinkedInProfileFields.h"
 
 @implementation DXViewController
 
@@ -104,6 +105,31 @@
      }];
 }
 
+- (IBAction)linkedInLoginPressed:(id)sender {
+    [[DXSESocialEngine sharedInstance].linkedIn login:^(DXSEModule *module, NSDictionary *result) {
+        
+        LinkedInLoginSuccessType successType = [[result valueForKey:cLoginSuccessTypeKey] integerValue];
+        
+        if (successType == LinkedInLoginSuccessTypeLogined) {
+            [[[UIAlertView alloc] initWithTitle:@"LinkedIn" message:@"logged in!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            
+            [[DXSESocialEngine sharedInstance].linkedIn setProfileFields:LINKEDIN_PROFILE_FIELDS__ALL];
+            
+            [[DXSESocialEngine sharedInstance].linkedIn getUserInfo:^(DXSEModule * module, id data) {
+                NSLog (@"UserInfo(LinkedIn): %@", data);
+            } failure:^(DXSEModule * module, NSError * error) {
+                NSLog (@"UserInfo: failed");
+            }];
+        }
+        else if (successType == LinkedInLoginSuccessTypeCanceled){
+            [[[UIAlertView alloc] initWithTitle:@"LinkedIn" message:@"Login Canceled !" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];        
+        }
+        
+    } failure:^(DXSEModule *module, NSError *error) {
+        [[[UIAlertView alloc] initWithTitle:@"LinkedIn" message:@"login error!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }];
+}
+
 
 - (IBAction)facebookLogout {
     [[DXSESocialEngine sharedInstance].facebook logout:^(DXSEModule * module, id data)
@@ -136,6 +162,14 @@
      {
          [[[UIAlertView alloc] initWithTitle:@"Instagram" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
      } failure:nil];
+}
+
+- (IBAction)linkedInLogout {
+    [[DXSESocialEngine sharedInstance].linkedIn logout:^(DXSEModule *module, id data) {
+        [[[UIAlertView alloc] initWithTitle:@"LinkedIn" message:@"loged out!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];        
+    } failure:^(DXSEModule *module, NSError *error) {
+        
+    }];
 }
 
 

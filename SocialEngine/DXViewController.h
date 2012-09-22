@@ -14,10 +14,12 @@
 - (IBAction)facebookLoginPressed:(id)sender;
 - (IBAction)foursquareLoginPressed:(id)sender;
 - (IBAction)instagramLoginPressed:(id)sender;
+- (IBAction)linkedInLoginPressed:(id)sender;
 
 - (IBAction)facebookLogout;
 - (IBAction)twitterLogout;
 - (IBAction)foursquareLogout;
 - (IBAction)instagramLogout;
+- (IBAction)linkedInLogout;
 
 @end

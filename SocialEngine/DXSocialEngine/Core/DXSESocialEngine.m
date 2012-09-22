@@ -16,6 +16,7 @@
 @property (nonatomic, readwrite, strong) DXSETwitter *twitter;
 @property (nonatomic, readwrite, strong) DXSE4Square *fourSquare;
 @property (nonatomic, readwrite, strong) DXSEInstagram *instagram;
+@property (nonatomic, readwrite, strong) DXSELinkedIn *linkedIn;
 
 @end
 
@@ -33,6 +34,7 @@
 @synthesize twitter;
 @synthesize fourSquare;
 @synthesize instagram;
+@synthesize linkedIn;
 
 #pragma mark - Init/Dealloc
 + (DXSESocialEngine *)sharedInstance {
@@ -65,6 +67,7 @@
     self.twitter = (DXSETwitter *)[self initializeModuleWithKey:@"DXSETwitter" fromDictionary:dictConfig];
     self.fourSquare = (DXSE4Square *)[self initializeModuleWithKey:@"DXSE4Square" fromDictionary:dictConfig];
     self.instagram = (DXSEInstagram *)[self initializeModuleWithKey:@"DXSEInstagram" fromDictionary:dictConfig];
+    self.linkedIn = (DXSELinkedIn *)[self initializeModuleWithKey:@"DXSELinkedIn" fromDictionary:dictConfig];
 }
 
 - (DXSEModule *)initializeModuleWithKey:(NSString *)aModuleKey fromDictionary:(NSDictionary *)aDictionary {

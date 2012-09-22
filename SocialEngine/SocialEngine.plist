@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>DXSELinkedIn</key>
+	<dict>
+		<key>oauthKey</key>
+		<string>zwohymznklpp</string>
+		<key>oauthSecret</key>
+		<string>34205rsr8QVRcuqN</string>
+		<key>redirectURL</key>
+		<string></string>
+	</dict>
 	<key>DXSEFacebook</key>
 	<dict>
 		<key>oauthKey</key>

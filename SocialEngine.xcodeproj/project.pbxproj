@@ -29,6 +29,33 @@
 		02E2227E1504FF3E00EF802E /* DXSE4Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222741504FF3E00EF802E /* DXSE4Square.m */; };
 		02E2227F1504FF3E00EF802E /* DXSETwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E222771504FF3E00EF802E /* DXSETwitter.m */; };
 		02F420721507709200023A4C /* TwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F420711507709200023A4C /* TwitterEngine.m */; settings = {COMPILER_FLAGS = ""; }; };
+		07821687160DC02C008D2691 /* DXSELinkedInCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 07821686160DC02C008D2691 /* DXSELinkedInCompany.m */; };
+		07821693160DFD51008D2691 /* DXSELinkedInDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07821692160DFD51008D2691 /* DXSELinkedInDate.m */; };
+		07821698160DFF47008D2691 /* DXSELinkedInCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = 07821697160DFF47008D2691 /* DXSELinkedInCountry.m */; };
+		0782169B160DFF51008D2691 /* DXSELinkedInLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0782169A160DFF51008D2691 /* DXSELinkedInLocation.m */; };
+		07F67AC9160CBB8700BFE095 /* RDLinkedInAuthorizationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67ABC160CBB8700BFE095 /* RDLinkedInAuthorizationController.m */; };
+		07F67ACA160CBB8700BFE095 /* RDLinkedInEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67ABF160CBB8700BFE095 /* RDLinkedInEngine.m */; };
+		07F67ACB160CBB8700BFE095 /* RDLinkedInHTTPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AC1160CBB8700BFE095 /* RDLinkedInHTTPURLConnection.m */; };
+		07F67ACC160CBB8700BFE095 /* RDLinkedInRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AC3160CBB8700BFE095 /* RDLinkedInRequestBuilder.m */; };
+		07F67ACD160CBB8700BFE095 /* RDLinkedInResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AC5160CBB8700BFE095 /* RDLinkedInResponseParser.m */; };
+		07F67ACE160CBB8700BFE095 /* RD_OAToken+storage.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AC7160CBB8700BFE095 /* RD_OAToken+storage.m */; };
+		07F67AFC160CBBB500BFE095 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AD9160CBBB500BFE095 /* NSMutableURLRequest+Parameters.m */; };
+		07F67AFD160CBBB500BFE095 /* NSString+RD_URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67ADB160CBBB500BFE095 /* NSString+RD_URLEncoding.m */; };
+		07F67AFF160CBBB500BFE095 /* RD_MutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67ADF160CBBB500BFE095 /* RD_MutableURLRequest+Parameters.m */; };
+		07F67B00160CBBB500BFE095 /* RD_MutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AE1160CBBB500BFE095 /* RD_MutableURLRequest.m */; };
+		07F67B01160CBBB500BFE095 /* RD_OAAsynchronousDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AE3160CBBB500BFE095 /* RD_OAAsynchronousDataFetcher.m */; };
+		07F67B02160CBBB500BFE095 /* RD_OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AE5160CBBB500BFE095 /* RD_OAConsumer.m */; };
+		07F67B03160CBBB500BFE095 /* RD_OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AE7160CBBB500BFE095 /* RD_OADataFetcher.m */; };
+		07F67B04160CBBB500BFE095 /* RD_OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AE9160CBBB500BFE095 /* RD_OAHMAC_SHA1SignatureProvider.m */; };
+		07F67B05160CBBB500BFE095 /* RD_OAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AEB160CBBB500BFE095 /* RD_OAMutableURLRequest.m */; };
+		07F67B06160CBBB500BFE095 /* RD_OAPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AED160CBBB500BFE095 /* RD_OAPlaintextSignatureProvider.m */; };
+		07F67B07160CBBB500BFE095 /* RD_OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AEF160CBBB500BFE095 /* RD_OARequestParameter.m */; };
+		07F67B08160CBBB500BFE095 /* RD_OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AF1160CBBB500BFE095 /* RD_OAServiceTicket.m */; };
+		07F67B09160CBBB500BFE095 /* RD_OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67AF4160CBBB500BFE095 /* RD_OAToken.m */; };
+		07F67B16160CC51A00BFE095 /* DXSELinkedIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67B15160CC51A00BFE095 /* DXSELinkedIn.m */; };
+		07F67B1A160CD3BB00BFE095 /* DXSEUserInfoLinkedIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67B19160CD3BB00BFE095 /* DXSEUserInfoLinkedIn.m */; };
+		07F67B1F160CD52A00BFE095 /* DXSELinkedInPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67B1E160CD52A00BFE095 /* DXSELinkedInPosition.m */; };
+		07F67B22160CD53700BFE095 /* DXSELinkedInEducation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F67B21160CD53700BFE095 /* DXSELinkedInEducation.m */; };
 		500B21DE153849C900C73CAC /* NSURL+WillFleming.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B21DD153849C900C73CAC /* NSURL+WillFleming.m */; };
 		500B21E215384C3600C73CAC /* DXSEUserInfoInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 500B21E115384C3600C73CAC /* DXSEUserInfoInstagram.m */; };
 		502B30FB15343F38006F032F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502B30FA15343F38006F032F /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -142,6 +169,68 @@
 		02E222771504FF3E00EF802E /* DXSETwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSETwitter.m; sourceTree = "<group>"; };
 		02F420701507709200023A4C /* TwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterEngine.h; sourceTree = "<group>"; };
 		02F420711507709200023A4C /* TwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterEngine.m; sourceTree = "<group>"; };
+		07821682160DBD46008D2691 /* LinkedInProfileFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedInProfileFields.h; sourceTree = "<group>"; };
+		07821685160DC02C008D2691 /* DXSELinkedInCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSELinkedInCompany.h; sourceTree = "<group>"; };
+		07821686160DC02C008D2691 /* DXSELinkedInCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSELinkedInCompany.m; sourceTree = "<group>"; };
+		07821691160DFD51008D2691 /* DXSELinkedInDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSELinkedInDate.h; sourceTree = "<group>"; };
+		07821692160DFD51008D2691 /* DXSELinkedInDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSELinkedInDate.m; sourceTree = "<group>"; };
+		07821696160DFF47008D2691 /* DXSELinkedInCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSELinkedInCountry.h; sourceTree = "<group>"; };
+		07821697160DFF47008D2691 /* DXSELinkedInCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSELinkedInCountry.m; sourceTree = "<group>"; };
+		07821699160DFF51008D2691 /* DXSELinkedInLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSELinkedInLocation.h; sourceTree = "<group>"; };
+		0782169A160DFF51008D2691 /* DXSELinkedInLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSELinkedInLocation.m; sourceTree = "<group>"; };
+		07F67AB8160CBB8700BFE095 /* RDLinkedIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLinkedIn.h; sourceTree = "<group>"; };
+		07F67AB9160CBB8700BFE095 /* RDLinkedInTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLinkedInTypes.h; sourceTree = "<group>"; };
+		07F67ABA160CBB8700BFE095 /* RDLinkedInAuthorizationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLinkedInAuthorizationControllerDelegate.h; sourceTree = "<group>"; };
+		07F67ABB160CBB8700BFE095 /* RDLinkedInAuthorizationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLinkedInAuthorizationController.h; sourceTree = "<group>"; };
+		07F67ABC160CBB8700BFE095 /* RDLinkedInAuthorizationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDLinkedInAuthorizationController.m; sourceTree = "<group>"; };
+		07F67ABD160CBB8700BFE095 /* RDLinkedInEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLinkedInEngineDelegate.h; sourceTree = "<group>"; };
+		07F67ABE160CBB8700BFE095 /* RDLinkedInEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLinkedInEngine.h; sourceTree = "<group>"; };
+		07F67ABF160CBB8700BFE095 /* RDLinkedInEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDLinkedInEngine.m; sourceTree = "<group>"; };
+		07F67AC0160CBB8700BFE095 /* RDLinkedInHTTPURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLinkedInHTTPURLConnection.h; sourceTree = "<group>"; };
+		07F67AC1160CBB8700BFE095 /* RDLinkedInHTTPURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDLinkedInHTTPURLConnection.m; sourceTree = "<group>"; };
+		07F67AC2160CBB8700BFE095 /* RDLinkedInRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLinkedInRequestBuilder.h; sourceTree = "<group>"; };
+		07F67AC3160CBB8700BFE095 /* RDLinkedInRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDLinkedInRequestBuilder.m; sourceTree = "<group>"; };
+		07F67AC4160CBB8700BFE095 /* RDLinkedInResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLinkedInResponseParser.h; sourceTree = "<group>"; };
+		07F67AC5160CBB8700BFE095 /* RDLinkedInResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDLinkedInResponseParser.m; sourceTree = "<group>"; };
+		07F67AC6160CBB8700BFE095 /* RD_OAToken+storage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RD_OAToken+storage.h"; sourceTree = "<group>"; };
+		07F67AC7160CBB8700BFE095 /* RD_OAToken+storage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RD_OAToken+storage.m"; sourceTree = "<group>"; };
+		07F67AC8160CBB8700BFE095 /* RDLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDLogging.h; sourceTree = "<group>"; };
+		07F67AD8160CBBB500BFE095 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
+		07F67AD9160CBBB500BFE095 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
+		07F67ADA160CBBB500BFE095 /* NSString+RD_URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RD_URLEncoding.h"; sourceTree = "<group>"; };
+		07F67ADB160CBBB500BFE095 /* NSString+RD_URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RD_URLEncoding.m"; sourceTree = "<group>"; };
+		07F67ADE160CBBB500BFE095 /* RD_MutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RD_MutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
+		07F67ADF160CBBB500BFE095 /* RD_MutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RD_MutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
+		07F67AE0160CBBB500BFE095 /* RD_MutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_MutableURLRequest.h; sourceTree = "<group>"; };
+		07F67AE1160CBBB500BFE095 /* RD_MutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_MutableURLRequest.m; sourceTree = "<group>"; };
+		07F67AE2160CBBB500BFE095 /* RD_OAAsynchronousDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OAAsynchronousDataFetcher.h; sourceTree = "<group>"; };
+		07F67AE3160CBBB500BFE095 /* RD_OAAsynchronousDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_OAAsynchronousDataFetcher.m; sourceTree = "<group>"; };
+		07F67AE4160CBBB500BFE095 /* RD_OAConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OAConsumer.h; sourceTree = "<group>"; };
+		07F67AE5160CBBB500BFE095 /* RD_OAConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_OAConsumer.m; sourceTree = "<group>"; };
+		07F67AE6160CBBB500BFE095 /* RD_OADataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OADataFetcher.h; sourceTree = "<group>"; };
+		07F67AE7160CBBB500BFE095 /* RD_OADataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_OADataFetcher.m; sourceTree = "<group>"; };
+		07F67AE8160CBBB500BFE095 /* RD_OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
+		07F67AE9160CBBB500BFE095 /* RD_OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
+		07F67AEA160CBBB500BFE095 /* RD_OAMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OAMutableURLRequest.h; sourceTree = "<group>"; };
+		07F67AEB160CBBB500BFE095 /* RD_OAMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_OAMutableURLRequest.m; sourceTree = "<group>"; };
+		07F67AEC160CBBB500BFE095 /* RD_OAPlaintextSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OAPlaintextSignatureProvider.h; sourceTree = "<group>"; };
+		07F67AED160CBBB500BFE095 /* RD_OAPlaintextSignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_OAPlaintextSignatureProvider.m; sourceTree = "<group>"; };
+		07F67AEE160CBBB500BFE095 /* RD_OARequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OARequestParameter.h; sourceTree = "<group>"; };
+		07F67AEF160CBBB500BFE095 /* RD_OARequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_OARequestParameter.m; sourceTree = "<group>"; };
+		07F67AF0160CBBB500BFE095 /* RD_OAServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OAServiceTicket.h; sourceTree = "<group>"; };
+		07F67AF1160CBBB500BFE095 /* RD_OAServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_OAServiceTicket.m; sourceTree = "<group>"; };
+		07F67AF2160CBBB500BFE095 /* RD_OASignatureProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OASignatureProviding.h; sourceTree = "<group>"; };
+		07F67AF3160CBBB500BFE095 /* RD_OAToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OAToken.h; sourceTree = "<group>"; };
+		07F67AF4160CBBB500BFE095 /* RD_OAToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RD_OAToken.m; sourceTree = "<group>"; };
+		07F67AF7160CBBB500BFE095 /* RD_OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RD_OAuthConsumer.h; sourceTree = "<group>"; };
+		07F67B14160CC51A00BFE095 /* DXSELinkedIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSELinkedIn.h; sourceTree = "<group>"; };
+		07F67B15160CC51A00BFE095 /* DXSELinkedIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSELinkedIn.m; sourceTree = "<group>"; };
+		07F67B18160CD3BB00BFE095 /* DXSEUserInfoLinkedIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfoLinkedIn.h; sourceTree = "<group>"; };
+		07F67B19160CD3BB00BFE095 /* DXSEUserInfoLinkedIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfoLinkedIn.m; sourceTree = "<group>"; };
+		07F67B1D160CD52A00BFE095 /* DXSELinkedInPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSELinkedInPosition.h; sourceTree = "<group>"; };
+		07F67B1E160CD52A00BFE095 /* DXSELinkedInPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSELinkedInPosition.m; sourceTree = "<group>"; };
+		07F67B20160CD53700BFE095 /* DXSELinkedInEducation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSELinkedInEducation.h; sourceTree = "<group>"; };
+		07F67B21160CD53700BFE095 /* DXSELinkedInEducation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSELinkedInEducation.m; sourceTree = "<group>"; };
 		500B21DC153849C900C73CAC /* NSURL+WillFleming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+WillFleming.h"; path = "WFInstagramAPI/NSURL+WillFleming.h"; sourceTree = "<group>"; };
 		500B21DD153849C900C73CAC /* NSURL+WillFleming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+WillFleming.m"; path = "WFInstagramAPI/NSURL+WillFleming.m"; sourceTree = "<group>"; };
 		500B21E015384C3600C73CAC /* DXSEUserInfoInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfoInstagram.h; sourceTree = "<group>"; };
@@ -369,6 +458,7 @@
 		02485FB0150A8090003B4565 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				07F67B17160CD38D00BFE095 /* UserInfoLinkedIn */,
 				E6CF5D231533262F0043ABEE /* DXSEUserInfo.h */,
 				E6CF5D24153326300043ABEE /* DXSEUserInfo.m */,
 				02485FB1150A8090003B4565 /* DXSEUserInfoFacebook.h */,
@@ -387,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				02E222641504FF3E00EF802E /* Core */,
+				07F67B13160CC4D400BFE095 /* LinkedInModule */,
 				506450ED1537151B0054B09C /* InstagramModule */,
 				02E2226F1504FF3E00EF802E /* FacebookModule */,
 				02E222721504FF3E00EF802E /* FourSquareModule */,
@@ -438,6 +529,145 @@
 			path = TwitterModule;
 			sourceTree = "<group>";
 		};
+		07821684160DC01A008D2691 /* DXSELinkedInCompany */ = {
+			isa = PBXGroup;
+			children = (
+				07821685160DC02C008D2691 /* DXSELinkedInCompany.h */,
+				07821686160DC02C008D2691 /* DXSELinkedInCompany.m */,
+			);
+			path = DXSELinkedInCompany;
+			sourceTree = "<group>";
+		};
+		0782168F160DFD40008D2691 /* DXSELinkedInDate */ = {
+			isa = PBXGroup;
+			children = (
+				07821691160DFD51008D2691 /* DXSELinkedInDate.h */,
+				07821692160DFD51008D2691 /* DXSELinkedInDate.m */,
+			);
+			path = DXSELinkedInDate;
+			sourceTree = "<group>";
+		};
+		07821694160DFF3C008D2691 /* DXSELinkedInCountry */ = {
+			isa = PBXGroup;
+			children = (
+				07821696160DFF47008D2691 /* DXSELinkedInCountry.h */,
+				07821697160DFF47008D2691 /* DXSELinkedInCountry.m */,
+			);
+			path = DXSELinkedInCountry;
+			sourceTree = "<group>";
+		};
+		07821695160DFF3C008D2691 /* DXSELinkedInLocation */ = {
+			isa = PBXGroup;
+			children = (
+				07821699160DFF51008D2691 /* DXSELinkedInLocation.h */,
+				0782169A160DFF51008D2691 /* DXSELinkedInLocation.m */,
+			);
+			path = DXSELinkedInLocation;
+			sourceTree = "<group>";
+		};
+		07F67AB6160CBB6F00BFE095 /* LinkedIn */ = {
+			isa = PBXGroup;
+			children = (
+				07F67ACF160CBBB500BFE095 /* RD_OAuthConsumer */,
+				07F67AB8160CBB8700BFE095 /* RDLinkedIn.h */,
+				07F67AB9160CBB8700BFE095 /* RDLinkedInTypes.h */,
+				07F67ABA160CBB8700BFE095 /* RDLinkedInAuthorizationControllerDelegate.h */,
+				07F67ABB160CBB8700BFE095 /* RDLinkedInAuthorizationController.h */,
+				07F67ABC160CBB8700BFE095 /* RDLinkedInAuthorizationController.m */,
+				07F67ABD160CBB8700BFE095 /* RDLinkedInEngineDelegate.h */,
+				07F67ABE160CBB8700BFE095 /* RDLinkedInEngine.h */,
+				07F67ABF160CBB8700BFE095 /* RDLinkedInEngine.m */,
+				07F67AC0160CBB8700BFE095 /* RDLinkedInHTTPURLConnection.h */,
+				07F67AC1160CBB8700BFE095 /* RDLinkedInHTTPURLConnection.m */,
+				07F67AC2160CBB8700BFE095 /* RDLinkedInRequestBuilder.h */,
+				07F67AC3160CBB8700BFE095 /* RDLinkedInRequestBuilder.m */,
+				07F67AC4160CBB8700BFE095 /* RDLinkedInResponseParser.h */,
+				07F67AC5160CBB8700BFE095 /* RDLinkedInResponseParser.m */,
+				07F67AC6160CBB8700BFE095 /* RD_OAToken+storage.h */,
+				07F67AC7160CBB8700BFE095 /* RD_OAToken+storage.m */,
+				07F67AC8160CBB8700BFE095 /* RDLogging.h */,
+			);
+			path = LinkedIn;
+			sourceTree = "<group>";
+		};
+		07F67ACF160CBBB500BFE095 /* RD_OAuthConsumer */ = {
+			isa = PBXGroup;
+			children = (
+				07F67AD8160CBBB500BFE095 /* NSMutableURLRequest+Parameters.h */,
+				07F67AD9160CBBB500BFE095 /* NSMutableURLRequest+Parameters.m */,
+				07F67ADA160CBBB500BFE095 /* NSString+RD_URLEncoding.h */,
+				07F67ADB160CBBB500BFE095 /* NSString+RD_URLEncoding.m */,
+				07F67ADE160CBBB500BFE095 /* RD_MutableURLRequest+Parameters.h */,
+				07F67ADF160CBBB500BFE095 /* RD_MutableURLRequest+Parameters.m */,
+				07F67AE0160CBBB500BFE095 /* RD_MutableURLRequest.h */,
+				07F67AE1160CBBB500BFE095 /* RD_MutableURLRequest.m */,
+				07F67AE2160CBBB500BFE095 /* RD_OAAsynchronousDataFetcher.h */,
+				07F67AE3160CBBB500BFE095 /* RD_OAAsynchronousDataFetcher.m */,
+				07F67AE4160CBBB500BFE095 /* RD_OAConsumer.h */,
+				07F67AE5160CBBB500BFE095 /* RD_OAConsumer.m */,
+				07F67AE6160CBBB500BFE095 /* RD_OADataFetcher.h */,
+				07F67AE7160CBBB500BFE095 /* RD_OADataFetcher.m */,
+				07F67AE8160CBBB500BFE095 /* RD_OAHMAC_SHA1SignatureProvider.h */,
+				07F67AE9160CBBB500BFE095 /* RD_OAHMAC_SHA1SignatureProvider.m */,
+				07F67AEA160CBBB500BFE095 /* RD_OAMutableURLRequest.h */,
+				07F67AEB160CBBB500BFE095 /* RD_OAMutableURLRequest.m */,
+				07F67AEC160CBBB500BFE095 /* RD_OAPlaintextSignatureProvider.h */,
+				07F67AED160CBBB500BFE095 /* RD_OAPlaintextSignatureProvider.m */,
+				07F67AEE160CBBB500BFE095 /* RD_OARequestParameter.h */,
+				07F67AEF160CBBB500BFE095 /* RD_OARequestParameter.m */,
+				07F67AF0160CBBB500BFE095 /* RD_OAServiceTicket.h */,
+				07F67AF1160CBBB500BFE095 /* RD_OAServiceTicket.m */,
+				07F67AF2160CBBB500BFE095 /* RD_OASignatureProviding.h */,
+				07F67AF3160CBBB500BFE095 /* RD_OAToken.h */,
+				07F67AF4160CBBB500BFE095 /* RD_OAToken.m */,
+				07F67AF7160CBBB500BFE095 /* RD_OAuthConsumer.h */,
+			);
+			path = RD_OAuthConsumer;
+			sourceTree = "<group>";
+		};
+		07F67B13160CC4D400BFE095 /* LinkedInModule */ = {
+			isa = PBXGroup;
+			children = (
+				07F67B14160CC51A00BFE095 /* DXSELinkedIn.h */,
+				07F67B15160CC51A00BFE095 /* DXSELinkedIn.m */,
+			);
+			path = LinkedInModule;
+			sourceTree = "<group>";
+		};
+		07F67B17160CD38D00BFE095 /* UserInfoLinkedIn */ = {
+			isa = PBXGroup;
+			children = (
+				07821682160DBD46008D2691 /* LinkedInProfileFields.h */,
+				07821694160DFF3C008D2691 /* DXSELinkedInCountry */,
+				07821695160DFF3C008D2691 /* DXSELinkedInLocation */,
+				0782168F160DFD40008D2691 /* DXSELinkedInDate */,
+				07821684160DC01A008D2691 /* DXSELinkedInCompany */,
+				07F67B1B160CD51400BFE095 /* DXSELinkedInEducation */,
+				07F67B1C160CD51400BFE095 /* DXSELinkedInPosition */,
+				07F67B18160CD3BB00BFE095 /* DXSEUserInfoLinkedIn.h */,
+				07F67B19160CD3BB00BFE095 /* DXSEUserInfoLinkedIn.m */,
+			);
+			path = UserInfoLinkedIn;
+			sourceTree = "<group>";
+		};
+		07F67B1B160CD51400BFE095 /* DXSELinkedInEducation */ = {
+			isa = PBXGroup;
+			children = (
+				07F67B20160CD53700BFE095 /* DXSELinkedInEducation.h */,
+				07F67B21160CD53700BFE095 /* DXSELinkedInEducation.m */,
+			);
+			path = DXSELinkedInEducation;
+			sourceTree = "<group>";
+		};
+		07F67B1C160CD51400BFE095 /* DXSELinkedInPosition */ = {
+			isa = PBXGroup;
+			children = (
+				07F67B1D160CD52A00BFE095 /* DXSELinkedInPosition.h */,
+				07F67B1E160CD52A00BFE095 /* DXSELinkedInPosition.m */,
+			);
+			path = DXSELinkedInPosition;
+			sourceTree = "<group>";
+		};
 		506450ED1537151B0054B09C /* InstagramModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +717,7 @@
 		E6EEE5CF1504ED3B0096C4CB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				07F67AB6160CBB6F00BFE095 /* LinkedIn */,
 				506450F215371B5C0054B09C /* WFInstagramAPI */,
 				E6EEE5D01504ED3B0096C4CB /* Foursquare2 */,
 				E6EEE6161504ED3B0096C4CB /* SCFacebook */,
@@ -830,6 +1061,33 @@
 				5064511D15371B670054B09C /* WFInstagramAPI.m in Sources */,
 				500B21DE153849C900C73CAC /* NSURL+WillFleming.m in Sources */,
 				500B21E215384C3600C73CAC /* DXSEUserInfoInstagram.m in Sources */,
+				07F67AC9160CBB8700BFE095 /* RDLinkedInAuthorizationController.m in Sources */,
+				07F67ACA160CBB8700BFE095 /* RDLinkedInEngine.m in Sources */,
+				07F67ACB160CBB8700BFE095 /* RDLinkedInHTTPURLConnection.m in Sources */,
+				07F67ACC160CBB8700BFE095 /* RDLinkedInRequestBuilder.m in Sources */,
+				07F67ACD160CBB8700BFE095 /* RDLinkedInResponseParser.m in Sources */,
+				07F67ACE160CBB8700BFE095 /* RD_OAToken+storage.m in Sources */,
+				07F67AFC160CBBB500BFE095 /* NSMutableURLRequest+Parameters.m in Sources */,
+				07F67AFD160CBBB500BFE095 /* NSString+RD_URLEncoding.m in Sources */,
+				07F67AFF160CBBB500BFE095 /* RD_MutableURLRequest+Parameters.m in Sources */,
+				07F67B00160CBBB500BFE095 /* RD_MutableURLRequest.m in Sources */,
+				07F67B01160CBBB500BFE095 /* RD_OAAsynchronousDataFetcher.m in Sources */,
+				07F67B02160CBBB500BFE095 /* RD_OAConsumer.m in Sources */,
+				07F67B03160CBBB500BFE095 /* RD_OADataFetcher.m in Sources */,
+				07F67B04160CBBB500BFE095 /* RD_OAHMAC_SHA1SignatureProvider.m in Sources */,
+				07F67B05160CBBB500BFE095 /* RD_OAMutableURLRequest.m in Sources */,
+				07F67B06160CBBB500BFE095 /* RD_OAPlaintextSignatureProvider.m in Sources */,
+				07F67B07160CBBB500BFE095 /* RD_OARequestParameter.m in Sources */,
+				07F67B08160CBBB500BFE095 /* RD_OAServiceTicket.m in Sources */,
+				07F67B09160CBBB500BFE095 /* RD_OAToken.m in Sources */,
+				07F67B16160CC51A00BFE095 /* DXSELinkedIn.m in Sources */,
+				07F67B1A160CD3BB00BFE095 /* DXSEUserInfoLinkedIn.m in Sources */,
+				07F67B1F160CD52A00BFE095 /* DXSELinkedInPosition.m in Sources */,
+				07F67B22160CD53700BFE095 /* DXSELinkedInEducation.m in Sources */,
+				07821687160DC02C008D2691 /* DXSELinkedInCompany.m in Sources */,
+				07821693160DFD51008D2691 /* DXSELinkedInDate.m in Sources */,
+				07821698160DFF47008D2691 /* DXSELinkedInCountry.m in Sources */,
+				0782169B160DFF51008D2691 /* DXSELinkedInLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

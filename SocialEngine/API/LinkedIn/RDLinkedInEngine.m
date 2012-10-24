@@ -36,6 +36,8 @@ const NSUInteger kRDLinkedInMaxStatusLength = 140;
 - (RDLinkedInConnectionID *)sendAPIRequestWithURL:(NSURL *)url HTTPMethod:(NSString *)method body:(NSData *)body;
 - (void)sendTokenRequestWithURL:(NSURL *)url token:(RD_OAToken *)token onSuccess:(SEL)successSel onFail:(SEL)failSel;
 
+@property (nonatomic, strong) NSString *redirectURL;
+
 @end
 
 
@@ -43,16 +45,17 @@ const NSUInteger kRDLinkedInMaxStatusLength = 140;
 
 @synthesize verifier = rdOAuthVerifier;
 
-+ (id)engineWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret delegate:(id<RDLinkedInEngineDelegate>)delegate {
-  return [[self alloc] initWithConsumerKey:consumerKey consumerSecret:consumerSecret delegate:delegate];
++ (id)engineWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret redirectURL:(NSString *)redirectURL delegate:(id<RDLinkedInEngineDelegate>)delegate {
+    return [[self alloc] initWithConsumerKey:consumerKey consumerSecret:consumerSecret redirectURL:redirectURL delegate:delegate];
 }
 
-- (id)initWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret delegate:(id<RDLinkedInEngineDelegate>)delegate {
+- (id)initWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret redirectURL:(NSString *)redirectURL delegate:(id<RDLinkedInEngineDelegate>)delegate {
   self = [super init];
   if( self != nil ) {
     rdDelegate = delegate;
     rdOAuthConsumer = [[RD_OAConsumer alloc] initWithKey:consumerKey secret:consumerSecret];
     rdConnections = [[NSMutableDictionary alloc] init];
+      _redirectURL = [redirectURL copy];
   }
   return self;
 }
@@ -256,9 +259,17 @@ const NSUInteger kRDLinkedInMaxStatusLength = 140;
 
     [request setHTTPMethod:@"POST"];
     
-    RD_OARequestParameter *parameter = [RD_OARequestParameter requestParameterWithName:@"scope" value:@"r_fullprofile r_emailaddress"];
-    [request setParameters:[NSArray arrayWithObject:parameter]];
-	
+    NSMutableArray *parametersArray = [NSMutableArray array];
+    
+    RD_OARequestParameter *scopeParameter = [RD_OARequestParameter requestParameterWithName:@"scope" value:@"r_fullprofile r_emailaddress"];
+    [parametersArray addObject:scopeParameter];
+    
+    if (self.redirectURL) {
+        RD_OARequestParameter *redirectURLParameter = [RD_OARequestParameter requestParameterWithName:@"oauth_callback" value:self.redirectURL];
+        [parametersArray addObject:redirectURLParameter];
+    }
+    
+    [request setParameters:parametersArray];	
 
 	if( rdOAuthVerifier.length ) token.pin = rdOAuthVerifier;
 	

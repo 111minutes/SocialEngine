@@ -41,8 +41,9 @@ static NSString *cGetProfile = @"GET_PROFILE";
         
         NSString *consumerKey = self.entryConfig.oauthKey;
         NSString *consumerSecret = self.entryConfig.oauthSecret;
+        NSString *redirectURL = self.entryConfig.redirectURL;
         
-        self.linkedInEngine = [RDLinkedInEngine engineWithConsumerKey:consumerKey consumerSecret:consumerSecret delegate:self];
+        self.linkedInEngine = [RDLinkedInEngine engineWithConsumerKey:consumerKey consumerSecret:consumerSecret redirectURL:redirectURL delegate:self];
 
         NSDictionary *fields = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [NSNumber numberWithLong:LINKEDIN_PROFILE_FIELD__ID], @"id", 

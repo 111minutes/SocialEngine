@@ -43,8 +43,8 @@
   return self;
 }
 
-- (id)initWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret delegate:(id<RDLinkedInAuthorizationControllerDelegate>)delegate {
-  return [self initWithEngine:[RDLinkedInEngine engineWithConsumerKey:consumerKey consumerSecret:consumerSecret delegate:nil] delegate:delegate];
+- (id)initWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret redirectURL:(NSString *)redirectURL delegate:(id<RDLinkedInAuthorizationControllerDelegate>)delegate {
+    return [self initWithEngine:[RDLinkedInEngine engineWithConsumerKey:consumerKey consumerSecret:consumerSecret redirectURL:redirectURL delegate:nil] delegate:delegate];
 }
 
 - (void)dealloc {

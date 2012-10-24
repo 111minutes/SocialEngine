@@ -76,7 +76,6 @@
 		5064511C15371B670054B09C /* WFIGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064510C15371B670054B09C /* WFIGUser.m */; };
 		5064511D15371B670054B09C /* WFInstagramAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064510F15371B670054B09C /* WFInstagramAPI.m */; };
 		5A85C38B197543E8BAFEC418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58526CBD1A4729B697B353 /* libPods.a */; };
-		E6C3BCF1154079AD007B620E /* Pods.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6C3BCF0154079AD007B620E /* Pods.xcconfig */; };
 		E6CF5D25153326310043ABEE /* DXSEUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CF5D24153326300043ABEE /* DXSEUserInfo.m */; };
 		E6EEE6A31504ED3B0096C4CB /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D21504ED3B0096C4CB /* Foursquare2.m */; settings = {COMPILER_FLAGS = ""; }; };
 		E6EEE6A41504ED3B0096C4CB /* HRRequest+PhotoExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D41504ED3B0096C4CB /* HRRequest+PhotoExt.m */; settings = {COMPILER_FLAGS = ""; }; };
@@ -926,7 +925,7 @@
 		0246878B14FE2642009E2CB9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 0246878E14FE2642009E2CB9 /* Build configuration list for PBXProject "SocialEngine" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -956,7 +955,6 @@
 				E6EEE6ED1504ED3B0096C4CB /* README in Resources */,
 				027238A9150521370090730A /* SocialEngine.plist in Resources */,
 				028FEF47150BBA1D006531CE /* Twitter.bundle in Resources */,
-				E6C3BCF1154079AD007B620E /* Pods.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

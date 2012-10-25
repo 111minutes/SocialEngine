@@ -40,16 +40,14 @@
     {
         if (success)
         {
-            aSuccess(self, nil);
-//            accessToken = [[SCFacebook shared].facebook.accessToken retain];
-        }
-        else
-        {
-            if(result)
+            if (aSuccess)
             {
-//                NSError* error = [[NSError alloc] initWithDomain:<#(NSString *)#> code:<#(NSInteger)#> userInfo:<#(NSDictionary *)#>]
-                aFailure(self, nil);
+                aSuccess(self, nil);
             }
+        }
+        else if (aFailure)
+        {
+            aFailure(self, nil);
         }
     }];
 }
@@ -61,13 +59,14 @@
     {
         if (success)
         {
-            aSuccess(self, nil);
+            if (aSuccess) {
+                aSuccess(self, nil);
+            }
         }
         else
         {
-            if(result)
+            if(aFailure)
             {
-//                NSError* error = [[NSError alloc] initWithDomain:<#(NSString *)#> code:<#(NSInteger)#> userInfo:<#(NSDictionary *)#>]
                 aFailure(self, nil);
             }
         }
@@ -94,7 +93,6 @@
     {
         if(success)
         {
-//            NSLog(@"%@", result);
             DXSEUserInfoFacebook* userInfo = [DXSEUserInfoFacebook userInfo];
             
             userInfo.ID = MU_NULL_PROTECT([result objectForKey:@"uid"]);
@@ -103,11 +101,15 @@
             userInfo.birthdayDate = MU_NULL_PROTECT([result objectForKey:@"birthday_date"]);
             userInfo.avatarURL = [NSURL URLWithString:MU_NULL_PROTECT([result objectForKey:@"pic"])];
             
-            aSuccess(self, userInfo);
+            if (aSuccess)
+                aSuccess(self, userInfo);
         }
         else
         {
-            aFailure(self, nil);
+            if (aFailure)
+            {
+                aFailure(self, nil);
+            }
         }
         
     }];
@@ -118,18 +120,23 @@
     NSAssert(NO, @"Not implement yet");
 }
 
-- (void) postText:(NSString *)aText andURL:(NSString *)anURL withSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
-{
+- (void)postText:(NSString *)aText
+          andURL:(NSString *)anURL
+     withSuccess:(DXSESuccessBlock)aSuccess
+         failure:(DXSEFailureBlock)aFailure {
+    
     [SCFacebook feedPostWithLinkPath:anURL caption:aText callBack:^(BOOL success, id result) {
         if(success)
         {
-            aSuccess(self, result);
+            if (aSuccess) {
+                aSuccess(self, result);
+            }
         }
         else
         {
-            NSInteger statusCode = 1000;
-            NSError *error = [NSError errorWithDomain:@"HTTP" code:statusCode userInfo:result];
-            aFailure(self, error);
+            if (aFailure) {
+                aFailure(self, nil);
+            }
         }
     }];
 }

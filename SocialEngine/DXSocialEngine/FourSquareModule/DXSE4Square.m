@@ -18,7 +18,8 @@
 //==============================================================================
 @interface DXSE4Square (Private)
 
-    -(void)setCode:(NSString*)aCode;
+- (void)setCode:(NSString*)aCode;
+- (void)clearAll4SquareCookies;
 
 @end
 
@@ -45,9 +46,23 @@
     return self;
 }
 
+//==============================================================================
+- (void)clearAll4SquareCookies{
+    NSString *urlString = @"foursquare.com";
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSEnumerator *enumerator = [[cookieStorage cookiesForURL:url] objectEnumerator];
+    NSHTTPCookie *cookie = nil;
+    
+    while ((cookie = [enumerator nextObject])) {
+        [cookieStorage deleteCookie:cookie];
+    }
+}
+
 #pragma mark - Authentication
 //==============================================================================
-- (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
+- (void)login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
     [self registerSuccessBlock:aSuccess forKey:LOGIN];
     [self registerFailureBlock:aFailure forKey:LOGIN];
@@ -62,10 +77,13 @@
 }
 
 //==============================================================================
-- (void) logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
+- (void)logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure
 {
+    [self clearAll4SquareCookies];
     [Foursquare2 removeAccessToken];
-    aSuccess(self, nil);
+    if (aSuccess) {
+        aSuccess(self, nil);
+    }
 }
 
 //==============================================================================
@@ -87,16 +105,10 @@
      {
          [Foursquare2 setBaseURL:[NSURL URLWithString:@"https://api.foursquare.com/v2/"]];
          
-         if (success)
+         if (success && [result objectForKey:@"access_token"])
          {
-             if ([result objectForKey:@"access_token"])
-             {
-                 [Foursquare2 setAccessToken:[result objectForKey:@"access_token"]];
-                 [self executeSuccessBlockForKey:LOGIN withData:nil];
-             }
-             else {
-                 [self executeFailureBlockForKey:LOGIN withError:nil];
-             }
+             [Foursquare2 setAccessToken:[result objectForKey:@"access_token"]];
+             [self executeSuccessBlockForKey:LOGIN withData:nil];
          }
          else
          {

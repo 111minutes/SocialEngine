@@ -30,17 +30,20 @@ typedef void (^DXSEFailureBlock)(DXSEModule* module, NSError* error);
 - (id) initWithEntryConfig:(DXSEntryConfig*) anInitialConfig;
 
 #pragma mark - Authentication
-- (void) login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
-- (void) logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
-- (BOOL) isAuthorized;
+- (void)login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (void)logout:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (BOOL)isAuthorized;
 - (NSString*) accessToken;
 
 #pragma mark - UserInfo
-- (void) getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
-- (void) getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (void)getUserInfo:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (void)getUserFriends:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
 
 #pragma mark - Posting Status
-- (void) postText:(NSString *)aText andURL:(NSString *)anURL withSuccess:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure;
+- (void)postText:(NSString *)aText
+          andURL:(NSString *)anURL
+     withSuccess:(DXSESuccessBlock)aSuccess
+         failure:(DXSEFailureBlock)aFailure;
 
 @end
 

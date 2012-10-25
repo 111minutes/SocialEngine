@@ -19,9 +19,9 @@
     DXSESuccessBlock postSuccessBlock;
     DXSEFailureBlock postFailureBlock;
     
-    NSString* userInfoIdentifier;
+    NSString *userInfoIdentifier;
 }
 
-- (NSString*) accessSecret;
+- (NSString *)accessSecret;
 
 @end

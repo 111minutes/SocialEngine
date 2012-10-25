@@ -73,12 +73,12 @@
 }
 
 //==============================================================================
-- (NSString*) accessToken
+- (NSString *)accessToken
 {
     return [TwitterEngine sharedEngine].accessToken.key;
 }
 
-- (NSString*) accessSecret {
+- (NSString *)accessSecret {
     return [TwitterEngine sharedEngine].accessToken.secret;
 }
 

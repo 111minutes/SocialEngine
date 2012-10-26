@@ -1,4 +1,4 @@
-    //
+//
 //  OAuthSignInViewController.m
 //  TwitterCommonLibrary
 //
@@ -14,115 +14,116 @@
 #define IPHONE_NAVIGATION_BAR_FRAME CGRectMake(0, 0, 320, 44)
 
 // iPad frames
-#define IPAD_VIEW_FRAME CGRectMake(0, 0, 768, 960)
-#define IPAD_BACKGROUND_VIEW_FRAME CGRectMake(0, 44, 768, 960)
-#define IPAD_NAVIGATION_BAR_FRAME CGRectMake(0, 0, 768, 44)
+#define IPAD_VIEW_FRAME UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]) ? CGRectMake(0, 0, 768, 960) : CGRectMake(0, 0, 1024, 704)
+#define IPAD_BACKGROUND_VIEW_FRAME UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]) ? CGRectMake(0, 44, 768, 960) : CGRectMake(0, 44, 1024, 704)
+#define IPAD_NAVIGATION_BAR_FRAME UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]) ? CGRectMake(0, 0, 768, 44) : CGRectMake(0, 0, 1024, 44)
 
-BOOL isIPad(void);
+BOOL isPad(void);
 
-@implementation OAuthSignInViewController
-@synthesize delegate;
-
-BOOL isIPad()
+BOOL isPad()
 {
     return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
 }
 
-- (id)init
-{
+@implementation OAuthSignInViewController
+
+@synthesize delegate;
+
+
+- (id)init {
     return [self initWithDelegate:NULL];
 }
 
-- (id)initWithDelegate:(id<OAuthSignInViewControllerDelegate>) aDelegate{
-	if (self = [super init]) {		
+- (id)initWithDelegate:(id<OAuthSignInViewControllerDelegate>)aDelegate {
+    
+	if (self = [super init]) {
 		self.delegate = aDelegate;
-		_firstLoad = YES;		
+		_firstLoad = YES;
 		
-        _webView = [[UIWebView alloc] initWithFrame: isIPad() ? IPAD_BACKGROUND_VIEW_FRAME : IPHONE_BACKGROUND_VIEW_FRAME];		
+        _webView = [[UIWebView alloc] initWithFrame: isPad() ? IPAD_BACKGROUND_VIEW_FRAME : IPHONE_BACKGROUND_VIEW_FRAME];
         _webView.alpha = 0.0;
         _webView.delegate = self;
         _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
         //Because twitter will present a pin on the site instead of the oauth_verifier for mobile applications
         //we will try to detect the number, so we turn off phone number recognition and we turn on data recognition.
-        if ([_webView respondsToSelector: @selector(setDetectsPhoneNumbers:)]){ 			
-            [(id) _webView setDetectsPhoneNumbers: NO];
+        if ([_webView respondsToSelector:@selector(setDetectsPhoneNumbers:)]){
+            [(id)_webView setDetectsPhoneNumbers: NO];
         }
-        if ([_webView respondsToSelector: @selector(setDataDetectorTypes:)]){
-            [(id) _webView setDataDetectorTypes:UIDataDetectorTypeNone];
+        if ([_webView respondsToSelector:@selector(setDataDetectorTypes:)]){
+            [(id)_webView setDataDetectorTypes:UIDataDetectorTypeNone];
         }
 	}
 	return self;
 }
 
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-	[super loadView];
-	
-    //    NSBundle* twitterBundle = [NSBundle bundleWithPath:@"Twitter.bundle"];
-    //    NSString* bgImagePath = [twitterBundle pathForResource:@"twitter_load" ofType:@"png" inDirectory:@"images"];
+- (void)dealloc {
+	[_webView release];
+    [super dealloc];
+}
+
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad {
     
-    NSString* bgImagePath = @"Twitter.bundle/images/twitter_load.png";
-	_backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:bgImagePath]] autorelease];
+	[super viewDidLoad];
+    //    NSBundle *twitterBundle = [NSBundle bundleWithPath:@"Twitter.bundle"];
+    //    NSString *bgImagePath = [twitterBundle pathForResource:@"twitter_load" ofType:@"png" inDirectory:@"images"];
     
-	self.view = [[[UIView alloc] initWithFrame: isIPad() ? IPAD_VIEW_FRAME : IPHONE_VIEW_FRAME ] autorelease];	
-	_backgroundView.frame =  isIPad() ? IPAD_BACKGROUND_VIEW_FRAME : IPHONE_BACKGROUND_VIEW_FRAME;
-	_navBar = [[[UINavigationBar alloc] initWithFrame: isIPad() ? IPAD_NAVIGATION_BAR_FRAME : IPHONE_NAVIGATION_BAR_FRAME] autorelease];
+    self.view.frame =  isPad() ? IPAD_VIEW_FRAME : IPHONE_VIEW_FRAME;
     
-	_navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+    _backgroundView = [[[UIImageView alloc] initWithFrame:isPad() ? IPAD_BACKGROUND_VIEW_FRAME : IPHONE_BACKGROUND_VIEW_FRAME] autorelease];
 	_backgroundView.contentMode = UIViewContentModeScaleToFill;
+    _backgroundView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.9];
+    UIImage *backGroundImage = [UIImage imageNamed:@"Twitter.bundle/images/twitter_load.png"];
+    if (!backGroundImage) {
+        _backgroundView.image = backGroundImage;
+    }
+    
+	_navBar = [[[UINavigationBar alloc] initWithFrame: isPad() ? IPAD_NAVIGATION_BAR_FRAME : IPHONE_NAVIGATION_BAR_FRAME] autorelease];
+	_navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+    
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	
 	[self.view addSubview:_backgroundView];
+    [self.view addSubview:_webView];
+	[self.view addSubview:_navBar];
 	
-    [self.view addSubview: _webView];
-	
-	[self.view addSubview: _navBar];
-	
-	_blockerView = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 200, 60)] autorelease];
-	_blockerView.backgroundColor = [UIColor colorWithWhite: 0.0 alpha: 0.8];
+	_blockerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 60)] autorelease];
 	_blockerView.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2);
+    CGRect frame = _blockerView.frame;
+    frame.origin = CGPointMake(ceilf(frame.origin.x), ceilf(frame.origin.y));
+    _blockerView.frame = frame;
 	_blockerView.alpha = 0.0;
 	_blockerView.clipsToBounds = YES;
     
-	UILabel	*label = [[[UILabel alloc] initWithFrame: CGRectMake(0, 5, _blockerView.bounds.size.width, 15)] autorelease];
-	label.text = NSLocalizedString(@"Please Wait…", nil);
+	UILabel	*label = [[[UILabel alloc] initWithFrame:CGRectMake(0, 5, _blockerView.bounds.size.width, 15)] autorelease];
+	label.text = NSLocalizedString(@"Please Wait...", nil);
 	label.backgroundColor = [UIColor clearColor];
 	label.textColor = [UIColor whiteColor];
 	label.textAlignment = UITextAlignmentCenter;
-	label.font = [UIFont boldSystemFontOfSize: 15];
-	[_blockerView addSubview: label];
+	label.font = [UIFont boldSystemFontOfSize:15];
+	[_blockerView addSubview:label];
 	
-	UIActivityIndicatorView	*spinner = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleWhite] autorelease];	
+	UIActivityIndicatorView	*spinner = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleWhite] autorelease];
 	spinner.center = CGPointMake(_blockerView.bounds.size.width / 2, _blockerView.bounds.size.height / 2 + 10);
-	[_blockerView addSubview: spinner];
-	[self.view addSubview: _blockerView];
+	[_blockerView addSubview:spinner];
+	[self.view addSubview:_blockerView];
 	[spinner startAnimating];
 	
-	UINavigationItem *navItem = [[[UINavigationItem alloc] initWithTitle: NSLocalizedString(@"Twitter Sign In", nil)] autorelease];
-	navItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCancel target:self action: @selector(cancel:)] autorelease];
+	UINavigationItem *navItem = [[[UINavigationItem alloc] initWithTitle:NSLocalizedString(@"Twitter Sign In", nil)] autorelease];
+	navItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                               target:self
+                                                                               action:@selector(cancel:)]
+                                 autorelease];
 	
-	[_navBar pushNavigationItem: navItem animated: NO];
+	[_navBar pushNavigationItem:navItem animated:NO];
 }
 
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
-/*
-// Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return interfaceOrientation == [[UIApplication sharedApplication] statusBarOrientation];
 }
-*/
 
-
-#pragma mark SignUp call backs
+#pragma mark - SignUp call backs
 - (void) denied {
 	[_delegate authenticationFailed];
 }
@@ -134,13 +135,17 @@ BOOL isIPad()
 	[self.delegate authenticatedWithPin:pin];
 }
 
-- (void) cancel:(id) sender {
+- (void)cancel:(id)sender {
 	[self.delegate authenticationCanceled];
 }
-#pragma mark SignUp call back end
 
-#pragma mark webViewDelegate
-- (void) webViewDidFinishLoad: (UIWebView *) webView {
+#pragma mark -
+#pragma mark - SignUp call back end
+
+#pragma mark - UIWebViewDelegate
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
 	_loading = NO;
 	if (_firstLoad) {
 		_firstLoad = NO;
@@ -173,7 +178,10 @@ BOOL isIPad()
 }
 
 
-- (BOOL) webView: (UIWebView *) webView shouldStartLoadWithRequest: (NSURLRequest *) request navigationType: (UIWebViewNavigationType) navigationType {
+- (BOOL)webView:(UIWebView *)webView
+shouldStartLoadWithRequest:(NSURLRequest *)request
+ navigationType:(UIWebViewNavigationType)navigationType {
+    
 	NSData	*data = [request HTTPBody];
 	char *raw = data ? (char *) [data bytes] : "";
 	
@@ -186,13 +194,13 @@ BOOL isIPad()
 	return YES;
 }
 
-#pragma mark webViewDelegate end
+#pragma mark - utility for finding the pin
 
-
-#pragma mark utility for finding the pin
-- (NSString *) locateAuthPinInWebView: (UIWebView *) webView {
+- (NSString *)locateAuthPinInWebView:(UIWebView *)webView {
+    
 	NSString			*js = @"var d = document.getElementById('oauth-pin'); if (d == null) d = document.getElementById('oauth_pin'); if (d) d = d.innerHTML; if (d == null) {var r = new RegExp('\\\\s[0-9]+\\\\s'); d = r.exec(document.body.innerHTML); if (d.length > 0) d = d[0];} d.replace(/^\\s*/, '').replace(/\\s*$/, ''); d;";
-	NSString			*pin = [webView stringByEvaluatingJavaScriptFromString: js];	
+    
+	NSString			*pin = [webView stringByEvaluatingJavaScriptFromString: js];
 	NSString			*html = [webView stringByEvaluatingJavaScriptFromString: @"document.body.innerText"];
 	
 	if (html.length == 0){
@@ -206,7 +214,7 @@ BOOL isIPad()
 		if (rawHTML[i] < '0' || rawHTML[i] > '9') {
 			if (chunkLength == 7) {
 				char *buffer = (char *) malloc(chunkLength + 1);
-
+                
 				memmove(buffer, &rawHTML[i - chunkLength], chunkLength);
 				buffer[chunkLength] = 0;
 				
@@ -217,40 +225,14 @@ BOOL isIPad()
 			chunkLength = 0;
 		} else
 			chunkLength++;
-	}	
+	}
 	return nil;
 }
 
-
-#pragma mark utility for finding the pin end
+#pragma mark - Utility for finding the pin end
 
 - (void) loadRequest:(NSURLRequest*) request{
 	[_webView loadRequest:request];
 }
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-
-- (void)dealloc
-{
-	[_webView release];
-    // Malaar: fuck my mind!
-//	[_navBar release];
-//	[_backgroundView release];	
-//	[_blockerView release];	
-    [super dealloc];
-}
-
 
 @end

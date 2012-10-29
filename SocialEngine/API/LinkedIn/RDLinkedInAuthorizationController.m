@@ -55,27 +55,31 @@
   
 }
 
-
 - (void)loadView {
   [super loadView];
-  self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-  
-  rdNavBar = [[UINavigationBar alloc] initWithFrame:CGRectZero];
-  [rdNavBar setItems:[NSArray arrayWithObject:[[UINavigationItem alloc] initWithTitle:@"LinkedIn Authorization"]]];
-  rdNavBar.topItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
-  [rdNavBar sizeToFit];
-  rdNavBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, rdNavBar.frame.size.height);
-  rdNavBar.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
-  [self.view addSubview:rdNavBar];
-  
-  rdWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, rdNavBar.frame.size.height, self.view.bounds.size.width, self.view.bounds.size.height - rdNavBar.frame.size.height)];
-  rdWebView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-  rdWebView.delegate = self;
-  rdWebView.scalesPageToFit = NO;
-  rdWebView.dataDetectorTypes = UIDataDetectorTypeNone;
-  [self.view addSubview:rdWebView];
-  
-  [self displayAuthorization];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    rdNavBar = [[UINavigationBar alloc] initWithFrame:CGRectZero];
+    [rdNavBar setItems:[NSArray arrayWithObject:[[UINavigationItem alloc] initWithTitle:@"LinkedIn Authorization"]]];
+    rdNavBar.topItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
+    [rdNavBar sizeToFit];
+    rdNavBar.frame = CGRectMake(0, 0, self.view.bounds.size.width, rdNavBar.frame.size.height);
+    rdNavBar.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
+    [self.view addSubview:rdNavBar];
+    
+    rdWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, rdNavBar.frame.size.height, self.view.bounds.size.width, self.view.bounds.size.height - rdNavBar.frame.size.height)];
+    rdWebView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    rdWebView.delegate = self;
+    rdWebView.scalesPageToFit = NO;
+    rdWebView.dataDetectorTypes = UIDataDetectorTypeNone;
+    [self.view addSubview:rdWebView];
+    
+    [self displayAuthorization];    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

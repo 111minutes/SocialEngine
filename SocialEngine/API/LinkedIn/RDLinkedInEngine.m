@@ -261,8 +261,10 @@ const NSUInteger kRDLinkedInMaxStatusLength = 140;
     
     NSMutableArray *parametersArray = [NSMutableArray array];
     
-    RD_OARequestParameter *scopeParameter = [RD_OARequestParameter requestParameterWithName:@"scope" value:@"r_fullprofile r_emailaddress"];
-    [parametersArray addObject:scopeParameter];
+    if (self.scopeRequestTokenParam) {
+        RD_OARequestParameter *scopeParameter = [RD_OARequestParameter requestParameterWithName:@"scope" value:self.scopeRequestTokenParam];
+        [parametersArray addObject:scopeParameter];
+    }
     
     if (self.redirectURL) {
         RD_OARequestParameter *redirectURLParameter = [RD_OARequestParameter requestParameterWithName:@"oauth_callback" value:self.redirectURL];

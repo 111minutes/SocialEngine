@@ -41,6 +41,7 @@ extern const NSUInteger kRDLinkedInMaxStatusLength;
 @property (nonatomic, readonly) BOOL isAuthorized;
 @property (nonatomic, readonly) BOOL hasRequestToken;
 @property (nonatomic, strong) NSString* verifier;
+@property (nonatomic, strong) NSString *scopeRequestTokenParam;
 
 + (id)engineWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret redirectURL:(NSString *)redirectURL delegate:(id<RDLinkedInEngineDelegate>)delegate;
 - (id)initWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret redirectURL:(NSString *)redirectURL delegate:(id<RDLinkedInEngineDelegate>)delegate;

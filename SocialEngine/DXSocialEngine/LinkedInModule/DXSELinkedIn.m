@@ -67,6 +67,8 @@ static NSString *cGetProfile = @"GET_PROFILE";
         self.requestsIdentifiersDictionary = [NSMutableDictionary dictionary];
         
         self.profileFields = LINKEDIN_PROFILE_FIELDS__ALL;
+        
+        self.scope = cLinkedInScopeDefault;
     }
     return self;
 }
@@ -366,6 +368,27 @@ static NSString *cGetProfile = @"GET_PROFILE";
     dxseCountry.code = code;
     
     return dxseCountry;
+}
+
+- (void)setScope:(LinkedInScope)scope {
+    if (scope == cLinkedInScopeDefault) {
+        self.linkedInEngine.scopeRequestTokenParam = nil;
+    }
+    else {
+        NSString *scopeString = @"";
+        if ((scope & cLinkedInScopeFullProfile) != 0) {
+            scopeString = @"r_fullprofile";
+        }
+        if (scope & cLinkedInScopeEmail) {
+            scopeString = [NSString stringWithFormat:@"%@ %@", scopeString, @"r_emailaddress"];
+        }
+        if (scopeString.length != 0) {
+            self.linkedInEngine.scopeRequestTokenParam = scopeString;
+        }
+        else {
+            self.linkedInEngine.scopeRequestTokenParam = nil;
+        }
+    }
 }
 
 

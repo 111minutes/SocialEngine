@@ -106,6 +106,7 @@
 }
 
 - (IBAction)linkedInLoginPressed:(id)sender {
+    [[DXSESocialEngine sharedInstance].linkedIn setScope:cLinkedInScopeFullProfile | cLinkedInScopeEmail];
     [[DXSESocialEngine sharedInstance].linkedIn login:^(DXSEModule *module, NSDictionary *result) {
         
         LinkedInLoginSuccessType successType = [[result valueForKey:cLoginSuccessTypeKey] integerValue];

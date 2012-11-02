@@ -12,6 +12,7 @@
 
 @protocol OAuthSignInViewControllerDelegate
 @optional
+- (void) authenticated;
 - (void) authenticatedWithPin:(NSString *) pin;
 - (void) authenticationFailed;
 - (void) authenticationCanceled;

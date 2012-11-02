@@ -140,31 +140,6 @@ BOOL isIPad()
 #pragma mark SignUp call back end
 
 #pragma mark webViewDelegate
-- (void) webViewDidFinishLoad: (UIWebView *) webView {
-	_loading = NO;
-	if (_firstLoad) {
-		_firstLoad = NO;
-	}else {
-		//This is when the screen refreshed because user has authenticated.
-		NSString *authPin = [self locateAuthPinInWebView: webView];
-		
-		if (authPin.length) {
-			[self gotPin: authPin];
-			return;
-		}
-	}
-	
-	[UIView beginAnimations: nil context: nil];
-	_blockerView.alpha = 0.0;
-	[UIView commitAnimations];
-	
-	if ([_webView isLoading]) {
-		_webView.alpha = 0.0;
-	} else {
-		_webView.alpha = 1.0;
-	}
-}
-
 - (void) webViewDidStartLoad: (UIWebView *) webView {
 	_loading = YES;
 	[UIView beginAnimations: nil context: nil];
@@ -174,16 +149,45 @@ BOOL isIPad()
 
 
 - (BOOL) webView: (UIWebView *) webView shouldStartLoadWithRequest: (NSURLRequest *) request navigationType: (UIWebViewNavigationType) navigationType {
-	NSData	*data = [request HTTPBody];
-	char *raw = data ? (char *) [data bytes] : "";
+	NSData				*data = [request HTTPBody];
+	char				*raw = data ? (char *) [data bytes] : "";
 	
-	//User canceled from within the web view
 	if (raw && strstr(raw, "cancel=")) {
 		[self denied];
 		return NO;
 	}
+    else if (raw && strstr(raw, "_method=delete"))
+    {
+        _firstLoad = YES;
+    }
 	if (navigationType != UIWebViewNavigationTypeOther) _webView.alpha = 0.1;
 	return YES;
+}
+
+- (void) webViewDidFinishLoad: (UIWebView *) webView {
+    _loading = NO;
+    //[self performInjection];
+    if (_firstLoad) {
+        [_webView performSelector: @selector(stringByEvaluatingJavaScriptFromString:) withObject: @"window.scrollBy(0,200)" afterDelay: 0];
+        _firstLoad = NO;
+    } else {
+        //*****************************************************
+        //  This is to bypass the pin requirement
+        //  in case the call back URL is set in Twitter settings
+        //*****************************************************
+        [self.delegate authenticated];
+        return;
+    }
+    
+    [UIView beginAnimations: nil context: nil];
+	_blockerView.alpha = 0.0;
+	[UIView commitAnimations];
+    
+    if ([_webView isLoading]) {
+        _webView.alpha = 0.0;
+    } else {
+        _webView.alpha = 1.0;
+    }
 }
 
 #pragma mark webViewDelegate end

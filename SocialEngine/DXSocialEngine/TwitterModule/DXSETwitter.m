@@ -103,7 +103,19 @@
 }
 
 #pragma mark - OAuthSignInViewControllerDelegate
-//==============================================================================
+
+- (void) authenticated
+{
+	TwitterEngine *engine = [TwitterEngine sharedEngine];
+	engine._pin = @"";
+	
+	[engine requestAccessToken:self onSuccess:@selector(onAccessTokenSuccess:withData:) onFail:@selector(onAccessTokenFailed:withData:)];
+    
+	// hide login controller here
+    [self hideLoginController];
+}
+
+
 - (void) authenticatedWithPin:(NSString *) pin
 {
 	TwitterEngine *engine = [TwitterEngine sharedEngine];

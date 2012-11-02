@@ -67,13 +67,17 @@ static TwitterEngine *sharedEngine = nil;
     [fetcher fetchDataWithRequest:request delegate:aDelegate didFinishSelector:success didFailSelector:fail];
 }
 
-- (void)requestAccessToken:(id)aDelegate onSuccess:(SEL)success onFail:(SEL)fail{	
-	self._requestToken.verifier = self._pin;
+- (void)requestAccessToken:(id)aDelegate onSuccess:(SEL)success onFail:(SEL)fail{
+	if ([self._pin length]) {
+        self._requestToken.verifier = self._pin;
+    }
 	
 	OAConsumer* consumer = [[[OAConsumer alloc] initWithKey:[self consumerKey] secret:[self consumerSecret]] autorelease];
-	OAMutableURLRequest	*request = [[[OAMutableURLRequest alloc]
-									 initWithURL:self._accessTokenURL
-									 consumer:consumer token:self._requestToken realm:nil signatureProvider: nil] autorelease];
+	OAMutableURLRequest	*request = [[[OAMutableURLRequest alloc] initWithURL:self._accessTokenURL
+                                                                    consumer:consumer
+                                                                       token:self._requestToken
+                                                                       realm:nil
+                                                           signatureProvider: nil] autorelease];
 	
     [request setHTTPMethod: @"POST"];
 	

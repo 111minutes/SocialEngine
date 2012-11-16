@@ -8,7 +8,7 @@
 // Original development by Dave Winer.
 //
 
-#import "NSData+Base64.h"
+#import "MGNSData+Base64.h"
 
 #import <Foundation/Foundation.h>
 

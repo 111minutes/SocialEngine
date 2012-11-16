@@ -10,7 +10,7 @@
 #import "MGTwitterHTTPURLConnection.h"
 #import "OAuthConsumer.h"
 
-#import "NSData+Base64.h"
+#import "MGNSData+Base64.h"
 
 #ifndef USE_LIBXML
 //  if you wish to use LibXML, add USE_LIBXML=1 to "Precompiler Macros" in Project Info for all targets

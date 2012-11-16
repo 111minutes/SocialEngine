@@ -78,7 +78,7 @@
 		E6EEE6D71504ED3B0096C4CB /* MGTwitterUsersLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6531504ED3B0096C4CB /* MGTwitterUsersLibXMLParser.m */; };
 		E6EEE6D81504ED3B0096C4CB /* MGTwitterUsersParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6551504ED3B0096C4CB /* MGTwitterUsersParser.m */; };
 		E6EEE6D91504ED3B0096C4CB /* MGTwitterXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6571504ED3B0096C4CB /* MGTwitterXMLParser.m */; };
-		E6EEE6DA1504ED3B0096C4CB /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6591504ED3B0096C4CB /* NSData+Base64.m */; };
+		E6EEE6DA1504ED3B0096C4CB /* MGNSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6591504ED3B0096C4CB /* MGNSData+Base64.m */; };
 		E6EEE6DB1504ED3B0096C4CB /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE65B1504ED3B0096C4CB /* NSString+UUID.m */; };
 		E6EEE6DC1504ED3B0096C4CB /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE65F1504ED3B0096C4CB /* NSMutableURLRequest+Parameters.m */; };
 		E6EEE6DD1504ED3B0096C4CB /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6611504ED3B0096C4CB /* NSString+URLEncoding.m */; };
@@ -266,8 +266,8 @@
 		E6EEE6551504ED3B0096C4CB /* MGTwitterUsersParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterUsersParser.m; sourceTree = "<group>"; };
 		E6EEE6561504ED3B0096C4CB /* MGTwitterXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterXMLParser.h; sourceTree = "<group>"; };
 		E6EEE6571504ED3B0096C4CB /* MGTwitterXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterXMLParser.m; sourceTree = "<group>"; };
-		E6EEE6581504ED3B0096C4CB /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		E6EEE6591504ED3B0096C4CB /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		E6EEE6581504ED3B0096C4CB /* MGNSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGNSData+Base64.h"; sourceTree = "<group>"; };
+		E6EEE6591504ED3B0096C4CB /* MGNSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGNSData+Base64.m"; sourceTree = "<group>"; };
 		E6EEE65A1504ED3B0096C4CB /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		E6EEE65B1504ED3B0096C4CB /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
 		E6EEE65E1504ED3B0096C4CB /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
@@ -710,8 +710,8 @@
 				E6EEE6551504ED3B0096C4CB /* MGTwitterUsersParser.m */,
 				E6EEE6561504ED3B0096C4CB /* MGTwitterXMLParser.h */,
 				E6EEE6571504ED3B0096C4CB /* MGTwitterXMLParser.m */,
-				E6EEE6581504ED3B0096C4CB /* NSData+Base64.h */,
-				E6EEE6591504ED3B0096C4CB /* NSData+Base64.m */,
+				E6EEE6581504ED3B0096C4CB /* MGNSData+Base64.h */,
+				E6EEE6591504ED3B0096C4CB /* MGNSData+Base64.m */,
 				E6EEE65A1504ED3B0096C4CB /* NSString+UUID.h */,
 				E6EEE65B1504ED3B0096C4CB /* NSString+UUID.m */,
 			);
@@ -983,7 +983,7 @@
 				E6EEE6D71504ED3B0096C4CB /* MGTwitterUsersLibXMLParser.m in Sources */,
 				E6EEE6D81504ED3B0096C4CB /* MGTwitterUsersParser.m in Sources */,
 				E6EEE6D91504ED3B0096C4CB /* MGTwitterXMLParser.m in Sources */,
-				E6EEE6DA1504ED3B0096C4CB /* NSData+Base64.m in Sources */,
+				E6EEE6DA1504ED3B0096C4CB /* MGNSData+Base64.m in Sources */,
 				E6EEE6DB1504ED3B0096C4CB /* NSString+UUID.m in Sources */,
 				E6EEE6DC1504ED3B0096C4CB /* NSMutableURLRequest+Parameters.m in Sources */,
 				E6EEE6DD1504ED3B0096C4CB /* NSString+URLEncoding.m in Sources */,

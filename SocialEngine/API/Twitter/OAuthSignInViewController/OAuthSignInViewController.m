@@ -58,22 +58,19 @@ BOOL isIPad()
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	[super loadView];
-	
-    //    NSBundle* twitterBundle = [NSBundle bundleWithPath:@"Twitter.bundle"];
-    //    NSString* bgImagePath = [twitterBundle pathForResource:@"twitter_load" ofType:@"png" inDirectory:@"images"];
-    
-    NSString* bgImagePath = @"Twitter.bundle/images/twitter_load.png";
-	_backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:bgImagePath]] autorelease];
-    
-//	self.view = [[[UIView alloc] initWithFrame: isIPad() ? IPAD_VIEW_FRAME : IPHONE_VIEW_FRAME ] autorelease];	
-	_backgroundView.frame =  isIPad() ? IPAD_BACKGROUND_VIEW_FRAME : IPHONE_BACKGROUND_VIEW_FRAME;
+
 	_navBar = [[[UINavigationBar alloc] initWithFrame: isIPad() ? IPAD_NAVIGATION_BAR_FRAME : IPHONE_NAVIGATION_BAR_FRAME] autorelease];
     
 	_navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-	_backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	
-	[self.view addSubview:_backgroundView];
+    _webView.autoresizingMask = self.view.autoresizingMask;
+    CGRect frame = self.view.bounds;
+    frame.origin = CGPointMake(0, 44);
+    frame.size = CGSizeMake(frame.size.width - frame.origin.x, frame.size.height - frame.origin.y);
+    _webView.frame = frame;
+    
+    self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
 	
     [self.view addSubview: _webView];
 	

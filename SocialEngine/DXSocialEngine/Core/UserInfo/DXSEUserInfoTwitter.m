@@ -10,7 +10,7 @@
 
 @implementation DXSEUserInfoTwitter
 
-@synthesize name, screenName;
+@synthesize name, screenName, avatarURL;
 
 //==============================================================================
 + (id) userInfoTwitter
@@ -23,6 +23,7 @@
 {
     [name release];
     [screenName release];
+    [avatarURL release];
     
     [super dealloc];
 }
@@ -30,8 +31,8 @@
 //==============================================================================
 - (NSString*) description
 {
-    return [NSString stringWithFormat:@"id=%@; name=%@; screenName=%@;",
-            self.ID, name, screenName];
+    return [NSString stringWithFormat:@"id=%@; name=%@; screenName=%@, avatarURL=%@;",
+            self.ID, name, screenName, avatarURL];
 }
 
 @end

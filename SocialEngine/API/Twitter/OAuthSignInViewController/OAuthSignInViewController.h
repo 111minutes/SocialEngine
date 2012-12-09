@@ -22,7 +22,6 @@
 	
 	UIWebView									*_webView;
 	UINavigationBar								*_navBar;
-	UIImageView									*_backgroundView;
 	
 	id <OAuthSignInViewControllerDelegate>		_delegate;
 	UIView										*_blockerView;

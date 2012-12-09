@@ -12,6 +12,7 @@
 
 @property (nonatomic, retain) NSString* name;
 @property (nonatomic, retain) NSString* screenName;
+@property (nonatomic, retain) NSURL *avatarURL;
 
 + (id) userInfoTwitter;
 

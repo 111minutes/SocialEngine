@@ -121,10 +121,15 @@
             userInfo.name = MU_NULL_PROTECT([result objectForKey:@"name"]);
             userInfo.email = MU_NULL_PROTECT([result objectForKey:@"email"]);
             userInfo.birthdayDate = MU_NULL_PROTECT([result objectForKey:@"birthday_date"]);
-            userInfo.avatarURL = [NSURL URLWithString:MU_NULL_PROTECT([result objectForKey:@"pic"])];
+
+            NSString *baseGraphPath = @"https://graph.facebook.com";
+            NSString *params = [NSString stringWithFormat:@"access_token=%@&width=400&height=400", [self accessToken]];
+            NSString *URLString = [NSString stringWithFormat:@"%@/me/picture?%@", baseGraphPath, params];
+            userInfo.avatarURL = [NSURL URLWithString:URLString];
             
-            if (aSuccess)
+            if (aSuccess) {
                 aSuccess(self, userInfo);
+            }
         }
         else
         {

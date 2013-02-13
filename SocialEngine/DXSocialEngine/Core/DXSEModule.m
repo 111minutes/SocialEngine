@@ -88,13 +88,13 @@
 }
 
 - (void)registerSuccessBlock:(DXSESuccessBlock)successBlock forKey:(NSString *)aBlockKey {
-    if (successBlock) {
+    if (successBlock && aBlockKey) {
         [successBlocks setObject:[successBlock copy] forKey:aBlockKey];
     }
 }
 
 - (void)registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString *)aBlockKey {
-    if (failureBlock) {
+    if (failureBlock && aBlockKey) {
         [failureBlocks setObject:[failureBlock copy] forKey:aBlockKey];
     }
 }

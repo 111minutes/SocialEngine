@@ -75,13 +75,8 @@ static NSString *cGetProfile = @"GET_PROFILE";
 
 - (void)login:(DXSESuccessBlock)aSuccess failure:(DXSEFailureBlock)aFailure {
 
-    if (aSuccess) {
-        [self registerSuccessBlock:aSuccess forKey:cLoginKey];
-    }
-    
-    if (aFailure) {
-        [self registerFailureBlock:aFailure forKey:cLoginKey];
-    }
+    [self registerSuccessBlock:aSuccess forKey:cLoginKey];
+    [self registerFailureBlock:aFailure forKey:cLoginKey];
     
     RDLinkedInAuthorizationController *controller = [RDLinkedInAuthorizationController authorizationControllerWithEngine:self.linkedInEngine delegate:self];
     if(controller) {
@@ -157,13 +152,8 @@ static NSString *cGetProfile = @"GET_PROFILE";
         }
     }    
     
-    if (aSuccess) {
-        [self registerSuccessBlock:aSuccess forKey:connectionId];
-    }
-    
-    if (aFailure) {
-        [self registerFailureBlock:aFailure forKey:connectionId];
-    }
+    [self registerSuccessBlock:aSuccess forKey:connectionId];
+    [self registerFailureBlock:aFailure forKey:connectionId];
     
     [self.requestsIdentifiersDictionary setValue:cGetProfile forKey:connectionId];
 }

@@ -291,6 +291,7 @@ static NSString *cGetProfile = @"GET_PROFILE";
     NSString *title = [positionDict objectForKey:@"title"];
     NSString *isCurrent = [positionDict objectForKey:@"is-current"];
     NSDictionary *startDate = [positionDict objectForKey:@"start-date"];
+    NSDictionary *endDate = [positionDict objectForKey:@"end-date"];
     NSDictionary *companyDict = [positionDict objectForKey:@"company"];
     NSString *summary = [positionDict objectForKey:@"summary"];
     
@@ -299,6 +300,7 @@ static NSString *cGetProfile = @"GET_PROFILE";
     dxsePosition.title = title;
     dxsePosition.isCurrent = isCurrent;
     dxsePosition.startDate = [self dateFromDict:startDate];
+    dxsePosition.endDate = [self dateFromDict:endDate];
     dxsePosition.company = [self companyFromDict:companyDict];
     dxsePosition.summary = summary;
     

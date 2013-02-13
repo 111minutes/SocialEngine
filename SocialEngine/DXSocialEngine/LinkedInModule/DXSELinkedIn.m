@@ -84,7 +84,9 @@ static NSString *cGetProfile = @"GET_PROFILE";
     }
     else {
         NSLog(@"Already authenticated");
-        aSuccess(self, nil);
+        if (aSuccess) {
+            aSuccess(self, nil);
+        }
     }
 }
 
@@ -92,7 +94,10 @@ static NSString *cGetProfile = @"GET_PROFILE";
     if([self isAuthorized]) {
         [self.linkedInEngine requestTokenInvalidation];
     }
-    aSuccess(self, nil);
+    
+    if (aSuccess) {
+        aSuccess(self, nil);
+    }
 }
 
 - (BOOL)isAuthorized {
@@ -284,9 +289,10 @@ static NSString *cGetProfile = @"GET_PROFILE";
 
     NSString *positionId = [positionDict objectForKey:@"id"];
     NSString *title = [positionDict objectForKey:@"title"];
-    NSString *isCurrent = [positionDict objectForKey:@"is-curren"];
+    NSString *isCurrent = [positionDict objectForKey:@"is-current"];
     NSDictionary *startDate = [positionDict objectForKey:@"start-date"];
     NSDictionary *companyDict = [positionDict objectForKey:@"company"];
+    NSString *summary = [positionDict objectForKey:@"summary"];
     
     DXSELinkedInPosition *dxsePosition = [DXSELinkedInPosition new];
     dxsePosition.positionId = positionId;
@@ -294,6 +300,7 @@ static NSString *cGetProfile = @"GET_PROFILE";
     dxsePosition.isCurrent = isCurrent;
     dxsePosition.startDate = [self dateFromDict:startDate];
     dxsePosition.company = [self companyFromDict:companyDict];
+    dxsePosition.summary = summary;
     
     return dxsePosition;
 }
@@ -308,6 +315,9 @@ static NSString *cGetProfile = @"GET_PROFILE";
     NSDictionary *startDateDict = [educationDict objectForKey:@"start-date"];
     NSDictionary *endDateDict = [educationDict objectForKey:@"end-date"];
     
+    NSString *notes = [educationDict objectForKey:@"notes"];
+    NSString *activities = [educationDict objectForKey:@"activities"];
+
     DXSELinkedInEducation *dxseEducation = [DXSELinkedInEducation new];
     dxseEducation.degree = degree;
     dxseEducation.fieldOfStudy = fieldOfStudy;
@@ -315,6 +325,8 @@ static NSString *cGetProfile = @"GET_PROFILE";
     dxseEducation.schoolName = schoolName;
     dxseEducation.startDate = [self dateFromDict:startDateDict];
     dxseEducation.endDate = [self dateFromDict:endDateDict];
+    dxseEducation.notes = notes;
+    dxseEducation.activities = activities;
     
     return dxseEducation;
 }

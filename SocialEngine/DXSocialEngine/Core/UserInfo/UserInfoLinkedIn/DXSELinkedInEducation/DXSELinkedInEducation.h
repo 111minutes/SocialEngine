@@ -17,5 +17,7 @@
 @property (nonatomic, strong) NSString *degree;
 @property (nonatomic, strong) DXSELinkedInDate *startDate;
 @property (nonatomic, strong) DXSELinkedInDate *endDate;
+@property (nonatomic, strong) NSString *activities;
+@property (nonatomic, strong) NSString *notes;
 
 @end

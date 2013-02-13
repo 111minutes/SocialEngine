@@ -88,25 +88,33 @@
 }
 
 - (void)registerSuccessBlock:(DXSESuccessBlock)successBlock forKey:(NSString *)aBlockKey {
-    [successBlocks setObject:[successBlock copy] forKey:aBlockKey];
+    if (successBlock) {
+        [successBlocks setObject:[successBlock copy] forKey:aBlockKey];
+    }
 }
 
 - (void)registerFailureBlock:(DXSEFailureBlock)failureBlock forKey:(NSString *)aBlockKey {
-    [failureBlocks setObject:[failureBlock copy] forKey:aBlockKey];
+    if (failureBlock) {
+        [failureBlocks setObject:[failureBlock copy] forKey:aBlockKey];
+    }
 }
 
 - (void)executeSuccessBlockForKey:(NSString *)aBlockKey withData:(id)aData {
     DXSESuccessBlock success = [successBlocks objectForKey:aBlockKey];
 
-    success (self, aData);
-    [successBlocks removeObjectForKey:aBlockKey];
+    if (success) {
+        success (self, aData);
+        [successBlocks removeObjectForKey:aBlockKey];        
+    }
 }
 
 - (void)executeFailureBlockForKey:(NSString *)aBlockKey withError:(NSError *)anError {
     DXSEFailureBlock failure = [failureBlocks objectForKey:aBlockKey];
 
-    failure (self, anError);
-    [failureBlocks removeObjectForKey:aBlockKey];
+    if (failure) {
+        failure (self, anError);
+        [failureBlocks removeObjectForKey:aBlockKey];
+    }
 }
 
 @end

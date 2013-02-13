@@ -9,7 +9,7 @@
 		<key>oauthSecret</key>
 		<string>34205rsr8QVRcuqN</string>
 		<key>redirectURL</key>
-		<string></string>
+		<string>http://linkedin_oauth/success</string>
 	</dict>
 	<key>DXSEFacebook</key>
 	<dict>

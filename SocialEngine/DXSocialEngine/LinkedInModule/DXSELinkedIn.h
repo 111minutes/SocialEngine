@@ -9,16 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "DXSEModule.h"
 
-static NSString *cLoginSuccessTypeKey = @"LoginSuccessTypeKey";
+static NSString *const cLoginSuccessTypeKey = @"LoginSuccessTypeKey";
 
 typedef enum {
     LinkedInLoginSuccessTypeLogined,
     LinkedInLoginSuccessTypeCanceled
 } LinkedInLoginSuccessType;
 
-static NSInteger cLinkedInScopeDefault = 0;
-static NSInteger cLinkedInScopeFullProfile = 1;
-static NSInteger cLinkedInScopeEmail = 2;
+static NSInteger const cLinkedInScopeDefault = 0;
+static NSInteger const cLinkedInScopeFullProfile = 1;
+static NSInteger const cLinkedInScopeEmail = 2;
 
 typedef long LINKEDIN_PROFILE_FIELDS;
 typedef NSInteger LinkedInScope;

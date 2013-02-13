@@ -17,5 +17,6 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) DXSELinkedInDate *startDate;
 @property (nonatomic, strong) DXSELinkedInCompany *company;
+@property (nonatomic, strong) NSString *summary;
 
 @end

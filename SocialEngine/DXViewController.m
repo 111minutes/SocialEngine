@@ -9,6 +9,7 @@
 #import "DXViewController.h"
 #import "DXSESocialEngine.h"
 #import "LinkedInProfileFields.h"
+#import "DXSEUserInfoLinkedIn.h"
 
 @implementation DXViewController
 
@@ -116,8 +117,9 @@
             
             [[DXSESocialEngine sharedInstance].linkedIn setProfileFields:LINKEDIN_PROFILE_FIELDS__ALL];
             
-            [[DXSESocialEngine sharedInstance].linkedIn getUserInfo:^(DXSEModule * module, id data) {
-                NSLog (@"UserInfo(LinkedIn): %@", data);
+            [[DXSESocialEngine sharedInstance].linkedIn getUserInfo:^(DXSEModule * module, DXSEUserInfoLinkedIn *data) {
+                NSLog(@"%@", data);
+                
             } failure:^(DXSEModule * module, NSError * error) {
                 NSLog (@"UserInfo: failed");
             }];

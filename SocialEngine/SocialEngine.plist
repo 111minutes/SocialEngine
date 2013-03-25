@@ -14,9 +14,9 @@
 	<key>DXSETwitter</key>
 	<dict>
 		<key>oauthKey</key>
-		<string>bTbgFez3wjSnrTiebajtsA</string>
+		<string>${TWITTER_KEY}</string>
 		<key>oauthSecret</key>
-		<string>bNYJtQh4ZWYyAixAPBNUaoWyLp6y8xHlCUuWhs441U</string>
+		<string>${TWITTER_SECRET}</string>
 		<key>redirectURL</key>
 		<string>http://google.com</string>
 	</dict>

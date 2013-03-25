@@ -28,4 +28,7 @@
 
 - (DXSEModule *) firstAuthorizedModule;
 
+- (void) configure;
+- (void) configureWithDictionary:(NSDictionary *)config;
+
 @end

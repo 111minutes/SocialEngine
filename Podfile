@@ -1,4 +1,5 @@
-platform :ios
+platform :ios, "5.0"
 
-dependency 'MUKit'
-dependency 'DXSocialEngineARCThirdParty'
+pod 'MUKit'
+pod 'DXSocialEngineARCThirdParty'
+pod 'AFNetworking'

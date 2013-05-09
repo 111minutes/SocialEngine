@@ -1,4 +1,4 @@
 platform :ios
 
-dependency 'MUKit'
-dependency 'DXSocialEngineARCThirdParty'
+pod 'MUKit'
+pod 'DXSocialEngineARCThirdParty'

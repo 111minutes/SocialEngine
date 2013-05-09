@@ -116,7 +116,12 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 	for (NSString *k in tokenParameters) {
 		[chunks addObject:[NSString stringWithFormat:@"%@=\"%@\"", k, [[tokenParameters objectForKey:k] encodedURLParameterString]]];
 	}
-
+    
+    if (token.verifier) {
+        
+        [chunks addObject:[NSString stringWithFormat:@"oauth_verifier=\"%@\"", token.verifier]];
+    }
+    
 	[chunks addObject:[NSString stringWithFormat:@"oauth_signature_method=\"%@\"", [[signatureProvider name] encodedURLParameterString]]];
 	[chunks addObject:[NSString stringWithFormat:@"oauth_signature=\"%@\"", [signature encodedURLParameterString]]];
 	[chunks addObject:[NSString stringWithFormat:@"oauth_timestamp=\"%@\"", timestamp]];

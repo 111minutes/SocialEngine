@@ -44,6 +44,18 @@
     return sharedInstance;
 }
 
+- (id)init
+{
+    self = [super init];
+    
+    if (self) {
+        
+        [self configure];
+    }
+    
+    return self;
+}
+
 //==============================================================================
 - (void) dealloc
 {

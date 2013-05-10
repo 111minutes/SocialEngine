@@ -61,6 +61,9 @@ static TwitterEngine *sharedEngine = nil;
 									 consumer:consumer token:nil realm:nil signatureProvider: nil] autorelease];
 
     [request setHTTPMethod: @"POST"];
+    
+    request.parameters = [NSArray arrayWithObjects:[[[OARequestParameter alloc] initWithName: @"oauth_callback"
+                                                                                       value: @"oob"] autorelease], nil];
 
 	NSLog(@"fetching request token");
 	OADataFetcher *fetcher = [[[OADataFetcher alloc] init] autorelease];

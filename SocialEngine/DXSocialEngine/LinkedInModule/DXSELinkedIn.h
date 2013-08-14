@@ -41,4 +41,6 @@ typedef NSInteger LinkedInScope;
 
 @property (nonatomic, strong, readonly) NSString *accessToken;
 
+@property (nonatomic, strong, readonly) NSString *secretKey;
+
 @end

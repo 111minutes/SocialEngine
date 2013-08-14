@@ -10,26 +10,25 @@
 #import "RDLinkedIn.h"
 #import "LinkedInProfileFields.h"
 #import "DXSEUserInfoLinkedIn.h"
+#import "LinkedInUserInfoMapper.h"
 
 static NSString *cLoginKey = @"LOGIN";
 static NSString *cGetProfile = @"GET_PROFILE";
+
+
+const struct LinkedInMemberPermissions LinkedInMemberPermissions = {
+    .basicProfile = @"r_basicprofile",
+    .fullProfile = @"r_fullprofile",
+    .emailAddress = @"r_emailaddress",
+    .contactInfo = @"r_contactinfo",
+};
+
 
 @interface DXSELinkedIn () <RDLinkedInEngineDelegate, RDLinkedInAuthorizationControllerDelegate>
 
 @property (nonatomic, strong) RDLinkedInEngine *linkedInEngine;
 @property (nonatomic, strong) NSDictionary *profileFieldsDictionary;
 @property (nonatomic, strong) NSMutableDictionary *requestsIdentifiersDictionary;
-@end
-
-@interface DXSELinkedIn ()
-- (DXSEUserInfoLinkedIn *)userInfoFromDict:(NSDictionary *)userInfoDict;
-- (DXSELinkedInDate *)dateFromDict:(NSDictionary *)dateDict;
-- (DXSELinkedInCompany *)companyFromDict:(NSDictionary *)companyDict;
-- (DXSELinkedInEducation *)educationFromDict:(NSDictionary *)educationDict;
-- (DXSELinkedInPosition *)positionFromDict:(NSDictionary *)positionDict;
-- (DXSELinkedInLocation *)locationFromDict:(NSDictionary *)locationDict;
-- (DXSELinkedInCountry *)countyFromDict:(NSDictionary *)countyDict;
-
 @end
 
 
@@ -60,6 +59,7 @@ static NSString *cGetProfile = @"GET_PROFILE";
                                 [NSNumber numberWithLong:LINKEDIN_PROFILE_FIELD__EMAIL_ADDRESS], @"email-address", 
                                 [NSNumber numberWithLong:LINKEDIN_PROFILE_FIELD__EDUCATIONS], @"educations", 
                                 [NSNumber numberWithLong:LINKEDIN_PROFILE_FIELD__LAST_MODIFIED_TIMESTAMP], @"last-modified-timestamp",
+                                [NSNumber numberWithLong:LINKEDIN_PROFILE_FIELD__PHONE], @"phone-numbers",
                                 nil];
         
         self.profileFieldsDictionary = fields;
@@ -105,7 +105,8 @@ static NSString *cGetProfile = @"GET_PROFILE";
 }
 
 - (NSString *)accessToken {
-    return nil;
+    RD_OAToken *token = [self linkedInEngineAccessToken:self.linkedInEngine];
+    return token.key;
 }
 
 
@@ -180,7 +181,7 @@ static NSString *cGetProfile = @"GET_PROFILE";
     
     NSString *requestIdentifier = [self.requestsIdentifiersDictionary objectForKey:identifier];
     if ([requestIdentifier isEqualToString:cGetProfile]) {
-        returnResult = [self userInfoFromDict:results];
+        returnResult = [LinkedInUserInfoMapper userInfoFromDictionary:results];
     }
     
     [self.requestsIdentifiersDictionary removeObjectForKey:identifier];
@@ -213,176 +214,7 @@ static NSString *cGetProfile = @"GET_PROFILE";
     [self hideLoginController];
 }
 
-
-
 #pragma mark - Responces Parsing
-
-- (DXSEUserInfoLinkedIn *)userInfoFromDict:(NSDictionary *)userInfoDict {
-
-    NSString *userId = [userInfoDict objectForKey:@"id"];
-    NSString *firstName = [userInfoDict objectForKey:@"first-name"];
-    NSString *lastName = [userInfoDict objectForKey:@"last-name"];
-    NSString *email = [userInfoDict objectForKey:@"email-address"];
-    NSString *headline = [userInfoDict objectForKey:@"headline"];
-    NSString *industry = [userInfoDict objectForKey:@"industry"];
-    NSString *summary = [userInfoDict objectForKey:@"summary"];
-    NSString *numConnections = [userInfoDict objectForKey:@"num-connections"];
-    NSString *lastModifiedTimestamp = [userInfoDict objectForKey:@"last-modified-timestamp"];
-    NSString *pictureUrl = [userInfoDict objectForKey:@"picture-url"];
-    NSString *currentShare = [userInfoDict objectForKey:@"current-share"];
-    NSDictionary *educations = [userInfoDict objectForKey:@"educations"];
-    NSDictionary *locationDict = [userInfoDict objectForKey:@"location"];
-    NSDictionary *positions = [userInfoDict objectForKey:@"positions"];
-    
-    
-    DXSEUserInfoLinkedIn *userInfo = [DXSEUserInfoLinkedIn new];
-    
-    userInfo.ID = userId;
-    userInfo.firstName = firstName;
-    userInfo.lastName = lastName;
-    userInfo.email = email;
-    userInfo.headline = headline;
-    userInfo.industry = industry;
-    userInfo.summary = summary;
-    userInfo.numConnections = numConnections;
-    userInfo.lastModifiedTimestamp = lastModifiedTimestamp;
-    userInfo.pictureUrl = pictureUrl;
-    userInfo.currentShare = currentShare;
-    userInfo.location = [self locationFromDict:locationDict];    
-    
-    
-    // Educations
-    NSMutableArray *educationsArray = [NSMutableArray array];
-    id education = [educations objectForKey:@"education"];
-    if ([education isKindOfClass:[NSArray class]]) {
-        for (NSDictionary *educationDict in education) {
-            DXSELinkedInEducation *dxseEducation = [self educationFromDict:educationDict];
-            [educationsArray addObject:dxseEducation];
-        }
-    }
-    else if ([education isKindOfClass:[NSDictionary class]]) {
-        DXSELinkedInEducation *dxseEducation = [self educationFromDict:education];
-        [educationsArray addObject:dxseEducation];
-    }
-    userInfo.educationsArray = educationsArray;
-    
-    
-    // Positions
-    NSMutableArray *positionsArray = [NSMutableArray array];
-    id position = [positions objectForKey:@"position"];
-    if ([position isKindOfClass:[NSArray class]]) {
-        for (NSDictionary *positionDict in position) {
-            DXSELinkedInPosition *dxsePosition = [self positionFromDict:positionDict];
-            [positionsArray addObject:dxsePosition];
-        }
-    }
-    else if ([position isKindOfClass:[NSDictionary class]]) {
-        DXSELinkedInPosition *dxsePosition = [self positionFromDict:position];
-        [positionsArray addObject:dxsePosition];    
-    }
-    userInfo.positionsArray = positionsArray;
-    
-    return userInfo;
-}
-
-- (DXSELinkedInPosition *)positionFromDict:(NSDictionary *)positionDict {
-
-    NSString *positionId = [positionDict objectForKey:@"id"];
-    NSString *title = [positionDict objectForKey:@"title"];
-    NSString *isCurrent = [positionDict objectForKey:@"is-current"];
-    NSDictionary *startDate = [positionDict objectForKey:@"start-date"];
-    NSDictionary *endDate = [positionDict objectForKey:@"end-date"];
-    NSDictionary *companyDict = [positionDict objectForKey:@"company"];
-    NSString *summary = [positionDict objectForKey:@"summary"];
-    
-    DXSELinkedInPosition *dxsePosition = [DXSELinkedInPosition new];
-    dxsePosition.positionId = positionId;
-    dxsePosition.title = title;
-    dxsePosition.isCurrent = isCurrent;
-    dxsePosition.startDate = [self dateFromDict:startDate];
-    dxsePosition.endDate = [self dateFromDict:endDate];
-    dxsePosition.company = [self companyFromDict:companyDict];
-    dxsePosition.summary = summary;
-    
-    return dxsePosition;
-}
-
-- (DXSELinkedInEducation *)educationFromDict:(NSDictionary *)educationDict {
-    
-    NSString *degree = [educationDict objectForKey:@"degree"];
-    NSString *fieldOfStudy = [educationDict objectForKey:@"field-of-study"];
-    NSString *educationId = [educationDict objectForKey:@"id"];
-    NSString *schoolName = [educationDict objectForKey:@"school-name"];
-    
-    NSDictionary *startDateDict = [educationDict objectForKey:@"start-date"];
-    NSDictionary *endDateDict = [educationDict objectForKey:@"end-date"];
-    
-    NSString *notes = [educationDict objectForKey:@"notes"];
-    NSString *activities = [educationDict objectForKey:@"activities"];
-
-    DXSELinkedInEducation *dxseEducation = [DXSELinkedInEducation new];
-    dxseEducation.degree = degree;
-    dxseEducation.fieldOfStudy = fieldOfStudy;
-    dxseEducation.educationId = educationId;
-    dxseEducation.schoolName = schoolName;
-    dxseEducation.startDate = [self dateFromDict:startDateDict];
-    dxseEducation.endDate = [self dateFromDict:endDateDict];
-    dxseEducation.notes = notes;
-    dxseEducation.activities = activities;
-    
-    return dxseEducation;
-}
-
-- (DXSELinkedInCompany *)companyFromDict:(NSDictionary *)companyDict {
-    
-    NSNumber *companyId = [companyDict objectForKey:@"id"];
-    NSString *industry = [companyDict objectForKey:@"industry"];
-    NSString *name = [companyDict objectForKey:@"name"];
-    NSString *size = [companyDict objectForKey:@"size"];
-    NSString *type = [companyDict objectForKey:@"type"];
-    
-    DXSELinkedInCompany *dxseCompany = [DXSELinkedInCompany new];
-    dxseCompany.companyId = companyId;
-    dxseCompany.industry = industry;
-    dxseCompany.name = name;
-    dxseCompany.size = size;
-    dxseCompany.type = type;
-    return dxseCompany;
-}
-
-- (DXSELinkedInDate *)dateFromDict:(NSDictionary *)dateDict {
-    
-    NSString *year = [dateDict objectForKey:@"year"];
-    NSString *month = [dateDict objectForKey:@"month"];
-    
-    DXSELinkedInDate *dxseDate = [DXSELinkedInDate new];
-    dxseDate.year = year;
-    dxseDate.month = month;
-    
-    return dxseDate;
-}
-
-- (DXSELinkedInLocation *)locationFromDict:(NSDictionary *)locationDict {
-    
-    NSString *name = [locationDict objectForKey:@"name"];
-    NSDictionary *countryDict = [locationDict objectForKey:@"country"];
-    
-    DXSELinkedInLocation *dxseLocation = [DXSELinkedInLocation new];
-    dxseLocation.name = name;
-    dxseLocation.country = [self countyFromDict:countryDict];
-    
-    return dxseLocation;
-}
-
-- (DXSELinkedInCountry *)countyFromDict:(NSDictionary *)countyDict {
-    
-    NSString *code = [countyDict objectForKey:@"code"];
-    
-    DXSELinkedInCountry *dxseCountry = [DXSELinkedInCountry new];
-    dxseCountry.code = code;
-    
-    return dxseCountry;
-}
 
 - (void)setScope:(LinkedInScope)scope {
     if (scope == cLinkedInScopeDefault) {
@@ -391,11 +223,15 @@ static NSString *cGetProfile = @"GET_PROFILE";
     else {
         NSString *scopeString = @"";
         if ((scope & cLinkedInScopeFullProfile) != 0) {
-            scopeString = @"r_fullprofile";
+            scopeString = LinkedInMemberPermissions.fullProfile;
         }
         if (scope & cLinkedInScopeEmail) {
-            scopeString = [NSString stringWithFormat:@"%@ %@", scopeString, @"r_emailaddress"];
+            scopeString = [NSString stringWithFormat:@"%@ %@", scopeString, LinkedInMemberPermissions.emailAddress];
         }
+        if (scope & cLinkedInScopeContactInfo) {
+            scopeString = [NSString stringWithFormat:@"%@ %@", scopeString, LinkedInMemberPermissions.contactInfo];
+        }
+        
         if (scopeString.length != 0) {
             self.linkedInEngine.scopeRequestTokenParam = scopeString;
         }

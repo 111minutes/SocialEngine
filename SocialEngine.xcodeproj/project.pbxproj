@@ -76,6 +76,12 @@
 		5064511C15371B670054B09C /* WFIGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064510C15371B670054B09C /* WFIGUser.m */; };
 		5064511D15371B670054B09C /* WFInstagramAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5064510F15371B670054B09C /* WFInstagramAPI.m */; };
 		5A85C38B197543E8BAFEC418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B58526CBD1A4729B697B353 /* libPods.a */; };
+		C98369CD17BBAF17008504A3 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9DA753160A346F00DE0935 /* libxml2.2.dylib */; };
+		C98369D117BBB220008504A3 /* LinkedInUserInfoMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C98369D017BBB220008504A3 /* LinkedInUserInfoMapper.m */; };
+		C9D0FC9617BBC7E400EF061A /* DXSELinkedInPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D0FC9517BBC7E400EF061A /* DXSELinkedInPhone.m */; };
+		C9E0635F17BB978300FF9B81 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E0635E17BB978300FF9B81 /* SystemConfiguration.framework */; };
+		C9E0636117BB978800FF9B81 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E0636017BB978800FF9B81 /* MobileCoreServices.framework */; };
+		C9E0636717BB9B1500FF9B81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E0636617BB9B1500FF9B81 /* Default-568h@2x.png */; };
 		E6CF5D25153326310043ABEE /* DXSEUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CF5D24153326300043ABEE /* DXSEUserInfo.m */; };
 		E6EEE6A31504ED3B0096C4CB /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D21504ED3B0096C4CB /* Foursquare2.m */; settings = {COMPILER_FLAGS = ""; }; };
 		E6EEE6A41504ED3B0096C4CB /* HRRequest+PhotoExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE5D41504ED3B0096C4CB /* HRRequest+PhotoExt.m */; settings = {COMPILER_FLAGS = ""; }; };
@@ -125,7 +131,6 @@
 		E6EEE6EE1504ED3B0096C4CB /* OAuthSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEE6861504ED3B0096C4CB /* OAuthSignInViewController.m */; settings = {COMPILER_FLAGS = ""; }; };
 		E6EEE7001504EDBE0096C4CB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE6FF1504EDBE0096C4CB /* Security.framework */; };
 		E6EEE70F1504EE760096C4CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EEE70E1504EE760096C4CB /* QuartzCore.framework */; };
-		EF9DA754160A346F00DE0935 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9DA753160A346F00DE0935 /* libxml2.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -267,6 +272,13 @@
 		5064510E15371B670054B09C /* WFInstagramAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFInstagramAPI.h; path = WFInstagramAPI/WFInstagramAPI.h; sourceTree = "<group>"; };
 		5064510F15371B670054B09C /* WFInstagramAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFInstagramAPI.m; path = WFInstagramAPI/WFInstagramAPI.m; sourceTree = "<group>"; };
 		5B58526CBD1A4729B697B353 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98369CF17BBB220008504A3 /* LinkedInUserInfoMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInUserInfoMapper.h; sourceTree = "<group>"; };
+		C98369D017BBB220008504A3 /* LinkedInUserInfoMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInUserInfoMapper.m; sourceTree = "<group>"; };
+		C9D0FC9417BBC7E400EF061A /* DXSELinkedInPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSELinkedInPhone.h; sourceTree = "<group>"; };
+		C9D0FC9517BBC7E400EF061A /* DXSELinkedInPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSELinkedInPhone.m; sourceTree = "<group>"; };
+		C9E0635E17BB978300FF9B81 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C9E0636017BB978800FF9B81 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C9E0636617BB9B1500FF9B81 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E6C3BCF0154079AD007B620E /* Pods.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E6CF5D231533262F0043ABEE /* DXSEUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSEUserInfo.h; sourceTree = "<group>"; };
 		E6CF5D24153326300043ABEE /* DXSEUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSEUserInfo.m; sourceTree = "<group>"; };
@@ -378,7 +390,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF9DA754160A346F00DE0935 /* libxml2.2.dylib in Frameworks */,
+				C98369CD17BBAF17008504A3 /* libxml2.2.dylib in Frameworks */,
+				C9E0636117BB978800FF9B81 /* MobileCoreServices.framework in Frameworks */,
+				C9E0635F17BB978300FF9B81 /* SystemConfiguration.framework in Frameworks */,
 				502B30FD15343F3E006F032F /* Accounts.framework in Frameworks */,
 				502B30FB15343F38006F032F /* Twitter.framework in Frameworks */,
 				E6EEE70F1504EE760096C4CB /* QuartzCore.framework in Frameworks */,
@@ -396,6 +410,7 @@
 		0246878914FE2642009E2CB9 = {
 			isa = PBXGroup;
 			children = (
+				C9E0636617BB9B1500FF9B81 /* Default-568h@2x.png */,
 				E6EEE5CF1504ED3B0096C4CB /* API */,
 				0246879E14FE2642009E2CB9 /* SocialEngine */,
 				0246879714FE2642009E2CB9 /* Frameworks */,
@@ -414,6 +429,8 @@
 		0246879714FE2642009E2CB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9E0636017BB978800FF9B81 /* MobileCoreServices.framework */,
+				C9E0635E17BB978300FF9B81 /* SystemConfiguration.framework */,
 				E6C3BCF0154079AD007B620E /* Pods.xcconfig */,
 				502B30FC15343F3D006F032F /* Accounts.framework */,
 				502B30FA15343F38006F032F /* Twitter.framework */,
@@ -627,6 +644,7 @@
 		07F67B13160CC4D400BFE095 /* LinkedInModule */ = {
 			isa = PBXGroup;
 			children = (
+				C98369CE17BBB212008504A3 /* LinkedInUserInfoMapper */,
 				07F67B14160CC51A00BFE095 /* DXSELinkedIn.h */,
 				07F67B15160CC51A00BFE095 /* DXSELinkedIn.m */,
 			);
@@ -636,6 +654,7 @@
 		07F67B17160CD38D00BFE095 /* UserInfoLinkedIn */ = {
 			isa = PBXGroup;
 			children = (
+				C9D0FC9317BBC7DA00EF061A /* DXSELinkedInPhone */,
 				07821682160DBD46008D2691 /* LinkedInProfileFields.h */,
 				07821694160DFF3C008D2691 /* DXSELinkedInCountry */,
 				07821695160DFF3C008D2691 /* DXSELinkedInLocation */,
@@ -711,6 +730,24 @@
 				5064510F15371B670054B09C /* WFInstagramAPI.m */,
 			);
 			name = WFInstagramAPI;
+			sourceTree = "<group>";
+		};
+		C98369CE17BBB212008504A3 /* LinkedInUserInfoMapper */ = {
+			isa = PBXGroup;
+			children = (
+				C98369CF17BBB220008504A3 /* LinkedInUserInfoMapper.h */,
+				C98369D017BBB220008504A3 /* LinkedInUserInfoMapper.m */,
+			);
+			path = LinkedInUserInfoMapper;
+			sourceTree = "<group>";
+		};
+		C9D0FC9317BBC7DA00EF061A /* DXSELinkedInPhone */ = {
+			isa = PBXGroup;
+			children = (
+				C9D0FC9417BBC7E400EF061A /* DXSELinkedInPhone.h */,
+				C9D0FC9517BBC7E400EF061A /* DXSELinkedInPhone.m */,
+			);
+			path = DXSELinkedInPhone;
 			sourceTree = "<group>";
 		};
 		E6EEE5CF1504ED3B0096C4CB /* API */ = {
@@ -925,7 +962,7 @@
 		0246878B14FE2642009E2CB9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 0246878E14FE2642009E2CB9 /* Build configuration list for PBXProject "SocialEngine" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -955,6 +992,7 @@
 				E6EEE6ED1504ED3B0096C4CB /* README in Resources */,
 				027238A9150521370090730A /* SocialEngine.plist in Resources */,
 				028FEF47150BBA1D006531CE /* Twitter.bundle in Resources */,
+				C9E0636717BB9B1500FF9B81 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1086,6 +1124,8 @@
 				07821693160DFD51008D2691 /* DXSELinkedInDate.m in Sources */,
 				07821698160DFF47008D2691 /* DXSELinkedInCountry.m in Sources */,
 				0782169B160DFF51008D2691 /* DXSELinkedInLocation.m in Sources */,
+				C98369D117BBB220008504A3 /* LinkedInUserInfoMapper.m in Sources */,
+				C9D0FC9617BBC7E400EF061A /* DXSELinkedInPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,8 +1155,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6C3BCF0154079AD007B620E /* Pods.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1130,6 +1174,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
@@ -1140,14 +1185,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6C3BCF0154079AD007B620E /* Pods.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

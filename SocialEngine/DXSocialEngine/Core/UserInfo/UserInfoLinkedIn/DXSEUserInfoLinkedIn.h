@@ -10,6 +10,7 @@
 #import "DXSELinkedInPosition.h"
 #import "DXSELinkedInEducation.h"
 #import "DXSELinkedInLocation.h"
+#import "DXSELinkedInPhone.h"
 
 @interface DXSEUserInfoLinkedIn : DXSEUserInfo
 
@@ -26,5 +27,6 @@
 @property (nonatomic, strong) NSArray *positionsArray;
 @property (nonatomic, strong) NSArray *educationsArray;
 @property (nonatomic, strong) DXSELinkedInLocation *location;
+@property (nonatomic, strong) DXSELinkedInPhone *phone;
 
 @end

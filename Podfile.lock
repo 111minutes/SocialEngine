@@ -1,27 +1,26 @@
+PODS:
+  - AFNetworking (1.3.2)
+  - HTTPRiot (0.6.1):
+    - KissXML
+    - SBJson (= 2.2.3)
+  - KissXML (5.0)
+  - MUKit (0.0.9)
+  - SBJson (2.2.3)
+  - TouchJSON (1.0)
 
-SPEC CHECKSUMS: 
-  TouchJSON: 42c1e460723d56d57d03ece0449299c81ebf9391
-  AFNetworking-Fork: c14419fe0e79045742ac7a892c4969ec1ca411e3
-  MUKit: 7da25f85fbae3190c473fe517e97471b0793414b
-  SBJson: cc373c9eed9314a45715e4fb77a1415c45fa056e
-  HTTPRiot: 6fc664f796e4ed199cae1df0643fb2335b776038
-  KissXML: 8dfe0fb6d4e987fec63656ff07d5e697f49976f8
-
-COCOAPODS: 0.16.1
-
-PODS: 
-- AFNetworking-Fork (0.9.1)
-- HTTPRiot (0.6.1): 
-  - KissXML
+DEPENDENCIES:
+  - AFNetworking (= 1.3.2)
+  - HTTPRiot
+  - MUKit (= 0.0.9)
   - SBJson (= 2.2.3)
-- KissXML (5.0)
-- MUKit (0.0.7): 
-  - AFNetworking-Fork
-- SBJson (2.2.3)
-- TouchJSON (1.0)
+  - TouchJSON
 
-DEPENDENCIES: 
-- HTTPRiot
-- MUKit
-- SBJson (= 2.2.3)
-- TouchJSON
+SPEC CHECKSUMS:
+  AFNetworking: 7f9bcd7c287a75476cd5c61e82fd3380e93e4c54
+  HTTPRiot: 6fc664f796e4ed199cae1df0643fb2335b776038
+  KissXML: 4c66b6f39ef49c23e6bb8d335b94136f12b1b615
+  MUKit: 34ece5872f6757d18afde36a67f57f88b19ed74e
+  SBJson: cc373c9eed9314a45715e4fb77a1415c45fa056e
+  TouchJSON: 42c1e460723d56d57d03ece0449299c81ebf9391
+
+COCOAPODS: 0.23.0

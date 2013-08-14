@@ -109,6 +109,11 @@ const struct LinkedInMemberPermissions LinkedInMemberPermissions = {
     return token.key;
 }
 
+- (NSString *)secretKey
+{
+    RD_OAToken *token = [self linkedInEngineAccessToken:self.linkedInEngine];
+    return token.secret;
+}
 
 #pragma mark - UserInfo
 
